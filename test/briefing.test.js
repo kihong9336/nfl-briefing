@@ -1,0 +1,62 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+
+import {
+  availableDates,
+  briefingForDate,
+  filterSections,
+  neighboringDates,
+  normalizeDateParam,
+} from '../src/briefing.js';
+
+const sample = [
+  {
+    date: '2026-10-15',
+    sections: [
+      { id: 'league', team: 'NFL', title: '리그 핵심 뉴스' },
+      { id: 'sf', team: '49ers', title: '49ers 부상 업데이트' },
+      { id: 'kc', team: 'Chiefs', title: 'Chiefs 라인 점검' },
+    ],
+  },
+  {
+    date: '2026-10-16',
+    sections: [{ id: 'next', team: 'NFL', title: '다음 경기 프리뷰' }],
+  },
+];
+
+test('availableDates returns newest briefing first', () => {
+  assert.deepEqual(availableDates(sample), ['2026-10-16', '2026-10-15']);
+});
+
+test('normalizeDateParam falls back to the newest available date', () => {
+  assert.equal(normalizeDateParam('not-a-date', sample), '2026-10-16');
+  assert.equal(normalizeDateParam(null, sample), '2026-10-16');
+});
+
+test('briefingForDate returns the requested briefing', () => {
+  assert.equal(briefingForDate('2026-10-15', sample).date, '2026-10-15');
+});
+
+test('neighboringDates returns older and newer archive links', () => {
+  assert.deepEqual(neighboringDates('2026-10-15', sample), {
+    older: null,
+    newer: '2026-10-16',
+  });
+  assert.deepEqual(neighboringDates('2026-10-16', sample), {
+    older: '2026-10-15',
+    newer: null,
+  });
+});
+
+test('filterSections keeps league news and selected team focus', () => {
+  const sections = sample[0].sections;
+  assert.deepEqual(
+    filterSections(sections, '49ers').map((section) => section.id),
+    ['league', 'sf'],
+  );
+  assert.deepEqual(
+    filterSections(sections, 'Chiefs').map((section) => section.id),
+    ['league', 'kc'],
+  );
+  assert.equal(filterSections(sections, 'all').length, 3);
+});

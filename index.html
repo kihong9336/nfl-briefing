@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3f0e8" />
+  <meta name="description" content="49ers와 Chiefs 팬을 위한 한국어 NFL 해설 브리핑" />
+  <title>NFL 브리핑 — 한국어 NFL 뉴스와 해설</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+  <header class="site-header">
+    <div class="masthead shell">
+      <a class="brand" href="./" aria-label="NFL 브리핑 홈">
+        <span class="brand-mark">NB</span>
+        <span>
+          <strong>NFL 브리핑</strong>
+          <small>NEWS · CONTEXT · FILM</small>
+        </span>
+      </a>
+      <div class="masthead-note">49ERS × CHIEFS<br /><span>팬의 시선, 객관적인 해설</span></div>
+    </div>
+    <div class="date-bar">
+      <div class="shell date-bar-inner">
+        <button class="date-arrow" id="olderButton" aria-label="이전 날짜">←</button>
+        <nav class="date-rail" id="dateRail" aria-label="브리핑 날짜"></nav>
+        <label class="calendar-control" aria-label="날짜 직접 선택">
+          <span>CAL</span>
+          <input id="datePicker" type="date" />
+        </label>
+        <button class="date-arrow" id="newerButton" aria-label="다음 날짜">→</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="demo-notice">현재 화면은 디자인 검증용 샘플입니다. 실제 뉴스 자동화 연결 전에는 사실 정보로 사용하지 않습니다.</div>
+
+  <main id="main" class="shell page-grid">
+    <article class="briefing-column">
+      <header class="edition-header">
+        <div class="edition-meta" id="editionMeta"></div>
+        <h1 id="editionTitle">오늘의 NFL 브리핑</h1>
+        <p id="editionDek"></p>
+      </header>
+
+      <section class="lead-story" id="leadStory" aria-labelledby="leadTitle"></section>
+
+      <div class="filter-row" aria-label="팀별 뉴스 필터">
+        <button class="filter is-active" data-filter="all">전체</button>
+        <button class="filter" data-filter="49ers">49ers</button>
+        <button class="filter" data-filter="Chiefs">Chiefs</button>
+      </div>
+
+      <section class="story-list" id="storyList" aria-label="주요 뉴스"></section>
+      <section class="highlights" id="highlights" aria-labelledby="highlightsTitle"></section>
+    </article>
+
+    <aside class="sidebar" aria-label="오늘의 경기 보드">
+      <div class="sidebar-sticky">
+        <section class="scoreboard">
+          <div class="section-rule"><span>THE BOARD</span></div>
+          <h2>다음에 볼 것</h2>
+          <div id="scheduleList"></div>
+        </section>
+        <section class="identity-card">
+          <span class="eyebrow">OUR TEAMS</span>
+          <div class="team-lockup">
+            <span class="team sf">SF</span>
+            <span class="versus">×</span>
+            <span class="team kc">KC</span>
+          </div>
+          <p>팬심은 분명하게.<br />사실과 해설은 정확하게.</p>
+        </section>
+        <section class="newsletter-note">
+          <span class="eyebrow">DAILY · 12:00 KST</span>
+          <h3>텔레그램에는<br />핵심만 짧게</h3>
+          <p>전체 해설과 공식 하이라이트는 이곳에 차곡차곡 보관합니다.</p>
+        </section>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <strong>NFL 브리핑</strong>
+      <span>공식 NFL 서비스가 아닌 독립 한국어 해설 아카이브</span>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
