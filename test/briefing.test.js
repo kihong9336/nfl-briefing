@@ -5,6 +5,7 @@ import {
   availableDates,
   briefingForDate,
   filterSections,
+  filterTactics,
   neighboringDates,
   normalizeDateParam,
 } from '../src/briefing.js';
@@ -59,4 +60,21 @@ test('filterSections keeps league news and selected team focus', () => {
     ['league', 'kc'],
   );
   assert.equal(filterSections(sections, 'all').length, 3);
+});
+
+test('filterTactics keeps universal concepts and selected team examples', () => {
+  const tactics = [
+    { id: 'coverage', team: 'NFL' },
+    { id: 'sf-motion', team: '49ers' },
+    { id: 'kc-protection', team: 'Chiefs' },
+  ];
+  assert.deepEqual(
+    filterTactics(tactics, '49ers').map((item) => item.id),
+    ['coverage', 'sf-motion'],
+  );
+  assert.deepEqual(
+    filterTactics(tactics, 'Chiefs').map((item) => item.id),
+    ['coverage', 'kc-protection'],
+  );
+  assert.equal(filterTactics(tactics, 'all').length, 3);
 });

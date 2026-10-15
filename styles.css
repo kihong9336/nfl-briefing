@@ -83,6 +83,39 @@ a { color: inherit; }
 .watch { display: flex; gap: 14px; margin: 0; color: var(--muted); font-size: 13px; }
 .watch span { color: var(--ink); font-weight: 800; letter-spacing: .12em; }
 
+.tactics { padding-top: 64px; }
+.tactics-heading { display: grid; grid-template-columns: 1fr minmax(240px, 340px); gap: 34px; align-items: end; margin-bottom: 26px; }
+.tactics-heading h2 { margin: 8px 0 0; font: 700 clamp(34px, 4vw, 49px)/1 'Source Serif 4', serif; letter-spacing: -1.8px; }
+.tactics-heading > p { margin: 0; color: var(--muted); font-size: 14px; }
+.tactic-list { border-top: 4px solid var(--ink); }
+.tactic-card { display: grid; grid-template-columns: minmax(220px, 34%) 1fr; gap: 28px; padding: 32px 0; border-bottom: 1px solid var(--rule); }
+.tactic-diagram { position: relative; min-height: 290px; overflow: hidden; background: #1f5c3a; border: 8px solid #18472e; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
+.tactic-diagram::before, .tactic-diagram::after { content: ''; position: absolute; inset-inline: 0; height: 1px; background: rgba(255,255,255,.48); }
+.tactic-diagram::before { top: 33%; }
+.tactic-diagram::after { top: 66%; }
+.field-line { position: absolute; top: 0; bottom: 0; width: 1px; border-left: 1px dashed rgba(255,255,255,.28); }
+.line-one { left: 33%; }
+.line-two { left: 66%; }
+.player { position: absolute; display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; font: 800 11px/1 'Noto Sans KR', sans-serif; font-style: normal; box-shadow: 0 2px 0 rgba(0,0,0,.24); }
+.offense { background: var(--white); color: var(--ink); border: 2px solid var(--ink); }
+.defense { background: var(--red); color: white; border: 2px solid #7f0a19; }
+.p1 { left: 18%; bottom: 18%; }.p2 { left: 44%; bottom: 18%; }.p3 { right: 16%; bottom: 18%; }
+.d1 { left: 28%; top: 18%; }.d2 { right: 28%; top: 18%; }
+.route { position: absolute; left: 25%; bottom: 31%; width: 45%; height: 37%; border-top: 3px solid #ffd54d; border-right: 3px solid #ffd54d; border-radius: 0 40px 0 0; transform: rotate(-8deg); }
+.route-2 { left: 46%; width: 28%; height: 45%; border-radius: 40px 0 0; border-right: 0; border-left: 3px solid #ffd54d; transform: rotate(10deg); }
+.route-3 { left: 19%; width: 60%; height: 26%; border-radius: 0; transform: rotate(0); }
+.tactic-copy h3 { margin: 8px 0 18px; font: 700 clamp(25px, 3vw, 36px)/1.14 'Source Serif 4', serif; letter-spacing: -1px; word-break: keep-all; }
+.tactic-copy dl { margin: 0; }
+.tactic-copy dl > div { display: grid; grid-template-columns: 104px 1fr; gap: 15px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.tactic-copy dt { font-size: 11px; font-weight: 800; letter-spacing: .04em; }
+.tactic-copy dd { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.film-link { display: flex; align-items: center; gap: 13px; margin-top: 18px; padding: 14px 16px; background: var(--ink); color: white; text-decoration: none; }
+.film-link > span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--red); font-size: 11px; padding-left: 2px; }
+.film-link strong, .film-link small { display: block; }
+.film-link strong { font-size: 13px; }
+.film-link small { margin-top: 3px; color: #aaa; font-size: 10px; }
+.film-link:hover strong { color: #ffd5da; }
+
 .highlights { padding-top: 58px; }
 .section-rule { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .section-rule::after { content: ''; height: 1px; flex: 1; background: var(--ink); }
@@ -129,6 +162,8 @@ a { color: inherit; }
   .date-chip { min-width: 116px; padding-inline: 14px; }
   .demo-notice { font-size: 11px; text-align: left; }
   .page-grid { display: block; padding-top: 38px; }
+  .tactics-heading { grid-template-columns: 1fr; gap: 12px; }
+  .tactic-card { grid-template-columns: minmax(180px, 32%) 1fr; }
   .edition-header h1 { letter-spacing: -2.3px; }
   .sidebar { margin-top: 70px; }
   .sidebar-sticky { position: static; }
@@ -147,6 +182,9 @@ a { color: inherit; }
   .story { grid-template-columns: 34px 1fr; gap: 10px; padding-block: 30px 34px; }
   .story-49ers, .story-chiefs { padding-left: 10px; }
   .story h2 { font-size: 26px; }
+  .tactic-card { grid-template-columns: 1fr; gap: 18px; }
+  .tactic-diagram { min-height: 220px; }
+  .tactic-copy dl > div { grid-template-columns: 90px 1fr; gap: 10px; }
   .analysis { padding-inline: 16px; margin-left: -44px; }
   .watch { margin-left: -44px; }
   .video-card { grid-template-columns: 1fr; }

@@ -3,6 +3,7 @@ import {
   availableDates,
   briefingForDate,
   filterSections,
+  filterTactics,
   neighboringDates,
   normalizeDateParam,
 } from './briefing.js';
@@ -71,6 +72,45 @@ function renderStories(briefing) {
     .join('');
 }
 
+function renderTactics(briefing) {
+  const tactics = filterTactics(briefing.tactics ?? [], currentFilter);
+  const section = $('#tactics');
+  if (!tactics.length) {
+    section.innerHTML = '';
+    section.hidden = true;
+    return;
+  }
+  section.hidden = false;
+  section.innerHTML = `
+    <div class="section-rule"><span>TACTICS · FILM ROOM</span></div>
+    <div class="tactics-heading">
+      <div><span class="eyebrow">전략을 알면 경기가 다르게 보입니다</span><h2 id="tacticsTitle">오늘의 전술 교실</h2></div>
+      <p>어려운 용어는 생활 속 비유로 풀고, 실제 경기에서 무엇을 보면 되는지까지 연결합니다.</p>
+    </div>
+    <div class="tactic-list">
+      ${tactics.map((item, index) => `
+        <article class="tactic-card">
+          <div class="tactic-diagram" aria-hidden="true">
+            <span class="field-line line-one"></span><span class="field-line line-two"></span>
+            <i class="player offense p1">O</i><i class="player offense p2">O</i><i class="player offense p3">O</i>
+            <i class="player defense d1">D</i><i class="player defense d2">D</i>
+            <span class="route route-${(index % 3) + 1}"></span>
+          </div>
+          <div class="tactic-copy">
+            <span class="story-label">${item.label}</span>
+            <h3>${item.title}</h3>
+            <dl>
+              <div><dt>전술의 뜻</dt><dd>${item.concept}</dd></div>
+              <div><dt>쉽게 말하면</dt><dd>${item.easy}</dd></div>
+              <div><dt>경기에서 볼 것</dt><dd>${item.gameUse}</dd></div>
+            </dl>
+            <a class="film-link" href="${item.url}" target="_blank" rel="noreferrer"><span>▶</span><div><strong>${item.videoTitle}</strong><small>${item.videoType}</small></div></a>
+          </div>
+        </article>
+      `).join('')}
+    </div>`;
+}
+
 function renderHighlights(briefing) {
   const section = $('#highlights');
   if (!briefing.highlights.length) {
@@ -106,6 +146,7 @@ function render() {
   $('#editionDek').textContent = briefing.dek;
   $('#leadStory').innerHTML = `<span class="eyebrow">${briefing.lead.kicker}</span><h2 id="leadTitle">${briefing.lead.title}</h2><p>${briefing.lead.summary}</p>`;
   renderStories(briefing);
+  renderTactics(briefing);
   renderHighlights(briefing);
   renderSchedule(briefing);
 

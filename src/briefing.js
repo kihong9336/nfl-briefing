@@ -25,3 +25,8 @@ export function filterSections(sections, filter) {
   if (!filter || filter === 'all') return sections;
   return sections.filter((section) => section.team === 'NFL' || section.team === filter);
 }
+
+export function filterTactics(tactics, filter) {
+  if (!filter || filter === 'all') return tactics;
+  return tactics.filter((item) => item.team === 'NFL' || item.team === filter);
+}

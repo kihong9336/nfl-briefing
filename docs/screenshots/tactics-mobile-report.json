@@ -1,0 +1,14 @@
+{
+  "url": "http://127.0.0.1:4173/?date=2026-10-15",
+  "title": "10월 15일 NFL 브리핑",
+  "innerWidth": 390,
+  "innerHeight": 844,
+  "devicePixelRatio": 1,
+  "documentScrollWidth": 390,
+  "bodyScrollWidth": 390,
+  "overflow": [],
+  "consoleHint": "Review overflow entries; intentionally off-screen skip links are expected.",
+  "contentHeight": 6343,
+  "firstScreenshot": "docs/screenshots/tactics-mobile-first.png",
+  "fullScreenshot": "docs/screenshots/tactics-mobile-full.png"
+}
