@@ -136,6 +136,6 @@ export const briefings = [
       },
     ],
     highlights: [],
-    schedule: [{ time: 'NEXT', matchup: '다음 브리핑', note: '매일 낮 12시 업데이트' }],
+    schedule: [{ time: 'NEXT', matchup: '다음 브리핑', note: '매일 오전 8시 업데이트' }],
   },
 ];

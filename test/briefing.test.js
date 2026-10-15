@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
   availableDates,
@@ -77,4 +78,16 @@ test('filterTactics keeps universal concepts and selected team examples', () => 
     ['coverage', 'kc-protection'],
   );
   assert.equal(filterTactics(tactics, 'all').length, 3);
+});
+
+test('published copy consistently announces the 08:00 KST update', () => {
+  const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const data = readFileSync(new URL('../src/data.js', import.meta.url), 'utf8');
+  const readme = readFileSync(new URL('../README.md', import.meta.url), 'utf8');
+  const publishedCopy = `${index}\n${data}\n${readme}`;
+
+  assert.match(index, /DAILY · 08:00 KST/);
+  assert.match(data, /매일 오전 8시 업데이트/);
+  assert.match(readme, /매일 오전 8시/);
+  assert.doesNotMatch(publishedCopy, /12:00 KST|매일 낮 12시/);
 });
