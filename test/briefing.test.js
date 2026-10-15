@@ -18,6 +18,7 @@ const sample = [
       { id: 'league', team: 'NFL', title: '리그 핵심 뉴스' },
       { id: 'sf', team: '49ers', title: '49ers 부상 업데이트' },
       { id: 'kc', team: 'Chiefs', title: 'Chiefs 라인 점검' },
+      { id: 'ne', team: 'Patriots', title: 'Patriots 수비 점검' },
     ],
   },
   {
@@ -60,7 +61,11 @@ test('filterSections keeps league news and selected team focus', () => {
     filterSections(sections, 'Chiefs').map((section) => section.id),
     ['league', 'kc'],
   );
-  assert.equal(filterSections(sections, 'all').length, 3);
+  assert.deepEqual(
+    filterSections(sections, 'Patriots').map((section) => section.id),
+    ['league', 'ne'],
+  );
+  assert.equal(filterSections(sections, 'all').length, 4);
 });
 
 test('filterTactics keeps universal concepts and selected team examples', () => {
@@ -68,6 +73,7 @@ test('filterTactics keeps universal concepts and selected team examples', () => 
     { id: 'coverage', team: 'NFL' },
     { id: 'sf-motion', team: '49ers' },
     { id: 'kc-protection', team: 'Chiefs' },
+    { id: 'ne-defense', team: 'Patriots' },
   ];
   assert.deepEqual(
     filterTactics(tactics, '49ers').map((item) => item.id),
@@ -77,7 +83,11 @@ test('filterTactics keeps universal concepts and selected team examples', () => 
     filterTactics(tactics, 'Chiefs').map((item) => item.id),
     ['coverage', 'kc-protection'],
   );
-  assert.equal(filterTactics(tactics, 'all').length, 3);
+  assert.deepEqual(
+    filterTactics(tactics, 'Patriots').map((item) => item.id),
+    ['coverage', 'ne-defense'],
+  );
+  assert.equal(filterTactics(tactics, 'all').length, 4);
 });
 
 test('published copy consistently announces the 08:00 KST update', () => {
@@ -87,6 +97,7 @@ test('published copy consistently announces the 08:00 KST update', () => {
   const publishedCopy = `${index}\n${data}\n${readme}`;
 
   assert.match(index, /DAILY · 08:00 KST/);
+  assert.match(index, /data-filter="Patriots"/);
   assert.match(data, /매일 오전 8시 업데이트/);
   assert.match(readme, /매일 오전 8시/);
   assert.doesNotMatch(publishedCopy, /12:00 KST|매일 낮 12시/);

@@ -37,6 +37,15 @@ export const briefings = [
         commentary: '화려한 패스 장면 뒤에 있는 태클과 내부 보호를 함께 보면 Chiefs 공격이 왜 어떤 날은 폭발하고 어떤 날은 답답한지 더 잘 보입니다.',
         watch: '상대 네 명 압박에 대한 내부 보호와 스크램블 비율',
       },
+      {
+        id: 'ne-1',
+        team: 'Patriots',
+        label: 'PATRIOTS FOCUS',
+        title: 'Patriots는 같은 정렬에서 얼마나 다른 답을 보여줄까',
+        summary: '뉴잉글랜드 경기를 볼 때는 선수 숫자만큼이나 스냅 전후에 수비 모양이 어떻게 바뀌는지가 중요합니다.',
+        commentary: '같은 프런트와 세이프티 배치에서 압박, 맨 커버리지, 존 커버리지를 바꿔 보여주면 상대 쿼터백은 공을 오래 들거나 보호 방향을 잘못 정할 수 있습니다.',
+        watch: '스냅 직후 세이프티 회전과 라인배커의 압박·커버리지 전환',
+      },
     ],
     tactics: [
       {
@@ -75,6 +84,18 @@ export const briefings = [
         videoType: '팀 전술 · 필름 분석',
         url: 'https://www.youtube.com/@KansasCityChiefs',
       },
+      {
+        id: 'ne-disguise',
+        team: 'Patriots',
+        label: 'PATRIOTS PLAYBOOK',
+        title: '수비 위장: 스냅 전 그림을 믿으면 안 되는 이유',
+        concept: '수비는 같은 정렬에서 압박과 커버리지를 바꿔 쿼터백이 잘못된 보호 또는 패스 선택을 하도록 유도합니다.',
+        easy: '같은 문 뒤에 매번 다른 방이 나타나도록 만들어 상대가 지도를 믿지 못하게 하는 것과 비슷합니다.',
+        gameUse: '스냅 전 세이프티 두 명이 깊게 있다가 한 명이 내려오는지, 압박할 듯 서 있던 라인배커가 패스 지역으로 빠지는지 봅니다.',
+        videoTitle: 'Patriots 수비 위장·커버리지 해설 영상 연결 예정',
+        videoType: '팀 전술 · 수비 필름 분석',
+        url: 'https://www.youtube.com/@patriots',
+      },
     ],
     highlights: [
       {
@@ -89,6 +110,7 @@ export const briefings = [
       { time: 'THU', matchup: '주요 프라임타임 경기', note: 'KST 경기 시각과 관전 포인트' },
       { time: 'SUN', matchup: '49ers 경기', note: '부상·매치업 핵심 변수' },
       { time: 'MON', matchup: 'Chiefs 경기', note: '라인 전력과 수비 대응' },
+      { time: 'NEXT', matchup: 'Patriots 경기', note: '수비 위장과 QB 성장 체크' },
     ],
   },
   {
