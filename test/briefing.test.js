@@ -113,6 +113,51 @@ test('published editions expose source links and hide the sample warning', () =>
   assert.match(app, /briefing\.sample/);
 });
 
+test('the sidebar uses its space for league-wide news instead of static filler', () => {
+  const edition = briefingForDate('2026-10-16', publishedBriefings);
+  const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
+
+  assert.ok(edition.leagueWide?.length >= 2);
+  assert.ok(edition.leagueWide.every((item) => !['49ers', 'Chiefs', 'Patriots'].includes(item.team)));
+  assert.ok(edition.leagueWide.every((item) => item.title && item.why && item.url));
+  assert.match(app, /리그 와이드/);
+  assert.match(app, /leagueWide/);
+  assert.match(app, /escapeHtml/);
+  assert.doesNotMatch(index, /OUR TEAMS|텔레그램에는/);
+});
+
+test('the upcoming games board clearly labels KST dates, weekdays, and status', () => {
+  const edition = briefingForDate('2026-10-16', publishedBriefings);
+  const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
+
+  assert.ok(edition.schedule.every((game) => game.date && game.weekday && game.time));
+  assert.match(app, /다가오는 경기 일정/);
+  assert.match(app, /모든 시간 KST/);
+  assert.match(app, /경기 예정/);
+  assert.match(app, /item\.status/);
+});
+
+test('new links have an explicit visible focus treatment', () => {
+  const css = readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.quick-hit:focus-visible/);
+  assert.match(css, /\.tactic-source a:focus-visible/);
+});
+
+test('published tactics contain a real play explanation instead of a generic external link', () => {
+  const edition = briefingForDate('2026-10-16', publishedBriefings);
+  const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
+
+  assert.ok(edition.tactics.every((item) => item.diagram?.kind));
+  assert.ok(edition.tactics.every((item) => item.breakdown?.length >= 3));
+  assert.ok(edition.tactics.every((item) => item.whyItWorks && item.defenseCounter));
+  assert.ok(edition.tactics.every((item) => item.watchOrder?.length >= 3));
+  assert.match(app, /renderTacticDiagram/);
+  assert.match(app, /play-steps/);
+  assert.match(app, /설명 근거/);
+  assert.doesNotMatch(app, /class="tactic-diagram" aria-hidden="true"/);
+});
+
 test('the public archive includes a verified, non-sample 2026-10-16 edition', () => {
   const edition = briefingForDate('2026-10-16', publishedBriefings);
 
