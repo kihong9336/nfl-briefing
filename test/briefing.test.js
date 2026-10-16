@@ -10,6 +10,7 @@ import {
   neighboringDates,
   normalizeDateParam,
 } from '../src/briefing.js';
+import { briefings as publishedBriefings } from '../src/data.js';
 
 const sample = [
   {
@@ -101,4 +102,28 @@ test('published copy consistently announces the 08:00 KST update', () => {
   assert.match(data, /매일 오전 8시 업데이트/);
   assert.match(readme, /매일 오전 8시/);
   assert.doesNotMatch(publishedCopy, /12:00 KST|매일 낮 12시/);
+});
+
+test('published editions expose source links and hide the sample warning', () => {
+  const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
+
+  assert.match(index, /id="demoNotice"/);
+  assert.match(app, /story-sources/);
+  assert.match(app, /briefing\.sample/);
+});
+
+test('the public archive includes a verified, non-sample 2026-10-16 edition', () => {
+  const edition = briefingForDate('2026-10-16', publishedBriefings);
+
+  assert.equal(edition?.sample, false);
+  assert.equal(edition?.date, '2026-10-16');
+  assert.ok(edition.sections.length >= 4);
+  assert.deepEqual(
+    [...new Set(edition.sections.map((section) => section.team))].sort(),
+    ['49ers', 'Chiefs', 'NFL', 'Patriots'].sort(),
+  );
+  assert.ok(edition.sections.every((section) => section.sources?.length));
+  assert.ok(edition.tactics.length >= 2);
+  assert.ok(edition.highlights.length >= 2);
 });

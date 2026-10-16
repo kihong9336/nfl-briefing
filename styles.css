@@ -83,6 +83,9 @@ a { color: inherit; }
 .analysis p { margin: 8px 0 0; }
 .watch { display: flex; gap: 14px; margin: 0; color: var(--muted); font-size: 13px; }
 .watch span { color: var(--ink); font-weight: 800; letter-spacing: .12em; }
+.story-sources { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 18px; }
+.story-sources a { color: var(--red-dark); font-size: 12px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.story-sources a:hover { color: var(--red); }
 
 .tactics { padding-top: 64px; }
 .tactics-heading { display: grid; grid-template-columns: 1fr minmax(240px, 340px); gap: 34px; align-items: end; margin-bottom: 26px; }

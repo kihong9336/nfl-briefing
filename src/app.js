@@ -66,6 +66,9 @@ function renderStories(briefing) {
           <p class="fact"><strong>핵심 요약</strong>${story.summary}</p>
           <div class="analysis"><strong>꿀봉의 해설</strong><p>${story.commentary}</p></div>
           <p class="watch"><span>WATCH</span>${story.watch}</p>
+          <div class="story-sources" aria-label="기사 출처">
+            ${(story.sources ?? []).map((source) => `<a href="${source.url}" target="_blank" rel="noreferrer">↗ ${source.label}</a>`).join('')}
+          </div>
         </div>
       </article>
     `)
@@ -141,6 +144,7 @@ function renderSchedule(briefing) {
 function render() {
   const briefing = briefingForDate(currentDate, briefings);
   renderDates();
+  $('#demoNotice').hidden = briefing.sample === false;
   $('#editionMeta').innerHTML = `<span>${briefing.edition}</span><time>${briefing.date.replaceAll('-', '.')} · ${briefing.weekday}</time>`;
   $('#editionTitle').textContent = `${formatDate(briefing.date)} NFL 브리핑`;
   $('#editionDek').textContent = briefing.dek;
