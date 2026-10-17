@@ -161,6 +161,12 @@ test('the mobile home uses an app-style digest without removing the full briefin
   assert.match(css, /\.mobile-tabbar/);
   assert.match(index, /id="storySheet"/);
   assert.match(index, /id="storySheetClose"/);
+  assert.match(app, /data-lead-detail/);
+  assert.match(app, /data-game-index/);
+  assert.match(app, /function openLeadSheet/);
+  assert.match(app, /function openGameSheet/);
+  assert.match(app, /전체 보기 →/);
+  assert.match(app, /경기 자세히 보기 →/);
   assert.match(app, /data-story-id/);
   assert.match(app, /storySheet\.showModal\(\)/);
   assert.match(app, /storySheetContent/);

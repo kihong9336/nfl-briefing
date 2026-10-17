@@ -62,6 +62,8 @@ a { color: inherit; }
 .edition-header > p { max-width: 750px; margin: 24px 0 0; font-size: 18px; color: var(--muted); word-break: keep-all; }
 
 .lead-story { margin: 36px 0 42px; padding: 34px 0 40px; border-bottom: 1px solid var(--ink); }
+.lead-story-button { width: 100%; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; text-align: left; }
+.lead-story-button > em { display: none; font-style: normal; }
 .eyebrow { color: var(--red); }
 .lead-story h2 { max-width: 780px; margin: 10px 0 16px; font: 700 clamp(30px, 4.4vw, 52px)/1.08 'Source Serif 4', serif; letter-spacing: -2px; word-break: keep-all; }
 .lead-story p { max-width: 690px; margin: 0; color: var(--muted); font-size: 17px; }
@@ -83,7 +85,7 @@ body.sheet-open { overflow: hidden; }
 .filter-row { display: flex; gap: 8px; margin-bottom: 10px; }
 .filter { min-height: 44px; padding: 8px 17px; border: 1px solid var(--ink); background: transparent; cursor: pointer; font-size: 13px; font-weight: 700; }
 .filter.is-active, .filter:hover { background: var(--ink); color: white; }
-.filter:focus-visible, .date-chip:focus-visible, .date-arrow:focus-visible, .video-card:focus-visible, .quick-hit:focus-visible, .tactic-source a:focus-visible { outline: 3px solid #1473e6; outline-offset: 3px; }
+.filter:focus-visible, .date-chip:focus-visible, .date-arrow:focus-visible, .lead-story-button:focus-visible, .digest-card:focus-visible, .mobile-game-card:focus-visible, .video-card:focus-visible, .quick-hit:focus-visible, .tactic-source a:focus-visible { outline: 3px solid #1473e6; outline-offset: 3px; }
 
 .story { display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 38px 0 44px; border-bottom: 1px solid var(--rule); }
 .story-number { font: 700 18px/1 'Source Serif 4', serif; color: var(--red); }
@@ -251,6 +253,7 @@ body.sheet-open { overflow: hidden; }
   .lead-story .eyebrow { color: #ff8b99; }
   .lead-story h2 { margin: 5px 0 8px; font-size: 24px; line-height: 1.1; letter-spacing: -.9px; }
   .lead-story p { display: -webkit-box; overflow: hidden; color: #d1d1cd; font-size: 12px; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .lead-story-button > em { display: block; margin-top: 11px; color: #ff9ba7; font-size: 10px; font-weight: 900; letter-spacing: .04em; }
 
   .mobile-digest { display: block; margin: 0 0 34px; }
   .digest-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 13px; }
@@ -274,12 +277,13 @@ body.sheet-open { overflow: hidden; }
   .mobile-schedule { margin-top: 31px; }
   .digest-heading.compact { margin-bottom: 12px; }
   .mobile-game-rail { grid-auto-columns: minmax(292px, 90%); gap: 10px; }
-  .mobile-game-card { min-height: 185px; scroll-snap-align: start; padding: 19px; border-radius: 12px; background: #20201e; color: white; }
+  .mobile-game-card { min-height: 185px; scroll-snap-align: start; padding: 19px; border: 0; border-radius: 12px; appearance: none; background: #20201e; color: white; cursor: pointer; font: inherit; text-align: left; }
   .mobile-game-card > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
   .mobile-game-card time { color: #ff9ba7; font-size: 11px; font-weight: 800; }
   .mobile-game-card > div span { padding: 4px 7px; background: #334d37; color: #cce9d0; font-size: 9px; font-weight: 800; }
   .mobile-game-card > strong { display: block; margin: 20px 0 10px; font: 750 21px/1.2 'Source Serif 4', serif; }
   .mobile-game-card p { display: -webkit-box; margin: 0; overflow: hidden; color: #b8b8b4; font-size: 12px; line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+  .mobile-game-card > em { display: block; margin-top: 15px; color: #ff9ba7; font-size: 10px; font-style: normal; font-weight: 900; }
 
   .filter-row { position: sticky; top: 98px; z-index: 5; margin-inline: -14px; padding: 10px 14px; background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(10px); }
   .filter { flex: 1; padding-inline: 8px; }

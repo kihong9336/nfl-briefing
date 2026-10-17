@@ -1,4 +1,4 @@
-import { briefings } from './data.js?v=20261017-sheetfix1';
+import { briefings } from './data.js?v=20261017-cardlinks1';
 import {
   availableDates,
   briefingForDate,
@@ -6,9 +6,9 @@ import {
   filterTactics,
   neighboringDates,
   normalizeDateParam,
-} from './briefing.js?v=20261017-sheetfix1';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-sheetfix1';
-import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-sheetfix1';
+} from './briefing.js?v=20261017-cardlinks1';
+import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-cardlinks1';
+import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-cardlinks1';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
@@ -81,20 +81,49 @@ function closeStorySheet() {
   document.body.classList.remove('sheet-open');
 }
 
-function openStorySheet(story) {
-  const meta = teamMeta(story.team);
+function showDetailSheet({ header, label, title, blocks, sources = [] }) {
+  $('#storySheetTitle').textContent = header;
   storySheetContent.innerHTML = `
-    <span class="story-label">${h(story.label || meta.label)}</span>
-    <h2>${h(story.title)}</h2>
-    <section><strong>핵심 요약</strong><p>${h(story.summary)}</p></section>
-    <section class="sheet-analysis"><strong>꿀봉의 해설</strong><p>${h(story.commentary)}</p></section>
-    <section><strong>경기에서 볼 것</strong><p>${h(story.watch)}</p></section>
-    <div class="story-sources">
-      ${(story.sources ?? []).map((source) => `<a href="${h(safeHttpsUrl(source.url))}" target="_blank" rel="noreferrer">↗ ${h(source.label)}</a>`).join('')}
-    </div>`;
+    <span class="story-label">${h(label)}</span>
+    <h2>${h(title)}</h2>
+    ${blocks.map((block) => `<section class="${block.emphasis ? 'sheet-analysis' : ''}"><strong>${h(block.label)}</strong><p>${h(block.text)}</p></section>`).join('')}
+    ${sources.length ? `<div class="story-sources">${sources.map((source) => `<a href="${h(safeHttpsUrl(source.url))}" target="_blank" rel="noreferrer">↗ ${h(source.label)}</a>`).join('')}</div>` : ''}`;
   document.body.classList.add('sheet-open');
   storySheet.showModal();
   $('#storySheetClose').focus();
+}
+
+function openStorySheet(story) {
+  const meta = teamMeta(story.team);
+  showDetailSheet({
+    header: '전체 해설',
+    label: story.label || meta.label,
+    title: story.title,
+    blocks: [
+      { label: '핵심 요약', text: story.summary },
+      { label: '꿀봉의 해설', text: story.commentary, emphasis: true },
+      { label: '경기에서 볼 것', text: story.watch },
+    ],
+    sources: story.sources ?? [],
+  });
+}
+
+function openLeadSheet(briefing) {
+  showDetailSheet({
+    header: '오늘의 핵심',
+    label: briefing.lead.kicker,
+    title: briefing.lead.title,
+    blocks: [{ label: '오늘의 핵심 요약', text: briefing.lead.summary }],
+  });
+}
+
+function openGameSheet(game) {
+  showDetailSheet({
+    header: '경기 프리뷰',
+    label: `${game.date} ${game.weekday} · ${game.time} KST · ${game.status ?? '경기 예정'}`,
+    title: game.matchup,
+    blocks: [{ label: '관전 포인트', text: game.note }],
+  });
 }
 
 function renderMobileDigest(briefing) {
@@ -112,7 +141,7 @@ function renderMobileDigest(briefing) {
           <small>${h(story.label || meta.label)}</small>
           <strong>${h(story.title)}</strong>
           <p>${h(story.summary)}</p>
-          <em>전체 해설 보기</em>
+          <em>전체 해설 보기 →</em>
         </button>`;
       }).join('')}
     </div>
@@ -122,11 +151,12 @@ function renderMobileDigest(briefing) {
         <small>${briefing.schedule.length} games</small>
       </div>
       <div class="mobile-game-rail">
-        ${briefing.schedule.map((game) => `<article class="mobile-game-card">
+        ${briefing.schedule.map((game, index) => `<button type="button" class="mobile-game-card" data-game-index="${index}">
           <div><time>${h(game.date)} ${h(game.weekday)} · ${h(game.time)}</time><span>${h(game.status ?? '경기 예정')}</span></div>
           <strong>${h(game.matchup)}</strong>
           <p>${h(game.note)}</p>
-        </article>`).join('')}
+          <em>경기 자세히 보기 →</em>
+        </button>`).join('')}
       </div>
     </section>`;
 
@@ -134,6 +164,12 @@ function renderMobileDigest(briefing) {
     button.addEventListener('click', () => {
       const story = stories.find((item) => item.id === button.dataset.storyId);
       if (story) openStorySheet(story);
+    });
+  });
+  $('#mobileDigest').querySelectorAll('[data-game-index]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const game = briefing.schedule[Number(button.dataset.gameIndex)];
+      if (game) openGameSheet(game);
     });
   });
 }
@@ -273,7 +309,8 @@ function render() {
   $('#editionMeta').innerHTML = `<span>${h(briefing.edition)}</span><time>${h(briefing.date.replaceAll('-', '.'))} · ${h(briefing.weekday)}</time>`;
   $('#editionTitle').textContent = `${formatDate(briefing.date)} NFL 브리핑`;
   $('#editionDek').textContent = briefing.dek;
-  $('#leadStory').innerHTML = `<span class="eyebrow">${h(briefing.lead.kicker)}</span><h2 id="leadTitle">${h(briefing.lead.title)}</h2><p>${h(briefing.lead.summary)}</p>`;
+  $('#leadStory').innerHTML = `<button type="button" class="lead-story-button" data-lead-detail><span class="eyebrow">${h(briefing.lead.kicker)}</span><h2 id="leadTitle">${h(briefing.lead.title)}</h2><p>${h(briefing.lead.summary)}</p><em>전체 보기 →</em></button>`;
+  $('#leadStory [data-lead-detail]').addEventListener('click', () => openLeadSheet(briefing));
   renderMobileDigest(briefing);
   renderStories(briefing);
   renderTactics(briefing);
