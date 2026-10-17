@@ -141,47 +141,16 @@ test('the installed web app refreshes deployed assets instead of keeping a stale
   assert.match(worker, /cache:\s*'no-store'/);
 });
 
-test('the mobile home uses an app-style digest without removing the full briefing', () => {
+test('mobile home uses canonical details and brings the league before favorite teams', () => {
   const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
-  const css = readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
-  const edition = briefingForDate('2026-10-17', publishedBriefings);
-
-  assert.match(index, /id="mobileDigest"/);
-  assert.match(index, /class="mobile-tabbar"/);
-  assert.match(index, /href="#storyList"/);
-  assert.match(index, /href="#mobileSchedule"/);
-  assert.match(index, /href="#tactics"/);
-  assert.match(app, /function renderMobileDigest/);
-  assert.match(app, /digest-story-rail/);
-  assert.match(app, /mobile-game-rail/);
-  assert.match(app, /story-detail-/);
-  assert.match(css, /scroll-snap-type:\s*x mandatory/);
-  assert.match(css, /padding-bottom:\s*calc\([^;]*safe-area-inset-bottom/);
-  assert.match(css, /\.mobile-tabbar/);
-  assert.match(index, /id="storySheet"/);
-  assert.match(index, /id="storySheetClose"/);
-  assert.match(app, /data-lead-detail/);
-  assert.match(app, /data-game-index/);
-  assert.match(app, /function openLeadSheet/);
-  assert.match(app, /function openGameSheet/);
-  assert.match(app, /전체 보기 →/);
-  assert.match(app, /경기 자세히 보기 →/);
-  assert.match(app, /data-story-id/);
-  assert.match(app, /storySheet\.showModal\(\)/);
-  assert.match(app, /storySheetContent/);
-  assert.doesNotMatch(app, /class="digest-card[^\"]*" href="#story-detail-/);
-  assert.match(css, /\.story-sheet::backdrop/);
-  assert.match(css, /\.story-sheet-bar\s*\{[^}]*position:\s*sticky/s);
-  assert.match(css, /\.date-chip\s*\{[^}]*display:\s*grid[^}]*align-items:\s*center/s);
-  assert.match(css, /\.date-chip small\s*\{[^}]*display:\s*none/s);
-  assert.match(css, /\.filter-row\s*\{[^}]*top:\s*98px/s);
-  assert.match(css, /\.edition-header h1\s*\{[^}]*display:\s*none/s);
-  assert.match(css, /\.lead-story h2\s*\{[^}]*font-size:\s*24px/s);
-  assert.match(css, /\.digest-story-rail\s*\{[^}]*grid-auto-columns:\s*86%/s);
-  assert.match(css, /\.mobile-tabbar a\.is-active\s*\{[^}]*background:/s);
-  assert.equal(edition.sections.length, 4);
-  assert.equal(edition.schedule.length, 4);
+  assert.doesNotMatch(index, /id="mobileDigest"|id="mobileSchedule"/);
+  assert.match(index, /href="#leagueWide"/);
+  assert.match(index, /href="#scheduleBoard"/);
+  assert.ok(index.indexOf('id="leagueWide"') < index.indexOf('id="storyList"'));
+  assert.match(app, /renderRoundup/);
+  assert.match(app, /storySheet.showModal/);
+  assert.match(app, /관전 제안/);
 });
 
 test('published editions expose source links and hide the sample warning', () => {
@@ -201,10 +170,10 @@ test('the sidebar uses its space for league-wide news instead of static filler',
   assert.ok(edition.leagueWide?.length >= 2);
   assert.ok(edition.leagueWide.every((item) => !['49ers', 'Chiefs', 'Patriots'].includes(item.team)));
   assert.ok(edition.leagueWide.every((item) => item.title && item.why && item.url));
-  assert.match(app, /리그 와이드/);
+  assert.match(app, /리그 뉴스/);
   assert.match(app, /leagueWide/);
   assert.match(app, /escapeHtml/);
-  assert.doesNotMatch(index, /OUR TEAMS|텔레그램에는/);
+  assert.doesNotMatch(index, />OUR TEAMS<|텔레그램에는/);
 });
 
 test('the upcoming games board clearly labels KST dates, weekdays, and status', () => {
@@ -212,8 +181,8 @@ test('the upcoming games board clearly labels KST dates, weekdays, and status', 
   const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
 
   assert.ok(edition.schedule.every((game) => game.date && game.weekday && game.time));
-  assert.match(app, /다가오는 경기 일정/);
-  assert.match(app, /모든 시간 KST/);
+  assert.match(app, /주요 경기 보드/);
+  assert.match(app, /한국시간\(KST\)/);
   assert.match(app, /경기 예정/);
   assert.match(app, /item\.status/);
 });

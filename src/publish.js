@@ -72,6 +72,10 @@ export function validateEdition(edition) {
 
   for (const story of edition.sections) {
     for (const field of REQUIRED_STORY_FIELDS) requireString(story[field], `story.${field}`);
+    if (story.update !== undefined) {
+      if (!['new', 'status-change', 'followup'].includes(story.update?.kind)) throw new Error('story.update.kind is unsupported');
+      requireHttps(story.update.evidence, 'story.update.evidence');
+    }
     requireMeaningful(story.title, 'story.title', 8);
     requireMeaningful(story.summary, 'story.summary', 15);
     requireMeaningful(story.commentary, 'story.commentary', 15);
@@ -82,6 +86,10 @@ export function validateEdition(edition) {
     for (const source of story.sources) {
       requireString(source.label, 'source.label');
       requireHttps(source.url, 'source.url');
+      if (source.publishedAt !== undefined) {
+        requireString(source.publishedAt, 'source.publishedAt');
+        if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$/.test(source.publishedAt) || !Number.isFinite(Date.parse(source.publishedAt))) throw new Error('source.publishedAt must be an ISO timestamp with timezone');
+      }
     }
   }
 

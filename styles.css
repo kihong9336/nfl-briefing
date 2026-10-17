@@ -319,3 +319,38 @@ body.sheet-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Mobile-first reading order: one card and one canonical detail per story. */
+.page-grid { display: block; max-width: 1000px; }
+.briefing-column { min-width: 0; }
+.lead-story { padding: 20px; background: var(--ink); color: white; border-radius: 14px; }
+.lead-story .eyebrow { color: #ff9ba7; }
+.lead-story h2 { font-size: 24px; margin: 6px 0 12px; }
+.roundup-list { list-style: none; padding: 0; margin: 0; }
+.roundup-list li + li { border-top: 1px solid #454540; }
+.roundup-list button { display: flex; align-items: baseline; gap: 10px; width: 100%; min-height: 44px; padding: 10px 0; border: 0; background: none; color: inherit; font: inherit; font-size: 13px; text-align: left; cursor: pointer; }
+.roundup-list button span { flex: 0 0 30px; color: #ff9ba7; font-size: 10px; font-weight: 800; }
+.roundup-list button b { margin-left: auto; }
+#scheduleBoard, #leagueWide, #favoriteTeams, #tactics { margin-top: 30px; scroll-margin-top: 112px; }
+#scheduleBoard h2, #leagueWide h2, #favoriteTeams h2 { font-size: 26px; }
+#scheduleList { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 24px; }
+.schedule-item { padding: 12px 0; }
+.schedule-item details { margin-top: 8px; font-size: 12px; }
+summary { cursor: pointer; min-height: 44px; padding: 10px 0; font-size: 13px; font-weight: 700; }
+.filter-scope, .evidence-note { color: var(--muted); font-size: 12px; }
+.story { display: block; padding: 14px 0 14px 14px; }
+.story-card-button { display: block; width: 100%; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; font: inherit; }
+.story-card-button h3 { margin: 6px 0 12px; font-size: 21px; line-height: 1.4; overflow-wrap: anywhere; }
+.card-action { color: var(--red-dark); font-size: 11px; font-weight: 700; }
+.tactics { padding-top: 12px; }
+.tactic-card { padding: 20px 0; }
+.tactic-card-header { margin-bottom: 8px; }
+.tactic-card-header h3 { font-size: 24px; }
+.tactic-card-header p { font-size: 14px; }
+button:focus-visible, summary:focus-visible { outline: 3px solid #1473e6; outline-offset: 3px; }
+@media(max-width:560px) {
+ #scheduleList { grid-template-columns: 1fr; }
+ .filter-row { position: static; }
+ .quick-hit { padding: 12px 0; }
+ .story-sheet-content h2 { font-size: 24px; overflow-wrap: anywhere; }
+}

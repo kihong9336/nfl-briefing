@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20261017-cardlinks1" />
+  <link rel="stylesheet" href="./styles.css?v=20261017-mobile2" />
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -55,7 +55,11 @@
 
       <section class="lead-story" id="leadStory" aria-labelledby="leadTitle"></section>
 
-      <section class="mobile-digest" id="mobileDigest" aria-label="오늘의 브리핑 빠른 탐색"></section>
+      <section class="scoreboard" id="scheduleBoard" aria-label="선택 경기 보드"></section>
+      <section class="league-wide" id="leagueWide" aria-label="리그 뉴스"></section>
+      <section id="favoriteTeams" aria-label="관심 팀 뉴스">
+      <div class="section-rule"><span>YOUR TEAMS</span></div><h2>관심 팀 뉴스</h2>
+      <p class="filter-scope">아래 팀 뉴스만 필터링합니다. 리그·경기·전술은 그대로 유지됩니다.</p>
 
       <div class="filter-row" aria-label="팀별 뉴스 필터">
         <button class="filter is-active" data-filter="all">전체</button>
@@ -65,16 +69,11 @@
       </div>
 
       <section class="story-list" id="storyList" aria-label="주요 뉴스"></section>
+      </section>
       <section class="tactics" id="tactics" aria-labelledby="tacticsTitle"></section>
       <section class="highlights" id="highlights" aria-labelledby="highlightsTitle"></section>
     </article>
 
-    <aside class="sidebar" aria-label="오늘의 경기 보드">
-      <div class="sidebar-sticky">
-        <section class="scoreboard" id="scheduleBoard"></section>
-        <section class="league-wide" id="leagueWide" aria-label="다른 팀과 선수 뉴스"></section>
-      </div>
-    </aside>
   </main>
 
   <footer class="site-footer">
@@ -96,11 +95,11 @@
 
   <nav class="mobile-tabbar" aria-label="모바일 빠른 이동">
     <a class="is-active" href="#main"><span>01</span>오늘</a>
-    <a href="#storyList"><span>02</span>뉴스</a>
-    <a href="#mobileSchedule"><span>03</span>경기</a>
+    <a href="#leagueWide"><span>02</span>리그</a>
+    <a href="#scheduleBoard"><span>03</span>경기</a>
     <a href="#tactics"><span>04</span>전술</a>
   </nav>
 
-  <script type="module" src="./src/app.js?v=20261017-cardlinks1"></script>
+  <script type="module" src="./src/app.js?v=20261017-mobile2"></script>
 </body>
 </html>
