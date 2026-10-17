@@ -127,6 +127,33 @@ test('the site installs on iPhone with the selected football app icon', () => {
   }
 });
 
+test('the mobile home uses an app-style digest without removing the full briefing', () => {
+  const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
+  const edition = briefingForDate('2026-10-17', publishedBriefings);
+
+  assert.match(index, /id="mobileDigest"/);
+  assert.match(index, /class="mobile-tabbar"/);
+  assert.match(index, /href="#storyList"/);
+  assert.match(index, /href="#mobileSchedule"/);
+  assert.match(index, /href="#tactics"/);
+  assert.match(app, /function renderMobileDigest/);
+  assert.match(app, /digest-story-rail/);
+  assert.match(app, /mobile-game-rail/);
+  assert.match(app, /story-detail-/);
+  assert.match(css, /scroll-snap-type:\s*x mandatory/);
+  assert.match(css, /padding-bottom:\s*calc\([^;]*safe-area-inset-bottom/);
+  assert.match(css, /\.mobile-tabbar/);
+  assert.match(css, /\.filter-row\s*\{[^}]*top:\s*98px/s);
+  assert.match(css, /\.edition-header h1\s*\{[^}]*display:\s*none/s);
+  assert.match(css, /\.lead-story h2\s*\{[^}]*font-size:\s*24px/s);
+  assert.match(css, /\.digest-story-rail\s*\{[^}]*grid-auto-columns:\s*86%/s);
+  assert.match(css, /\.mobile-tabbar a\.is-active\s*\{[^}]*background:/s);
+  assert.equal(edition.sections.length, 4);
+  assert.equal(edition.schedule.length, 4);
+});
+
 test('published editions expose source links and hide the sample warning', () => {
   const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');

@@ -57,13 +57,57 @@ function renderDates() {
   $('#datePicker').value = currentDate;
 }
 
+function teamMeta(team) {
+  const teams = {
+    '49ers': { code: 'SF', label: '49ERS FOCUS' },
+    Chiefs: { code: 'KC', label: 'CHIEFS FOCUS' },
+    Patriots: { code: 'NE', label: 'PATRIOTS FOCUS' },
+    NFL: { code: 'NFL', label: 'LEAGUE FOCUS' },
+  };
+  return teams[team] ?? { code: team.slice(0, 3).toUpperCase(), label: team };
+}
+
+function renderMobileDigest(briefing) {
+  const stories = filterSections(briefing.sections, currentFilter);
+  $('#mobileDigest').innerHTML = `
+    <div class="digest-heading">
+      <div><span>QUICK READ</span><h2>오늘 먼저 볼 것</h2></div>
+      <small>옆으로 넘겨 빠르게 훑기</small>
+    </div>
+    <div class="digest-story-rail" aria-label="핵심 뉴스 빠른 탐색">
+      ${stories.map((story, index) => {
+        const meta = teamMeta(story.team);
+        return `<a class="digest-card digest-${h(story.team.toLowerCase())}" href="#story-detail-${h(story.id)}">
+          <div class="digest-card-top"><b>${h(meta.code)}</b><span>${String(index + 1).padStart(2, '0')}</span></div>
+          <small>${h(story.label || meta.label)}</small>
+          <strong>${h(story.title)}</strong>
+          <p>${h(story.summary)}</p>
+          <em>전체 해설 보기 ↓</em>
+        </a>`;
+      }).join('')}
+    </div>
+    <section class="mobile-schedule" id="mobileSchedule" aria-labelledby="mobileScheduleTitle">
+      <div class="digest-heading compact">
+        <div><span>UPCOMING · KST</span><h2 id="mobileScheduleTitle">다가오는 경기</h2></div>
+        <small>${briefing.schedule.length} games</small>
+      </div>
+      <div class="mobile-game-rail">
+        ${briefing.schedule.map((game) => `<article class="mobile-game-card">
+          <div><time>${h(game.date)} ${h(game.weekday)} · ${h(game.time)}</time><span>${h(game.status ?? '경기 예정')}</span></div>
+          <strong>${h(game.matchup)}</strong>
+          <p>${h(game.note)}</p>
+        </article>`).join('')}
+      </div>
+    </section>`;
+}
+
 function renderStories(briefing) {
   const sections = filterSections(briefing.sections, currentFilter);
   $('#storyList').innerHTML = sections
     .map((story, index) => {
       const teamClass = ['49ers', 'Chiefs', 'Patriots'].includes(story.team) ? `story-${story.team.toLowerCase()}` : '';
       return `
-      <article class="story ${teamClass}">
+      <article class="story ${teamClass}" id="story-detail-${h(story.id)}">
         <div class="story-number">${String(index + 1).padStart(2, '0')}</div>
         <div class="story-body">
           <span class="story-label">${h(story.label)}</span>
@@ -193,6 +237,7 @@ function render() {
   $('#editionTitle').textContent = `${formatDate(briefing.date)} NFL 브리핑`;
   $('#editionDek').textContent = briefing.dek;
   $('#leadStory').innerHTML = `<span class="eyebrow">${h(briefing.lead.kicker)}</span><h2 id="leadTitle">${h(briefing.lead.title)}</h2><p>${h(briefing.lead.summary)}</p>`;
+  renderMobileDigest(briefing);
   renderStories(briefing);
   renderTactics(briefing);
   renderHighlights(briefing);

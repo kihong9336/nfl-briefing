@@ -22,7 +22,7 @@
   <header class="site-header">
     <div class="masthead shell">
       <a class="brand" href="./" aria-label="NFL 브리핑 홈">
-        <span class="brand-mark">NB</span>
+        <span class="brand-mark"><img src="./assets/icons/apple-touch-icon.png" alt="" /></span>
         <span>
           <strong>NFL 브리핑</strong>
           <small>NEWS · CONTEXT · FILM</small>
@@ -55,6 +55,8 @@
 
       <section class="lead-story" id="leadStory" aria-labelledby="leadTitle"></section>
 
+      <section class="mobile-digest" id="mobileDigest" aria-label="오늘의 브리핑 빠른 탐색"></section>
+
       <div class="filter-row" aria-label="팀별 뉴스 필터">
         <button class="filter is-active" data-filter="all">전체</button>
         <button class="filter" data-filter="49ers">49ers</button>
@@ -81,6 +83,13 @@
       <span>공식 NFL 서비스가 아닌 독립 한국어 해설 아카이브</span>
     </div>
   </footer>
+
+  <nav class="mobile-tabbar" aria-label="모바일 빠른 이동">
+    <a class="is-active" href="#main"><span>01</span>오늘</a>
+    <a href="#storyList"><span>02</span>뉴스</a>
+    <a href="#mobileSchedule"><span>03</span>경기</a>
+    <a href="#tactics"><span>04</span>전술</a>
+  </nav>
 
   <script type="module" src="./src/app.js"></script>
 </body>
