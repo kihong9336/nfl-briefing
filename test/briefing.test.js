@@ -127,6 +127,20 @@ test('the site installs on iPhone with the selected football app icon', () => {
   }
 });
 
+test('the installed web app refreshes deployed assets instead of keeping a stale iPhone cache', () => {
+  const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
+  const worker = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
+
+  assert.match(index, /styles\.css\?v=[a-z0-9-]+/i);
+  assert.match(index, /src\/app\.js\?v=[a-z0-9-]+/i);
+  assert.match(app, /navigator\.serviceWorker\.register\('\.\/sw\.js'/);
+  assert.match(app, /updateViaCache:\s*'none'/);
+  assert.match(worker, /skipWaiting\(\)/);
+  assert.match(worker, /clients\.claim\(\)/);
+  assert.match(worker, /cache:\s*'no-store'/);
+});
+
 test('the mobile home uses an app-style digest without removing the full briefing', () => {
   const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');

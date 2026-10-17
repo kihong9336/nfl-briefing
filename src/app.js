@@ -1,4 +1,4 @@
-import { briefings } from './data.js';
+import { briefings } from './data.js?v=20261017-cachefix1';
 import {
   availableDates,
   briefingForDate,
@@ -6,12 +6,19 @@ import {
   filterTactics,
   neighboringDates,
   normalizeDateParam,
-} from './briefing.js';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js';
-import { renderTacticDiagram } from './tactic-visuals.js';
+} from './briefing.js?v=20261017-cachefix1';
+import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-cachefix1';
+import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-cachefix1';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' }).catch(() => {});
+  });
+}
+
 const params = new URLSearchParams(window.location.search);
 let currentDate = normalizeDateParam(params.get('date'), briefings);
 let currentFilter = params.get('team') || 'all';
