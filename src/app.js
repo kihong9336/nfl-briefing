@@ -1,4 +1,4 @@
-import { briefings } from './data.js?v=20261017-cachefix1';
+import { briefings } from './data.js?v=20261017-datefix1';
 import {
   availableDates,
   briefingForDate,
@@ -6,9 +6,9 @@ import {
   filterTactics,
   neighboringDates,
   normalizeDateParam,
-} from './briefing.js?v=20261017-cachefix1';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-cachefix1';
-import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-cachefix1';
+} from './briefing.js?v=20261017-datefix1';
+import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-datefix1';
+import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-datefix1';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;

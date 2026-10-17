@@ -224,8 +224,9 @@ a { color: inherit; }
   .brand strong { font: 800 21px/1 'Source Serif 4', serif; letter-spacing: -.8px; }
   .brand small { display: none; }
   .date-bar-inner { height: 44px; grid-template-columns: 38px 1fr 46px 38px; }
-  .date-chip { min-width: 102px; padding: 7px 12px; }
-  .date-chip span { font-size: 12px; }
+  .date-chip { display: grid; min-width: 102px; padding: 0 12px; align-items: center; }
+  .date-chip span { font-size: 12px; white-space: nowrap; }
+  .date-chip small { display: none; }
   .calendar-control { width: 48px; }
   .page-grid { padding-top: 12px; padding-bottom: 68px; }
   .edition-header { padding-bottom: 7px; border-bottom: 0; }
