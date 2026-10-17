@@ -1,5 +1,174 @@
 export const briefings = [
   {
+    "date": "2026-10-18",
+    "weekday": "일요일",
+    "edition": "2026 WEEK 42 · 검증 발행본",
+    "sample": false,
+    "dek": "2026년 10월 18일 07:41 KST 조회 기준으로 구단 공식 발표와 공식 일정 원문을 우선 확인했으며, 경기 전 변동 가능성이 있는 출전 여부는 확정 상태와 전망을 구분했다.",
+    "lead": {
+      "kicker": "오늘의 핵심",
+      "title": "A.J. 브라운 복귀와 세 응원팀의 경기 전 마지막 변수",
+      "summary": "패트리어츠는 A.J. 브라운을 부상자 명단에서 활성화했고, 치프스는 주전급 결장자가 많은 차저스의 보호 문제를 공략할 기회를 맞았다. 49ers는 5전 전승 흐름 속에서 제이든 대니얼스의 이중 위협과 워싱턴 러닝백 재편에 대응한다."
+    },
+    "sections": [
+      {
+        "id": "patriots-brown-returns",
+        "team": "Patriots",
+        "label": "로스터·공격",
+        "title": "A.J. 브라운 활성화, 제츠의 고빈도 블리츠를 벌줄 카드가 돌아왔다",
+        "summary": "뉴잉글랜드는 발목 고위 염좌로 네 경기를 빠진 와이드리시버 A.J. 브라운을 10월 17일 부상자 명단에서 53인 로스터로 복귀시켰다. 코너백 칼튼 데이비스 3세는 목 부상으로 아웃이고, 크리스천 곤살레스는 어깨 부상에서 풀 참가 후 경기 상태 지정 없이 복귀 준비를 마쳤다.",
+        "commentary": "브라운의 존재는 단순한 표적 추가가 아니다. 제츠가 맨 커버와 블리츠를 함께 쓰면 바깥 수비수는 안전 도움 없이 버텨야 하므로, 드레이크 메이가 압박 전에 매치업을 읽고 짧게 던져도 브라운의 캐치 후 전진과 몸싸움이 큰 이득으로 연결될 수 있다.",
+        "watch": "첫 두 드라이브에서 브라운의 스냅 비율과 정렬 위치를 먼저 보고, 제츠가 세이프티를 브라운 쪽으로 기울이는지 확인하자. 세이프티가 이동하면 반대쪽 일대일과 슬롯의 빠른 인브레이킹 루트가 열리는지가 핵심이다.",
+        "sources": [
+          {
+            "label": "Patriots 공식 로스터 분석",
+            "url": "https://www.patriots.com/news/roster-analysis-patriots-activate-wr-a-j-brown-for-sunday-s-game-vs-the-jets-in-week-6"
+          },
+          {
+            "label": "Patriots 공식 최종 부상 보고서",
+            "url": "https://www.patriots.com/news/week-6-injury-report-patriots-vs-jets"
+          },
+          {
+            "label": "Patriots 공식 전술 프리뷰",
+            "url": "https://www.patriots.com/news/patriots-gameplan-prepping-for-jets-blitz-happy-defense-and-key-matchups-in-week-6-matchup"
+          }
+        ]
+      },
+      {
+        "id": "chiefs-attack-chargers-protection",
+        "team": "Chiefs",
+        "label": "AFC 서부·패스러시",
+        "title": "치프스는 라이스 없이, 차저스는 양쪽 전선의 핵심 없이 맞붙는다",
+        "summary": "캔자스시티는 태클 조시 시먼스의 등 부상과 와이드리시버 라시 라이스의 햄스트링 부상으로 두 선수를 아웃 처리했다. 차저스는 오른쪽 태클 조 알트, 왼쪽 가드 카요데 아워시카, 와이드리시버 트레 해리스, 코너백 단테 잭슨, 세이프티 더윈 제임스가 모두 아웃이다.",
+        "commentary": "치프스 공격은 라이스가 빠져 중간 지역의 안정적인 체인 무버를 다른 조합으로 메워야 하지만, 수비 쪽 기회는 더 선명하다. 차저스의 오른쪽 태클과 왼쪽 가드 공백은 바깥 스피드 러시와 내부 스턴트를 동시에 부담스럽게 만들며, 저스틴 허버트가 이미 많은 압박을 받은 흐름을 더 악화시킬 수 있다.",
+        "watch": "조지 칼라프티스가 차저스의 대체 오른쪽 태클을 일대일로 공격하는지, 아니면 치프스가 태클과 가드 사이를 교차하는 스턴트로 보호 규칙을 흔드는지 보자. 공격에서는 라이스 대신 누가 세 번째 다운의 짧은 중간 루트를 맡는지도 중요하다.",
+        "sources": [
+          {
+            "label": "Chiefs 공식 경기 프리뷰와 최종 부상 상황",
+            "url": "https://www.chiefs.com/news/five-things-to-watch-on-sunday-chargers-vs-chiefs-x3265"
+          },
+          {
+            "label": "Chiefs 공식 경기 안내",
+            "url": "https://www.chiefs.com/news/how-to-watch-and-listen-week-6-chargers-vs-chiefs"
+          }
+        ]
+      },
+      {
+        "id": "49ers-contain-daniels",
+        "team": "49ers",
+        "label": "MNF 프리뷰",
+        "title": "5전 전승 49ers, 대니얼스의 탈출로를 닫아야 한다",
+        "summary": "샌프란시스코는 시애틀전 32대29 승리로 5승 무패를 기록했고, 워싱턴은 팔꿈치 부상에서 돌아온 제이든 대니얼스가 직전 경기에서 패스 199야드와 러시 103야드를 합쳐 총 302야드를 생산했다. 워싱턴의 팀 러싱 선두 자코리 크로스키메릿은 사타구니 부상으로 아웃이며 대니얼스는 왼쪽 팔꿈치로 목요일과 금요일 훈련에 모두 풀 참가했다.",
+        "commentary": "워싱턴의 전통적인 러닝백 물량은 줄었지만 대니얼스가 스크램블로 수비 숫자 계산을 다시 깨뜨릴 수 있다. 49ers는 무작정 엣지에서 안쪽으로 파고들기보다 러시 레인을 유지하고, 내부 압박으로 대니얼스를 바깥의 대기 중인 수비수 쪽으로 유도하는 편이 안전하다.",
+        "watch": "수비 엔드가 대니얼스보다 깊게 올라가 탈출 통로를 내주는지부터 확인하자. 이어 라인배커 한 명이 QB 러시를 감시하는지, 워싱턴이 라차드 화이트와 오스틴 에켈러의 짧은 패스로 그 감시자를 묶는지 보면 수비 계획을 읽을 수 있다.",
+        "sources": [
+          {
+            "label": "49ers 공식 Week 6 프리뷰",
+            "url": "https://www.49ers.com/news/5-things-to-know-49ers-week-6-matchup-vs-commanders-keena-turner-49ers-hof-induction"
+          },
+          {
+            "label": "Commanders 공식 토요일 경기 상태",
+            "url": "https://www.commanders.com/news/game-status-commanders-49ers-week-6"
+          }
+        ]
+      }
+    ],
+    "tactics": [
+      {
+        "id": "patriots-hot-read-vs-jets-blitz",
+        "team": "Patriots",
+        "label": "전술 교실",
+        "title": "블리츠의 빈자리로 즉시 던지는 핫 리드",
+        "concept": "핫 리드는 수비가 보호 인원보다 많은 러셔를 보내거나 특정 차단자를 감당하기 어렵게 만들 때, 쿼터백과 리시버가 미리 약속한 짧은 패스로 공을 빠르게 빼는 해법이다.",
+        "easy": "여러 사람이 한꺼번에 현관으로 몰려오면 문 앞에서 버티는 대신 옆 창구로 물건을 바로 넘기는 것과 비슷하다.",
+        "gameUse": "제츠는 공식 프리뷰 기준 블리츠 비율이 리그 2위였고 직전 경기에서 여덟 개의 색을 기록했다. 뉴잉글랜드가 실제로 어떤 콜을 쓸지는 확인되지 않았지만, 메이와 브라운이 압박 전 정렬을 공유해 빠른 일대일 패스로 전환하는 장면을 기대할 수 있다.",
+        "diagram": {
+          "kind": "blitz-hot-read",
+          "caption": "제츠가 라인배커와 니켈 수비수를 전진시킬 때, 브라운 또는 슬롯 리시버가 비워진 짧은 구역으로 즉시 꺾고 메이가 압박 도착 전에 던지는 일반 원리"
+        },
+        "breakdown": [
+          {
+            "label": "스냅 전 배치",
+            "text": "메이는 수비선 가까이에 선 라인배커와 니켈 수비수의 숫자, 세이프티 깊이, 브라운의 일대일 여부를 차례로 확인한다."
+          },
+          {
+            "label": "스냅 직후 움직임",
+            "text": "추가 러셔가 앞으로 출발하면 리시버는 긴 루트를 고집하지 않고 러셔가 떠난 짧은 안쪽 또는 바깥쪽 공간으로 빠르게 꺾는다."
+          },
+          {
+            "label": "쿼터백 판단",
+            "text": "메이는 보호가 감당할 수 없는 러셔를 확인한 순간 깊은 진행을 버리고, 가장 가까운 자유 수비수가 도착하기 전에 핫 리드로 공을 보낸다."
+          },
+          {
+            "label": "공의 결과",
+            "text": "짧은 완성 자체는 작은 이득이지만 브라운이 첫 태클을 견디면 블리츠 뒤에 수비 숫자가 부족해져 폭발적인 캐치 후 전진으로 바뀔 수 있다."
+          }
+        ],
+        "whyItWorks": "블리츠는 압박 인원을 늘리는 대신 짧은 패스 구역의 수비수를 줄인다. 공격이 그 빈자리를 빨리 찾으면 패스 보호가 오래 버틸 필요가 없고, 남은 수비수는 넓은 공간에서 강한 리시버를 혼자 태클해야 한다.",
+        "defenseCounter": "제츠는 블리츠처럼 보인 뒤 일부 러셔를 뒤로 빼는 시뮬레이티드 프레셔와 스냅 후 탬파2 전환으로 첫 핫 리드를 가로막을 수 있다. 메이는 단순히 숫자만 세지 말고 실제로 누가 러시하고 어느 세이프티가 깊은 절반을 맡는지 확인해야 한다.",
+        "watchOrder": [
+          "스냅 전 라인배커와 니켈 수비수가 라인 가까이 서는지 본다",
+          "스냅 뒤 실제로 전진하는 추가 러셔와 뒤로 빠지는 수비수를 구분한다",
+          "메이의 공이 두 박자 안에 나오고 브라운이 빈 구역으로 꺾는지 확인한다"
+        ],
+        "source": {
+          "label": "Patriots 공식 제츠 전술 프리뷰",
+          "url": "https://www.patriots.com/news/patriots-gameplan-prepping-for-jets-blitz-happy-defense-and-key-matchups-in-week-6-matchup"
+        }
+      }
+    ],
+    "highlights": [],
+    "schedule": [
+      {
+        "date": "10/19",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "New York Jets at New England Patriots",
+        "note": "A.J. 브라운의 실제 스냅 제한 여부와 제츠 블리츠에 대한 드레이크 메이의 빠른 처리 속도를 관찰한다."
+      },
+      {
+        "date": "10/19",
+        "weekday": "월",
+        "time": "05:25",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Chargers at Kansas City Chiefs",
+        "note": "차저스의 대체 공격 라인이 치프스의 엣지 러시와 스턴트를 버티는지, 치프스 공격은 라시 라이스의 중간 지역 역할을 누구에게 배분하는지 본다."
+      },
+      {
+        "date": "10/20",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Washington Commanders at San Francisco 49ers",
+        "note": "49ers가 제이든 대니얼스의 스크램블 레인을 통제하면서 러닝백 교체로 늘어날 수 있는 짧은 패스까지 함께 막는지가 관건이다."
+      }
+    ],
+    "leagueWide": [
+      {
+        "team": "Philadelphia Eagles",
+        "label": "쿼터백·부상자 명단",
+        "title": "제일런 허츠가 종아리 표재성 혈전으로 IR 이동",
+        "why": "필라델피아는 허츠를 부상자 명단에 올렸고 캐롤라이나전은 태너 맥키가 선발한다. 단순한 경기 당일 판단이 아니라 공격 구조와 NFC 순위 경쟁에 영향을 주는 중기 변수다.",
+        "url": "https://www.philadelphiaeagles.com/news/eagles-place-jalen-hurts-on-injured-reserve-sign-jaydon-blue-to-the-active-roster-2026-nfl-week-6-panthers"
+      },
+      {
+        "team": "Green Bay Packers",
+        "label": "로스터 재편",
+        "title": "새비온 윌리엄스 복귀, 수비 태클 두 명과 스카이 무어는 IR",
+        "why": "그린베이는 와이드리시버 새비온 윌리엄스를 활성화했지만 조너선 포드와 제이본 하그레이브, 스카이 무어를 부상자 명단에 올렸다. 공격에는 복귀 자원이 생긴 반면 얇아진 수비 전선의 로테이션이 댈러스전 핵심 약점이 된다.",
+        "url": "https://www.packers.com/news/packers-announce-roster-moves-oct-17-2026"
+      },
+      {
+        "team": "Baltimore Ravens",
+        "label": "쿼터백 부상",
+        "title": "라마 잭슨, 발목 부상으로 클리블랜드전 결장",
+        "why": "잭슨은 12일째 발목 부상으로 훈련하지 못해 두 경기 연속 빠지고 타일러 헌틀리가 다시 선발한다. 볼티모어는 QB 설계 러시와 즉흥적 폭발력이 줄어드는 대신 헌틀리 중심의 짧은 패스와 정돈된 드라이브 효율이 필요하다.",
+        "url": "https://www.baltimoreravens.com/news/lamar-jackson-injury-report-ravens-browns-sidelined-matt-hibner-broderick-washington"
+      }
+    ]
+  },
+  {
     "date": "2026-10-17",
     "weekday": "토요일",
     "edition": "2026 WEEK 6 · 검증 발행본",
