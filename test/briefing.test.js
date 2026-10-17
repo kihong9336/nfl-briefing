@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 
 import {
   availableDates,
@@ -102,6 +102,29 @@ test('published copy consistently announces the 08:00 KST update', () => {
   assert.match(data, /매일 오전 8시 업데이트/);
   assert.match(readme, /매일 오전 8시/);
   assert.doesNotMatch(publishedCopy, /12:00 KST|매일 낮 12시/);
+});
+
+test('the site installs on iPhone with the selected football app icon', () => {
+  const index = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const manifest = JSON.parse(readFileSync(new URL('../manifest.webmanifest', import.meta.url), 'utf8'));
+  const iconPaths = [
+    '../assets/icons/apple-touch-icon.png',
+    '../assets/icons/icon-192.png',
+    '../assets/icons/icon-512.png',
+  ];
+
+  assert.match(index, /rel="apple-touch-icon" href="\.\/assets\/icons\/apple-touch-icon\.png"/);
+  assert.match(index, /rel="manifest" href="\.\/manifest\.webmanifest"/);
+  assert.match(index, /name="apple-mobile-web-app-capable" content="yes"/);
+  assert.equal(manifest.name, 'NFL 브리핑');
+  assert.equal(manifest.display, 'standalone');
+  assert.equal(manifest.start_url, './');
+  assert.deepEqual(manifest.icons.map((icon) => icon.sizes), ['192x192', '512x512']);
+  for (const path of iconPaths) {
+    const url = new URL(path, import.meta.url);
+    assert.equal(existsSync(url), true, `${path} should exist`);
+    assert.ok(statSync(url).size > 1_000, `${path} should contain a real icon`);
+  }
 });
 
 test('published editions expose source links and hide the sample warning', () => {
