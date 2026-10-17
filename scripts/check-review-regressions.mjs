@@ -1,18 +1,23 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
+const base = (process.env.BASE_URL || 'http://127.0.0.1:4173').replace(/\/$/, '') + '/';
 const browser = await chromium.launch({channel:'chrome',headless:true});
 const page = await browser.newPage({viewport:{width:390,height:844},serviceWorkers:'block'});
 const errors=[]; page.on('pageerror',e=>errors.push(e.message));
 try {
- await page.goto('http://127.0.0.1:4175/?date=2026-10-17&team=Patriots');
+ await page.goto(base + '?date=2026-10-17&team=Patriots');
  await page.locator('.mobile-tabbar [href="#leagueWide"]').click();
  await page.waitForFunction(()=>location.hash==='#leagueWide');
  await page.locator('#olderButton').click();
  await page.locator('[data-filter="Chiefs"]').click();
  await page.goBack();
+ assert.equal(await page.locator('#datePicker').inputValue(),'2026-10-16');
+ assert.equal(await page.locator('.filter.is-active').getAttribute('data-filter'),'Patriots');
+ await page.goBack();
  assert.match(page.url(),/date=2026-10-17&team=Patriots/);
  assert.equal(await page.locator('#datePicker').inputValue(),'2026-10-17','Back restores date from URL');
  assert.equal(await page.locator('.filter.is-active').getAttribute('data-filter'),'Patriots');
+ await page.goForward();
  await page.goForward();
  assert.equal(await page.locator('#datePicker').inputValue(),'2026-10-16');
  assert.equal(await page.locator('.filter.is-active').getAttribute('data-filter'),'Chiefs');
@@ -23,7 +28,7 @@ try {
  await page.goForward();
  assert.equal(await page.locator('#storySheet').evaluate(e=>e.open),true,'Forward reopens detail');
  assert.equal(await page.locator('#storySheetContent h2').textContent(),title);
- await page.goto('http://127.0.0.1:4175/?date=2026-10-17');
+ await page.goto(base + '?date=2026-10-17');
  assert.ok(await page.locator('#leagueWide button[data-league-index]').count()>0,'league card opens local detail');
  await page.locator('#leagueWide button[data-league-index]').first().click();
  assert.match(await page.locator('#storySheetContent').innerText(),/보도 내용·해석\(기존 혼합 문안\)/);
@@ -45,7 +50,7 @@ try {
  await page.goBack();
  assert.equal(await page.locator('#leadStory [data-league-index]').count(),1,'roundup includes actual leagueWide item');
  assert.ok(await page.locator('#leadStory li').count()<=4);
- const expectedIds=await page.evaluate(async()=>{const {briefings}=await import('./src/data.js?v=20261017-mobile2');return briefings[0].sections.slice(0,3).map(s=>s.id);});
+ const expectedIds=await page.evaluate(async()=>{const {briefings}=await import('./src/data.js?v=20261017-context3');return briefings[0].sections.slice(0,3).map(s=>s.id);});
  assert.deepEqual(await page.locator('#leadStory [data-story-id]').evaluateAll(els=>els.map(e=>e.dataset.storyId)),expectedIds);
  await page.locator('#leadStory [data-league-index]').click();
  assert.equal(await page.locator('#storySheetContent h2').textContent(),expanded);

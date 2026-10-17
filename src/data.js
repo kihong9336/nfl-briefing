@@ -142,7 +142,7 @@ export const briefings = [
         "channel": "NFL 공식",
         "type": "전체 하이라이트 · 입문",
         "note": "Denver 수비가 다널드의 패스를 두 차례 가로채며 168야드 공격으로도 승리한 과정을 볼 수 있다. 연장 인터셉션에서 코너백이 리시버 뒤가 아니라 패스 길 앞으로 움직이는 순간과, 턴오버 뒤 공격이 무리하지 않고 결승 필드골 위치를 만드는 흐름을 확인하자.",
-        "url": "https://www.nfl.com/videos/seahawks-vs-broncos-highlights-week-6"
+        "url": "https://www.youtube.com/watch?v=6uFD3NGt0GE"
       }
     ],
     "schedule": [

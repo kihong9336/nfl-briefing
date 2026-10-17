@@ -5,7 +5,9 @@
 ## 현재 구현
 
 - 상단 날짜 레일과 달력 입력
-- 날짜별 고정 URL 쿼리 (`?date=YYYY-MM-DD`)
+- 인터랙티브 앱 날짜 선택: `?date=YYYY-MM-DD` (필터·다이얼로그 사용)
+- 공유용 정적 원문: `./editions/YYYY-MM-DD/` (JavaScript 없이 본문·날짜별 OG 메타데이터 제공)
+- 전체 정적 아카이브: `./editions/` — 앱 상단에서 원문·공유 링크 접근
 - 전체 / 49ers / Chiefs / Patriots 필터
 - 리그 핵심 뉴스, 팀 포커스, 해설, 관전 포인트
 - 공식 하이라이트 영역
@@ -39,9 +41,16 @@ npm test
 1. 매일 웹 검색 및 공식 출처 교차 검증
 2. 구조화된 브리핑 JSON 생성
 3. `publish-edition.mjs`로 데이터 검증·저장
-4. 전체 테스트 후 GitHub `main`에 push
+4. `npm test && npm run build`로 검증·정적 HTML 재생성 후 `src/data.js`와 `editions/`를 함께 staging (`git add src/data.js editions/`); 코드 변경은 해당 파일도 명시하여 staging하고 검토 후 GitHub `main`에 push
 5. GitHub Pages 배포 확인
-6. Telegram에는 제목·핵심 3줄·해당 날짜 URL만 전송
+6. Telegram에는 제목·핵심 3줄·정적 공유 URL (`https://kihong9336.github.io/nfl-briefing/editions/YYYY-MM-DD/`)만 전송. `?date=`는 앱 탐색용이며 날짜별 소셜 미리보기 주소가 아닙니다.
+
+## 영상 링크 발행 원칙
+
+- `highlights[].url`과 `tactics[].video.url`은 해당 경기·장면의 **NFL 또는 구단 공식 유튜브 영상 직접 링크**를 우선한다.
+- 채널 진위, 영상 제목·시즌·상대 팀 일치를 확인한다. 검색결과 페이지나 채널 홈을 개별 영상 링크로 대신하지 않는다.
+- 적합한 공식 유튜브 영상이 없거나 확인할 수 없을 때만 NFL·구단 공식 사이트 영상으로 대체하고 플랫폼을 명시한다. 추측한 영상 ID·재생 시점은 넣지 않는다.
+- 기존 발행본의 영상도 교체할 때에는 동일 경기·내용임을 확인한 뒤 변경한다.
 
 ## 공개 배포
 
@@ -69,7 +78,7 @@ npm test
 npm install --no-save --package-lock=false playwright
 python3 -m http.server 4175
 # 별도 터미널
-node scripts/check-redesign.mjs
+BASE_URL=http://localhost:4175 node scripts/check-mobile-ux.mjs
 npm test
 ```
 Chrome 채널로 390/375/320/1280px, 상세 닫기·뒤로가기·포커스 복귀·팀 필터·구판·날짜 변경·오버플로를 검사합니다.

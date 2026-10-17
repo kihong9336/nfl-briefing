@@ -307,7 +307,7 @@ body.sheet-open { overflow: hidden; }
   .watch { margin-left: -44px; }
   .video-card { grid-template-columns: 1fr; }
   .video-poster { min-height: 190px; }
-  .mobile-tabbar { position: fixed; z-index: 30; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(4, 1fr); padding: 7px 8px calc(7px + env(safe-area-inset-bottom)); border-top: 1px solid #d6d0c4; background: rgba(255,254,250,.96); box-shadow: 0 -8px 24px rgba(20,18,15,.08); backdrop-filter: blur(18px); }
+  .mobile-tabbar { position: fixed; z-index: 30; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 7px 8px calc(7px + env(safe-area-inset-bottom)); border-top: 1px solid #d6d0c4; background: rgba(255,254,250,.96); box-shadow: 0 -8px 24px rgba(20,18,15,.08); backdrop-filter: blur(18px); }
   .mobile-tabbar a { position: relative; display: grid; min-height: 47px; place-items: center; gap: 1px; border-radius: 10px; color: #77716a; font-size: 11px; font-weight: 800; text-decoration: none; }
   .mobile-tabbar a span { color: #999289; font-size: 9px; letter-spacing: .08em; }
   .mobile-tabbar a.is-active { background: #f5e4e6; color: var(--red); }
@@ -320,6 +320,13 @@ body.sheet-open { overflow: hidden; }
   * { transition: none !important; }
 }
 
+/* A single concise thought may wrap: never hide its conclusion on mobile. */
+.story-takeaway, .tactic-trigger { display: block; margin: 8px 0; max-width: 100%; white-space: normal; overflow-wrap: anywhere; font-size: 13px; line-height: 1.7; color: var(--muted); }
+.story-takeaway small { display: inline; color: var(--red-dark); font-size: 10px; font-weight: 700; }
+.story-stage { border-top: 1px solid var(--rule); padding-block: 8px; }
+.story-stage p { margin: 0 0 14px; font-size: 15px; line-height: 1.72; }
+.archive-control { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 11px; color: var(--muted); }
+.archive-control select { min-height: 44px; max-width: 100%; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 8px; background: var(--white); color: var(--ink); font: inherit; }
 /* Mobile-first reading order: one card and one canonical detail per story. */
 .page-grid { display: block; max-width: 1000px; }
 .briefing-column { min-width: 0; }

@@ -1,12 +1,12 @@
-import { briefings } from './data.js?v=20261017-mobile2';
+import { briefings } from './data.js?v=20261017-context3';
 import {
   availableDates,
   briefingForDate,
   neighboringDates,
   normalizeDateParam,
-} from './briefing.js?v=20261017-mobile2';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-mobile2';
-import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-mobile2';
+} from './briefing.js?v=20261017-context3';
+import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-context3';
+import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-context3';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
@@ -37,7 +37,7 @@ function setUrl() {
   next.searchParams.set('date', currentDate);
   if (currentFilter === 'all') next.searchParams.delete('team');
   else next.searchParams.set('team', currentFilter);
-  window.history.replaceState({}, '', next);
+  window.history.pushState({}, '', next);
 }
 
 function changeDate(date) {
@@ -58,6 +58,18 @@ function renderDates() {
     button.addEventListener('click', () => changeDate(button.dataset.date));
   });
 
+  const groups = new Map();
+  for (const date of dates) {
+    const edition = briefingForDate(date, briefings);
+    // Read only supplied metadata, never infer NFL weeks from calendar dates.
+    const declared = String(edition.edition ?? '').match(/(\d{4})\s+WEEK\s+(\d+)/i);
+    const season = edition.season ?? declared?.[1];
+    const week = edition.week ?? declared?.[2];
+    const group = season && week ? `${season} 시즌 · ${week}주차` : '주차 미지정 · 기타 발행본';
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(edition);
+  }
+  $('#archiveSelect').innerHTML = [...groups].map(([group, editions]) => `<optgroup label="${h(group)}">${editions.map(edition => `<option value="${h(edition.date)}" ${edition.date === currentDate ? 'selected' : ''}>${h(edition.date)}${edition.sample === false ? '' : ' · 샘플'}</option>`).join('')}</optgroup>`).join('');
   const neighbors = neighboringDates(currentDate, briefings);
   $('#olderButton').disabled = !neighbors.older;
   $('#newerButton').disabled = !neighbors.newer;
@@ -95,7 +107,7 @@ function showDetailSheet(detail, restore = false) {
   storySheetContent.innerHTML = `
     <span class="story-label">${h(label)}</span>
     <h2>${h(plainTitle(title))}</h2>
-    ${blocks.map((block) => `<section class="${block.emphasis ? 'sheet-analysis' : ''}"><strong>${h(block.label)}</strong><p>${h(block.text)}</p></section>`).join('')}
+    ${blocks.map((block, index) => `<details class="story-stage ${block.emphasis ? 'sheet-analysis' : ''}" ${index === 0 ? 'open' : ''}><summary>${h(block.label)}</summary><p>${h(block.text)}</p></details>`).join('')}
     ${sources.length ? `<div class="story-sources">${sources.map((source) => `<a href="${h(safeHttpsUrl(source.url))}" target="_blank" rel="noreferrer">↗ ${h(source.label)}${source.publishedAt ? ` · 원문 게시 ${h(source.publishedAt)}` : ''}</a>`).join('')}</div>` : ''}`;
   document.body.classList.add('sheet-open');
   storySheetContent.insertAdjacentHTML('beforeend', `<details class="glossary"><summary>용어 도움말 · 탭하여 펼치기</summary><dl><dt>FP</dt><dd>훈련 전면 참가</dd><dt>LP</dt><dd>훈련 제한 참가</dd><dt>DNP</dt><dd>훈련 불참</dd><dt>out</dt><dd>해당 경기 결장</dd><dt>questionable</dt><dd>경기 출전 여부 불확실</dd></dl><p>훈련 참가와 경기 출전 상태는 다릅니다. 이 설명은 기사에 보도된 상태를 바꾸지 않습니다.</p></details>`);
@@ -110,9 +122,9 @@ function openStorySheet(story) {
     label: story.label || meta.label,
     title: story.title,
     blocks: [
-      { label: '보도 요약', text: story.summary },
-      { label: '해석 · 꿀봉의 해설', text: story.commentary, emphasis: true },
-      { label: '관전 제안 · 영상 독립 검증 아님', text: story.watch },
+      { label: '무슨 일인가 · 보도 요약', text: story.summary },
+      { label: '왜 중요한가 · 해석', text: story.commentary, emphasis: true },
+      { label: '경기에서 볼 것 · 관전 제안', text: story.watch },
     ],
     sources: [...(story.sources ?? []), ...(story.update?.evidence ? [{label: '변경 근거', url: story.update.evidence}] : [])],
   });
@@ -134,8 +146,16 @@ function renderRoundup(briefing) {
   bindStoryButtons($('#leadStory'), stories);
   bindLeagueButtons($('#leadStory'), leagueItems);
 }
+function shortExtract(text) {
+  return String(text ?? '').trim().match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || String(text ?? '').trim();
+}
+function takeaway(item) {
+  const explicit = typeof item.takeaway === 'string' && item.takeaway.trim();
+  const text = explicit || shortExtract(item.commentary || item.why);
+  return text ? `<p class="story-takeaway"><small>${explicit ? '핵심' : item.why ? '보도·해석 혼합 발췌' : '해설 발췌'}</small> ${h(text)}</p>` : '';
+}
 function storyCard(story) {
-  return `<article class="story story-${h(story.team.toLowerCase())}"><button class="story-card-button" data-story-id="${h(story.id)}"><span class="story-label">${h(story.label)}</span>${story.update?.evidence && ['new','status-change','followup'].includes(story.update.kind) ? `<span class="update-badge"> · ${h({new:'새 소식','status-change':'상태 변화',followup:'후속'}[story.update.kind])}</span>` : ''}<h3>${h(plainTitle(story.title))}</h3><span class="card-action">보도 요약 · 해석 읽기 →</span></button></article>`;
+  return `<article class="story story-${h(story.team.toLowerCase())}"><button class="story-card-button" data-story-id="${h(story.id)}"><span class="story-label">${h(story.label)}</span>${story.update?.evidence && ['new','status-change','followup'].includes(story.update.kind) ? `<span class="update-badge"> · ${h({new:'새 소식','status-change':'상태 변화',followup:'후속'}[story.update.kind])}</span>` : ''}<h3>${h(plainTitle(story.title))}</h3>${takeaway(story)}<span class="card-action">보도 요약 · 해석 읽기 →</span></button></article>`;
 }
 function renderStories(briefing) {
   const stories = briefing.sections.filter(story => story.team !== 'NFL' && (currentFilter === 'all' || story.team === currentFilter));
@@ -168,7 +188,7 @@ function renderTactics(briefing) {
           <header class="tactic-card-header">
             <span class="story-label">${h(item.label)}</span>
             <h3>${h(plainTitle(item.title))}</h3>
-            <p>${h(item.concept)}</p>
+            <p class="tactic-trigger"><strong>관전 포인트</strong> ${h(shortExtract(item.watchOrder?.[0] || item.gameUse))}</p>
           </header>
           <div class="diagram-lesson">
             <figure class="tactic-figure">
@@ -183,6 +203,7 @@ function renderTactics(briefing) {
             </div>
           </div>
           <div class="teaching-grid">
+            <section><span>전술 개념</span><p>${h(item.concept)}</p></section>
             <section><span>쉽게 말하면</span><p>${h(item.easy)}</p></section>
             <section><span>왜 통하는가</span><p>${h(item.whyItWorks ?? item.concept)}</p></section>
             <section><span>수비의 대응</span><p>${h(item.defenseCounter ?? '실제 경기 사례와 함께 보강할 예정인 과거 디자인 샘플입니다.')}</p></section>
@@ -259,7 +280,7 @@ function renderLeagueWide(briefing) {
     <h2>리그 뉴스</h2>
     <p class="league-wide-dek">팀 필터와 관계없이 보는 리그 소식</p>
     ${leagueStories.map(storyCard).join('')}<div class="quick-hit-list">
-      ${items.map((item, index) => `<article class="quick-hit"><button class="story-card-button" data-league-index="${index}"><span>${h(item.label)}</span><h3>${h(plainTitle(item.title))}</h3><small>보도 내용·해석 읽기 →</small></button><a href="${h(safeHttpsUrl(item.url))}" target="_blank" rel="noreferrer">출처 원문 ↗</a></article>`).join('')}
+      ${items.map((item, index) => `<article class="quick-hit"><button class="story-card-button" data-league-index="${index}"><span>${h(item.label)}</span><h3>${h(plainTitle(item.title))}</h3>${takeaway(item)}<small>보도 내용·해석 읽기 →</small></button><a href="${h(safeHttpsUrl(item.url))}" target="_blank" rel="noreferrer">출처 원문 ↗</a></article>`).join('')}
     </div>`;
   bindStoryButtons(section, leagueStories);
   bindLeagueButtons(section, items);
@@ -272,6 +293,7 @@ function render() {
   $('#editionMeta').innerHTML = `<span>${h(briefing.edition.replace('검증 발행본', '일일 브리핑'))}</span><time>${h(briefing.date.replaceAll('-', '.'))} · ${h(briefing.weekday)}</time>`;
   $('#editionTitle').textContent = `${formatDate(briefing.date)} NFL 브리핑`;
   $('#editionDek').textContent = briefing.dek;
+  $('#editionShare').setAttribute('href', `./editions/${briefing.date}/`);
   renderRoundup(briefing);
   renderStories(briefing);
   renderTactics(briefing);
@@ -285,6 +307,7 @@ function render() {
   document.title = `${formatDate(briefing.date)} NFL 브리핑`;
 }
 
+$('#archiveSelect').addEventListener('change', event => changeDate(event.target.value));
 $('#datePicker').addEventListener('change', (event) => changeDate(event.target.value));
 $('#storySheetClose').addEventListener('click', closeStorySheet);
 storySheet.addEventListener('click', (event) => {

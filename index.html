@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20261017-mobile2" />
+  <link rel="stylesheet" href="./styles.css?v=20261017-context3" />
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -43,14 +43,16 @@
     </div>
   </header>
 
-  <div class="demo-notice" id="demoNotice">현재 화면은 디자인 검증용 샘플입니다. 실제 뉴스 자동화 연결 전에는 사실 정보로 사용하지 않습니다.</div>
+  <div class="demo-notice" id="demoNotice" hidden>현재 화면은 디자인 검증용 샘플입니다. 실제 뉴스 자동화 연결 전에는 사실 정보로 사용하지 않습니다.</div>
 
   <main id="main" class="shell page-grid">
     <article class="briefing-column">
       <header class="edition-header">
+        <label class="archive-control" for="archiveSelect">시즌 · 주차 아카이브 <select id="archiveSelect" aria-label="시즌과 주차별 발행본"></select></label>
         <div class="edition-meta" id="editionMeta"></div>
         <h1 id="editionTitle">오늘의 NFL 브리핑</h1>
         <p id="editionDek"></p>
+        <nav aria-label="원문과 공유"><a href="./editions/">전체 원문 아카이브</a> · <a id="editionShare" href="./editions/">이 날짜 공유용 원문</a></nav>
       </header>
 
       <section class="lead-story" id="leadStory" aria-labelledby="leadTitle"></section>
@@ -95,11 +97,12 @@
 
   <nav class="mobile-tabbar" aria-label="모바일 빠른 이동">
     <a class="is-active" href="#main"><span>01</span>오늘</a>
-    <a href="#leagueWide"><span>02</span>리그</a>
-    <a href="#scheduleBoard"><span>03</span>경기</a>
-    <a href="#tactics"><span>04</span>전술</a>
+    <a href="#scheduleBoard"><span>02</span>경기</a>
+    <a href="#leagueWide"><span>03</span>리그</a>
+    <a href="#favoriteTeams"><span>04</span>내 팀</a>
+    <a href="#tactics"><span>05</span>전술</a>
   </nav>
 
-  <script type="module" src="./src/app.js?v=20261017-mobile2"></script>
+  <script type="module" src="./src/app.js?v=20261017-context3"></script>
 </body>
 </html>
