@@ -1,4 +1,4 @@
-import { briefings } from './data.js?v=20261017-datefix1';
+import { briefings } from './data.js?v=20261017-sheetfix1';
 import {
   availableDates,
   briefingForDate,
@@ -6,12 +6,14 @@ import {
   filterTactics,
   neighboringDates,
   normalizeDateParam,
-} from './briefing.js?v=20261017-datefix1';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-datefix1';
-import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-datefix1';
+} from './briefing.js?v=20261017-sheetfix1';
+import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-sheetfix1';
+import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-sheetfix1';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
+const storySheet = $('#storySheet');
+const storySheetContent = $('#storySheetContent');
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -74,6 +76,27 @@ function teamMeta(team) {
   return teams[team] ?? { code: team.slice(0, 3).toUpperCase(), label: team };
 }
 
+function closeStorySheet() {
+  if (storySheet.open) storySheet.close();
+  document.body.classList.remove('sheet-open');
+}
+
+function openStorySheet(story) {
+  const meta = teamMeta(story.team);
+  storySheetContent.innerHTML = `
+    <span class="story-label">${h(story.label || meta.label)}</span>
+    <h2>${h(story.title)}</h2>
+    <section><strong>핵심 요약</strong><p>${h(story.summary)}</p></section>
+    <section class="sheet-analysis"><strong>꿀봉의 해설</strong><p>${h(story.commentary)}</p></section>
+    <section><strong>경기에서 볼 것</strong><p>${h(story.watch)}</p></section>
+    <div class="story-sources">
+      ${(story.sources ?? []).map((source) => `<a href="${h(safeHttpsUrl(source.url))}" target="_blank" rel="noreferrer">↗ ${h(source.label)}</a>`).join('')}
+    </div>`;
+  document.body.classList.add('sheet-open');
+  storySheet.showModal();
+  $('#storySheetClose').focus();
+}
+
 function renderMobileDigest(briefing) {
   const stories = filterSections(briefing.sections, currentFilter);
   $('#mobileDigest').innerHTML = `
@@ -84,13 +107,13 @@ function renderMobileDigest(briefing) {
     <div class="digest-story-rail" aria-label="핵심 뉴스 빠른 탐색">
       ${stories.map((story, index) => {
         const meta = teamMeta(story.team);
-        return `<a class="digest-card digest-${h(story.team.toLowerCase())}" href="#story-detail-${h(story.id)}">
+        return `<button type="button" class="digest-card digest-${h(story.team.toLowerCase())}" data-story-id="${h(story.id)}">
           <div class="digest-card-top"><b>${h(meta.code)}</b><span>${String(index + 1).padStart(2, '0')}</span></div>
           <small>${h(story.label || meta.label)}</small>
           <strong>${h(story.title)}</strong>
           <p>${h(story.summary)}</p>
-          <em>전체 해설 보기 ↓</em>
-        </a>`;
+          <em>전체 해설 보기</em>
+        </button>`;
       }).join('')}
     </div>
     <section class="mobile-schedule" id="mobileSchedule" aria-labelledby="mobileScheduleTitle">
@@ -106,6 +129,13 @@ function renderMobileDigest(briefing) {
         </article>`).join('')}
       </div>
     </section>`;
+
+  $('#mobileDigest').querySelectorAll('[data-story-id]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const story = stories.find((item) => item.id === button.dataset.storyId);
+      if (story) openStorySheet(story);
+    });
+  });
 }
 
 function renderStories(briefing) {
@@ -258,6 +288,11 @@ function render() {
 }
 
 $('#datePicker').addEventListener('change', (event) => changeDate(event.target.value));
+$('#storySheetClose').addEventListener('click', closeStorySheet);
+storySheet.addEventListener('click', (event) => {
+  if (event.target === storySheet) closeStorySheet();
+});
+storySheet.addEventListener('close', () => document.body.classList.remove('sheet-open'));
 document.querySelectorAll('.filter').forEach((button) => {
   button.addEventListener('click', () => {
     currentFilter = button.dataset.filter;

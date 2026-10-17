@@ -159,6 +159,14 @@ test('the mobile home uses an app-style digest without removing the full briefin
   assert.match(css, /scroll-snap-type:\s*x mandatory/);
   assert.match(css, /padding-bottom:\s*calc\([^;]*safe-area-inset-bottom/);
   assert.match(css, /\.mobile-tabbar/);
+  assert.match(index, /id="storySheet"/);
+  assert.match(index, /id="storySheetClose"/);
+  assert.match(app, /data-story-id/);
+  assert.match(app, /storySheet\.showModal\(\)/);
+  assert.match(app, /storySheetContent/);
+  assert.doesNotMatch(app, /class="digest-card[^\"]*" href="#story-detail-/);
+  assert.match(css, /\.story-sheet::backdrop/);
+  assert.match(css, /\.story-sheet-bar\s*\{[^}]*position:\s*sticky/s);
   assert.match(css, /\.date-chip\s*\{[^}]*display:\s*grid[^}]*align-items:\s*center/s);
   assert.match(css, /\.date-chip small\s*\{[^}]*display:\s*none/s);
   assert.match(css, /\.filter-row\s*\{[^}]*top:\s*98px/s);
