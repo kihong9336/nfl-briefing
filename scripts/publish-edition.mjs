@@ -6,6 +6,7 @@ import { pathToFileURL } from 'node:url';
 
 import { briefings } from '../src/data.js';
 import { serializeBriefings, upsertEdition } from '../src/publish.js';
+import { applyVideoPolicy } from '../src/video-policy.js';
 import { buildPages } from './build-pages.mjs';
 
 const inputPath = process.argv[2];
@@ -15,7 +16,8 @@ if (!inputPath) {
 }
 
 const absoluteInput = resolve(inputPath);
-const edition = JSON.parse(await readFile(absoluteInput, 'utf8'));
+const { edition, warnings } = applyVideoPolicy(JSON.parse(await readFile(absoluteInput, 'utf8')));
+for (const warning of warnings) console.warn(warning);
 const next = upsertEdition(briefings, edition);
 const outputUrl = new URL('../src/data.js', import.meta.url);
 await writeFile(outputUrl, serializeBriefings(next), 'utf8');

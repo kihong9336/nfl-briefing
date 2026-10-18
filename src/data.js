@@ -65,17 +65,17 @@ export const briefings = [
     "highlights": [
       {
         "title": "Jets vs. Patriots Full Highlights | NFL Week 6",
-        "channel": "Patriots 공식",
+        "channel": "NFL 공식 YouTube",
         "type": "전체 하이라이트 · 입문",
         "note": "메이의 세 차례 터치다운 패스와 Jets의 추격, 4쿼터 인터셉션까지 경기 흐름을 확인할 수 있다. 득점 장면만 보지 말고 Patriots 공격 라인이 부상 이후 포켓 폭을 어떻게 유지하는지도 함께 보자.",
-        "url": "https://www.patriots.com/video/jets-vs-patriots-full-highlights-nfl-week-6"
+        "url": "https://www.youtube.com/watch?v=CDcGaEkMy6s"
       },
       {
         "title": "Charles Woods' first NFL interception occurs on Geno Smith's errant deep ball",
-        "channel": "Patriots 공식",
+        "channel": "NFL 공식 YouTube",
         "type": "단일 플레이 · 수비 판독",
         "note": "Jets의 추격을 끊은 4쿼터 인터셉션 장면이다. 공만 따라가지 말고 우즈가 타이트엔드의 진행 방향과 쿼터백 시선을 읽고 패스 길 앞으로 이동하는 순서를 관찰하자.",
-        "url": "https://www.patriots.com/video/charles-woods-first-nfl-interception-occurs-on-geno-smith-s-errant-deep-ball"
+        "url": "https://www.youtube.com/watch?v=QgWZbdpJHMY"
       }
     ],
     "schedule": [

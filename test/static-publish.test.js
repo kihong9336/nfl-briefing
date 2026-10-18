@@ -12,7 +12,7 @@ test('build is deterministic and publisher automatically regenerates all static 
   const temp = await mkdtemp(join(tmpdir(), 'nfl-static-'));
   try {
     for (const dir of ['src', 'scripts']) await mkdir(join(temp, dir));
-    for (const file of ['package.json', 'src/data.js', 'src/publish.js', 'src/publication-guard.js', 'src/static-pages.js', 'scripts/publish-edition.mjs', 'scripts/build-pages.mjs']) await cp(join(root, file), join(temp, file));
+    for (const file of ['package.json', 'src/data.js', 'src/publish.js', 'src/publication-guard.js', 'src/video-policy.js', 'src/static-pages.js', 'scripts/publish-edition.mjs', 'scripts/build-pages.mjs']) await cp(join(root, file), join(temp, file));
     execFileSync(process.execPath, ['scripts/build-pages.mjs'], { cwd: temp });
     const original = await readFile(join(temp, 'editions/index.html'), 'utf8');
     execFileSync(process.execPath, ['scripts/build-pages.mjs'], { cwd: temp });
