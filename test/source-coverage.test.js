@@ -8,6 +8,16 @@ import { auditSourceCoverage } from '../src/source-coverage.js';
 const date = '2026-10-18';
 const domains = ['espn.com', 'apnews.com', 'cbssports.com', 'nfl.com'];
 const row = (domain, status = 'retrieved') => ({ name: domain, domain, status, url: `https://${domain}/story`, checkedAt: `${date}T12:00:00+09:00`, note: 'checked' });
+test('www prefix and bare host are equivalent but other subdomains are not', () => {
+ for(const domain of domains) {
+  const data=audit(); const i=domains.indexOf(domain);data.coverage[i].url=`https://www.${domain}/news`;
+  assert.equal(auditSourceCoverage(data).status,'complete');
+  data.coverage[i].domain=`www.${domain}`;data.coverage[i].url=`https://${domain}/news`;
+  assert.equal(auditSourceCoverage(data).status,'complete');
+ }
+ const data=audit();data.coverage[0].url='https://evil.espn.com/news';
+ assert.throws(()=>auditSourceCoverage(data),/domain/);
+});
 test('official-only narrow audit rejected and repeated subdomains collapse', () => {
   assert.throws(() => auditSourceCoverage({ date, coverage: ['nfl.com', 'www.nfl.com', 'patriots.com', 'chiefs.com'].map(d => row(d)) }), /four|4/);
   const data = audit(); data.coverage.push(row('www.espn.com'));

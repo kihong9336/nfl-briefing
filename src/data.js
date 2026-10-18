@@ -1,5 +1,156 @@
 export const briefings = [
   {
+    "date": "2026-10-19",
+    "weekday": "월요일",
+    "edition": "2026 WEEK 6 · 검증 발행본",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 6,
+    "dek": "10월 19일 오전 7시 38분 KST 조회 기준이다. NFL·구단 공식 자료를 우선하고 CBS·NBC·AP·Yahoo 원문과 대조했으며, ESPN은 로봇 검증으로 본문 접근이 제한됐다. 종료 경기와 확정된 출전 상태만 기사로 채택하고 진행 중인 Chiefs 경기는 일정 보드에만 표시했다.",
+    "lead": {
+      "kicker": "오늘의 핵심",
+      "title": "Patriots 3연승, 49ers는 유스첵 복귀와 전력 공백을 함께 맞는다",
+      "summary": "뉴잉글랜드는 Jets를 26-19로 꺾어 4승 2패가 됐고, 샌프란시스코는 Commanders전을 앞두고 카일 유스첵의 복귀 가능성을 확인한 반면 디보 새뮤얼과 닉 보사의 결장을 확정했다."
+    },
+    "sections": [
+      {
+        "id": "patriots-jets-week6-win",
+        "team": "Patriots",
+        "label": "경기 결과 · AFC East",
+        "title": "메이 3TD와 레드존 수비, Patriots가 Jets를 26-19로 제압",
+        "summary": "뉴잉글랜드는 현지 10월 18일 Jets를 26-19로 이겨 4승 2패와 3연승을 기록했다. 드레이크 메이는 18회 성공 32회 시도, 235야드와 터치다운 3개를 기록했고, 수비는 4쿼터 찰스 우즈의 인터셉션을 포함해 Jets의 레드존 기회를 끝까지 터치다운으로 연결시키지 않았다. 공격 라인 세 명이 경기 중 다친 상황에서도 승리를 지켰다.",
+        "commentary": "이 경기는 총야드보다 중요한 상황별 효율의 차이를 보여준다. Patriots 공격은 두 차례 펌블과 라인 부상으로 흐름을 끊었지만 메이가 포켓 밖에서 시간을 벌어 득점 패스를 만들었고, 수비는 Jets가 필드 중앙까지 전진한 뒤 마지막 짧은 공간에서 선택지를 줄였다. 다만 마이크 브레이블 감독이 경기 뒤 경기력이 좋아지지 않았다고 평가한 만큼, 3연승을 공격 완성의 증거로 보기보다 위기 상황에서 버틴 결과로 보는 편이 정확하다.",
+        "watch": "하이라이트에서는 첫째 메이가 압박을 피해 던질 시간을 연장하는 장면, 둘째 교체 공격 라인의 안쪽 간격, 셋째 Jets가 레드존에서 짧은 러닝과 패스를 선택할 때 Patriots 수비가 골라인 앞 공간을 어떻게 좁히는지 순서대로 보자. A.J. 브라운은 IR 복귀전에서 10번 표적을 받았지만 3리셉션 27야드에 그쳐 메이와의 타이밍은 다음 경기의 과제로 남았다.",
+        "sources": [
+          {
+            "label": "Patriots 공식 경기 기록",
+            "url": "https://www.patriots.com/news/gamebook-jets-at-patriots-week-6"
+          },
+          {
+            "label": "Patriots 공식 경기 후 기자회견",
+            "url": "https://www.patriots.com/news/new-england-patriots-postgame-quotes-10-18-x5479"
+          },
+          {
+            "label": "CBS Sports·AP 경기 리캡",
+            "url": "https://www.cbssports.com/nfl/news/drake-maye-powers-injury-depleted-patriots-past-jets-26-19/"
+          }
+        ],
+        "eventKey": "2026-week6-patriots-jets-result",
+        "takeaway": "3연승의 기반은 메이의 3TD와 레드존 수비였지만 공격 라인 부상과 두 차례 펌블은 다음 경기까지 점검해야 한다."
+      },
+      {
+        "id": "49ers-juszczyk-return-week6",
+        "team": "49ers",
+        "label": "최종 경기 상태",
+        "title": "유스첵은 복귀 전망, 새뮤얼·보사는 Commanders전 OUT",
+        "summary": "49ers 공식 최종 발표에서 풀백 카일 유스첵은 무릎 부상으로 Seattle전을 쉰 뒤 별도 경기 상태 없이 복귀가 예상된다. 디보 새뮤얼은 햄스트링, 닉 보사는 무릎·종아리, 개럿 왈로는 햄스트링, 마키스 시글은 발목 부상으로 OUT이다. 마이크 에번스와 크리스천 커크를 포함한 여섯 명은 Questionable이며 최종 액티브 명단은 킥오프 90분 전에 확정된다.",
+        "commentary": "유스첵의 복귀는 단순히 러너 한 명을 더하는 변화가 아니다. 49ers는 풀백을 백필드와 라인 끝, 슬롯 사이에 이동시켜 수비가 인원 대응을 먼저 드러내게 만들고, 같은 인원으로 러닝과 플레이액션을 연결한다. 반면 보사가 빠진 수비는 제이든 대니얼스를 무리하게 쫓다가 바깥 탈출로를 내주지 않도록 네 명의 러시 레인을 균형 있게 유지해야 한다.",
+        "watch": "공격에서는 유스첵이 첫 두 드라이브부터 모션과 리드 블록에 정상적으로 참여하는지 확인하고, 마이크 에번스와 크리스천 커크의 액티브 여부에 따라 패스 인원 구성이 어떻게 달라지는지 보자. 수비에서는 보사 대신 선 엣지 수비수가 안쪽으로 급하게 파고들지 않고 대니얼스의 바깥 스크램블 길을 지키는지가 핵심이다.",
+        "sources": [
+          {
+            "label": "49ers 공식 최종 경기 상태",
+            "url": "https://www.49ers.com/news/kyle-juszczyk-available-deebo-ruled-out-vs-commanders-in-week-6-wasvssf"
+          },
+          {
+            "label": "49ers 공식 경기 센터",
+            "url": "https://www.49ers.com/game-day/2026/reg-week6/commanders-at-49ers/"
+          }
+        ],
+        "eventKey": "2026-week6-49ers-juszczyk-return-status",
+        "takeaway": "유스첵 복귀는 공격의 인원 위장을 회복시키지만 보사와 새뮤얼의 결장은 양쪽 핵심 역할에 공백을 남긴다."
+      }
+    ],
+    "tactics": [],
+    "highlights": [
+      {
+        "title": "Jets vs. Patriots Full Highlights | NFL Week 6",
+        "channel": "Patriots 공식",
+        "type": "전체 하이라이트 · 입문",
+        "note": "메이의 세 차례 터치다운 패스와 Jets의 추격, 4쿼터 인터셉션까지 경기 흐름을 확인할 수 있다. 득점 장면만 보지 말고 Patriots 공격 라인이 부상 이후 포켓 폭을 어떻게 유지하는지도 함께 보자.",
+        "url": "https://www.patriots.com/video/jets-vs-patriots-full-highlights-nfl-week-6"
+      },
+      {
+        "title": "Charles Woods' first NFL interception occurs on Geno Smith's errant deep ball",
+        "channel": "Patriots 공식",
+        "type": "단일 플레이 · 수비 판독",
+        "note": "Jets의 추격을 끊은 4쿼터 인터셉션 장면이다. 공만 따라가지 말고 우즈가 타이트엔드의 진행 방향과 쿼터백 시선을 읽고 패스 길 앞으로 이동하는 순서를 관찰하자.",
+        "url": "https://www.patriots.com/video/charles-woods-first-nfl-interception-occurs-on-geno-smith-s-errant-deep-ball"
+      }
+    ],
+    "schedule": [
+      {
+        "date": "10/19",
+        "weekday": "월",
+        "time": "05:25",
+        "status": "진행 중",
+        "matchup": "Los Angeles Chargers at Kansas City Chiefs",
+        "note": "오전 7시 38분 KST 조회 시 3쿼터 진행 중이었다. Chiefs가 러닝으로 박스 숫자를 끌어당긴 뒤 중간 패스 공간을 만드는지와 Chargers가 폭발 패스를 실제 터치다운으로 마무리하는지를 본다."
+      },
+      {
+        "date": "10/20",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Washington Commanders at San Francisco 49ers",
+        "note": "유스첵 복귀가 모션과 플레이액션의 선택지를 되살리는지, 보사가 없는 수비 전선이 제이든 대니얼스의 바깥 스크램블을 통제하는지가 핵심이다."
+      },
+      {
+        "date": "10/23",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Chicago Bears",
+        "note": "짧은 주간에 Patriots가 부상당한 공격 라인을 재구성하는 방식과 복귀전에서 높은 패스 효율을 보인 칼렙 윌리엄스를 압박하는 방법을 확인한다."
+      },
+      {
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "San Francisco 49ers at Atlanta Falcons",
+        "note": "49ers는 월요일 밤 경기 뒤 짧아진 회복 기간에 원정 경기를 치른다. 수비 로테이션과 부상 선수의 스냅 관리가 평소보다 중요하다."
+      },
+      {
+        "date": "10/26",
+        "weekday": "월",
+        "time": "09:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Seattle Seahawks",
+        "note": "Seattle의 소음 속에서 Chiefs 공격 라인이 보호 신호를 정확히 전달하는지와 마홈스가 깊은 패스보다 체크다운으로 압박을 먼저 무력화하는지 본다."
+      }
+    ],
+    "leagueWide": [
+      {
+        "team": "Houston Texans",
+        "label": "런던 경기 · AFC South",
+        "title": "스트라우드 312야드 3TD, Texans가 Jaguars를 34-31로 제압",
+        "why": "C.J. 스트라우드는 24회 성공 34회 시도, 312야드와 터치다운 3개를 기록했고 Houston은 경기 종료와 함께 결승 필드골을 넣었다. 특히 공격 스냅의 35.6%에서 공격 라인맨을 여섯 명 이상 사용해 Jacksonville의 강한 수비 전선을 무겁게 만들었고, 그 결과 러싱 114야드와 플레이액션 공간을 함께 확보했다.",
+        "url": "https://www.nfl.com/news/2026-nfl-season-week-6-what-we-learned-from-sunday-s-games",
+        "eventKey": "2026-week6-texans-jaguars-result",
+        "takeaway": "Houston은 추가 공격 라인맨과 균형 잡힌 러닝으로 스트라우드의 깊은 패스를 살리며 AFC South 경쟁을 다시 열었다."
+      },
+      {
+        "team": "Carolina Panthers",
+        "label": "NFC 결과 · 공격 균형",
+        "title": "브라이스 영·허버드가 Eagles를 흔들며 Panthers 25-14 승리",
+        "why": "브라이스 영은 281야드와 터치다운 2개, 추바 허버드는 러싱 120야드와 터치다운 1개를 기록했다. Carolina는 399야드를 생산한 반면 Jalen Hurts와 Saquon Barkley가 빠진 Philadelphia를 222야드로 묶었고, 3쿼터 92야드 드라이브로 경기 주도권을 굳혔다.",
+        "url": "https://www.cbssports.com/nfl/gametracker/recap/NFL_20261018_CAR@PHI/",
+        "eventKey": "2026-week6-panthers-eagles-result",
+        "takeaway": "Carolina는 패스 폭발력과 120야드 러싱을 결합해 주전 공백이 큰 Philadelphia의 수비 체력을 무너뜨렸다."
+      },
+      {
+        "team": "Cleveland Browns",
+        "label": "AFC North · 역전승",
+        "title": "Browns, 마지막 플레이 필드골로 Ravens에 13-10 역전승",
+        "why": "Cleveland는 4쿼터 데릭 헨리의 펌블 뒤 오드릭 에스팀의 2야드 터치다운으로 동점을 만들고, 마지막 드라이브에서 데숀 왓슨의 33야드 패스와 안드레 스밋의 37야드 필드골로 승리했다. 10-0 이후 아홉 차례 연속 득점하지 못한 Baltimore 공격의 정체가 AFC North 공동 선두 구도를 만들었다.",
+        "url": "https://www.cbssports.com/nfl/gametracker/preview/NFL_20261018_BAL@CLE/",
+        "eventKey": "2026-week6-browns-ravens-result",
+        "takeaway": "Cleveland는 수비가 만든 짧은 필드와 마지막 한 번의 폭발 패스로 4승 2패 동률의 AFC North 경쟁에 합류했다."
+      }
+    ]
+  },
+  {
     "date": "2026-10-18",
     "weekday": "일요일",
     "edition": "2026 WEEK 6 · 일일 브리핑",

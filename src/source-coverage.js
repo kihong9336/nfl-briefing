@@ -2,7 +2,7 @@ const FAMILIES = ['espn.com', 'apnews.com', 'cbssports.com', 'nbcsports.com', 's
 const family = host => FAMILIES.find(base => host === base || host.endsWith(`.${base}`));
 const text = value => typeof value === 'string' && value.trim().length > 0;
 const validDate = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
-const normalizeHost = host => host.toLowerCase().replace(/\.$/, '');
+const normalizeHost = host => host.toLowerCase().replace(/\.$/, '').replace(/^www\./, '');
 
 export function auditSourceCoverage(audit, { expectedDate } = {}) {
   if (!audit || !validDate(audit.date)) throw new Error('Invalid audit date; expected YYYY-MM-DD.');
