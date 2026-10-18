@@ -14,5 +14,5 @@ test('news partition selects actual first three main and one league, leaving dis
  }
  const today=helpers.partitionNews(briefings.find(b=>b.date==='2026-10-18'),'all');
  assert.equal(today.topStories.length+today.topLeague.length,3);
- assert.equal(today.leagueItems.length,1);
+ assert.equal(today.leagueItems.length,briefings.find(b=>b.date==='2026-10-18').leagueWide.length-today.topLeague.length);
 });

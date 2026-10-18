@@ -4,7 +4,7 @@ export const briefings = [
     "weekday": "일요일",
     "edition": "2026 WEEK 6 · 일일 브리핑",
     "sample": false,
-    "dek": "10월 18일 발행본을 최근 발행본과 대조해 편집했습니다. 새 상태 변화는 구단 공식 원문으로 확인했고, 변동 없는 기사와 반복 전술은 제외했습니다.",
+    "dek": "10월 18일 오전 추가 조사: NFL·ESPN·CBS·NBC·Yahoo를 탐색하고 공식 발표 및 기명 취재 원문을 대조했습니다. AP는 접근 제한으로 확인하지 못했습니다. 기존 기사와 중복을 제거하고 취재 보도와 공식 확정을 구분했습니다.",
     "lead": {
       "kicker": "오늘 달라진 점",
       "title": "브라운 활성화·허츠 IR 등록·워싱턴 러닝백 결장 확정",
@@ -130,6 +130,67 @@ export const briefings = [
         "url": "https://www.packers.com/news/packers-announce-roster-moves-oct-17-2026",
         "eventKey": "2026-week6-packers-oct17-roster-moves",
         "takeaway": "리시버 복귀와 수비 전선 이탈이 동시에 발생한 로스터 변경입니다."
+      },
+      {
+        "team": "Pittsburgh Steelers",
+        "eventKey": "2026-week6-steelers-roman-wilson-ir",
+        "label": "로스터 변동",
+        "title": "로먼 윌슨도 IR…스틸러스 리시버진 추가 공백",
+        "why": "피츠버그는 윌슨을 IR에 올리고 브랜던 존슨과 브랜던 스미스를 승격했다. 프라이어무스는 종아리 문제로 Questionable에 추가됐고 메트캐프는 부상 보고서에서 빠졌다.",
+        "takeaway": "해설: 기존 리시버의 역할을 대체 자원에게 어떻게 나누는지 보자.",
+        "url": "https://www.steelers.com/news/steelers-make-roster-moves-ahead-of-buccaneers-game",
+        "sourcePublishedAt": "2026-10-17T19:02:08.865Z"
+      },
+      {
+        "team": "Carolina Panthers",
+        "eventKey": "2026-week6-panthers-moton-wharton-etienne-activation",
+        "label": "로스터 변동",
+        "title": "팬서스, 모턴·워턴·에티엔 활성화로 양쪽 라인 보강",
+        "why": "ESPN의 Mike Kaye는 구단 발표를 인용해 모턴이 비축구 부상·질병 명단(NFI), 워턴이 신체활동 불가 명단(PUP), 에티엔이 부상자 명단(IR)에서 활성화됐다고 보도했다. 대체 태클 프릴링이 출전 불투명(Doubtful)한 상황에서 모턴 복귀는 패스 보호선의 선택지를 넓힌다.",
+        "takeaway": "해설: 활성화와 실제 출전 비중은 구분해야 한다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50202634/taylor-moton-3-panthers-activated-ahead-eagles-game",
+        "sourcePublishedAt": "2026-10-17T18:21:08Z"
+      },
+      {
+        "team": "Chicago Bears",
+        "eventKey": "2026-week6-bears-gordon-pup-odeyingbo-ir",
+        "label": "로스터 변동",
+        "title": "고든 PUP 해제, 오데잉보는 IR…베어스 수비 재편",
+        "why": "ESPN의 Courtney Cronin은 구단 발표를 인용해 니켈 코너 카일러 고든의 53인 로스터 복귀와 수비 엔드 다요 오데잉보의 IR 등록을 전했다. 고든의 복귀가 곧 전 경기 출전을 의미하지는 않는다는 코치 설명도 함께 보도했다.",
+        "takeaway": "해설: 슬롯 수비 복귀와 패스러시 손실을 별개로 봐야 한다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50202598/bears-cb-kyler-gordon-set-2026-debut-pup-activation",
+        "sourcePublishedAt": "2026-10-17T18:14:20Z"
+      },
+      {
+        "team": "Chicago Bears",
+        "eventKey": "2026-week6-bears-caleb-williams-hamstring-status",
+        "label": "취재 보도 · 후속 소식",
+        "title": "NFL Network 보도: 윌리엄스, Falcons전 선발 복귀 계획",
+        "why": "NFL Network의 마이크 가라폴로·이언 라포포트와 ESPN의 애덤 셰프터는 시카고가 윌리엄스의 선발을 계획한다고 보도했다. 전날의 출전 불확실 상태 이후 새로 나온 선발 계획 보도이며, 공식 경기 상태 해제나 최종 출전 명단 확정을 뜻하지 않는다.",
+        "takeaway": "선발 복귀 계획은 보도됐지만 최종 경기 명단 확인은 남아 있다.",
+        "url": "https://www.nfl.com/news/nfl-network-bears-qb-caleb-williams-hamstring-expected-to-start-sunday-vs-falcons",
+        "sourcePublishedAt": "2026-10-17T20:43:42.677Z",
+        "changeSummary": "출전 여부가 불확실했던 상황에서 기명 기자들이 구단의 선발 계획을 보도했다. 공식 확정과는 구분한다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/nfl-network-bears-qb-caleb-williams-hamstring-expected-to-start-sunday-vs-falcons",
+          "before": "출전하면",
+          "after": "선발을 계획한다고 보도했다",
+          "quote": "NFL Network 기자들과 ESPN 기자는 시카고가 윌리엄스의 선발을 계획한다고 보도했다. (원문 번역)"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.nfl.com/news/nfl-network-bears-qb-caleb-williams-hamstring-expected-to-start-sunday-vs-falcons"
+        }
+      },
+      {
+        "team": "Las Vegas Raiders / NFL",
+        "eventKey": "2026-week5-discipline-oct17-crosby-fine",
+        "label": "리그 징계 · CBS 보도",
+        "title": "크로스비, Week 5 헬멧 사용 반칙으로 23,882달러 벌금",
+        "why": "CBS Sports는 NFL이 Week 5 경기의 헬멧 사용 반칙으로 Raiders의 맥스 크로스비에게 23,882달러 벌금을 부과했다고 보도했다. 경기 결과를 다시 소개하는 것이 아니라 현지 토요일 공개된 징계 소식이며, 이 벌금 자체를 출전정지로 해석하지 않는다.",
+        "takeaway": "출전정지로 해석하지 않는다.",
+        "url": "https://www.cbssports.com/nfl/news/nfl-fines-raiders-maxx-crosby-nearly-24000-week-5-discipline/",
+        "sourcePublishedAt": "2026-10-17T21:47:18+00:00"
       }
     ]
   },
@@ -327,7 +388,8 @@ export const briefings = [
         "label": "선발 결정 대기",
         "title": "칼렙 윌리엄스, 한 주 내내 FP에도 Questionable",
         "why": "윌리엄스는 햄스트링 부상 뒤 세 경기를 결장했지만 이번 주 훈련에는 모두 전면 참가했다. 출전하면 부상 등급 없이 선발이 확정된 Atlanta의 Michael Penix Jr.와 2024년 1라운드 QB 맞대결이 성사된다.",
-        "url": "https://www.nfl.com/news/bears-qb-caleb-williams-hamstring-questionable-to-play-falcons"
+        "url": "https://www.nfl.com/news/bears-qb-caleb-williams-hamstring-questionable-to-play-falcons",
+        "eventKey": "2026-week6-bears-caleb-williams-hamstring-status"
       },
       {
         "team": "Packers",
