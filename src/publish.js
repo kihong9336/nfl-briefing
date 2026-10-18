@@ -1,3 +1,5 @@
+import { guardPublication } from './publication-guard.js';
+
 const REQUIRED_EDITION_FIELDS = ['date', 'weekday', 'edition', 'dek', 'lead', 'sections', 'tactics', 'highlights', 'schedule', 'leagueWide'];
 const REQUIRED_STORY_FIELDS = ['id', 'team', 'label', 'title', 'summary', 'commentary', 'watch'];
 const REQUIRED_TACTIC_FIELDS = ['id', 'team', 'label', 'title', 'concept', 'easy', 'gameUse', 'whyItWorks', 'defenseCounter'];
@@ -66,8 +68,8 @@ export function validateEdition(edition) {
     requireMeaningful(edition.lead?.[field], `lead.${field}`, minimum);
   }
 
-  if (!Array.isArray(edition.sections) || edition.sections.length === 0) {
-    throw new Error('sections must contain at least one story');
+  if (!Array.isArray(edition.sections)) {
+    throw new Error('sections must be an array');
   }
 
   for (const story of edition.sections) {
@@ -150,9 +152,6 @@ export function validateEdition(edition) {
     requireHttps(video.url, 'highlight.url');
   }
 
-  if (edition.leagueWide.length < 2) {
-    throw new Error('leagueWide must contain at least two useful items');
-  }
   for (const item of edition.leagueWide) {
     for (const field of ['team', 'label', 'title', 'why', 'url']) requireString(item[field], `leagueWide.${field}`);
     if (CORE_TEAMS.has(item.team.trim().toLowerCase())) throw new Error('leagueWide must cover teams outside the three core teams');
@@ -162,11 +161,27 @@ export function validateEdition(edition) {
     requireHttps(item.url, 'leagueWide.url');
   }
 
+  if (edition.week !== undefined) {
+    if (!Number.isInteger(edition.season) || edition.season < 1920) throw new Error('week requires a valid season');
+    if (edition.seasonType === 'postseason') {
+      if (!['wild-card', 'divisional', 'conference', 'super-bowl'].includes(edition.week)) throw new Error('invalid postseason week');
+    } else if ((edition.seasonType !== undefined && edition.seasonType !== 'regular') || !Number.isInteger(edition.week) || edition.week < 1 || edition.week > 18) throw new Error('regular season week must be 1–18');
+  }
+  for (const item of [...edition.sections, ...edition.leagueWide]) {
+    if (item.eventKey !== undefined && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.eventKey)) throw new Error('eventKey must be stable lowercase kebab-case');
+    if (item.takeaway !== undefined) requireMeaningful(item.takeaway, 'takeaway', 10);
+    if (item.changeSummary !== undefined) requireMeaningful(item.changeSummary, 'changeSummary', 10);
+    if (item.changeEvidence !== undefined) {
+      requireHttps(item.changeEvidence?.url, 'changeEvidence.url');
+      for (const field of ['before', 'after', 'quote']) requireString(item.changeEvidence?.[field], `changeEvidence.${field}`);
+    }
+  }
   return edition;
 }
 
 export function upsertEdition(briefings, edition) {
   validateEdition(edition);
+  guardPublication(briefings, edition);
   return [edition, ...briefings.filter((item) => item.date !== edition.date)]
     .sort((a, b) => b.date.localeCompare(a.date));
 }

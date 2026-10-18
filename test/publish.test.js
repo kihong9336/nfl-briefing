@@ -76,6 +76,16 @@ const validEdition = {
   ],
 };
 
+test('publication rejects a reworded event despite a new URL', () => {
+  const prior = structuredClone(validEdition);
+  prior.sections[0].eventKey = '2026-jets-qb-availability';
+  const next = structuredClone(prior);
+  next.date = '2026-10-18'; next.weekday = '일요일';
+  next.sections[0].title = '다른 표현으로 다시 쓴 같은 선수 소식';
+  next.sections[0].sources[0].url = 'https://www.nfl.com/news/new-story';
+  assert.throws(() => upsertEdition([prior], next), /repeated event/i);
+});
+
 test('validateEdition accepts a sourced non-sample briefing', () => {
   assert.doesNotThrow(() => validateEdition(validEdition));
 });
@@ -92,10 +102,32 @@ test('validateEdition rejects shallow tactics that outsource the explanation', (
   assert.throws(() => validateEdition(invalid), /breakdown/i);
 });
 
-test('validateEdition rejects too few league-wide items', () => {
-  const invalid = structuredClone(validEdition);
-  invalid.leagueWide = invalid.leagueWide.slice(0, 1);
-  assert.throws(() => validateEdition(invalid), /at least two/i);
+test('no new stories is a valid honest edition, without quotas', () => {
+  const quiet = structuredClone(validEdition);
+  quiet.sections = []; quiet.leagueWide = [];
+  assert.doesNotThrow(() => validateEdition(quiet));
+});
+
+test('changed facts on the same source pass, mere update badges do not', () => {
+  const prior = structuredClone(validEdition); prior.leagueWide = [];
+  const story = prior.sections[0]; story.eventKey = '2026-qb-status';
+  story.summary = '공식 보고서에서 선수는 훈련 제한 참가 상태로 확인됐습니다.';
+  story.sources[0].url = 'https://www.nfl.com/news/injury-report';
+  const next = structuredClone(prior); next.date = '2026-10-18'; next.weekday = '일요일';
+  const updated = next.sections[0];
+  updated.summary = '공식 보고서에서 선수는 최종 경기 결장 상태로 확인됐습니다.';
+  updated.update = {kind: 'status-change', evidence: story.sources[0].url};
+  assert.throws(() => upsertEdition([prior], next), /repeated event/);
+  updated.changeSummary = '훈련 참가 상태에서 최종 출전 상태로 변경';
+  updated.changeEvidence = {url: story.sources[0].url, before: '훈련 제한 참가', after: '최종 경기 결장', quote: '선수는 최종 경기 결장 상태입니다.'};
+  assert.doesNotThrow(() => upsertEdition([prior], next));
+  updated.changeEvidence.quote = '이전 보고서를 다시 인용했습니다.';
+  assert.throws(() => upsertEdition([prior], next), /repeated event/);
+});
+
+test('optional NFL week metadata rejects calendar week 42', () => {
+  assert.throws(() => validateEdition({...validEdition, season: 2026, seasonType: 'regular', week: 42}), /week/);
+  assert.doesNotThrow(() => validateEdition({...validEdition, season: 2026, seasonType: 'postseason', week: 'super-bowl'}));
 });
 
 test('validateEdition rejects core-team filler in league-wide sidebar', () => {
@@ -209,7 +241,7 @@ test('validateEdition normalizes core-team names before league-wide exclusion', 
 test('upsertEdition replaces the same date and keeps newest first', () => {
   const old = { ...validEdition, date: '2026-10-16', weekday: '금요일', dek: '이전 날짜에 저장된 충분한 길이의 발행 설명입니다.' };
   const replacement = { ...validEdition, date: '2026-10-16', weekday: '금요일', dek: '같은 날짜를 교체하는 충분한 길이의 새 발행 설명입니다.' };
-  const next = upsertEdition([old, { ...validEdition, date: '2026-10-15', weekday: '목요일' }], replacement);
+  const next = upsertEdition([old, { ...validEdition, date: '2026-10-15', weekday: '목요일', sample: true }], replacement);
 
   assert.deepEqual(next.map((item) => item.date), ['2026-10-16', '2026-10-15']);
   assert.equal(next[0].dek, '같은 날짜를 교체하는 충분한 길이의 새 발행 설명입니다.');

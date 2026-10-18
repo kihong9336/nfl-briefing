@@ -12,12 +12,13 @@ test('build is deterministic and publisher automatically regenerates all static 
   const temp = await mkdtemp(join(tmpdir(), 'nfl-static-'));
   try {
     for (const dir of ['src', 'scripts']) await mkdir(join(temp, dir));
-    for (const file of ['package.json', 'src/data.js', 'src/publish.js', 'src/static-pages.js', 'scripts/publish-edition.mjs', 'scripts/build-pages.mjs']) await cp(join(root, file), join(temp, file));
+    for (const file of ['package.json', 'src/data.js', 'src/publish.js', 'src/publication-guard.js', 'src/static-pages.js', 'scripts/publish-edition.mjs', 'scripts/build-pages.mjs']) await cp(join(root, file), join(temp, file));
     execFileSync(process.execPath, ['scripts/build-pages.mjs'], { cwd: temp });
     const original = await readFile(join(temp, 'editions/index.html'), 'utf8');
     execFileSync(process.execPath, ['scripts/build-pages.mjs'], { cwd: temp });
     assert.equal(await readFile(join(temp, 'editions/index.html'), 'utf8'), original);
     const edition = structuredClone(briefings[0]);
+    edition.sections = []; edition.leagueWide = [];
     edition.date = '2026-10-18'; edition.weekday = '일요일'; edition.lead.title = '테스트 전용 발행 파이프라인 재생성 확인';
     await writeFile(join(temp, 'input.json'), JSON.stringify(edition));
     const output = execFileSync(process.execPath, ['scripts/publish-edition.mjs', 'input.json'], { cwd: temp, encoding: 'utf8' });

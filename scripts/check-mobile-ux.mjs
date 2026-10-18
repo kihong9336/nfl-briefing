@@ -18,9 +18,7 @@ try {
     }
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'no horizontal overflow');
     const takeaways = page.locator('#storyList .story-takeaway');
-    assert.equal(await takeaways.count(), await page.locator('#storyList .story').count(), 'every article has a takeaway');
-    for (const line of await takeaways.allTextContents()) assert.ok(line.trim().length > 0);
-    assert.ok(await page.locator('.story-takeaway').first().evaluate(node => getComputedStyle(node).whiteSpace !== 'nowrap' && node.scrollHeight <= node.clientHeight + 1), 'complete takeaway is readable without clipping');
+    assert.equal(await takeaways.count(), 0, 'takeaways appear once in roundup, not as arbitrary article excerpts');
     await page.locator('#storyList [data-story-id]').first().click();
     assert.equal(await page.locator('.story-stage').count(), 3);
     const edition = briefings.find(item => item.date === new URL(page.url()).searchParams.get('date')) || briefings[0];

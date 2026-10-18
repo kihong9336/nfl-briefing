@@ -1,12 +1,12 @@
-import { briefings } from './data.js?v=20261017-context3';
+import { briefings } from './data.js?v=20261018-dedupe1';
 import {
   availableDates,
   briefingForDate,
   neighboringDates,
   normalizeDateParam,
-} from './briefing.js?v=20261017-context3';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261017-context3';
-import { renderTacticDiagram } from './tactic-visuals.js?v=20261017-context3';
+} from './briefing.js?v=20261018-dedupe1';
+import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-dedupe1';
+import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-dedupe1';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
@@ -139,20 +139,19 @@ function bindStoryButtons(container, stories) {
   });
 }
 function renderRoundup(briefing) {
-  const leagueItems = briefing.leagueWide ?? [];
-  // Keep source order; this is a compact selection, not a news ranking.
-  const stories = briefing.sections.slice(0, leagueItems.length ? 3 : 4);
-  $('#leadStory').innerHTML = `<span class="eyebrow">DAILY ROUNDUP</span><h2 id="leadTitle">오늘의 짧은 브리핑</h2><ol class="roundup-list">${stories.map(story => `<li><button data-story-id="${h(story.id)}"><span>${h(teamMeta(story.team).code)}</span>${h(plainTitle(story.title))} <b aria-hidden="true">↗</b></button></li>`).join('')}${leagueItems.length ? `<li><button data-league-index="0"><span>NFL</span>${h(plainTitle(leagueItems[0].title))} <b aria-hidden="true">↗</b></button></li>` : ''}</ol>`;
-  bindStoryButtons($('#leadStory'), stories);
-  bindLeagueButtons($('#leadStory'), leagueItems);
+  const leagueCount = (briefing.leagueWide ?? []).length + briefing.sections.filter(story => story.team === 'NFL').length;
+  const favoriteCount = briefing.sections.filter(story => story.team !== 'NFL').length;
+  const total = leagueCount + favoriteCount;
+  const overview = briefing.editorialSummary?.trim() || `이 발행본에는 리그 기사 ${leagueCount}건과 관심 팀 기사 ${favoriteCount}건, 총 ${total}건이 있습니다.`;
+  $('#leadStory').innerHTML = `<span class="eyebrow">EDITION OVERVIEW</span><h2 id="leadTitle">오늘의 짧은 브리핑</h2><p>${h(overview)}</p><nav aria-label="기사 섹션 바로가기"><a href="#leagueWide">리그 · ${leagueCount}건 →</a> · <a href="#favoriteTeams">관심 팀 · ${favoriteCount}건 →</a></nav>${total === 0 ? '<p>이 발행본에 등록된 기사가 없습니다.</p>' : ''}`;
 }
 function shortExtract(text) {
   return String(text ?? '').trim().match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || String(text ?? '').trim();
 }
 function takeaway(item) {
-  const explicit = typeof item.takeaway === 'string' && item.takeaway.trim();
-  const text = explicit || shortExtract(item.commentary || item.why);
-  return text ? `<p class="story-takeaway"><small>${explicit ? '핵심' : item.why ? '보도·해석 혼합 발췌' : '해설 발췌'}</small> ${h(text)}</p>` : '';
+  // Article content lives only in its canonical detail view.
+  // Do not manufacture a summary by cutting an arbitrary first sentence.
+  return '';
 }
 function storyCard(story) {
   return `<article class="story story-${h(story.team.toLowerCase())}"><button class="story-card-button" data-story-id="${h(story.id)}"><span class="story-label">${h(story.label)}</span>${story.update?.evidence && ['new','status-change','followup'].includes(story.update.kind) ? `<span class="update-badge"> · ${h({new:'새 소식','status-change':'상태 변화',followup:'후속'}[story.update.kind])}</span>` : ''}<h3>${h(plainTitle(story.title))}</h3>${takeaway(story)}<span class="card-action">보도 요약 · 해석 읽기 →</span></button></article>`;

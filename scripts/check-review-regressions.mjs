@@ -38,23 +38,19 @@ try {
  await page.waitForFunction(()=>!document.querySelector('#storySheet').open);
  await page.route('**/src/data.js*', async route => {
    const response=await route.fetch();
-   await route.fulfill({response,body:(await response.text())+'\nbriefings[0].sections[0].title = "FP LP DNP OUT Questionable 42"; briefings[0].leagueWide[0].title = "FP LP DNP OUT Questionable 42";'});
+   await route.fulfill({response,body:(await response.text())+'\nbriefings.find(b=>b.date === "2026-10-17").sections[0].title = "FP LP DNP OUT Questionable 42"; briefings.find(b=>b.date === "2026-10-17").leagueWide[0].title = "FP LP DNP OUT Questionable 42";'});
  });
  await page.reload();
  const expanded='훈련 전면 참가(FP) 훈련 제한 참가(LP) 훈련 불참(DNP) 경기 결장(OUT) 출전 여부 불확실(Questionable) 42';
  assert.equal(await page.locator('#storyList h3').first().textContent(),expanded);
  assert.equal(await page.locator('#leagueWide .quick-hit h3').first().textContent(),expanded);
- assert.ok((await page.locator('#leadStory').innerText()).includes(expanded));
+ assert.ok(!(await page.locator('#leadStory').innerText()).includes(expanded));
  await page.locator('#storyList button').first().click();
  assert.equal(await page.locator('#storySheetContent h2').textContent(),expanded);
  await page.goBack();
- assert.equal(await page.locator('#leadStory [data-league-index]').count(),1,'roundup includes actual leagueWide item');
- assert.ok(await page.locator('#leadStory li').count()<=4);
- const expectedIds=await page.evaluate(async()=>{const {briefings}=await import('./src/data.js?v=20261017-context3');return briefings[0].sections.slice(0,3).map(s=>s.id);});
- assert.deepEqual(await page.locator('#leadStory [data-story-id]').evaluateAll(els=>els.map(e=>e.dataset.storyId)),expectedIds);
- await page.locator('#leadStory [data-league-index]').click();
- assert.equal(await page.locator('#storySheetContent h2').textContent(),expanded);
- assert.match(await page.locator('#storySheetContent').innerText(),/보도 내용·해석\(기존 혼합 문안\)/);
+ assert.equal(await page.locator('#leadStory [data-league-index], #leadStory [data-story-id]').count(),0);
+ await page.locator('#leadStory a[href="#leagueWide"]').click();
+ assert.equal(new URL(page.url()).hash,'#leagueWide');
  assert.deepEqual(errors,[]);
  console.log('PASS exact anchor/date/filter Back and Forward; detail Forward');
 } finally { await browser.close(); }
