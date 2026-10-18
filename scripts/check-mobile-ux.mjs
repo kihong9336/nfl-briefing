@@ -7,7 +7,7 @@ try {
   for (const width of [320, 375, 390, 1280]) {
     const page = await browser.newPage({ viewport: { width, height: 850 }, serviceWorkers: 'block' });
     await page.goto(base);
-    await page.waitForSelector('#storyList .story');
+    await page.waitForSelector('#leadStory .story');
     const tabs = page.locator('.mobile-tabbar a');
     assert.deepEqual(await tabs.evaluateAll(nodes => nodes.map(n => [n.textContent.replace(/\d/g,'').trim(), n.hash])), [['오늘','#main'],['경기','#scheduleBoard'],['리그','#leagueWide'],['내 팀','#favoriteTeams'],['전술','#tactics']]);
     if (width < 561) {
@@ -17,9 +17,9 @@ try {
       }
     }
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'no horizontal overflow');
-    const takeaways = page.locator('#storyList .story-takeaway');
+    const takeaways = page.locator('#leadStory .story-takeaway');
     assert.equal(await takeaways.count(), 0, 'takeaways appear once in roundup, not as arbitrary article excerpts');
-    await page.locator('#storyList [data-story-id]').first().click();
+    await page.locator('#leadStory [data-story-id]').first().click();
     assert.equal(await page.locator('.story-stage').count(), 3);
     const edition = briefings.find(item => item.date === new URL(page.url()).searchParams.get('date')) || briefings[0];
     assert.equal(await page.locator('.story-stage p').nth(2).textContent(), edition.sections.find(item => item.team !== 'NFL').watch, 'full watch text preserved');

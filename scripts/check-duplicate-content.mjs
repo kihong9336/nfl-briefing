@@ -14,7 +14,7 @@ try {
       }
       assert.equal(await page.locator('#leadStory .story-takeaway').count(), 0);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'no overflow');
-      assert.equal(await page.locator('#leadStory [data-story-id], #leadStory [data-league-index]').count(), 0, 'overview contains no per-article copies');
+      assert.ok(await page.locator('#leadStory [data-story-id], #leadStory [data-league-index]').count() > 0, 'actual headline cards restored');
       assert.equal(await page.locator('#leadStory a[href="#leagueWide"]').count(), 1);
       assert.equal(await page.locator('#leadStory a[href="#favoriteTeams"]').count(), 1);
       const counts = await page.evaluate(async date => {
@@ -23,12 +23,12 @@ try {
         return {league: (edition.leagueWide ?? []).length + edition.sections.filter(s => s.team === 'NFL').length, favorites: edition.sections.filter(s => s.team !== 'NFL').length,
           content: [...edition.sections, ...(edition.leagueWide ?? [])].flatMap(s => [s.takeaway, s.summary, s.commentary, s.why]).filter(Boolean)};
       }, date);
-      assert.equal(await page.locator('#leadStory a[href="#leagueWide"]').textContent(), `리그 · ${counts.league}건 →`);
-      assert.equal(await page.locator('#leadStory a[href="#favoriteTeams"]').textContent(), `관심 팀 · ${counts.favorites}건 →`);
+      const titles = await page.locator('#leadStory h3, #storyList h3, #leagueWide h3').allTextContents();
+      assert.equal(new Set(titles).size, titles.length, 'one headline per story across zones');
       for (const text of counts.content) assert.ok(!roundup.includes(text), 'no article text in overview');
-      assert.equal(await page.locator('#storyList button, #leagueWide button').count(), counts.league + counts.favorites);
+      assert.equal(await page.locator('#leadStory button, #storyList button, #leagueWide button').count(), counts.league + counts.favorites);
       if (counts.league + counts.favorites) {
-      await page.locator('#storyList button, #leagueWide button').first().click();
+      await page.locator('#leadStory button, #storyList button, #leagueWide button').first().click();
       assert.ok(await page.locator('#storySheet').isVisible());
       assert.ok((await page.locator('#storySheet .story-stage p').first().textContent()).length > 10);
       assert.ok(await page.locator('#storySheet .story-sources a').count() || date === '2026-10-14');
@@ -36,8 +36,13 @@ try {
       await page.waitForFunction(() => !document.querySelector('#storySheet').open);
       }
       const league = await page.locator('#leagueWide').textContent();
-      await page.locator('[data-filter="Chiefs"]').click();
-      assert.equal(await page.locator('#leagueWide').textContent(), league);
+      for (const filter of ['Chiefs', '49ers', 'Patriots', 'all']) {
+        await page.locator(`[data-filter="${filter}"]`).click();
+        assert.equal(await page.locator('#leagueWide').textContent(), league);
+        assert.equal(await page.locator('#leadStory').textContent(), roundup);
+        const ids = await page.locator('#leadStory [data-story-id], #storyList [data-story-id], #leagueWide [data-story-id]').evaluateAll(nodes => nodes.map(n => n.dataset.storyId));
+        assert.equal(new Set(ids).size, ids.length);
+      }
       assert.deepEqual(errors, []);
       console.log(`PASS duplicate-content ${date} ${width}px`);
       await page.close();
@@ -50,8 +55,8 @@ try {
   });
   await page.goto(`${process.env.BASE_URL || 'http://localhost:4173'}/`);
   await page.waitForSelector('#leadTitle');
-  assert.match(await page.locator('#leadStory').innerText(), /총 0건/);
-  assert.equal(await page.locator('#storyList button, #leagueWide button').count(), 0);
+  assert.match(await page.locator('#leadStory').innerText(), /등록된 기사가 없습니다/);
+  assert.equal(await page.locator('#leadStory button, #storyList button, #leagueWide button').count(), 0);
   assert.equal(await page.locator('#leadStory [data-story-id], #leadStory [data-league-index]').count(), 0);
   console.log('PASS zero-article edition');
   await page.close();

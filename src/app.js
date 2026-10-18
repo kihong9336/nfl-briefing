@@ -1,12 +1,13 @@
-import { briefings } from './data.js?v=20261018-dedupe1';
+import { briefings } from './data.js?v=20261018-partition2';
 import {
   availableDates,
+  partitionNews,
   briefingForDate,
   neighboringDates,
   normalizeDateParam,
-} from './briefing.js?v=20261018-dedupe1';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-dedupe1';
-import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-dedupe1';
+} from './briefing.js?v=20261018-partition2';
+import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-partition2';
+import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-partition2';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
@@ -138,12 +139,11 @@ function bindStoryButtons(container, stories) {
     });
   });
 }
-function renderRoundup(briefing) {
-  const leagueCount = (briefing.leagueWide ?? []).length + briefing.sections.filter(story => story.team === 'NFL').length;
-  const favoriteCount = briefing.sections.filter(story => story.team !== 'NFL').length;
-  const total = leagueCount + favoriteCount;
-  const overview = briefing.editorialSummary?.trim() || `이 발행본에는 리그 기사 ${leagueCount}건과 관심 팀 기사 ${favoriteCount}건, 총 ${total}건이 있습니다.`;
-  $('#leadStory').innerHTML = `<span class="eyebrow">EDITION OVERVIEW</span><h2 id="leadTitle">오늘의 짧은 브리핑</h2><p>${h(overview)}</p><nav aria-label="기사 섹션 바로가기"><a href="#leagueWide">리그 · ${leagueCount}건 →</a> · <a href="#favoriteTeams">관심 팀 · ${favoriteCount}건 →</a></nav>${total === 0 ? '<p>이 발행본에 등록된 기사가 없습니다.</p>' : ''}`;
+function renderRoundup(news) {
+  const total = news.topStories.length + news.topLeague.length;
+  $('#leadStory').innerHTML = `<span class="eyebrow">TODAY’S BRIEFING</span><h2 id="leadTitle">오늘의 짧은 브리핑</h2><p>전체 팀 주요 소식 · 팀 필터와 관계없이 표시합니다.</p><ul class="roundup-list">${news.topStories.map(story => `<li class="story"><button data-story-id="${h(story.id)}"><span>${h(teamMeta(story.team).code)}</span><h3>${h(plainTitle(story.title))}</h3><b aria-hidden="true">→</b></button></li>`).join('')}${news.topLeague.map((item, index) => `<li class="quick-hit"><button data-league-index="${index}"><span>NFL</span><h3>${h(plainTitle(item.title))}</h3><b aria-hidden="true">→</b></button></li>`).join('')}</ul>${total === 0 ? '<p>이 발행본에 등록된 기사가 없습니다.</p>' : ''}<nav aria-label="기사 섹션 바로가기"><a href="#leagueWide">리그 추가 소식 →</a> · <a href="#favoriteTeams">관심 팀 추가 소식 →</a></nav>`;
+  bindStoryButtons($('#leadStory'), news.topStories);
+  bindLeagueButtons($('#leadStory'), news.topLeague);
 }
 function shortExtract(text) {
   return String(text ?? '').trim().match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || String(text ?? '').trim();
@@ -156,9 +156,9 @@ function takeaway(item) {
 function storyCard(story) {
   return `<article class="story story-${h(story.team.toLowerCase())}"><button class="story-card-button" data-story-id="${h(story.id)}"><span class="story-label">${h(story.label)}</span>${story.update?.evidence && ['new','status-change','followup'].includes(story.update.kind) ? `<span class="update-badge"> · ${h({new:'새 소식','status-change':'상태 변화',followup:'후속'}[story.update.kind])}</span>` : ''}<h3>${h(plainTitle(story.title))}</h3>${takeaway(story)}<span class="card-action">보도 요약 · 해석 읽기 →</span></button></article>`;
 }
-function renderStories(briefing) {
-  const stories = briefing.sections.filter(story => story.team !== 'NFL' && (currentFilter === 'all' || story.team === currentFilter));
-  $('#storyList').innerHTML = stories.map(storyCard).join('');
+function renderStories(news) {
+  const stories = news.favorites;
+  $('#storyList').innerHTML = stories.map(storyCard).join('') || '<p>추가 소식 없음</p>';
   bindStoryButtons($('#storyList'), stories);
 }
 
@@ -264,23 +264,15 @@ function bindLeagueButtons(container, items) {
   });
 }
 
-function renderLeagueWide(briefing) {
-  const items = briefing.leagueWide ?? [];
+function leagueCards(items) {
+  return items.map((item, index) => `<article class="quick-hit"><button class="story-card-button" data-league-index="${index}"><span>${h(item.label)}</span><h3>${h(plainTitle(item.title))}</h3><small>보도 내용·해석 읽기 →</small></button><a href="${h(safeHttpsUrl(item.url))}" target="_blank" rel="noreferrer">출처 원문 ↗</a></article>`).join('');
+}
+function renderLeagueWide(news) {
+  const items = news.leagueItems;
   const section = $('#leagueWide');
-  const leagueStories = briefing.sections.filter(story => story.team === 'NFL');
-  if (!items.length && !leagueStories.length) {
-    section.hidden = true;
-    section.innerHTML = '';
-    return;
-  }
+  const leagueStories = news.leagueStories;
   section.hidden = false;
-  section.innerHTML = `
-    <div class="section-rule"><span>AROUND THE LEAGUE</span></div>
-    <h2>리그 뉴스</h2>
-    <p class="league-wide-dek">팀 필터와 관계없이 보는 리그 소식</p>
-    ${leagueStories.map(storyCard).join('')}<div class="quick-hit-list">
-      ${items.map((item, index) => `<article class="quick-hit"><button class="story-card-button" data-league-index="${index}"><span>${h(item.label)}</span><h3>${h(plainTitle(item.title))}</h3>${takeaway(item)}<small>보도 내용·해석 읽기 →</small></button><a href="${h(safeHttpsUrl(item.url))}" target="_blank" rel="noreferrer">출처 원문 ↗</a></article>`).join('')}
-    </div>`;
+  section.innerHTML = `<div class="section-rule"><span>AROUND THE LEAGUE</span></div><h2>리그 뉴스</h2><p class="league-wide-dek">짧은 브리핑 외 추가 소식 · 팀 필터와 관계없이 표시합니다.</p>${leagueStories.map(storyCard).join('')}<div class="quick-hit-list">${leagueCards(items)}</div>${!items.length && !leagueStories.length ? '<p>추가 소식 없음</p>' : ''}`;
   bindStoryButtons(section, leagueStories);
   bindLeagueButtons(section, items);
 }
@@ -293,12 +285,13 @@ function render() {
   $('#editionTitle').textContent = `${formatDate(briefing.date)} NFL 브리핑`;
   $('#editionDek').textContent = briefing.dek;
   $('#editionShare').setAttribute('href', `./editions/${briefing.date}/`);
-  renderRoundup(briefing);
-  renderStories(briefing);
+  const news = partitionNews(briefing, currentFilter);
+  renderRoundup(news);
+  renderStories(news);
   renderTactics(briefing);
   renderHighlights(briefing);
   renderSchedule(briefing);
-  renderLeagueWide(briefing);
+  renderLeagueWide(news);
 
   document.querySelectorAll('.filter').forEach((button) => {
     button.classList.toggle('is-active', button.dataset.filter === currentFilter);

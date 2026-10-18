@@ -21,7 +21,7 @@ try {
  await page.goForward();
  assert.equal(await page.locator('#datePicker').inputValue(),'2026-10-16');
  assert.equal(await page.locator('.filter.is-active').getAttribute('data-filter'),'Chiefs');
- await page.locator('#storyList [data-story-id]').first().click();
+ await page.locator('#leadStory [data-story-id]').first().click();
  const title=await page.locator('#storySheetContent h2').textContent();
  await page.goBack();
  assert.equal(await page.locator('#storySheet').evaluate(e=>e.open),false);
@@ -42,13 +42,13 @@ try {
  });
  await page.reload();
  const expanded='훈련 전면 참가(FP) 훈련 제한 참가(LP) 훈련 불참(DNP) 경기 결장(OUT) 출전 여부 불확실(Questionable) 42';
- assert.equal(await page.locator('#storyList h3').first().textContent(),expanded);
- assert.equal(await page.locator('#leagueWide .quick-hit h3').first().textContent(),expanded);
- assert.ok(!(await page.locator('#leadStory').innerText()).includes(expanded));
- await page.locator('#storyList button').first().click();
+ assert.equal(await page.locator('#leadStory .story h3').first().textContent(),expanded);
+ assert.equal(await page.locator('#leadStory .quick-hit h3').first().textContent(),expanded);
+ assert.ok((await page.locator('#leadStory').innerText()).includes(expanded));
+ await page.locator('#leadStory button').first().click();
  assert.equal(await page.locator('#storySheetContent h2').textContent(),expanded);
  await page.goBack();
- assert.equal(await page.locator('#leadStory [data-league-index], #leadStory [data-story-id]').count(),0);
+ assert.equal(await page.locator('#leadStory [data-league-index], #leadStory [data-story-id]').count(),4);
  await page.locator('#leadStory a[href="#leagueWide"]').click();
  assert.equal(new URL(page.url()).hash,'#leagueWide');
  assert.deepEqual(errors,[]);
