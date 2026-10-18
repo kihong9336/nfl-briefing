@@ -18,7 +18,7 @@ try {
       assert.equal(await page.locator('#leadStory a[href="#leagueWide"]').count(), 1);
       assert.equal(await page.locator('#leadStory a[href="#favoriteTeams"]').count(), 1);
       const counts = await page.evaluate(async date => {
-        const {briefings} = await import('/src/data.js?v=20261017-context3');
+        const {briefings} = await import('./src/data.js?v=20261018-dedupe1');
         const edition = briefings.find(item => item.date === date);
         return {league: (edition.leagueWide ?? []).length + edition.sections.filter(s => s.team === 'NFL').length, favorites: edition.sections.filter(s => s.team !== 'NFL').length,
           content: [...edition.sections, ...(edition.leagueWide ?? [])].flatMap(s => [s.takeaway, s.summary, s.commentary, s.why]).filter(Boolean)};
