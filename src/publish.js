@@ -1,4 +1,5 @@
 import { guardPublication, repeatedPublicationEvent } from './publication-guard.js';
+import { carryForwardSchedule, scheduleDate } from './schedule-continuity.js';
 
 const REQUIRED_EDITION_FIELDS = ['date', 'weekday', 'edition', 'dek', 'lead', 'sections', 'tactics', 'highlights', 'schedule', 'leagueWide'];
 const REQUIRED_STORY_FIELDS = ['id', 'team', 'label', 'title', 'summary', 'commentary', 'watch'];
@@ -132,7 +133,7 @@ export function validateEdition(edition) {
     for (const field of ['date', 'weekday', 'time', 'status', 'matchup', 'note']) requireString(game[field], `schedule.${field}`);
     if (!/^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])$/.test(game.date)) throw new Error('schedule.date must use MM/DD');
     const [gameMonth, gameDay] = game.date.split('/').map(Number);
-    const gameYear = gameMonth < editionMonth ? editionYear + 1 : editionYear;
+    const gameYear = Number(scheduleDate(game, edition.date)?.slice(0, 4));
     if (!isCalendarDate(gameYear, gameMonth, gameDay)) throw new Error('schedule.date must be a real calendar date');
     if (!/^[월화수목금토일]$/.test(game.weekday)) throw new Error('schedule.weekday must be one Korean weekday character');
     const expectedGameWeekday = SHORT_WEEKDAYS[new Date(Date.UTC(gameYear, gameMonth - 1, gameDay)).getUTCDay()];
@@ -206,6 +207,7 @@ export function preparePublication(briefings, input) {
       summary: selected.map(item => item.summary ?? item.why).join(' ')};
     edition.dek = edition.lead.summary;
   }
+  edition.schedule = carryForwardSchedule(briefings, edition);
   validateEdition(edition);
   guardPublication(briefings, edition);
   return {edition, report};

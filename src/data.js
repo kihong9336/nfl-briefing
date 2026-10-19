@@ -7,7 +7,7 @@ export const briefings = [
     "season": 2026,
     "seasonType": "regular",
     "week": 6,
-    "dek": "2026년 10월 20일 아침 KST 기준. 구단 공식 기사와 리그·주요 매체를 대조했다. Chiefs·49ers·Patriots의 경기 및 선수 상태, Packers·Bills의 경기 결과를 다룬다. 전술적 의미는 사실과 구분한 편집 해석이다.",
+    "dek": "2026년 10월 20일 아침 KST 기준. 현지 18일 일요일 12경기를 대조해 이전 발행 4경기의 반복은 피하고 미수록 경기 결과를 보강했다. 관심 세 팀의 소식과 리그 전체 경기의 주요 장면을 함께 다룬다. 예정 일정은 뉴스 채택 여부와 별개로 유지한다.",
     "lead": {
       "kicker": "오늘의 핵심",
       "title": "Chiefs 22-6 승리와 Walker 128야드, 49ers는 Evans 출전 확정",
@@ -104,6 +104,51 @@ export const briefings = [
           "label": "49ers 공식 시청 안내",
           "url": "https://www.49ers.com/news/ways-to-watch-and-listen-commanders-vs-49ers-week-6-monday-night-football"
         }
+      },
+      {
+        "gameId": "401873010",
+        "gameDate": "2026-10-23",
+        "date": "10/23",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Chicago Bears",
+        "note": "짧은 준비 기간에 공격진을 조정하고, 복귀한 Caleb Williams와 Bears의 블리츠에 대응하는 방식을 본다.",
+        "source": {
+          "label": "ESPN Week 7 일정 재조회",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "lastConfirmedEdition": "2026-10-20"
+      },
+      {
+        "gameId": "401873017",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "San Francisco 49ers at Atlanta Falcons",
+        "note": "월요일 밤 경기 뒤 짧아진 회복 기간과 원정 이동 속에서 부상 선수·수비 로테이션 관리가 중요하다.",
+        "source": {
+          "label": "ESPN Week 7 일정 재조회",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "lastConfirmedEdition": "2026-10-20"
+      },
+      {
+        "gameId": "401873022",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "09:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Seattle Seahawks",
+        "note": "Seattle 원정 소음 속 보호 신호와 Walker의 러닝, 이를 바탕으로 만드는 패스 공간을 살핀다.",
+        "source": {
+          "label": "ESPN Week 7 일정 재조회",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "lastConfirmedEdition": "2026-10-20"
       }
     ],
     "leagueWide": [
@@ -124,6 +169,51 @@ export const briefings = [
         "url": "https://www.buffalobills.com/news/bills-33-raiders-30-final-score-recap-highlights",
         "eventKey": "2026-week6-bills-raiders-result",
         "takeaway": "패스 대승이 아니라 러닝과 막판 필드골로 지킨 3점 차 원정 승리다."
+      },
+      {
+        "team": "Tennessee Titans",
+        "label": "AFC South · 시즌 첫 승",
+        "title": "Titans, 수비·스페셜팀으로 0-13을 뒤집고 Colts에 26-20 승리",
+        "why": "Tennessee는 전반 0-13 열세를 뒤집어 시즌 첫 승을 거뒀다. 수비는 턴오버 3개와 색 6개를 만들었고, Chimere Dike의 58야드 펀트 리턴이 동점 터치다운의 발판이 됐다. 이어 펀트를 막아낸 뒤 Femi Oladejo가 공을 주워 14야드 리턴 터치다운을 기록했다. Joey Slye는 종료 2분 3초 전 49야드 필드골로 다시 리드를 만들었다. 편집 해석: 패스 생산량보다 수비가 되찾은 공과 리턴으로 짧아진 공격 거리가 역전의 핵심이었다.",
+        "eventKey": "2026-week6-titans-colts-result",
+        "takeaway": "공격만으로 열세를 만회한 경기가 아니라 턴오버·펀트 리턴·펀트 블록이 함께 만든 역전승이다.",
+        "url": "https://www.tennesseetitans.com/news/titans-stage-second-half-comeback-beat-colts-26-20"
+      },
+      {
+        "team": "Pittsburgh Steelers",
+        "label": "연장 승부 · 결정적 블리츠",
+        "title": "Steelers, Bernard의 연장 TD와 Ramsey의 4다운 색으로 26-19 승리",
+        "why": "Pittsburgh는 연장에서 12플레이로 70야드를 전진한 뒤 Aaron Rodgers의 6야드 패스를 Germie Bernard가 받아 결승 터치다운을 기록했다. Tampa Bay의 다음 공격에서는 Jalen Ramsey가 블리츠로 들어가 4다운 8야드 상황에서 쿼터백을 쓰러뜨리며 승부를 끝냈다. 정규시간 막판에는 Jamel Dean의 인터셉션 리턴이 앞서가는 필드골을 만들었지만 상대가 다시 동점을 만들었다. 편집 해석: 공격의 긴 연장 드라이브와 수비 백의 추가 압박이 각각 득점과 마지막 저지를 완성했다.",
+        "eventKey": "2026-week6-steelers-buccaneers-result",
+        "takeaway": "연장 터치다운만큼 중요한 장면은 상대의 마지막 4다운에서 들어온 Ramsey의 블리츠였다.",
+        "url": "https://www.steelers.com/news/steelers-rally-past-buccaneers-26-19-in-overtime"
+      },
+      {
+        "team": "New Orleans Saints",
+        "label": "NFC · 역전 뒤 추격 저지",
+        "title": "Saints, Shough의 패스 3TD·러싱 TD로 Giants에 34-27 승리",
+        "why": "New Orleans는 0-10으로 출발했지만 킥오프에서 Isaiah Stalbird가 펌블을 유도하고 Oscar Delp가 회수한 뒤 전반 종료 전 동점을 만들었다. Tyler Shough는 패스 터치다운 3개와 쿼터백 스니크 터치다운을 기록했고, 팀은 시즌 최다인 175러싱야드를 생산했다. 후반 Alvin Kamara의 31야드 캐치앤런 터치다운으로 앞서간 뒤 34-10까지 벌렸으나, 4쿼터 추격을 허용해 마지막 엔드존 패스가 실패한 뒤에야 승리를 확정했다. 편집 해석: 후반 러닝과 짧은 패스 이후 전진은 성과였지만 큰 리드를 지키는 수비 운영은 별도 점검 대상이다.",
+        "eventKey": "2026-week6-saints-giants-result",
+        "takeaway": "스페셜팀이 만든 추가 공격권과 후반 러닝으로 역전했지만, 24점 리드가 한 번의 공격권 차이까지 줄었다.",
+        "url": "https://www.neworleanssaints.com/news/2026-nfl-week-6-new-york-giants-vs-new-orleans-saints-game-recap"
+      },
+      {
+        "team": "Chicago Bears",
+        "label": "주전 복귀 · 압박 수비",
+        "title": "Williams 복귀전 305야드, Bears가 Gordon의 색으로 31-23 승리 지켜",
+        "why": "햄스트링 부상으로 세 경기를 쉰 Caleb Williams는 복귀전에서 36회 중 30회 패스를 성공해 305야드와 터치다운 1개를 기록했다. 첫 두 공격을 모두 터치다운으로 마무리한 Chicago는 31-7까지 앞섰지만 Atlanta가 31-23으로 추격했다. 시즌 첫 출전한 Kyler Gordon은 종료 2분 54초 전 자신의 세 번째 색이자 두 번째 스트립색으로 펌블을 만들었고 Devin Bush가 회수했다. 편집 해석: 패스 타이밍의 회복과 수비 백 블리츠가 승리를 이끌었지만, 주전 수비 교체 이후 추격을 허용한 점은 다음 경기 운영의 점검 항목이다.",
+        "eventKey": "2026-week6-bears-falcons-result",
+        "takeaway": "Williams의 정확한 초반 패스와 Gordon의 결정적 블리츠라는 두 복귀 효과가 드러난 경기다.",
+        "url": "https://www.chicagobears.com/news/game-recap-bears-improve-to-4-2-with-road-victory-in-atlanta-2026-week-6"
+      },
+      {
+        "team": "Arizona Cardinals",
+        "label": "NFC West · 필드골 6개",
+        "title": "Ryland의 종료 순간 43야드 필드골, Cardinals가 Rams에 18-16 승리",
+        "why": "Chad Ryland가 필드골 6개로 Arizona의 모든 득점을 올렸고, 마지막 43야드 킥으로 18-16 승리를 확정했다. Rams가 종료 1분도 남지 않은 시점에 역전했지만 Jalen Brooks의 21야드 리셉션과 상대 반칙이 재역전 킥의 거리를 만들었다. Cardinals 수비는 Matthew Stafford에게 계속 블리츠를 보내며 두 차례 4다운 공격을 막았다. 반면 공격은 레드존에 다섯 번 들어가고도 터치다운을 만들지 못했다. 편집 해석: 수비 압박과 킥의 정확도가 승리를 지켰지만, 레드존 마무리 실패를 공격 완성으로 오인해서는 안 된다.",
+        "eventKey": "2026-week6-cardinals-rams-result",
+        "takeaway": "필드골만으로 이긴 결과 뒤에는 수비의 4다운 저지와 해결되지 않은 레드존 효율 문제가 함께 있다.",
+        "url": "https://www.azcardinals.com/news/cardinals-special-teams-leads-the-way-in-victory-over-rams"
       }
     ]
   },
