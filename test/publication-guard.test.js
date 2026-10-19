@@ -3,6 +3,14 @@ import assert from 'node:assert/strict';
 import {guardPublication} from '../src/publication-guard.js';
 const story = {team:'Ravens', title:'Old headline', summary:'The quarterback will miss the next game.', sources:[{url:'https://www.nfl.com/news/qb-out'}]};
 const old = {date:'2026-10-17', sample:false, sections:[story], leagueWide:[]};
+test('rolling game-center, schedule and injury-report sources are not event identity', () => {
+ for (const path of ['/game-day/2026/reg-week6/chargers-at-chiefs/', '/schedule/2026/', '/team/injury-report/']) {
+  const url = 'https://www.chiefs.com' + path;
+  const prior = {...old, sections:[{...story, team:'Chiefs', title:'Rice injury preview', summary:'The receiver was limited in practice before the game.', sources:[{url}]}]};
+  const result = {...story, team:'Chiefs', title:'Chiefs win game result', summary:'Kansas City won the completed football game by three points.', eventKey:'chiefs-game-result', sources:[{url}]};
+  assert.doesNotThrow(()=>guardPublication([prior],edition(result)));
+ }
+});
 test('changing event keys cannot hide identical factual text', () => {
  const prev={...old,sections:[{...story,eventKey:'first-key'}]};
  assert.throws(()=>guardPublication([prev],edition({...story,eventKey:'renamed-key'})),/repeated event/);

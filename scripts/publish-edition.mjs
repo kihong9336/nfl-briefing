@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import { readFile, writeFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { resolve, extname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 import { briefings } from '../src/data.js';
-import { serializeBriefings, upsertEdition } from '../src/publish.js';
+import { preparePublication, serializeBriefings, upsertEdition } from '../src/publish.js';
 import { applyVideoPolicy } from '../src/video-policy.js';
 import { buildPages } from './build-pages.mjs';
 
@@ -16,13 +16,24 @@ if (!inputPath) {
 }
 
 const absoluteInput = resolve(inputPath);
-const { edition, warnings } = applyVideoPolicy(JSON.parse(await readFile(absoluteInput, 'utf8')));
+const input = JSON.parse(await readFile(absoluteInput, 'utf8'));
+const prepared = preparePublication(briefings, input);
+const suffix = extname(absoluteInput);
+const reportPath = (suffix ? absoluteInput.slice(0, -suffix.length) : absoluteInput) + '.publication-report.json';
+await writeFile(reportPath, JSON.stringify(prepared.report, null, 2) + '\n', 'utf8');
+for (const exclusion of prepared.report.exclusions) console.warn(`Excluded ${JSON.stringify(exclusion)}`);
+if (!prepared.edition) {
+  console.error('No new verified stories: publication not performed. See ' + reportPath);
+  process.exit(3);
+}
+const { edition, warnings } = applyVideoPolicy(prepared.edition);
 for (const warning of warnings) console.warn(warning);
 const next = upsertEdition(briefings, edition);
 const outputUrl = new URL('../src/data.js', import.meta.url);
 await writeFile(outputUrl, serializeBriefings(next), 'utf8');
 
 const generatedPaths = await buildPages(next);
+await writeFile(reportPath, JSON.stringify({...prepared.report, status: 'published', videoWarnings: warnings}, null, 2) + '\n', 'utf8');
 console.log(`Published ${edition.date} into ${pathToFileURL(outputUrl.pathname).pathname}`);
 console.log(`Generated static pages:\n${generatedPaths.join('\n')}`);
 console.log('Stage the data AND all generated pages (including new dates): git add -- src/data.js editions/');

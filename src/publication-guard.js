@@ -11,11 +11,16 @@ function canonical(url) {
   } catch { return ''; }
 }
 const urls = item => [...(item.sources ?? []).map(source => source.url), item.url].filter(Boolean).map(canonical).filter(Boolean);
+function isEventSource(url) {
+  const parts = new URL(url).pathname.toLowerCase().split('/').filter(Boolean);
+  // Rolling hubs aggregate distinct injuries, previews and results for one game.
+  return parts.length >= 2 && !parts.some(part => /^(game-day|gameday|game-center|gamecenter|schedule|schedules|injury-report|injury-reports|injuries)$/.test(part));
+}
 function sameEvent(a, b) {
   if (normalize(text(a)).length > 20 && normalize(text(a)) === normalize(text(b))) return true;
   if (a.eventKey && b.eventKey) return a.eventKey === b.eventKey;
   // A generic landing page or a matching headline alone is not an event identity.
-  const sharedSource = urls(a).some(url => new URL(url).pathname.split('/').filter(Boolean).length >= 2 && urls(b).includes(url));
+  const sharedSource = urls(a).some(url => isEventSource(url) && urls(b).includes(url));
   return (sharedSource && normalize(a.team) === normalize(b.team)) || (normalize(text(a)).length > 20 && normalize(text(a)) === normalize(text(b)));
 }
 function changed(item, previous) {
@@ -31,6 +36,12 @@ function changed(item, previous) {
     && normalize(quote).includes(newFact)
     && urls(item).includes(canonical(url));
 }
+export function repeatedPublicationEvent(briefings, edition, item) {
+  const cutoff = Date.parse(edition.date) - 7 * 86400000;
+  const recent = briefings.filter(old => old.sample === false && old.date < edition.date && Date.parse(old.date) >= cutoff).sort((a,b) => b.date.localeCompare(a.date));
+  const previous = recent.flatMap(old => items(old).map(story => ({story, date: old.date}))).find(({story}) => sameEvent(item, story));
+  return previous && !changed(item, previous.story) ? previous : null;
+}
 export function guardPublication(briefings, edition) {
   const current = items(edition);
   for (let i = 0; i < current.length; i++) {
@@ -38,10 +49,8 @@ export function guardPublication(briefings, edition) {
       if (sameEvent(current[i], earlier)) throw new Error(`repeated event within edition: ${current[i].eventKey || current[i].title}; merge coverage`);
     }
   }
-  const cutoff = Date.parse(edition.date) - 7 * 86400000;
-  const recent = briefings.filter(old => old.sample === false && old.date < edition.date && Date.parse(old.date) >= cutoff).sort((a,b) => b.date.localeCompare(a.date));
   for (const item of current) {
-    const previous = recent.flatMap(old => items(old).map(story => ({story, date: old.date}))).find(({story}) => sameEvent(item, story));
-    if (previous && !changed(item, previous.story)) throw new Error(`repeated event: ${item.eventKey || item.title} (${previous.date}); supply source-verified changeSummary and changeEvidence or omit`);
+    const previous = repeatedPublicationEvent(briefings, edition, item);
+    if (previous) throw new Error(`repeated event: ${item.eventKey || item.title} (${previous.date}); supply source-verified changeSummary and changeEvidence or omit`);
   }
 }

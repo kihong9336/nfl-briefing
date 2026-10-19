@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { upsertEdition, validateEdition } from '../src/publish.js';
+import { preparePublication, upsertEdition, validateEdition } from '../src/publish.js';
 
 const validEdition = {
   date: '2026-10-17',
@@ -76,6 +76,42 @@ const validEdition = {
   ],
 };
 
+test('prepare excludes historical duplicates, audits both collections and rebuilds headers without mutating input', () => {
+  const prior = structuredClone(validEdition);
+  const next = structuredClone(validEdition); next.date = '2026-10-18'; next.weekday = '일요일';
+  next.sections.push({...next.sections[0], id:'fresh', title:'새로운 선수 계약과 다음 경기 준비 소식', summary:'이전에 보도되지 않은 새로운 선수 계약의 세부 내용입니다.', sources:[{label:'NFL',url:'https://www.nfl.com/news/fresh'}]});
+  const original = structuredClone(next);
+  const result = preparePublication([prior], next);
+  assert.equal(result.report.status, 'ready');
+  assert.equal(result.report.inputStoryCount, 4);
+  assert.equal(result.report.outputStoryCount, 1);
+  assert.deepEqual(result.report.exclusions.map(x=>[x.collection,x.index,x.previousDate]), [['sections',0,prior.date],['leagueWide',0,prior.date],['leagueWide',1,prior.date]]);
+  assert.equal(result.edition.lead.title, next.sections[1].title);
+  assert.equal(result.edition.lead.summary, next.sections[1].summary);
+  assert.equal(result.edition.dek, next.sections[1].summary);
+  assert.deepEqual(next, original);
+  assert.doesNotThrow(()=>upsertEdition([prior], result.edition));
+});
+
+test('prepare retains strict validation even for stories that would be excluded', () => {
+  for (const mutate of [e=>e.sections[0].sources=[], e=>e.sections[0].title='<bad>', e=>e.highlights=[{title:'invalid'}], e=>e.tactics[0].breakdown=[]]) {
+    const next = structuredClone(validEdition); next.date='2026-10-18'; next.weekday='일요일'; mutate(next);
+    assert.throws(()=>preparePublication([validEdition],next));
+  }
+  const repeated = structuredClone(validEdition); repeated.sections.push({...repeated.sections[0],id:'duplicate'});
+  assert.throws(()=>preparePublication([],repeated),/within edition/);
+});
+
+test('prepare returns explicit no-new status for empty or fully excluded editions', () => {
+  const next = structuredClone(validEdition); next.date='2026-10-18'; next.weekday='일요일';
+  const excluded = preparePublication([validEdition],next);
+  assert.equal(excluded.edition,null);
+  assert.equal(excluded.report.status,'no-new-verified-stories');
+  assert.equal(excluded.report.exclusions.length,3);
+  next.sections=[]; next.leagueWide=[];
+  assert.equal(preparePublication([],next).report.status,'no-new-verified-stories');
+});
+
 test('publication rejects a reworded event despite a new URL', () => {
   const prior = structuredClone(validEdition);
   prior.sections[0].eventKey = '2026-jets-qb-availability';
@@ -121,6 +157,7 @@ test('changed facts on the same source pass, mere update badges do not', () => {
   updated.changeSummary = '훈련 참가 상태에서 최종 출전 상태로 변경';
   updated.changeEvidence = {url: story.sources[0].url, before: '훈련 제한 참가', after: '최종 경기 결장', quote: '선수는 최종 경기 결장 상태입니다.'};
   assert.doesNotThrow(() => upsertEdition([prior], next));
+  assert.equal(preparePublication([prior], next).report.outputStoryCount, 1);
   updated.changeEvidence.quote = '이전 보고서를 다시 인용했습니다.';
   assert.throws(() => upsertEdition([prior], next), /repeated event/);
 });

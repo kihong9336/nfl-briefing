@@ -18,7 +18,9 @@ test('build is deterministic and publisher automatically regenerates all static 
     execFileSync(process.execPath, ['scripts/build-pages.mjs'], { cwd: temp });
     assert.equal(await readFile(join(temp, 'editions/index.html'), 'utf8'), original);
     const edition = structuredClone(briefings[0]);
-    edition.sections = []; edition.leagueWide = [];
+    edition.sections = [edition.sections[0]]; edition.leagueWide = [];
+    edition.sections[0].eventKey = 'test-unique-publish';
+    edition.sections[0].summary = 'A unique factual test story for publication pipeline verification.';
     edition.date = '2026-10-18'; edition.weekday = '일요일'; edition.lead.title = '테스트 전용 발행 파이프라인 재생성 확인';
     await writeFile(join(temp, 'input.json'), JSON.stringify(edition));
     const output = execFileSync(process.execPath, ['scripts/publish-edition.mjs', 'input.json'], { cwd: temp, encoding: 'utf8' });
@@ -28,5 +30,20 @@ test('build is deterministic and publisher automatically regenerates all static 
     assert.ok((await readFile(join(temp, 'src/data.js'), 'utf8')).includes(edition.lead.title));
     assert.ok(output.includes('git add -- src/data.js editions/'));
     assert.ok(output.includes('editions/2026-10-18/index.html'));
+    const report = JSON.parse(await readFile(join(temp, 'input.publication-report.json'), 'utf8'));
+    assert.equal(report.outputStoryCount, 1);
+    assert.equal(report.status, 'published');
+    const publishedData = await readFile(join(temp, 'src/data.js'), 'utf8');
+    edition.date = '2026-10-19'; edition.weekday = '월요일';
+    const duplicateInput = JSON.stringify(edition);
+    await writeFile(join(temp, 'input.json'), duplicateInput);
+    assert.throws(()=>execFileSync(process.execPath, ['scripts/publish-edition.mjs', 'input.json'], {cwd:temp, stdio:'pipe'}));
+    const emptyReport = JSON.parse(await readFile(join(temp, 'input.publication-report.json'), 'utf8'));
+    assert.equal(emptyReport.status, 'no-new-verified-stories');
+    assert.equal(emptyReport.inputStoryCount, 1);
+    assert.equal(emptyReport.outputStoryCount, 0);
+    assert.equal(emptyReport.exclusions[0].previousDate, '2026-10-18');
+    assert.equal(await readFile(join(temp, 'src/data.js'), 'utf8'), publishedData);
+    assert.equal(await readFile(join(temp, 'input.json'), 'utf8'), duplicateInput);
   } finally { await rm(temp, { recursive: true, force: true }); }
 });

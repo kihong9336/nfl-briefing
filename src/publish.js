@@ -1,4 +1,4 @@
-import { guardPublication } from './publication-guard.js';
+import { guardPublication, repeatedPublicationEvent } from './publication-guard.js';
 
 const REQUIRED_EDITION_FIELDS = ['date', 'weekday', 'edition', 'dek', 'lead', 'sections', 'tactics', 'highlights', 'schedule', 'leagueWide'];
 const REQUIRED_STORY_FIELDS = ['id', 'team', 'label', 'title', 'summary', 'commentary', 'watch'];
@@ -177,6 +177,38 @@ export function validateEdition(edition) {
     }
   }
   return edition;
+}
+
+// Validate the complete input first: exclusions must never conceal malformed content.
+export function preparePublication(briefings, input) {
+  validateEdition(input);
+  guardPublication([], input); // within-edition duplicates still require editorial merging
+  const edition = structuredClone(input);
+  const exclusions = [];
+  const inputStoryCount = input.sections.length + input.leagueWide.length;
+  for (const collection of ['sections', 'leagueWide']) {
+    edition[collection] = edition[collection].filter((item, index) => {
+      const previous = repeatedPublicationEvent(briefings, edition, item);
+      if (!previous) return true;
+      exclusions.push({collection, index, id: item.id ?? null, eventKey: item.eventKey ?? null,
+        title: item.title, previousDate: previous.date, previousId: previous.story.id ?? null,
+        previousEventKey: previous.story.eventKey ?? null, previousTitle: previous.story.title,
+        reason: 'repeated-event-without-verified-change'});
+      return false;
+    });
+  }
+  const selected = [...edition.sections, ...edition.leagueWide];
+  const report = {date: edition.date, status: selected.length ? 'ready' : 'no-new-verified-stories',
+    inputStoryCount, outputStoryCount: selected.length, exclusions};
+  if (!selected.length) return {edition: null, report};
+  if (exclusions.length) {
+    edition.lead = {kicker: '오늘의 핵심', title: selected.map(item => item.title).join(' · '),
+      summary: selected.map(item => item.summary ?? item.why).join(' ')};
+    edition.dek = edition.lead.summary;
+  }
+  validateEdition(edition);
+  guardPublication(briefings, edition);
+  return {edition, report};
 }
 
 export function upsertEdition(briefings, edition) {

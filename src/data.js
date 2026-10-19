@@ -1,5 +1,133 @@
 export const briefings = [
   {
+    "date": "2026-10-20",
+    "weekday": "화요일",
+    "edition": "2026 WEEK 6 · 원문 재검증 복구본",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 6,
+    "dek": "2026년 10월 20일 아침 KST 기준. 구단 공식 기사와 리그·주요 매체를 대조했다. Chiefs·49ers·Patriots의 경기 및 선수 상태, Packers·Bills의 경기 결과를 다룬다. 전술적 의미는 사실과 구분한 편집 해석이다.",
+    "lead": {
+      "kicker": "오늘의 핵심",
+      "title": "Chiefs 22-6 승리와 Walker 128야드, 49ers는 Evans 출전 확정",
+      "summary": "Chiefs는 Walker의 두 차례 러싱 터치다운과 수비로 무패를 지켰다. 49ers는 Evans의 출전을 확인했고 Patriots는 Doubs를 부상자 명단에 올렸다. Packers는 수비 압박으로, Bills는 경기 막판 공격으로 승리를 확보했다."
+    },
+    "sections": [
+      {
+        "id": "chiefs-chargers-week6-result",
+        "team": "Chiefs",
+        "label": "경기 결과 · 공식 기록 재검증",
+        "title": "Walker 128야드·2TD, Chiefs가 Chargers를 22-6으로 제압",
+        "summary": "Chiefs는 Chargers를 22-6으로 꺾고 5승 무패가 됐다. Ken Walker는 19회 러시로 128야드와 터치다운 2개를 기록했고 Mahomes는 272패싱야드를 올렸다. 수비는 테이크어웨이 2회와 별도로 4다운 저지 3회, 색 4개를 기록했다.",
+        "commentary": "편집 해석: 단순히 턴오버가 많아서 이겼다고 묶으면 수비의 성격을 놓친다. 공을 직접 빼앗은 두 번과 4다운을 막은 세 번은 서로 다른 사건이다. Walker가 8명 이상 박스에서도 53야드와 두 TD를 얻었다는 공식 분석은 수비 숫자를 늘리는 것만으로 러닝을 해결하지 못했음을 보여준다. 다음 상대는 박스 숫자뿐 아니라 갭 책임과 첫 태클의 정확도를 함께 점검해야 한다.",
+        "watch": "Walker의 첫 컷 직전 수비수의 갭 이동, 박스가 조밀해진 뒤 Worthy의 짧은 패스 공간, Chiefs 수비가 4다운에서 러시와 커버리지를 결합하는 순서로 보자. 이는 관전 제안이지 아직 확인하지 않은 다음 경기의 전개 예측은 아니다.",
+        "sources": [
+          {
+            "label": "Chiefs 공식 경기 리캡",
+            "url": "https://www.chiefs.com/news/chiefs-defeat-chargers-22-6-to-move-to-5-0-on-the-season"
+          },
+          {
+            "label": "Chiefs 공식 경기 분석",
+            "url": "https://www.chiefs.com/news/10-quick-facts-following-the-chiefs-week-6-win-over-los-angeles-upon-further-review"
+          }
+        ],
+        "eventKey": "2026-week6-chiefs-chargers-result",
+        "takeaway": "실제 승리는 22-6, 러닝의 중심은 Pacheco가 아니라 Walker였다. 테이크어웨이와 4다운 저지는 구분해야 한다."
+      },
+      {
+        "id": "49ers-week6-final-active-update",
+        "team": "49ers",
+        "label": "경기 직전 상태 확정",
+        "title": "49ers, Questionable이던 Evans 액티브 확정…경기 직전 인원 구체화",
+        "summary": "49ers 공식 경기 당일 발표에서 Mike Evans가 액티브로 확정됐다. 전날 Questionable이던 Mykel Williams, Gracen Halton, Siran Neal, Upton Stout도 액티브로 발표됐다. Deebo Samuel과 Nick Bosa의 결장은 유지된다. Kirk는 공식 기사 본문과 하단 비활성 명단이 서로 맞지 않아 확정 상태로 다루지 않는다.",
+        "commentary": "전술 해석: Evans의 출전 가능 확정은 바깥 일대일 패스 선택지를 유지하는 데 의미가 있다. 다만 액티브 등록이 정상적인 전체 스냅 소화까지 보장하지는 않는다. Bosa 결장이 유지되는 수비는 패스러시와 Daniels의 외곽 탈출로 차단 사이의 균형이 중요하다.",
+        "watch": "Evans의 초반 스냅과 움직임, 그에게 세이프티 도움이 붙는지, 수비 엣지가 안으로 파고들 때 바깥 러시 레인이 비는지 확인한다.",
+        "sources": [
+          {
+            "label": "49ers 공식 경기 당일 액티브 기사",
+            "url": "https://www.49ers.com/news/mike-evans-active-kirk-out-vs-commanders-inactives-week-6-wasvssf"
+          },
+          {
+            "label": "49ers 공식 최종 부상 보고서",
+            "url": "https://www.49ers.com/news/kyle-juszczyk-available-deebo-ruled-out-vs-commanders-in-week-6-wasvssf"
+          }
+        ],
+        "eventKey": "2026-week6-49ers-juszczyk-return-status",
+        "takeaway": "Evans가 Questionable에서 액티브로 바뀌었다. 실제 스냅과 움직임은 경기에서 확인할 부분이다.",
+        "changeSummary": "전날 Questionable이던 Evans의 경기 당일 액티브 등록이 확인됐다.",
+        "changeEvidence": {
+          "url": "https://www.49ers.com/news/mike-evans-active-kirk-out-vs-commanders-inactives-week-6-wasvssf",
+          "before": "마이크 에번스와 크리스천 커크를 포함한 여섯 명은 Questionable",
+          "after": "Mike Evans가 액티브로 확정됐다",
+          "quote": "한국어 번역 요약: Questionable로 분류됐던 Mike Evans가 액티브로 확정됐다.",
+          "quoteLanguage": "ko",
+          "translation": "한국어 번역 요약: Questionable로 분류됐던 Mike Evans가 액티브로 확정됐다.",
+          "translationLabel": "원문에서 Evans에 해당하는 사실을 한국어로 요약한 번역. 원문 직접인용은 originalQuote.",
+          "originalQuote": "Wide receiver Mike Evans (ribs, Achilles), defensive linemen Gracen Halton (quadricep) and Mykel Williams (knee), defensive back Siran Neal (neck), and cornerback Upton Stout (shoulder) were all listed as questionable but are active for Monday's game."
+        },
+        "update": {
+          "kind": "status-change",
+          "evidence": "https://www.49ers.com/news/mike-evans-active-kirk-out-vs-commanders-inactives-week-6-wasvssf",
+          "previousDate": "2026-10-19"
+        }
+      },
+      {
+        "id": "patriots-doubs-ir-oct19",
+        "team": "Patriots",
+        "label": "공식 로스터 이동",
+        "title": "Patriots, Romeo Doubs를 IR로…Davison은 53인 로스터 합류",
+        "summary": "Patriots는 현지 10월 19일 Romeo Doubs를 부상자 명단(IR)에 올리고 Elliott Davison을 연습조에서 53인 로스터로 올렸다고 공식 발표했다. Ryan Miller, Jacob Rizy, Andrew Rupcich는 연습조에 합류했다. 이번 발표만으로 Doubs의 복귀 날짜나 대체 선발을 확정할 수는 없다.",
+        "commentary": "편집 해석: 리시버의 IR 이동과 수비수의 53인 합류는 일대일 포지션 대체가 아니다. 로스터 한 자리를 수비·스페셜팀에 쓰면서 패스 공격은 남은 리시버들의 정렬과 역할을 재배분해야 한다. Rizy와 Rupcich의 연습조 합류는 라인 선택지를 넓히지만 당장 경기 액티브로 확정됐다는 뜻은 아니다.",
+        "watch": "다음 공식 연습 보고서에서 리시버 스냅과 정렬의 변화, 연습조 라인맨의 실제 승격 여부, Davison의 스페셜팀 역할을 확인하자. IR 발표에 없는 부상 진단이나 복귀 시점은 추정하지 않는다.",
+        "sources": [
+          {
+            "label": "Patriots 공식 로스터 발표",
+            "url": "https://www.patriots.com/news/patriots-place-wr-romeo-doubs-on-injured-reserve-sign-db-elliott-davison-to-the-53-man-roster-from-the-practice-squad-announce-additional-practice-squad-moves"
+          }
+        ],
+        "eventKey": "2026-10-19-patriots-doubs-ir-davison-roster",
+        "takeaway": "Doubs의 IR 이동은 새 로스터 사건이며, 연습조 보강을 곧바로 선발 교체로 읽어서는 안 된다."
+      }
+    ],
+    "tactics": [],
+    "highlights": [],
+    "schedule": [
+      {
+        "date": "10/20",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Washington Commanders at San Francisco 49ers",
+        "note": "공식 안내의 10월 19일 월요일 17:15 PT를 America/Los_Angeles에서 Asia/Seoul로 변환했다. Evans 출전 상황과 Bosa 없는 수비의 러시 레인을 관찰한다.",
+        "source": {
+          "label": "49ers 공식 시청 안내",
+          "url": "https://www.49ers.com/news/ways-to-watch-and-listen-commanders-vs-49ers-week-6-monday-night-football"
+        }
+      }
+    ],
+    "leagueWide": [
+      {
+        "team": "Green Bay Packers",
+        "label": "SNF · 공식 경기 결과",
+        "title": "Packers 23-13 승리, 핵심은 수비 압박과 전반 3다운",
+        "why": "Packers는 Cowboys에 23-13으로 승리해 4승 2패가 됐다. Love는 276패싱야드, TD 1개와 인터셉션 1개를 기록했다. 수비는 인터셉션 2회와 득점권 4다운 저지 2회를 만들었다. 편집 해석: 51점짜리 공격 폭발이 아니라 상대의 깊은 패스를 제한하고 전반 3다운 10회 중 9회를 성공한 상황별 효율이 중심이다.",
+        "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-cowboys-week-6-2026",
+        "eventKey": "2026-week6-packers-cowboys-result",
+        "takeaway": "득점 난타전이 아닌 23-13 승리였다. 압박과 커버리지, 3다운 효율을 함께 봐야 한다."
+      },
+      {
+        "team": "Buffalo Bills",
+        "label": "AFC · 공식 경기 결과",
+        "title": "Bills 33-30 승리, Allen 255야드·2TD와 Cook의 막판 전진",
+        "why": "Buffalo는 Las Vegas 원정에서 33-30으로 이겨 5승 1패가 됐다. Allen은 255패싱야드와 TD 2개, Cook은 러싱 95야드와 TD 1개를 기록했다. 편집 해석: 23-23에서 Cook이 66야드 득점 드라이브의 46야드를 책임진 흐름과 마지막 필드골이 중요했다. 34-17 완승이나 Allen 347야드·3TD로 설명할 경기가 아니다.",
+        "url": "https://www.buffalobills.com/news/bills-33-raiders-30-final-score-recap-highlights",
+        "eventKey": "2026-week6-bills-raiders-result",
+        "takeaway": "패스 대승이 아니라 러닝과 막판 필드골로 지킨 3점 차 원정 승리다."
+      }
+    ]
+  },
+  {
     "date": "2026-10-19",
     "weekday": "월요일",
     "edition": "2026 WEEK 6 · 검증 발행본",
