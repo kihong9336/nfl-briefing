@@ -3,6 +3,18 @@ import assert from 'node:assert/strict';
 
 import { preparePublication, upsertEdition, validateEdition } from '../src/publish.js';
 
+for (const kind of ['hook-and-ladder', 'fourth-down-db-blitz']) {
+  test(`validator accepts ${kind} without changing article or source fields`, () => {
+    const edition = structuredClone(validEdition);
+    edition.tactics[0].diagram.kind = kind;
+    const before = structuredClone(edition);
+    assert.equal(validateEdition(edition), edition);
+    assert.deepEqual(edition, before);
+    edition.tactics[0].diagram.kind = 'unknown-diagram';
+    assert.throws(() => validateEdition(edition), /unsupported tactic.diagram.kind/);
+  });
+}
+
 const validEdition = {
   date: '2026-10-17',
   weekday: '토요일',

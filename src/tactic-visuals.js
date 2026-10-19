@@ -67,7 +67,48 @@ function backShoulder(item) {
     </svg>`;
 }
 
+function hookAndLadder(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="ladder-title ladder-desc">
+    <title id="ladder-title">${escapeXml(item.title)}</title>
+    <desc id="ladder-desc">개념도: 실제 선수 위치·플레이 필름 재현 아님. 공격은 위쪽. QB의 짧은 전방 패스를 WR이 받고 뒤따르는 RB에게 후방 래터럴, RB가 전진해 갱신선 통과.</desc>
+    <defs><marker id="ladder-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="mini-label" x="24" y="30">개념도 · 실제 선수 위치·플레이 필름 재현 아님</text>
+    <text class="field-label" x="24" y="65">3rd &amp; 11 · 공격 방향 ↑ · 거리 비례 아님</text>
+    <path class="line-scrimmage" d="M18 290H702"/><text class="field-label" x="24" y="280">LINE OF SCRIMMAGE</text>
+    <path class="route-path" d="M18 140H702"/><text class="field-label" x="420" y="130">LINE TO GAIN · 11yd</text>
+    <path data-action="forward-pass" class="pass-path" d="M360 330 L220 210" marker-end="url(#ladder-arrow)"/>
+    <path data-action="backward-lateral" class="pass-path" d="M220 210 L320 245" marker-end="url(#ladder-arrow)"/>
+    <path data-action="advance" class="route-path" d="M320 245 L390 110" marker-end="url(#ladder-arrow)"/>
+    ${player(360, 350, 'QB')}${player(200, 195, 'WR')}${player(320, 265, 'RB')}
+    <text class="mini-label" x="60" y="335">① 짧은 전방 패스</text>
+    <text class="mini-label" x="45" y="245">② 후방 래터럴</text>
+    <text class="mini-label" x="420" y="205">③ RB 전진 · 갱신선 통과</text>
+    <text class="mini-label" x="24" y="395">래터럴은 전방이 아닌 뒤쪽으로 · RB는 WR 뒤를 따라 받음</text>
+  </svg>`;
+}
+
+function fourthDownDbBlitz(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="db-title db-desc">
+    <title id="db-title">${escapeXml(item.title)}</title>
+    <desc id="db-desc">일반 배치 개념도: 실제 선수 위치·플레이 필름 재현 아님. 연장 4th and 8에서 DB가 QB를 압박해 스크리미지 라인 뒤에서 색. 실제 보호 방식·수비 프런트는 표시하지 않음.</desc>
+    <defs><marker id="db-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#ff5b68" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="mini-label" x="24" y="30">개념도 · 실제 선수 위치·플레이 필름 재현 아님</text>
+    <text class="field-label" x="24" y="65">OT · 4th &amp; 8 · 공격 방향 ↑ · 거리 비례 아님</text>
+    <path class="route-path" d="M18 140H702"/><text class="field-label" x="420" y="130">LINE TO GAIN · 8yd</text>
+    <path class="line-scrimmage" d="M18 270H702"/><text class="field-label" x="420" y="260">LINE OF SCRIMMAGE</text>
+    <path data-action="db-pressure" class="pressure-path" d="M180 220 Q240 300 340 330" marker-end="url(#db-arrow)"/>
+    ${player(170, 200, 'DB', 'defense')}${player(360, 340, 'QB')}
+    <text class="callout danger" x="230" y="205">DB 블리츠 → QB</text>
+    <text class="callout light" x="420" y="345">SACK · 갱신 실패</text>
+    <text class="mini-label" x="24" y="395">일반 배치만 표시 · 실제 보호 방식·수비 프런트 추정 없음</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'fourth-down-db-blitz') return fourthDownDbBlitz(item);
+  if (item?.diagram?.kind === 'hook-and-ladder') return hookAndLadder(item);
   if (item?.diagram?.kind === 'blitz-hot-read') return blitzHotRead(item);
   if (item?.diagram?.kind === 'back-shoulder') return backShoulder(item);
   return `<div class="diagram-fallback">이 전술의 전용 다이어그램을 준비 중입니다.</div>`;
