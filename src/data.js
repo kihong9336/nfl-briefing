@@ -7,13 +7,55 @@ export const briefings = [
     "season": 2026,
     "seasonType": "regular",
     "week": 6,
-    "dek": "2026년 10월 20일 아침 KST 기준. 현지 18일 일요일 12경기를 대조해 이전 발행 4경기의 반복은 피하고 미수록 경기 결과를 보강했다. 관심 세 팀의 소식과 리그 전체 경기의 주요 장면을 함께 다룬다. 예정 일정은 뉴스 채택 여부와 별개로 유지한다.",
+    "dek": "10월 20일 저녁 확인 내용을 반영했습니다. 49ers의 23-17 승리와 경기 후 부상, Eagles·Colts·Rams의 변화를 추가하고 기존 경기 해설·전술교실·영상을 함께 보존했습니다.",
     "lead": {
-      "kicker": "오늘의 핵심",
-      "title": "Chiefs 22-6 승리와 Walker 128야드, 49ers는 Evans 출전 확정",
-      "summary": "Chiefs는 Walker의 두 차례 러싱 터치다운과 수비로 무패를 지켰다. 49ers는 Evans의 출전을 확인했고 Patriots는 Doubs를 부상자 명단에 올렸다. Packers는 수비 압박으로, Bills는 경기 막판 공격으로 승리를 확보했다."
+      "kicker": "오늘의 핵심 · 저녁 업데이트",
+      "title": "49ers는 6연승, Eagles·Colts·Rams는 다음 국면으로",
+      "summary": "49ers는 전반 리드를 마지막 수비로 지켰다. 리그에서는 Hurts의 치료와 복귀 전망, Colts 단장 교체, Rams의 부상 공백이 다음 경기와 남은 시즌의 관전 맥락을 바꿨다."
     },
     "sections": [
+      {
+        "id": "49ers-commanders-week6-result",
+        "team": "49ers",
+        "label": "경기 결과 · 저녁 업데이트",
+        "title": "49ers 23-17 승리…Mustapha의 4다운 수비로 6연승 지켜",
+        "summary": "49ers가 Commanders를 23-17로 꺾었다. 전반 20-3 리드 뒤 추격을 허용했지만, 경기 막판 Mustapha의 4다운 패스 저지와 Height·White의 마지막 색으로 승리를 지켰다. McCaffrey는 러싱 터치다운 두 개를 기록했다.",
+        "commentary": "전반 득점과 마지막 수비는 나누어 봐야 한다. 공격이 후반에도 지배했다고 해석하면 추격을 허용한 흐름을 놓친다. 4다운 3야드에서 수비는 짧은 거리뿐 아니라 엔드존까지 지켜야 했고 Mustapha가 Burks를 향한 패스를 끊었다.",
+        "watch": "4다운 직전 러닝 저지, 엔드존 패스에 대한 Mustapha의 대응, 마지막 패스러시 순서로 확인한다.",
+        "sources": [
+          {
+            "label": "49ers 공식 리캡",
+            "url": "https://www.49ers.com/news/49ers-are-victorious-in-week-6-mnf-showdown-vs-commanders-takeaways-from-wasvssf"
+          },
+          {
+            "label": "Commanders 공식 리캡",
+            "url": "https://www.commanders.com/news/instant-analysis-commanders-49ers-2026"
+          }
+        ],
+        "eventKey": "2026-week6-49ers-commanders-result",
+        "takeaway": "전반 리드를 만든 공격과 추격을 막아낸 마지막 수비를 구분해서 읽는다."
+      },
+      {
+        "id": "49ers-evans-achilles-postgame",
+        "team": "49ers",
+        "label": "경기 후 부상 업데이트",
+        "title": "Evans, 액티브 등록 뒤 아킬레스 통증으로 이탈…다음 경기 출전은 미정",
+        "summary": "Evans는 액티브 명단에 들어 출전했지만 아킬레스 부위 통증이 악화돼 경기에서 이탈했다. Shanahan은 경기 후 추가 검사가 필요하지 않으며 Week 7 출전을 희망한다고 밝혔다.",
+        "commentary": "아침의 액티브 확정과 실제 경기 소화는 다른 상태다. 다음 Falcons전은 Evans의 회복과 나머지 리시버의 역할 배분을 함께 확인해야 한다.",
+        "watch": "다음 공식 연습 보고서에서 Evans의 참여 수준과 경기 상태 지정을 확인한다.",
+        "sources": [
+          {
+            "label": "NFL 경기 후 업데이트",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19"
+          },
+          {
+            "label": "NBC Shanahan 발언",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-mike-evans-injury-is-not-a-long-term-thing-hopeful-he-can-play-sunday"
+          }
+        ],
+        "eventKey": "2026-week6-49ers-evans-achilles-game-exit",
+        "takeaway": "액티브 등록 뒤 경기 중 이탈이라는 새 사건이며 다음 경기 출전은 아직 확정되지 않았다."
+      },
       {
         "id": "chiefs-chargers-week6-result",
         "team": "Chiefs",
@@ -34,43 +76,6 @@ export const briefings = [
         ],
         "eventKey": "2026-week6-chiefs-chargers-result",
         "takeaway": "실제 승리는 22-6, 러닝의 중심은 Pacheco가 아니라 Walker였다. 테이크어웨이와 4다운 저지는 구분해야 한다."
-      },
-      {
-        "id": "49ers-week6-final-active-update",
-        "team": "49ers",
-        "label": "경기 직전 상태 확정",
-        "title": "49ers, Questionable이던 Evans 액티브 확정…경기 직전 인원 구체화",
-        "summary": "49ers 공식 경기 당일 발표에서 Mike Evans가 액티브로 확정됐다. 전날 Questionable이던 Mykel Williams, Gracen Halton, Siran Neal, Upton Stout도 액티브로 발표됐다. Deebo Samuel과 Nick Bosa의 결장은 유지된다. Kirk는 공식 기사 본문과 하단 비활성 명단이 서로 맞지 않아 확정 상태로 다루지 않는다.",
-        "commentary": "Evans의 출전 가능 확정은 바깥 일대일 패스 선택지를 유지하는 데 의미가 있다. 다만 액티브 등록이 정상적인 전체 스냅 소화까지 보장하지는 않는다. Bosa 결장이 유지되는 수비는 패스러시와 Daniels의 외곽 탈출로 차단 사이의 균형이 중요하다.",
-        "watch": "Evans의 초반 스냅과 움직임, 그에게 세이프티 도움이 붙는지, 수비 엣지가 안으로 파고들 때 바깥 러시 레인이 비는지 확인한다.",
-        "sources": [
-          {
-            "label": "49ers 공식 경기 당일 액티브 기사",
-            "url": "https://www.49ers.com/news/mike-evans-active-kirk-out-vs-commanders-inactives-week-6-wasvssf"
-          },
-          {
-            "label": "49ers 공식 최종 부상 보고서",
-            "url": "https://www.49ers.com/news/kyle-juszczyk-available-deebo-ruled-out-vs-commanders-in-week-6-wasvssf"
-          }
-        ],
-        "eventKey": "2026-week6-49ers-juszczyk-return-status",
-        "takeaway": "Evans가 Questionable에서 액티브로 바뀌었다. 실제 스냅과 움직임은 경기에서 확인할 부분이다.",
-        "changeSummary": "전날 Questionable이던 Evans의 경기 당일 액티브 등록이 확인됐다.",
-        "changeEvidence": {
-          "url": "https://www.49ers.com/news/mike-evans-active-kirk-out-vs-commanders-inactives-week-6-wasvssf",
-          "before": "마이크 에번스와 크리스천 커크를 포함한 여섯 명은 Questionable",
-          "after": "Mike Evans가 액티브로 확정됐다",
-          "quote": "한국어 번역 요약: Questionable로 분류됐던 Mike Evans가 액티브로 확정됐다.",
-          "quoteLanguage": "ko",
-          "translation": "한국어 번역 요약: Questionable로 분류됐던 Mike Evans가 액티브로 확정됐다.",
-          "translationLabel": "원문에서 Evans에 해당하는 사실을 한국어로 요약한 번역. 원문 직접인용은 originalQuote.",
-          "originalQuote": "Wide receiver Mike Evans (ribs, Achilles), defensive linemen Gracen Halton (quadricep) and Mykel Williams (knee), defensive back Siran Neal (neck), and cornerback Upton Stout (shoulder) were all listed as questionable but are active for Monday's game."
-        },
-        "update": {
-          "kind": "status-change",
-          "evidence": "https://www.49ers.com/news/mike-evans-active-kirk-out-vs-commanders-inactives-week-6-wasvssf",
-          "previousDate": "2026-10-19"
-        }
       },
       {
         "id": "patriots-doubs-ir-oct19",
@@ -203,6 +208,13 @@ export const briefings = [
     ],
     "highlights": [
       {
+        "title": "Washington Commanders vs San Francisco 49ers Game Highlights | 2026 NFL Season Week 6",
+        "channel": "NFL",
+        "type": "NFL 공식 경기 하이라이트",
+        "note": "전반 20-3 리드를 만든 공격과 후반 추격을 버틴 수비를 나누어 본다. 마지막에는 4다운 패스 저지와 패스러시가 어떻게 승리를 지켰는지 살펴본다.",
+        "url": "https://www.youtube.com/watch?v=EM4Bq_uqLQ0"
+      },
+      {
         "title": "Los Angeles Chargers vs Kansas City Chiefs Game Highlights | 2026 NFL Season Week 6",
         "channel": "NFL",
         "type": "youtube",
@@ -229,9 +241,9 @@ export const briefings = [
         "date": "10/20",
         "weekday": "화",
         "time": "09:15",
-        "status": "경기 예정",
+        "status": "종료",
         "matchup": "Washington Commanders at San Francisco 49ers",
-        "note": "공식 안내의 10월 19일 월요일 17:15 PT를 America/Los_Angeles에서 Asia/Seoul로 변환했다. Evans 출전 상황과 Bosa 없는 수비의 러시 레인을 관찰한다.",
+        "note": "49ers 23-17 승리. 경기 결과와 마지막 수비 장면은 위 기사·하이라이트에서 확인할 수 있다.",
         "source": {
           "label": "49ers 공식 시청 안내",
           "url": "https://www.49ers.com/news/ways-to-watch-and-listen-commanders-vs-49ers-week-6-monday-night-football"
@@ -245,12 +257,14 @@ export const briefings = [
         "time": "09:15",
         "status": "경기 예정",
         "matchup": "New England Patriots at Chicago Bears",
-        "note": "짧은 준비 기간에 공격진을 조정하고, 복귀한 Caleb Williams와 Bears의 블리츠에 대응하는 방식을 본다.",
+        "note": "Bears의 훅앤래더처럼 공의 주인을 바꾸는 공격에 Patriots 수비가 추격 책임을 나누는지, 첫 태클 뒤 전진을 얼마나 억제하는지 살펴본다.",
         "source": {
-          "label": "ESPN Week 7 일정 재조회",
-          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          "label": "Patriots 공식 일정",
+          "url": "https://www.patriots.com/schedule/"
         },
-        "lastConfirmedEdition": "2026-10-20"
+        "checkedAt": "2026-10-20T20:07:47+09:00",
+        "lastConfirmedEdition": "2026-10-20",
+        "verified": true
       },
       {
         "gameId": "401873017",
@@ -260,12 +274,14 @@ export const briefings = [
         "time": "02:00",
         "status": "경기 예정",
         "matchup": "San Francisco 49ers at Atlanta Falcons",
-        "note": "월요일 밤 경기 뒤 짧아진 회복 기간과 원정 이동 속에서 부상 선수·수비 로테이션 관리가 중요하다.",
+        "note": "49ers가 이번 경기 후반의 공격 정체를 어떻게 보완하는지, Evans의 연습 참여와 경기 상태가 패스 대상 분배에 어떤 영향을 주는지 본다.",
         "source": {
-          "label": "ESPN Week 7 일정 재조회",
-          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          "label": "49ers 공식 일정",
+          "url": "https://www.49ers.com/schedule/"
         },
-        "lastConfirmedEdition": "2026-10-20"
+        "checkedAt": "2026-10-20T20:07:47+09:00",
+        "lastConfirmedEdition": "2026-10-20",
+        "verified": true
       },
       {
         "gameId": "401873022",
@@ -275,15 +291,80 @@ export const briefings = [
         "time": "09:20",
         "status": "경기 예정",
         "matchup": "Kansas City Chiefs at Seattle Seahawks",
-        "note": "Seattle 원정 소음 속 보호 신호와 Walker의 러닝, 이를 바탕으로 만드는 패스 공간을 살핀다.",
+        "note": "Chiefs의 러닝 전진이 이어질 때 Seahawks가 수비 인원을 어떻게 조정하고, 그 변화가 패스 공간에 어떤 영향을 주는지 본다.",
         "source": {
-          "label": "ESPN Week 7 일정 재조회",
-          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          "label": "Chiefs 공식 일정",
+          "url": "https://www.chiefs.com/schedule/"
         },
-        "lastConfirmedEdition": "2026-10-20"
+        "checkedAt": "2026-10-20T20:07:47+09:00",
+        "lastConfirmedEdition": "2026-10-20",
+        "verified": true
       }
     ],
     "leagueWide": [
+      {
+        "team": "Commanders",
+        "label": "저녁 추가 확인",
+        "title": "McLaurin 무릎 부상으로 이탈…Quinn은 중상 우려, 검사는 현지 화요일",
+        "why": "무릎 부상으로 카트에 실려 나간 McLaurin은 현지 10월 20일 검사를 받을 예정이다. Quinn 감독은 심각한 부상 가능성을 우려했다. 주요 리시버의 이탈이 얼마나 이어질지에 따라 패스 공격의 역할 배분도 달라질 수 있다.",
+        "url": "https://www.nfl.com/news/commanders-wr-terry-mclaurin-carted-off-field-with-knee-injury-vs-49ers",
+        "eventKey": "2026-week6-commanders-mclaurin-knee-injury",
+        "takeaway": "무릎 부상으로 카트에 실려 나간 McLaurin은 현지 10월 20일 검사를 받을 예정이다. Quinn 감독은 심각한 부상 가능성을 우려했다. 주요 리시버의 이탈이 얼마나 이어질지에 따라 패스 공격의 역할 배분도 달라질 수 있다."
+      },
+      {
+        "team": "Eagles",
+        "label": "저녁 추가 확인",
+        "title": "Hurts, 추가 검사에서 폐 혈전 확인…시즌 잔여 결장 전망 보도",
+        "why": "구단과 에이전트는 추가 검사에서 폐 혈전이 확인됐으며 치료 중 접촉 활동을 할 수 없다고 밝혔다. 시즌 잔여 결장은 NFL Network·ESPN의 전망이다. Eagles의 단기 경기 운영뿐 아니라 남은 시즌 쿼터백 운용을 좌우할 소식이다.",
+        "url": "https://www.nfl.com/news/eagles-qb-jalen-hurts-out-2026-season-blood-clots",
+        "eventKey": "2026-10-19-eagles-hurts-blood-clots-update",
+        "takeaway": "구단과 에이전트는 추가 검사에서 폐 혈전이 확인됐으며 치료 중 접촉 활동을 할 수 없다고 밝혔다. 시즌 잔여 결장은 NFL Network·ESPN의 전망이다. Eagles의 단기 경기 운영뿐 아니라 남은 시즌 쿼터백 운용을 좌우할 소식이다."
+      },
+      {
+        "team": "Colts",
+        "label": "저녁 추가 확인",
+        "title": "Colts, 2승 4패 출발 뒤 Ballard 단장 해임",
+        "why": "2승 4패 출발과 Titans전 역전패 뒤 선수단 구성 책임자가 교체됐다. 코치의 경기 운영을 넘어 영입·드래프트를 포함한 구단의 방향에 책임을 물었다는 점에서, 이후 선수단 개편과 운영 체제를 함께 살펴볼 사건이다.",
+        "url": "https://www.nfl.com/news/colts-fire-gm-chris-ballard",
+        "eventKey": "2026-10-19-colts-ballard-fired",
+        "takeaway": "2승 4패 출발과 Titans전 역전패 뒤 선수단 구성 책임자가 교체됐다. 코치의 경기 운영을 넘어 영입·드래프트를 포함한 구단의 방향에 책임을 물었다는 점에서, 이후 선수단 개편과 운영 체제를 함께 살펴볼 사건이다."
+      },
+      {
+        "team": "Rams",
+        "label": "저녁 추가 확인",
+        "title": "Rams, Adams 6~10주 결장 예상…Ford·Grupe는 시즌 아웃",
+        "why": "McVay는 Adams의 장기 결장 전망과 Ford·Grupe의 시즌 아웃을 밝혔다. Turner도 IR로 이동할 예정이다. 패스 공격과 수비 내부, 킥 부문의 공백이 동시에 생겼다는 점이 Cardinals전 결과와 다른 새 변화다.",
+        "url": "https://www.nfl.com/news/davante-adams-hamstring-expected-to-miss-6-10-weeks-as-injuries-pile-up-rams",
+        "eventKey": "2026-10-19-rams-adams-ford-turner-injuries",
+        "takeaway": "McVay는 Adams의 장기 결장 전망과 Ford·Grupe의 시즌 아웃을 밝혔다. Turner도 IR로 이동할 예정이다. 패스 공격과 수비 내부, 킥 부문의 공백이 동시에 생겼다는 점이 Cardinals전 결과와 다른 새 변화다."
+      },
+      {
+        "team": "Bills",
+        "label": "저녁 추가 확인",
+        "title": "Gardner-Johnson, Raiders전 비신사적 행위로 한 경기 출장 정지",
+        "why": "NFL이 한 경기 출장 정지를 발표했다. 경기 중 퇴장과 이후 리그 징계는 별개의 조치다. 다음 경기 세이프티 역할 배분과 후속 공식 발표를 확인할 필요가 있다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19",
+        "eventKey": "2026-10-19-bills-gardner-johnson-suspension",
+        "takeaway": "NFL이 한 경기 출장 정지를 발표했다. 경기 중 퇴장과 이후 리그 징계는 별개의 조치다. 다음 경기 세이프티 역할 배분과 후속 공식 발표를 확인할 필요가 있다."
+      },
+      {
+        "team": "Texans",
+        "label": "저녁 추가 확인",
+        "title": "Tank Dell, Giants전 복귀 예정…Ryans 감독이 출전 계획 밝혀",
+        "why": "Ryans 감독은 Dell이 Week 7 Giants전에 뛸 것이라고 밝혔다. 장기 재활 뒤 복귀 계획이라는 새 변화다. 출전 계획과 과거와 같은 스냅·역할을 곧바로 소화하는 것은 구분해서 봐야 한다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19",
+        "eventKey": "2026-week7-texans-tank-dell-return",
+        "takeaway": "Ryans 감독은 Dell이 Week 7 Giants전에 뛸 것이라고 밝혔다. 장기 재활 뒤 복귀 계획이라는 새 변화다. 출전 계획과 과거와 같은 스냅·역할을 곧바로 소화하는 것은 구분해서 봐야 한다."
+      },
+      {
+        "team": "Falcons",
+        "label": "저녁 추가 확인",
+        "title": "Falcons, Andy Dalton 영입하고 Cooper Rush 방출",
+        "why": "Andy Dalton을 영입하고 Cooper Rush를 방출하며 쿼터백 뎁스를 바꿨다. 49ers의 다음 상대인 만큼, 경기 주간 선발·백업 역할과 부상 보고서를 함께 살펴볼 변화다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19",
+        "eventKey": "2026-10-19-falcons-dalton-rush-roster",
+        "takeaway": "Andy Dalton을 영입하고 Cooper Rush를 방출하며 쿼터백 뎁스를 바꿨다. 49ers의 다음 상대인 만큼, 경기 주간 선발·백업 역할과 부상 보고서를 함께 살펴볼 변화다."
+      },
       {
         "team": "Green Bay Packers",
         "label": "SNF · 공식 경기 결과",
