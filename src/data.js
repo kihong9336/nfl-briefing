@@ -2,12 +2,12 @@ export const briefings = [
   {
     "date": "2026-10-20",
     "weekday": "화요일",
-    "edition": "2026 WEEK 6 · 원문 재검증 복구본",
+    "edition": "2026 WEEK 6 · 저녁 통합 검증판",
     "sample": false,
     "season": 2026,
     "seasonType": "regular",
     "week": 6,
-    "dek": "10월 20일 저녁 확인 내용을 반영했습니다. 49ers의 23-17 승리와 경기 후 부상, Eagles·Colts·Rams의 변화를 추가하고 기존 경기 해설·전술교실·영상을 함께 보존했습니다.",
+    "dek": "10월 20일 저녁 업데이트. 49ers의 23-17 승리와 Eagles·Colts·Rams의 주요 변화를 다루고, Patriots의 목요일 경기 준비 상황을 추가했습니다. 일요일 경기 해설과 두 전술교실도 함께 읽을 수 있습니다.",
     "lead": {
       "kicker": "오늘의 핵심 · 저녁 업데이트",
       "title": "49ers는 6연승, Eagles·Colts·Rams는 다음 국면으로",
@@ -24,11 +24,11 @@ export const briefings = [
         "watch": "4다운 직전 러닝 저지, 엔드존 패스에 대한 Mustapha의 대응, 마지막 패스러시 순서로 확인한다.",
         "sources": [
           {
-            "label": "49ers 공식 리캡",
+            "label": "www.49ers.com",
             "url": "https://www.49ers.com/news/49ers-are-victorious-in-week-6-mnf-showdown-vs-commanders-takeaways-from-wasvssf"
           },
           {
-            "label": "Commanders 공식 리캡",
+            "label": "www.commanders.com",
             "url": "https://www.commanders.com/news/instant-analysis-commanders-49ers-2026"
           }
         ],
@@ -45,11 +45,11 @@ export const briefings = [
         "watch": "다음 공식 연습 보고서에서 Evans의 참여 수준과 경기 상태 지정을 확인한다.",
         "sources": [
           {
-            "label": "NFL 경기 후 업데이트",
-            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19"
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19"
           },
           {
-            "label": "NBC Shanahan 발언",
+            "label": "www.nbcsports.com",
             "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-mike-evans-injury-is-not-a-long-term-thing-hopeful-he-can-play-sunday"
           }
         ],
@@ -66,11 +66,11 @@ export const briefings = [
         "watch": "Walker의 첫 컷 직전 수비수의 갭 이동, 박스가 조밀해진 뒤 Worthy의 짧은 패스 공간, Chiefs 수비가 4다운에서 러시와 커버리지를 결합하는 순서로 보자.",
         "sources": [
           {
-            "label": "Chiefs 공식 경기 리캡",
+            "label": "www.chiefs.com",
             "url": "https://www.chiefs.com/news/chiefs-defeat-chargers-22-6-to-move-to-5-0-on-the-season"
           },
           {
-            "label": "Chiefs 공식 경기 분석",
+            "label": "www.chiefs.com",
             "url": "https://www.chiefs.com/news/10-quick-facts-following-the-chiefs-week-6-win-over-los-angeles-upon-further-review"
           }
         ],
@@ -87,12 +87,33 @@ export const briefings = [
         "watch": "다음 공식 연습 보고서에서 리시버 스냅과 정렬의 변화, 연습조 라인맨의 실제 승격 여부, Davison의 스페셜팀 역할을 확인하자.",
         "sources": [
           {
-            "label": "Patriots 공식 로스터 발표",
+            "label": "www.patriots.com",
             "url": "https://www.patriots.com/news/patriots-place-wr-romeo-doubs-on-injured-reserve-sign-db-elliott-davison-to-the-53-man-roster-from-the-practice-squad-announce-additional-practice-squad-moves"
           }
         ],
         "eventKey": "2026-10-19-patriots-doubs-ir-davison-roster",
         "takeaway": "Doubs의 IR 이동은 새 로스터 사건이며, 연습조 보강을 곧바로 선발 교체로 읽어서는 안 된다."
+      },
+      {
+        "id": "patriots-week7-monday-walkthrough",
+        "team": "Patriots",
+        "label": "목요일 경기 준비 · 첫 연습 보고",
+        "title": "Patriots 첫 Week 7 보고: 가드 두 명 DNP, Maye·Campbell은 FP",
+        "summary": "Patriots의 현지 10월 19일 워크스루 보고에서 Ben Brown(무릎)과 Alijah Vera-Tucker(햄스트링)는 불참(DNP), Morgan Moses(발)는 제한 참여(LP)였다. Drake Maye(오른쪽 어깨)와 Will Campbell(무릎)은 전체 참여(FP), A.J. Brown(발목)은 제한 참여(LP)로 기재됐다. 상대 Bears도 워크스루 추정 참여도를 냈고 T.J. Edwards와 Jonah Jackson, Kyle Monangai, Jack Sanborn이 불참(DNP)였다.",
+        "commentary": "워크스루는 경기 계획과 움직임을 맞춰 보는 저강도 훈련이다. 일요일 경기 뒤 목요일 원정을 준비하는 짧은 주간이라, 첫 보고만으로 실제 고강도 훈련이나 경기 출전 능력을 단정하기 어렵다. 내부 가드 두 자리의 상태와 센터와의 보호 신호 조율을 다음 훈련에서 확인할 필요가 있다.",
+        "watch": "화·수요일 실제 훈련 추이와 최종 경기 상태, 내부 압박을 누구에게 넘길지 보호 배정을 확인하자.",
+        "eventKey": "2026-week7-patriots-bears-oct19-walkthrough",
+        "sources": [
+          {
+            "label": "Patriots 공식 Week 7 부상·연습 보고",
+            "url": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears"
+          }
+        ],
+        "takeaway": "워크스루 참여도는 최종 출전 등급이 아니다. 짧은 준비 기간의 핵심은 가드와 태클의 조합이다.",
+        "update": {
+          "kind": "new",
+          "evidence": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears"
+        }
       }
     ],
     "tactics": [
@@ -211,28 +232,28 @@ export const briefings = [
         "title": "Washington Commanders vs San Francisco 49ers Game Highlights | 2026 NFL Season Week 6",
         "channel": "NFL",
         "type": "NFL 공식 경기 하이라이트",
-        "note": "전반 20-3 리드를 만든 공격과 후반 추격을 버틴 수비를 나누어 본다. 마지막에는 4다운 패스 저지와 패스러시가 어떻게 승리를 지켰는지 살펴본다.",
+        "note": "오늘 공개판에서 유지한 공식 영상이다. 이번 조사에서는 oEmbed 제목·NFL 채널을 재확인했으며, 영상 장면이나 재생 시점을 새로 확인했다고 주장하지 않는다.",
         "url": "https://www.youtube.com/watch?v=EM4Bq_uqLQ0"
       },
       {
         "title": "Los Angeles Chargers vs Kansas City Chiefs Game Highlights | 2026 NFL Season Week 6",
         "channel": "NFL",
         "type": "youtube",
-        "note": "2026 시즌 Week 6 · 10월 18일 경기 공식 하이라이트. YouTube watch 메타데이터와 oEmbed에서 제목·NFL 채널·업로드 날짜 검증.",
+        "note": "오늘 공개판에서 유지한 공식 영상이다. 이번 조사에서는 oEmbed 제목·NFL 채널을 재확인했으며, 영상 장면이나 재생 시점을 새로 확인했다고 주장하지 않는다.",
         "url": "https://www.youtube.com/watch?v=B5OVcasfeTU"
       },
       {
         "title": "Pittsburgh Steelers vs. Tampa Bay Buccaneers Game Highlights | 2026 NFL Season Week 6",
         "channel": "NFL",
         "type": "youtube",
-        "note": "2026 시즌 Week 6 · 10월 18일 경기 공식 하이라이트. YouTube watch 메타데이터와 oEmbed에서 제목·NFL 채널·업로드 날짜 검증.",
+        "note": "오늘 공개판에서 유지한 공식 영상이다. 이번 조사에서는 oEmbed 제목·NFL 채널을 재확인했으며, 영상 장면이나 재생 시점을 새로 확인했다고 주장하지 않는다.",
         "url": "https://www.youtube.com/watch?v=vf4ksuXiQ1M"
       },
       {
         "title": "Chicago Bears vs Atlanta Falcons Game Highlights | 2026 NFL Season Week 6",
         "channel": "NFL",
         "type": "youtube",
-        "note": "2026 시즌 Week 6 · 10월 18일 경기 공식 하이라이트. YouTube watch 메타데이터와 oEmbed에서 제목·NFL 채널·업로드 날짜 검증.",
+        "note": "오늘 공개판에서 유지한 공식 영상이다. 이번 조사에서는 oEmbed 제목·NFL 채널을 재확인했으며, 영상 장면이나 재생 시점을 새로 확인했다고 주장하지 않는다.",
         "url": "https://www.youtube.com/watch?v=H82sLvw_lcU"
       }
     ],
@@ -243,10 +264,10 @@ export const briefings = [
         "time": "09:15",
         "status": "종료",
         "matchup": "Washington Commanders at San Francisco 49ers",
-        "note": "49ers 23-17 승리. 경기 결과와 마지막 수비 장면은 위 기사·하이라이트에서 확인할 수 있다.",
+        "note": "49ers가 23-17로 이겼다. McCaffrey의 두 러싱 TD 이후 4쿼터 추격을 마지막 수비로 막았다.",
         "source": {
-          "label": "49ers 공식 시청 안내",
-          "url": "https://www.49ers.com/news/ways-to-watch-and-listen-commanders-vs-49ers-week-6-monday-night-football"
+          "label": "www.49ers.com",
+          "url": "https://www.49ers.com/news/49ers-are-victorious-in-week-6-mnf-showdown-vs-commanders-takeaways-from-wasvssf"
         }
       },
       {
@@ -259,8 +280,8 @@ export const briefings = [
         "matchup": "New England Patriots at Chicago Bears",
         "note": "Bears의 훅앤래더처럼 공의 주인을 바꾸는 공격에 Patriots 수비가 추격 책임을 나누는지, 첫 태클 뒤 전진을 얼마나 억제하는지 살펴본다.",
         "source": {
-          "label": "Patriots 공식 일정",
-          "url": "https://www.patriots.com/schedule/"
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
         },
         "checkedAt": "2026-10-20T20:07:47+09:00",
         "lastConfirmedEdition": "2026-10-20",
@@ -276,8 +297,8 @@ export const briefings = [
         "matchup": "San Francisco 49ers at Atlanta Falcons",
         "note": "49ers가 이번 경기 후반의 공격 정체를 어떻게 보완하는지, Evans의 연습 참여와 경기 상태가 패스 대상 분배에 어떤 영향을 주는지 본다.",
         "source": {
-          "label": "49ers 공식 일정",
-          "url": "https://www.49ers.com/schedule/"
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
         },
         "checkedAt": "2026-10-20T20:07:47+09:00",
         "lastConfirmedEdition": "2026-10-20",
@@ -293,8 +314,8 @@ export const briefings = [
         "matchup": "Kansas City Chiefs at Seattle Seahawks",
         "note": "Chiefs의 러닝 전진이 이어질 때 Seahawks가 수비 인원을 어떻게 조정하고, 그 변화가 패스 공간에 어떤 영향을 주는지 본다.",
         "source": {
-          "label": "Chiefs 공식 일정",
-          "url": "https://www.chiefs.com/schedule/"
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
         },
         "checkedAt": "2026-10-20T20:07:47+09:00",
         "lastConfirmedEdition": "2026-10-20",
@@ -309,7 +330,13 @@ export const briefings = [
         "why": "무릎 부상으로 카트에 실려 나간 McLaurin은 현지 10월 20일 검사를 받을 예정이다. Quinn 감독은 심각한 부상 가능성을 우려했다. 주요 리시버의 이탈이 얼마나 이어질지에 따라 패스 공격의 역할 배분도 달라질 수 있다.",
         "url": "https://www.nfl.com/news/commanders-wr-terry-mclaurin-carted-off-field-with-knee-injury-vs-49ers",
         "eventKey": "2026-week6-commanders-mclaurin-knee-injury",
-        "takeaway": "무릎 부상으로 카트에 실려 나간 McLaurin은 현지 10월 20일 검사를 받을 예정이다. Quinn 감독은 심각한 부상 가능성을 우려했다. 주요 리시버의 이탈이 얼마나 이어질지에 따라 패스 공격의 역할 배분도 달라질 수 있다."
+        "takeaway": "무릎 부상으로 카트에 실려 나간 McLaurin은 현지 10월 20일 검사를 받을 예정이다. Quinn 감독은 심각한 부상 가능성을 우려했다. 주요 리시버의 이탈이 얼마나 이어질지에 따라 패스 공격의 역할 배분도 달라질 수 있다.",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/commanders-wr-terry-mclaurin-carted-off-field-with-knee-injury-vs-49ers"
+          }
+        ]
       },
       {
         "team": "Eagles",
@@ -318,7 +345,13 @@ export const briefings = [
         "why": "구단과 에이전트는 추가 검사에서 폐 혈전이 확인됐으며 치료 중 접촉 활동을 할 수 없다고 밝혔다. 시즌 잔여 결장은 NFL Network·ESPN의 전망이다. Eagles의 단기 경기 운영뿐 아니라 남은 시즌 쿼터백 운용을 좌우할 소식이다.",
         "url": "https://www.nfl.com/news/eagles-qb-jalen-hurts-out-2026-season-blood-clots",
         "eventKey": "2026-10-19-eagles-hurts-blood-clots-update",
-        "takeaway": "구단과 에이전트는 추가 검사에서 폐 혈전이 확인됐으며 치료 중 접촉 활동을 할 수 없다고 밝혔다. 시즌 잔여 결장은 NFL Network·ESPN의 전망이다. Eagles의 단기 경기 운영뿐 아니라 남은 시즌 쿼터백 운용을 좌우할 소식이다."
+        "takeaway": "구단과 에이전트는 추가 검사에서 폐 혈전이 확인됐으며 치료 중 접촉 활동을 할 수 없다고 밝혔다. 시즌 잔여 결장은 NFL Network·ESPN의 전망이다. Eagles의 단기 경기 운영뿐 아니라 남은 시즌 쿼터백 운용을 좌우할 소식이다.",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/eagles-qb-jalen-hurts-out-2026-season-blood-clots"
+          }
+        ]
       },
       {
         "team": "Colts",
@@ -327,7 +360,13 @@ export const briefings = [
         "why": "2승 4패 출발과 Titans전 역전패 뒤 선수단 구성 책임자가 교체됐다. 코치의 경기 운영을 넘어 영입·드래프트를 포함한 구단의 방향에 책임을 물었다는 점에서, 이후 선수단 개편과 운영 체제를 함께 살펴볼 사건이다.",
         "url": "https://www.nfl.com/news/colts-fire-gm-chris-ballard",
         "eventKey": "2026-10-19-colts-ballard-fired",
-        "takeaway": "2승 4패 출발과 Titans전 역전패 뒤 선수단 구성 책임자가 교체됐다. 코치의 경기 운영을 넘어 영입·드래프트를 포함한 구단의 방향에 책임을 물었다는 점에서, 이후 선수단 개편과 운영 체제를 함께 살펴볼 사건이다."
+        "takeaway": "2승 4패 출발과 Titans전 역전패 뒤 선수단 구성 책임자가 교체됐다. 코치의 경기 운영을 넘어 영입·드래프트를 포함한 구단의 방향에 책임을 물었다는 점에서, 이후 선수단 개편과 운영 체제를 함께 살펴볼 사건이다.",
+        "sources": [
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/colts-fire-gm-chris-ballard"
+          }
+        ]
       },
       {
         "team": "Rams",
@@ -336,7 +375,13 @@ export const briefings = [
         "why": "McVay는 Adams의 장기 결장 전망과 Ford·Grupe의 시즌 아웃을 밝혔다. Turner도 IR로 이동할 예정이다. 패스 공격과 수비 내부, 킥 부문의 공백이 동시에 생겼다는 점이 Cardinals전 결과와 다른 새 변화다.",
         "url": "https://www.nfl.com/news/davante-adams-hamstring-expected-to-miss-6-10-weeks-as-injuries-pile-up-rams",
         "eventKey": "2026-10-19-rams-adams-ford-turner-injuries",
-        "takeaway": "McVay는 Adams의 장기 결장 전망과 Ford·Grupe의 시즌 아웃을 밝혔다. Turner도 IR로 이동할 예정이다. 패스 공격과 수비 내부, 킥 부문의 공백이 동시에 생겼다는 점이 Cardinals전 결과와 다른 새 변화다."
+        "takeaway": "McVay는 Adams의 장기 결장 전망과 Ford·Grupe의 시즌 아웃을 밝혔다. Turner도 IR로 이동할 예정이다. 패스 공격과 수비 내부, 킥 부문의 공백이 동시에 생겼다는 점이 Cardinals전 결과와 다른 새 변화다.",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/davante-adams-hamstring-expected-to-miss-6-10-weeks-as-injuries-pile-up-rams"
+          }
+        ]
       },
       {
         "team": "Bills",
@@ -345,7 +390,13 @@ export const briefings = [
         "why": "NFL이 한 경기 출장 정지를 발표했다. 경기 중 퇴장과 이후 리그 징계는 별개의 조치다. 다음 경기 세이프티 역할 배분과 후속 공식 발표를 확인할 필요가 있다.",
         "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19",
         "eventKey": "2026-10-19-bills-gardner-johnson-suspension",
-        "takeaway": "NFL이 한 경기 출장 정지를 발표했다. 경기 중 퇴장과 이후 리그 징계는 별개의 조치다. 다음 경기 세이프티 역할 배분과 후속 공식 발표를 확인할 필요가 있다."
+        "takeaway": "NFL이 한 경기 출장 정지를 발표했다. 경기 중 퇴장과 이후 리그 징계는 별개의 조치다. 다음 경기 세이프티 역할 배분과 후속 공식 발표를 확인할 필요가 있다.",
+        "sources": [
+          {
+            "label": "www.buffalobills.com",
+            "url": "https://www.buffalobills.com/news/joe-brady-address-c-j-gardner-johnson-suspension-jim-leonhard-says-davison-igbinosun-has-earned-majority-of-the-snaps"
+          }
+        ]
       },
       {
         "team": "Texans",
@@ -354,7 +405,13 @@ export const briefings = [
         "why": "Ryans 감독은 Dell이 Week 7 Giants전에 뛸 것이라고 밝혔다. 장기 재활 뒤 복귀 계획이라는 새 변화다. 출전 계획과 과거와 같은 스냅·역할을 곧바로 소화하는 것은 구분해서 봐야 한다.",
         "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19",
         "eventKey": "2026-week7-texans-tank-dell-return",
-        "takeaway": "Ryans 감독은 Dell이 Week 7 Giants전에 뛸 것이라고 밝혔다. 장기 재활 뒤 복귀 계획이라는 새 변화다. 출전 계획과 과거와 같은 스냅·역할을 곧바로 소화하는 것은 구분해서 봐야 한다."
+        "takeaway": "Ryans 감독은 Dell이 Week 7 Giants전에 뛸 것이라고 밝혔다. 장기 재활 뒤 복귀 계획이라는 새 변화다. 출전 계획과 과거와 같은 스냅·역할을 곧바로 소화하는 것은 구분해서 봐야 한다.",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50220990/texans-tank-dell-play-sunday-1st-game-knee-injury"
+          }
+        ]
       },
       {
         "team": "Falcons",
@@ -363,7 +420,13 @@ export const briefings = [
         "why": "Andy Dalton을 영입하고 Cooper Rush를 방출하며 쿼터백 뎁스를 바꿨다. 49ers의 다음 상대인 만큼, 경기 주간 선발·백업 역할과 부상 보고서를 함께 살펴볼 변화다.",
         "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19",
         "eventKey": "2026-10-19-falcons-dalton-rush-roster",
-        "takeaway": "Andy Dalton을 영입하고 Cooper Rush를 방출하며 쿼터백 뎁스를 바꿨다. 49ers의 다음 상대인 만큼, 경기 주간 선발·백업 역할과 부상 보고서를 함께 살펴볼 변화다."
+        "takeaway": "Andy Dalton을 영입하고 Cooper Rush를 방출하며 쿼터백 뎁스를 바꿨다. 49ers의 다음 상대인 만큼, 경기 주간 선발·백업 역할과 부상 보고서를 함께 살펴볼 변화다.",
+        "sources": [
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19"
+          }
+        ]
       },
       {
         "team": "Green Bay Packers",
@@ -372,7 +435,13 @@ export const briefings = [
         "why": "Packers는 Cowboys에 23-13으로 승리해 4승 2패가 됐다. Love는 276패싱야드, TD 1개와 인터셉션 1개를 기록했다. 수비는 인터셉션 2회와 득점권 4다운 저지 2회를 만들었다. 51점짜리 공격 폭발이 아니라 상대의 깊은 패스를 제한하고 전반 3다운 10회 중 9회를 성공한 상황별 효율이 중심이다.",
         "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-cowboys-week-6-2026",
         "eventKey": "2026-week6-packers-cowboys-result",
-        "takeaway": "득점 난타전이 아닌 23-13 승리였다. 압박과 커버리지, 3다운 효율을 함께 봐야 한다."
+        "takeaway": "득점 난타전이 아닌 23-13 승리였다. 압박과 커버리지, 3다운 효율을 함께 봐야 한다.",
+        "sources": [
+          {
+            "label": "www.packers.com",
+            "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-cowboys-week-6-2026"
+          }
+        ]
       },
       {
         "team": "Buffalo Bills",
@@ -381,7 +450,13 @@ export const briefings = [
         "why": "Buffalo는 Las Vegas 원정에서 33-30으로 이겨 5승 1패가 됐다. Allen은 255패싱야드와 TD 2개, Cook은 러싱 95야드와 TD 1개를 기록했다. 23-23에서 Cook이 66야드 득점 드라이브의 46야드를 책임진 흐름과 마지막 필드골이 중요했다. 34-17 완승이나 Allen 347야드·3TD로 설명할 경기가 아니다.",
         "url": "https://www.buffalobills.com/news/bills-33-raiders-30-final-score-recap-highlights",
         "eventKey": "2026-week6-bills-raiders-result",
-        "takeaway": "패스 대승이 아니라 러닝과 막판 필드골로 지킨 3점 차 원정 승리다."
+        "takeaway": "패스 대승이 아니라 러닝과 막판 필드골로 지킨 3점 차 원정 승리다.",
+        "sources": [
+          {
+            "label": "www.buffalobills.com",
+            "url": "https://www.buffalobills.com/news/bills-33-raiders-30-final-score-recap-highlights"
+          }
+        ]
       },
       {
         "team": "Tennessee Titans",
@@ -390,7 +465,13 @@ export const briefings = [
         "why": "Tennessee는 전반 0-13 열세를 뒤집어 시즌 첫 승을 거뒀다. 수비는 턴오버 3개와 색 6개를 만들었고, Chimere Dike의 58야드 펀트 리턴이 동점 터치다운의 발판이 됐다. 이어 펀트를 막아낸 뒤 Femi Oladejo가 공을 주워 14야드 리턴 터치다운을 기록했다. Joey Slye는 종료 2분 3초 전 49야드 필드골로 다시 리드를 만들었다. 패스 생산량보다 수비가 되찾은 공과 리턴으로 짧아진 공격 거리가 역전의 핵심이었다.",
         "eventKey": "2026-week6-titans-colts-result",
         "takeaway": "공격만으로 열세를 만회한 경기가 아니라 턴오버·펀트 리턴·펀트 블록이 함께 만든 역전승이다.",
-        "url": "https://www.tennesseetitans.com/news/titans-stage-second-half-comeback-beat-colts-26-20"
+        "url": "https://www.tennesseetitans.com/news/titans-stage-second-half-comeback-beat-colts-26-20",
+        "sources": [
+          {
+            "label": "www.tennesseetitans.com",
+            "url": "https://www.tennesseetitans.com/news/titans-stage-second-half-comeback-beat-colts-26-20"
+          }
+        ]
       },
       {
         "team": "Pittsburgh Steelers",
@@ -399,7 +480,13 @@ export const briefings = [
         "why": "Pittsburgh는 연장에서 12플레이로 70야드를 전진한 뒤 Aaron Rodgers의 6야드 패스를 Germie Bernard가 받아 결승 터치다운을 기록했다. Tampa Bay의 다음 공격에서는 Jalen Ramsey가 블리츠로 들어가 4다운 8야드 상황에서 쿼터백을 쓰러뜨리며 승부를 끝냈다. 정규시간 막판에는 Jamel Dean의 인터셉션 리턴이 앞서가는 필드골을 만들었지만 상대가 다시 동점을 만들었다. 공격의 긴 연장 드라이브와 수비 백의 추가 압박이 각각 득점과 마지막 저지를 완성했다.",
         "eventKey": "2026-week6-steelers-buccaneers-result",
         "takeaway": "연장 터치다운만큼 중요한 장면은 상대의 마지막 4다운에서 들어온 Ramsey의 블리츠였다.",
-        "url": "https://www.steelers.com/news/steelers-rally-past-buccaneers-26-19-in-overtime"
+        "url": "https://www.steelers.com/news/steelers-rally-past-buccaneers-26-19-in-overtime",
+        "sources": [
+          {
+            "label": "www.steelers.com",
+            "url": "https://www.steelers.com/news/steelers-rally-past-buccaneers-26-19-in-overtime"
+          }
+        ]
       },
       {
         "team": "New Orleans Saints",
@@ -408,7 +495,13 @@ export const briefings = [
         "why": "New Orleans는 0-10으로 출발했지만 킥오프에서 Isaiah Stalbird가 펌블을 유도하고 Oscar Delp가 회수한 뒤 전반 종료 전 동점을 만들었다. Tyler Shough는 패스 터치다운 3개와 쿼터백 스니크 터치다운을 기록했고, 팀은 시즌 최다인 175러싱야드를 생산했다. 후반 Alvin Kamara의 31야드 캐치앤런 터치다운으로 앞서간 뒤 34-10까지 벌렸으나, 4쿼터 추격을 허용해 마지막 엔드존 패스가 실패한 뒤에야 승리를 확정했다. 후반 러닝과 짧은 패스 이후 전진은 성과였지만 큰 리드를 지키는 수비 운영은 별도 점검 대상이다.",
         "eventKey": "2026-week6-saints-giants-result",
         "takeaway": "스페셜팀이 만든 추가 공격권과 후반 러닝으로 역전했지만, 24점 리드가 한 번의 공격권 차이까지 줄었다.",
-        "url": "https://www.neworleanssaints.com/news/2026-nfl-week-6-new-york-giants-vs-new-orleans-saints-game-recap"
+        "url": "https://www.neworleanssaints.com/news/2026-nfl-week-6-new-york-giants-vs-new-orleans-saints-game-recap",
+        "sources": [
+          {
+            "label": "www.neworleanssaints.com",
+            "url": "https://www.neworleanssaints.com/news/2026-nfl-week-6-new-york-giants-vs-new-orleans-saints-game-recap"
+          }
+        ]
       },
       {
         "team": "Chicago Bears",
@@ -417,7 +510,13 @@ export const briefings = [
         "why": "햄스트링 부상으로 세 경기를 쉰 Caleb Williams는 복귀전에서 36회 중 30회 패스를 성공해 305야드와 터치다운 1개를 기록했다. 첫 두 공격을 모두 터치다운으로 마무리한 Chicago는 31-7까지 앞섰지만 Atlanta가 31-23으로 추격했다. 시즌 첫 출전한 Kyler Gordon은 종료 2분 54초 전 자신의 세 번째 색이자 두 번째 스트립색으로 펌블을 만들었고 Devin Bush가 회수했다. 패스 타이밍의 회복과 수비 백 블리츠가 승리를 이끌었지만, 주전 수비 교체 이후 추격을 허용한 점은 다음 경기 운영의 점검 항목이다.",
         "eventKey": "2026-week6-bears-falcons-result",
         "takeaway": "Williams의 정확한 초반 패스와 Gordon의 결정적 블리츠라는 두 복귀 효과가 드러난 경기다.",
-        "url": "https://www.chicagobears.com/news/game-recap-bears-improve-to-4-2-with-road-victory-in-atlanta-2026-week-6"
+        "url": "https://www.chicagobears.com/news/game-recap-bears-improve-to-4-2-with-road-victory-in-atlanta-2026-week-6",
+        "sources": [
+          {
+            "label": "www.chicagobears.com",
+            "url": "https://www.chicagobears.com/news/game-recap-bears-improve-to-4-2-with-road-victory-in-atlanta-2026-week-6"
+          }
+        ]
       },
       {
         "team": "Arizona Cardinals",
@@ -426,9 +525,16 @@ export const briefings = [
         "why": "Chad Ryland가 필드골 6개로 Arizona의 모든 득점을 올렸고, 마지막 43야드 킥으로 18-16 승리를 확정했다. Rams가 종료 1분도 남지 않은 시점에 역전했지만 Jalen Brooks의 21야드 리셉션과 상대 반칙이 재역전 킥의 거리를 만들었다. Cardinals 수비는 Matthew Stafford에게 계속 블리츠를 보내며 두 차례 4다운 공격을 막았다. 반면 공격은 레드존에 다섯 번 들어가고도 터치다운을 만들지 못했다. 수비 압박과 킥의 정확도가 승리를 지켰지만, 레드존 마무리 실패를 공격 완성으로 오인해서는 안 된다.",
         "eventKey": "2026-week6-cardinals-rams-result",
         "takeaway": "필드골만으로 이긴 결과 뒤에는 수비의 4다운 저지와 해결되지 않은 레드존 효율 문제가 함께 있다.",
-        "url": "https://www.azcardinals.com/news/cardinals-special-teams-leads-the-way-in-victory-over-rams"
+        "url": "https://www.azcardinals.com/news/cardinals-special-teams-leads-the-way-in-victory-over-rams",
+        "sources": [
+          {
+            "label": "www.azcardinals.com",
+            "url": "https://www.azcardinals.com/news/cardinals-special-teams-leads-the-way-in-victory-over-rams"
+          }
+        ]
       }
-    ]
+    ],
+    "sourcesMarkdown": "## Sources\n\n https://www.nfl.com/scores/2026/week-6\n https://www.49ers.com/news/49ers-are-victorious-in-week-6-mnf-showdown-vs-commanders-takeaways-from-wasvssf\n https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19\n https://www.commanders.com/news/instant-analysis-commanders-49ers-2026\n https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=6\n https://www.chiefs.com/news/10-quick-facts-following-the-chiefs-week-6-win-over-los-angeles-upon-further-review\n https://www.patriots.com/news/week-7-injury-report-patriots-at-bears\n https://amp.nfl.com/news/colts-fire-gm-chris-ballard\n https://www.buffalobills.com/news/joe-brady-address-c-j-gardner-johnson-suspension-jim-leonhard-says-davison-igbinosun-has-earned-majority-of-the-snaps\n https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-mike-evans-injury-is-not-a-long-term-thing-hopeful-he-can-play-sunday\n https://www.espn.com/nfl/story/_/id/50220990/texans-tank-dell-play-sunday-1st-game-knee-injury\n https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7\n https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DEM4Bq_uqLQ0&format=json\n https://www.nfl.com/news/davante-adams-hamstring-expected-to-miss-6-10-weeks-as-injuries-pile-up-rams\n https://www.nfl.com/news/eagles-qb-jalen-hurts-out-2026-season-blood-clots\n https://www.chiefs.com/news/chiefs-defeat-chargers-22-6-to-move-to-5-0-on-the-season\n https://www.patriots.com/news/patriots-place-wr-romeo-doubs-on-injured-reserve-sign-db-elliott-davison-to-the-53-man-roster-from-the-practice-squad-announce-additional-practice-squad-moves\n https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-cowboys-week-6-2026\n https://www.buffalobills.com/news/bills-33-raiders-30-final-score-recap-highlights\n https://www.tennesseetitans.com/news/titans-stage-second-half-comeback-beat-colts-26-20\n https://www.steelers.com/news/steelers-rally-past-buccaneers-26-19-in-overtime\n https://www.neworleanssaints.com/news/2026-nfl-week-6-new-york-giants-vs-new-orleans-saints-game-recap\n https://www.chicagobears.com/news/game-recap-bears-improve-to-4-2-with-road-victory-in-atlanta-2026-week-6\n https://www.azcardinals.com/news/cardinals-special-teams-leads-the-way-in-victory-over-rams\n https://www.patriots.com/news/after-further-review-drake-maye-and-a-j-brown-film-breakdown-quick-hit-film-notes-from-sunday-s-win-over-the-jets\n https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DB5OVcasfeTU&format=json\n https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dvf4ksuXiQ1M&format=json\n https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DH82sLvw_lcU&format=json\n https://www.nfl.com/news/commanders-wr-terry-mclaurin-carted-off-field-with-knee-injury-vs-49ers"
   },
   {
     "date": "2026-10-19",
