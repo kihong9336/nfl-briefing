@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { validateHandoff } from '../src/handoff.js';
+const input={date:'2026-10-20'};
+const options={date:'2026-10-20',notBefore:'2026-10-20T18:00:00+09:00'};
+const good=()=>({date:input.date,checkedAt:'2026-10-20T19:00:00+09:00',gameCoverage:[{game:'example',status:'reviewed'}],editorialCoverage:{tactics:{status:'selected'},highlights:{status:'selected'}}});
+test('rejects morning artifact for evening handoff',()=>assert.throws(()=>validateHandoff(input,{...good(),checkedAt:'2026-10-20T07:43:00+09:00'},options),/stale/));
+test('requires actual review evidence instead of silently passing missing audits',()=>{const a=good();delete a.gameCoverage;assert.throws(()=>validateHandoff(input,a,options),/gameCoverage/);});
+test('accepts explicit unavailable video review without blocking valid news',()=>{const a=good();a.editorialCoverage.highlights.status='unavailable';assert.equal(validateHandoff(input,a,options).date,input.date);});
+test('rejects mismatched dates and invalid cutoff',()=>{assert.throws(()=>validateHandoff(input,{...good(),date:'2026-10-19'},options),/date/);assert.throws(()=>validateHandoff(input,good(),{...options,notBefore:'bad'}),/cutoff/);});
