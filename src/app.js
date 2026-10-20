@@ -8,6 +8,7 @@ import {
 } from './briefing.js?v=20261018-partition2';
 import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-partition2';
 import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-partition2';
+import { renderIntegratedTactic } from './tactic-reading-flow.js?v=20261020-integrated';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
@@ -179,6 +180,7 @@ function renderTactics(briefing) {
     </div>
     <div class="tactic-list">
       ${tactics.map((item) => {
+        if (item.narrativeMode === 'integrated') return renderIntegratedTactic(item);
         const breakdown = item.breakdown ?? [{ label: '경기에서 볼 것', text: item.gameUse }];
         const watchOrder = item.watchOrder ?? [item.gameUse];
         const source = item.source ?? { label: item.videoTitle, url: item.url };

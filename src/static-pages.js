@@ -1,4 +1,5 @@
 // Static HTML is deliberately independent of the interactive app and its JavaScript.
+import { renderIntegratedTactic } from './tactic-reading-flow.js';
 export const SITE_BASE = 'https://kihong9336.github.io/nfl-briefing/';
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const labels = { summary: '요약', commentary: '해설', watch: '관전 포인트', concept: '개념', easy: '쉽게 이해하기', gameUse: '경기에서 보기', whyItWorks: '작동 원리', defenseCounter: '수비의 대응', breakdown: '단계별 해설', watchOrder: '관찰 순서', sources: '출처', source: '출처', diagram: '전술 도해 설명', caption: '설명', video: '관련 영상', videoTitle: '영상 제목', videoType: '영상 유형', channel: '채널', type: '유형', note: '참고', why: '의미', date: '날짜', weekday: '요일', time: '시각 (KST)', status: '경기 상태', matchup: '매치업', publishedAt: '원문 발행 시각', update: '업데이트', evidence: '근거', takeaway: '핵심 정리', weeklyQuestion: '이번 주 질문' };
@@ -34,7 +35,7 @@ function renderEdition(edition) {
   const body = `<header><nav aria-label="브리핑 탐색"><a href="${SITE_BASE}?date=${edition.date}">이 날짜를 앱에서 읽기</a><a href="${SITE_BASE}editions/">전체 아카이브</a></nav><p><time datetime="${edition.date}">${edition.date}</time> ${escape(edition.weekday)} · ${escape(edition.edition)}</p><h1>${escape(edition.lead.title)}</h1><p>${escape(edition.dek)}</p></header>
 ${sample ? '<aside data-sample-warning="true"><strong>디자인 샘플</strong> — 실제 뉴스 발행본이 아닙니다. 아래 내용은 화면 구성 예시입니다.</aside>' : ''}
 <main><section aria-label="오늘의 핵심"><h2>${escape(edition.lead.kicker)}</h2><p>${escape(edition.lead.summary)}</p></section>
-${sections.map(([key, label]) => `<section><h2>${label}</h2>${(edition[key] ?? []).map((item) => `<article><h3>${escape(item.title ?? item.matchup ?? label)}</h3>${content(Object.fromEntries(Object.entries(item).filter(([name]) => name !== 'title')))}</article>`).join('') || '<p>등록된 항목이 없습니다.</p>'}</section>`).join('\n')}
+${sections.map(([key, label]) => `<section><h2>${label}</h2>${(edition[key] ?? []).map((item) => key === 'tactics' && item.narrativeMode === 'integrated' ? renderIntegratedTactic(item) : `<article><h3>${escape(item.title ?? item.matchup ?? label)}</h3>${content(Object.fromEntries(Object.entries(item).filter(([name]) => name !== 'title')))}</article>`).join('') || '<p>등록된 항목이 없습니다.</p>'}</section>`).join('\n')}
 ${['takeaway', 'weeklyQuestion'].filter((key) => edition[key] !== undefined).map((key) => `<section><h2>${labels[key]}</h2>${content(edition[key])}</section>`).join('')}</main><footer><p>이 문서는 ${edition.date} 발행분의 원문 보관본입니다. 내용과 경기 상태는 해당 발행 시점 기준이며 자동 재검증되지 않습니다.</p><a href="${SITE_BASE}">최신 브리핑</a></footer>`;
   return document(title, description, `${SITE_BASE}editions/${edition.date}/`, body, edition.date);
 }
