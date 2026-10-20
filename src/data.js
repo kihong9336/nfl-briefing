@@ -1313,7 +1313,7 @@ export const briefings = [
       {
         "time": "NEXT",
         "matchup": "다음 브리핑",
-        "note": "매일 오전 8시 업데이트"
+        "note": "매일 오후 8시 업데이트"
       }
     ]
   }
