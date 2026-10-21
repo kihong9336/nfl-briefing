@@ -1,5 +1,323 @@
 export const briefings = [
   {
+    "date": "2026-10-21",
+    "weekday": "수요일",
+    "edition": "2026 WEEK 7 · 저녁 검증판",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 7,
+    "dek": "Hurts 의료 처치에 대한 선수노조의 조사 요구와 McLaurin의 시즌 아웃 확정이 오늘의 중심이다. Rams의 새 키커 영입, 파리 경기 보안 강화, 여러 구단의 로스터 조정과 Patriots의 화요일 연습 변화를 함께 짚는다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 리그와 선수 안전",
+      "title": "Hurts 진료 논란은 조사 요구로, McLaurin은 시즌 아웃",
+      "summary": "NFLPA는 Hurts의 의료 처치를 조사해야 한다고 요구했고 NFL은 의료진의 대응을 옹호했다. Washington은 McLaurin의 시즌 잔여 결장을 확인했다. 출전 판단의 절차와 핵심 선수 공백에 대한 팀별 대응을 나누어 읽는다."
+    },
+    "sections": [
+      {
+        "id": "hurts-care-investigation",
+        "team": "NFL",
+        "label": "선수 안전 · NFL과 선수노조의 입장",
+        "title": "Hurts 진료 논란에 NFLPA는 조사 요구, NFL은 의료진 판단 옹호",
+        "summary": "NFL 선수노조는 현지 10월 20일 밤 Jalen Hurts에게 제공된 의료 처치 전반을 조사해야 한다고 요구했다. 앞서 NFL 최고 의료책임자 Allen Sills는 Eagles 의료진의 대응이 보수적이고 선수 중심적이었다며 옹호했다. 조사 요구가 나왔다는 사실과 실제 조사가 시작됐다는 것은 다르다.",
+        "commentary": "이번 새 소식은 부상 진단의 반복이 아니라, 선수의 출전 판단을 누가 어떤 절차로 검토할 것인가에 관한 논쟁이다. 선수노조는 사실 확인을 먼저 요구하고, 리그는 기존 의료 절차에 신뢰를 표했다. 공개된 두 입장만으로 의료 과실이나 문제없음 중 어느 쪽도 확정할 수 없다. Eagles의 쿼터백 운용과 별개로 리그 전체의 선수 안전 검토 절차를 볼 사안이다.",
+        "watch": "NFL과 NFLPA가 조사 착수 여부, 조사 범위와 독립성에 합의하는지 확인하자. 의료 기록이 공개되지 않은 부분을 추측하지 않는다.",
+        "eventKey": "2026-10-20-nflpa-hurts-medical-care-investigation",
+        "takeaway": "새 쟁점은 진단 자체가 아니라 의료 판단의 검토 절차다. 조사 요구를 조사 착수로 읽지 말자.",
+        "sources": [
+          {
+            "label": "ESPN · Tim McManus, NFLPA 성명",
+            "url": "https://www.espn.com/nfl/story/_/id/50233573/nflpa-demands-full-investigation-hurts-medical-care"
+          },
+          {
+            "label": "NFL · Allen Sills의 공식 설명",
+            "url": "https://www.nfl.com/news/nfl-supports-eagles-treatment-of-qb-jalen-hurts-medical-situation"
+          },
+          {
+            "label": "NBC/PFT · NFLPA 성명 교차 확인",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-calls-for-full-investigation-into-jalen-hurts-situation"
+          }
+        ]
+      },
+      {
+        "id": "commanders-mclaurin-season-ending",
+        "team": "NFL",
+        "label": "검사 결과 확정 · 후속",
+        "title": "McLaurin, 슬개건 파열로 시즌 아웃…Washington의 패스 역할 재편",
+        "summary": "Commanders는 현지 10월 20일 Dan Quinn 감독의 발표를 통해 Terry McLaurin의 슬개건 파열을 확인했다. McLaurin은 시즌을 마감한다. 전날의 중상 우려와 검사 대기에서 잔여 시즌 결장으로 상태가 확정됐다.",
+        "commentary": "구단은 Stefon Diggs와 Treylon Burks, Dyami Brown, 신인 Antonio Williams 등 기존 리시버들에게 더 큰 역할이 필요하다고 설명했다. 한 선수의 타깃을 한 명에게 모두 넘기기보다 바깥쪽 패스, 안쪽 연결, 깊은 패스의 책임이 어떻게 나뉘는지가 중요하다. 현재 명단을 활용한다는 설명을 곧바로 새 영입이나 특정 선수의 주전 확정으로 바꾸어 읽어서는 안 된다.",
+        "watch": "바이위크 이후 리시버들의 정렬과 타깃 분배, 연습조 선수의 실제 승격 발표를 확인하자.",
+        "eventKey": "2026-week6-commanders-mclaurin-knee-injury",
+        "takeaway": "검사 대기에서 시즌 아웃으로 바뀌었다. 다음 과제는 McLaurin의 역할을 여러 표적에게 나누는 일이다.",
+        "sources": [
+          {
+            "label": "Commanders · Quinn 감독의 검사 결과 발표",
+            "url": "https://www.commanders.com/news/terry-mclaurin-knee-injury-commanders"
+          },
+          {
+            "label": "NFL · 시즌 잔여 결장 확인",
+            "url": "https://www.nfl.com/news/commanders-wr-terry-mclaurin-out-rest-of-season-torn-patellar-tendon"
+          },
+          {
+            "label": "CBS · 부상 후속 보도",
+            "url": "https://www.cbssports.com/nfl/news/commanders-terry-mclaurin-knee-injury-monday-night-football/"
+          }
+        ],
+        "changeSummary": "중상 우려와 검사 대기 이후 구단이 슬개건 파열 및 시즌 잔여 결장을 확인했다.",
+        "changeEvidence": {
+          "url": "https://www.commanders.com/news/terry-mclaurin-knee-injury-commanders",
+          "before": "현지 10월 20일 검사를 받을 예정이다",
+          "after": "시즌을 마감한다",
+          "quote": "시즌을 마감한다.",
+          "originalQuote": "is done for the season",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "status-change",
+          "evidence": "https://www.commanders.com/news/terry-mclaurin-knee-injury-commanders"
+        }
+      },
+      {
+        "id": "patriots-bears-tuesday-practice",
+        "team": "Patriots",
+        "label": "목요일 경기 준비 · 화요일 후속",
+        "title": "Patriots 가드 두 명은 계속 DNP…Davis·Bears Jackson은 참여도 상승",
+        "summary": "현지 10월 20일 Patriots 공식 보고에서 Ben Brown과 Alijah Vera-Tucker는 계속 불참(DNP), Carlton Davis III는 제한 참여(LP)로 바뀌었다. Maye와 Will Campbell은 전체 참여(FP), A.J. Brown과 Morgan Moses는 제한 참여를 유지했다. Bears의 Jonah Jackson은 화요일 제한 참여(LP)였다. 전날에는 불참으로 기록됐으며, Bears의 화요일 수치는 워크스루 기반 추정치다.",
+        "commentary": "월요일 보고를 그대로 되풀이한 것이 아니라 Davis와 Jackson의 참여도 변화가 확인됐다. 다만 Patriots 내부 가드 두 자리의 준비 문제는 남아 있고, 상대 라인의 호전도 실제 경기 소화 능력을 보장하지 않는다. 짧은 준비 기간에는 새로운 플레이 수보다 가드·센터 사이 보호 배정이 맞는지, 대체 선수가 들어왔을 때 내부 압박을 어떻게 넘기는지가 더 유용한 관찰점이다.",
+        "watch": "수요일 최종 경기 상태와 선발 라인 조합을 보자. DNP·LP·FP는 연습 참여도이며 경기 OUT·Questionable과 구분한다.",
+        "eventKey": "2026-week7-patriots-bears-oct19-walkthrough",
+        "takeaway": "Davis와 Jackson은 참여도가 올랐지만 Patriots의 두 가드는 계속 불참이다. 최종 출전 판정은 별개다.",
+        "sources": [
+          {
+            "label": "Patriots · 월요일·화요일 공식 연습 보고",
+            "url": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears"
+          },
+          {
+            "label": "NFL · 화요일 리그 업데이트",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-oct-20"
+          }
+        ],
+        "changeSummary": "같은 주차의 월요일 워크스루 이후 화요일 참여도가 공개됐다. Jackson은 DNP에서 LP, Davis도 DNP에서 LP로 바뀌었다.",
+        "changeEvidence": {
+          "url": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears",
+          "before": "Jonah Jackson, Kyle Monangai, Jack Sanborn이 불참(DNP)였다",
+          "after": "Jonah Jackson은 화요일 제한 참여(LP)였다",
+          "quote": "Jonah Jackson은 화요일 제한 참여(LP)였다.",
+          "originalQuote": "LIMITED PARTICIPATION OL Jonah Jackson - Hip / Quadricep",
+          "isTranslation": true,
+          "translationLanguage": "ko",
+          "context": "Tuesday section; Monday section separately lists Jonah Jackson under DID NOT PARTICIPATE."
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears"
+        }
+      },
+      {
+        "id": "49ers-naquan-jones-release",
+        "team": "49ers",
+        "label": "공식 로스터 이동",
+        "title": "49ers, 수비 라인맨 Naquan Jones 방출…후속 보강은 별도 확인",
+        "summary": "49ers는 현지 10월 20일 수비 라인맨 Naquan Jones를 방출했다고 발표했다. 구단에 따르면 Jones는 이번 시즌 세 경기에 출전해 태클 두 개를 기록했다.",
+        "commentary": "이번 발표에서 확인되는 변화는 Jones가 선수단에서 빠졌다는 점이다. 이 짧은 발표는 방출 이유나 대체 영입, 부상자의 복귀를 설명하지 않는다. 수비 로테이션에 어떤 영향이 있는지는 다음 액티브 명단과 실제 스냅 배분으로 확인해야 한다. 이를 대형 트레이드의 예고로 확대해 해석할 근거는 없다.",
+        "watch": "Falcons전 주간의 후속 로스터 발표와 수비 라인 출전 명단을 확인하자.",
+        "eventKey": "2026-10-20-49ers-naquan-jones-release",
+        "takeaway": "방출은 공식 확인됐지만 빈자리를 누가 채울지는 발표되지 않았다.",
+        "sources": [
+          {
+            "label": "49ers · Naquan Jones 방출 발표",
+            "url": "https://www.49ers.com/news/49ers-release-dl-naquan-jones"
+          }
+        ]
+      }
+    ],
+    "leagueWide": [
+      {
+        "team": "Rams",
+        "label": "리그 · 공식 발표",
+        "title": "Rams, McManus 영입으로 킥 공백 대응…Adams·Ford는 IR 등록",
+        "why": "Rams는 현지 10월 20일 Brandon McManus와 계약하고 Davante Adams와 Poona Ford를 부상자 명단(IR)에 올렸다고 공식 발표했다. McManus는 Blake Grupe의 부상으로 생긴 킥 공백을 채운다. 전날의 부상 전망에서 실제 인력 조치로 넘어갔다. 다음 Raiders전에서는 킥 시도 거리뿐 아니라 롱스내퍼·홀더와의 호흡을 볼 필요가 있으며, 과거 성공률을 새 팀에서의 성공 보장으로 삼아서는 안 된다.",
+        "eventKey": "2026-10-20-rams-mcmanus-signing",
+        "takeaway": "부상 공백에 대한 새 조치는 McManus 영입이다. 계약 성사와 킥 유닛의 안정은 구분해서 보자.",
+        "url": "https://www.therams.com/news/rams-sign-kicker-brandon-mcmanus-place-poona-ford-and-davante-adams-on-injured-reserve",
+        "sources": [
+          {
+            "label": "Rams · McManus 계약·IR 등록 공식 발표",
+            "url": "https://www.therams.com/news/rams-sign-kicker-brandon-mcmanus-place-poona-ford-and-davante-adams-on-injured-reserve"
+          },
+          {
+            "label": "ESPN · 계약 사전 보도, NFL Network 취재 인용",
+            "url": "https://www.espn.com/nfl/story/_/id/50231705/sources-rams-signing-free-agent-kicker-brandon-mcmanus"
+          }
+        ]
+      },
+      {
+        "team": "Steelers / Saints",
+        "label": "국제 경기 · 운영 업데이트",
+        "title": "파리 경기는 예정대로…NFL, Steelers–Saints전 보안 강화",
+        "why": "NFL은 현지 10월 20일 파리 지역 소요 사태 이후 Steelers–Saints전 보안을 강화하며 프랑스 당국·미 국무부와 협력하고 있다고 설명했다. Peter O’Reilly는 경기 개최 자체가 위협받은 단계는 없었다고 밝혔다. 일정상 경기는 한국시간 10월 25일 일요일 오후 10시 30분이다. 보안 강화와 연기·취소는 다른 상태다. 팀 이동과 경기 운영의 추가 공식 공지를 확인하되, 이번 발표만으로 개최지가 바뀌었다고 판단하지 않는다.",
+        "eventKey": "2026-10-20-nfl-paris-security",
+        "takeaway": "보안은 강화되지만 개최 일정은 유지된다. 취소나 장소 변경으로 해석할 발표는 아니다.",
+        "url": "https://www.nfl.com/news/nfl-says-heightened-security-measures-will-be-in-place-for-steelers-saints-game-in-paris",
+        "sources": [
+          {
+            "label": "NFL 게재 AP 보도 · 리그 보안 설명",
+            "url": "https://www.nfl.com/news/nfl-says-heightened-security-measures-will-be-in-place-for-steelers-saints-game-in-paris"
+          },
+          {
+            "label": "NFL · Week 7 공식 일정",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          }
+        ]
+      },
+      {
+        "team": "Giants",
+        "label": "리그 · 공식 발표",
+        "title": "Giants, Najee Harris·Jihad Ward 방출…Trace Ford는 정식 합류",
+        "why": "Giants는 현지 10월 20일 러닝백 Najee Harris와 외곽 라인배커 Jihad Ward를 방출하고, 연습조의 Trace Ford를 정식 로스터로 올렸다고 발표했다. 공격과 수비 인력 조정이 함께 이뤄진 것으로, Ford가 러닝백 Harris를 같은 포지션에서 대체하는 이동이 아니다. Texans전을 앞두고 남은 러닝백들의 실제 터치 배분과 Ford의 수비·스페셜팀 역할을 확인하자. 이 발표만으로 새 주전 러닝백은 확정되지 않는다.",
+        "eventKey": "2026-10-20-giants-harris-ward-release",
+        "takeaway": "Harris 방출과 Ford 승격은 서로 다른 포지션의 조정이다. 다음 주전·터치 배분은 따로 확인해야 한다.",
+        "url": "https://www.giants.com/news/rb-najee-harris-olb-jihad-ward-released-among-series-of-roster-moves-trace-ford-active-roster-moves-week-7",
+        "sources": [
+          {
+            "label": "Giants · 10월 20일 공식 로스터 이동",
+            "url": "https://www.giants.com/news/rb-najee-harris-olb-jihad-ward-released-among-series-of-roster-moves-trace-ford-active-roster-moves-week-7"
+          },
+          {
+            "label": "ESPN · Harris 방출 취재",
+            "url": "https://www.espn.com/nfl/story/_/id/50228752/giants-releasing-rb-najee-harris-source-says"
+          }
+        ]
+      },
+      {
+        "team": "Titans",
+        "label": "리그 · 공식 발표",
+        "title": "Titans, 시설 내 사건 검토 뒤 Jordan Elliott 방출",
+        "why": "Titans는 10월 15일 팀 시설에서 Jordan Elliott와 관련한 사건이 있었고, 검토 후 현지 10월 20일 그를 방출했다고 밝혔다. 사건의 구체적 내용은 공개하지 않았다. 확인된 것은 구단의 로스터 조치이며, 범죄 혐의나 리그 출전정지로 바꾸어 설명할 근거는 없다. 다음 Browns전을 앞두고 수비 라인 대체 인력과 후속 공식 발표를 살피되 미공개 사유를 추측하지 않는다.",
+        "eventKey": "2026-10-20-titans-jordan-elliott-release",
+        "takeaway": "사건의 내용은 미공개다. 구단 방출과 리그 징계·형사 절차를 혼동하지 말자.",
+        "url": "https://www.tennesseetitans.com/news/titans-release-dl-jordan-elliott-while-also-making-a-pair-of-practice-squad-moves",
+        "sources": [
+          {
+            "label": "Titans · 구단 성명 및 방출 발표",
+            "url": "https://www.tennesseetitans.com/news/titans-release-dl-jordan-elliott-while-also-making-a-pair-of-practice-squad-moves"
+          },
+          {
+            "label": "ESPN · Turron Davenport 취재",
+            "url": "https://www.espn.com/nfl/story/_/id/50228692/titans-abruptly-release-dt-jordan-elliott-undisclosed-reasons"
+          }
+        ]
+      },
+      {
+        "team": "Steelers",
+        "label": "리그 · 공식 발표",
+        "title": "Steelers, Valdes-Scantling을 연습조로…즉시 경기 출전 확정은 아냐",
+        "why": "Steelers는 현지 10월 20일 Marquez Valdes-Scantling을 연습조에 영입했다. ESPN에 게재된 AP 보도는 Michael Pittman Jr.와 Roman Wilson의 IR 이동으로 얇아진 리시버진을 배경으로 설명했다. 이 영입은 Paris 원정의 선택지를 넓히지만 정식 로스터 승격이나 경기 액티브 등록과는 다르다. Saints전 전까지 실제 승격이 이뤄지는지, 기존 리시버들의 역할이 어떻게 나뉘는지 확인하자.",
+        "eventKey": "2026-10-20-steelers-valdes-scantling-practice-squad",
+        "takeaway": "리시버 보강은 연습조 계약 단계다. 경기 출전과 스냅 증가는 별도의 확인이 필요하다.",
+        "url": "https://www.steelers.com/news/steelers-sign-valdes-scantling",
+        "sources": [
+          {
+            "label": "Steelers · 연습조 계약 공식 발표",
+            "url": "https://www.steelers.com/news/steelers-sign-valdes-scantling"
+          },
+          {
+            "label": "ESPN 게재 AP · 리시버진 상황",
+            "url": "https://www.espn.com/nfl/story/_/id/50232379/steelers-bring-back-marquez-valdes-scantling-amid-wr-injuries"
+          }
+        ]
+      }
+    ],
+    "tactics": [],
+    "highlights": [],
+    "schedule": [
+      {
+        "gameId": "401873010",
+        "gameDate": "2026-10-23",
+        "date": "10/23",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Chicago Bears",
+        "note": "Patriots 가드 두 명의 최종 상태와 Bears 내부 라인 조합을 먼저 확인하자. 연습 참여도와 경기 출전 등급은 다르다.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-21T18:03:16.384+09:00",
+        "lastConfirmedEdition": "2026-10-21",
+        "verified": true
+      },
+      {
+        "gameDate": "2026-10-25",
+        "date": "10/25",
+        "weekday": "일",
+        "time": "22:30",
+        "status": "경기 예정",
+        "matchup": "Pittsburgh Steelers at New Orleans Saints",
+        "note": "파리 경기의 보안 강화 관련 추가 공지와 Steelers의 리시버 승격 여부를 확인하자. 현재 공식 일정은 유지된다.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-21T18:03:16.384+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-21"
+      },
+      {
+        "gameId": "401873017",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "San Francisco 49ers at Atlanta Falcons",
+        "note": "49ers 수비 라인의 후속 명단과 로테이션을 보자. Jones 방출만으로 대체 선수나 부상자 복귀를 단정하지 않는다.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-21T18:03:16.384+09:00",
+        "lastConfirmedEdition": "2026-10-21",
+        "verified": true
+      },
+      {
+        "gameId": "401873022",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "09:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Seattle Seahawks",
+        "note": "Chiefs의 러닝과 짧은 패스가 Seahawks 수비의 박스 인원 조정에 어떻게 대응하는지 살펴보자.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-21T18:03:16.384+09:00",
+        "lastConfirmedEdition": "2026-10-21",
+        "verified": true
+      },
+      {
+        "gameDate": "2026-10-27",
+        "date": "10/27",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Dallas Cowboys at Philadelphia Eagles",
+        "note": "Eagles의 쿼터백 운용과 공격 계획을 확인하자. 선수노조의 의료 조사 요구와 실제 경기 출전 상태는 별개의 사안이다.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-21T18:03:16.384+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-21"
+      }
+    ]
+  },
+  {
     "date": "2026-10-20",
     "weekday": "화요일",
     "edition": "2026 WEEK 6 · 저녁 통합 검증판",
