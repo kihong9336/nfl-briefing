@@ -1,5 +1,322 @@
 export const briefings = [
   {
+    "date": "2026-10-22",
+    "weekday": "목요일",
+    "edition": "2026 WEEK 7 · 저녁 검증판",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 7,
+    "dek": "Hurts 진료 조사 요구에 대한 Goodell의 답변과 Giants의 선발 QB 교체가 중심이다. 조건부 감독 벌금, Bills 추가 징계, LaPorta 계약 발언을 구분하고 Patriots 최종 결장 명단과 49ers·Chiefs의 새 연습 보고를 짚는다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 리그와 쿼터백",
+      "title": "Goodell은 조사 환영, Giants는 McCarthy 선발 전환",
+      "summary": "Hurts 진료 문제는 커미셔너의 공개 답변으로 이어졌고, NFC East 선두 Giants는 Texans전 선발을 바꿨다. 리그 징계의 적용 조건과 주말 출전 판단의 서로 다른 단계를 함께 읽는다."
+    },
+    "sections": [
+      {
+        "id": "2026-10-20-nflpa-hurts-medical-care-investigation",
+        "eventKey": "2026-10-20-nflpa-hurts-medical-care-investigation",
+        "team": "NFL",
+        "label": "리그 · 선수 안전 후속",
+        "title": "Goodell, Hurts 진료 조사 요구에 환영 입장…조사 결과와는 별개",
+        "summary": "현지 10월 21일 Roger Goodell 커미셔너는 NFLPA가 요구한 Jalen Hurts 의료 처치 조사를 환영한다고 밝혔다. 동시에 리그는 기존 절차가 지켜졌다는 입장을 유지했다. 전날 선수노조의 조사 요구에 대한 커미셔너의 공개 답변이 새로 나왔다.",
+        "commentary": "리그의 절차 옹호와 조사 수용 의사는 함께 존재할 수 있다. 중요한 것은 환영 발언 자체보다 누가 어떤 범위를 검토하고 결과를 어떻게 공개하느냐다. 이 발언을 독립조사 착수 확정이나 의료적 적절성에 대한 최종 결론으로 읽어서는 안 된다. Eagles의 경기 준비를 넘어 선수 안전에 대한 리그와 노조의 책임 분담을 볼 사안이다.",
+        "watch": "조사 주체·범위·일정의 공식 발표를 확인하자. 의학적 원인이나 복귀 시기는 이번 발언으로 추정하지 않는다.",
+        "takeaway": "조사 요구에 리그 수장의 답변이 나왔다. 환영 발언과 조사 착수·결론은 구분해야 한다.",
+        "sources": [
+          {
+            "label": "ESPN · Goodell 기자회견",
+            "url": "https://www.espn.com/nfl/story/_/id/50239029/roger-goodell-nfl-welcomes-probe-hurts-medical-care"
+          },
+          {
+            "label": "Yahoo · Jori Epstein 현장 취재",
+            "url": "https://sports.yahoo.com/nfl/article/roger-goodell-we-welcome-nflpa-call-for-investigation-into-jalen-hurts-blood-clots-163012423.html"
+          }
+        ],
+        "changeSummary": "NFLPA의 조사 요구 이후 Goodell이 공개적으로 조사 환영 입장을 밝혔다.",
+        "changeEvidence": {
+          "url": "https://www.espn.com/nfl/story/_/id/50239029/roger-goodell-nfl-welcomes-probe-hurts-medical-care",
+          "before": "조사해야 한다고 요구했다",
+          "after": "조사를 환영한다고 밝혔다",
+          "quote": "Goodell은 조사를 환영한다고 밝혔다.",
+          "originalQuote": "the league welcomes an investigation",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.espn.com/nfl/story/_/id/50239029/roger-goodell-nfl-welcomes-probe-hurts-medical-care"
+        }
+      },
+      {
+        "id": "2026-10-21-giants-mccarthy-week7-starter",
+        "eventKey": "2026-10-21-giants-mccarthy-week7-starter",
+        "team": "NFL",
+        "label": "쿼터백 교체 · 구단 확정",
+        "title": "NFC East 선두 Giants, Texans전 선발을 McCarthy로 바꾼다",
+        "summary": "Giants는 현지 10월 21일 J.J. McCarthy가 Week 7 Houston전 선발이라고 공식 발표했다. Jameis Winston은 백업, Jake Haener는 비상용 세 번째 쿼터백이다. 구단 발표 기준 Giants는 3승 2패 1무로 NFC East 선두이며 Texans는 2승 4패다.",
+        "commentary": "하위권 팀의 장기 실험으로만 볼 교체가 아니다. 지구 선두를 지키려는 팀이 공격의 방향을 바꾸는 선택이다. Harbaugh 감독은 Winston의 기여를 인정하면서도 McCarthy가 공격에 선택지를 준다고 설명했다. 새 선발의 재능을 곧바로 공격 효율 상승으로 간주하지 말고, 첫 경기의 보호 배정과 공 처리부터 평가하는 편이 낫다.",
+        "watch": "초반 짧은 패스로 리듬을 만드는지, 압박 때 무리한 연장 플레이를 줄이는지 보자. 한 경기로 장기 성공을 판정하지 않는다.",
+        "takeaway": "선두 경쟁 중인 Giants가 선발 QB를 바꾼다. 새 이름보다 보호와 판단의 안정이 먼저다.",
+        "sources": [
+          {
+            "label": "Giants · Harbaugh 감독 공식 발표",
+            "url": "https://www.giants.com/news/j-j-mccarthy-to-start-quarterback-new-york-giants-week-7-houston-texans-john-harbaugh-jameis-winston"
+          },
+          {
+            "label": "CBS · 선발 교체 교차 확인",
+            "url": "https://www.cbssports.com/nfl/news/giants-plan-to-start-jj-mccarthy-vs-texans-in-week-7-per-report/"
+          }
+        ]
+      },
+      {
+        "id": "2026-week7-patriots-bears-oct19-walkthrough",
+        "eventKey": "2026-week7-patriots-bears-oct19-walkthrough",
+        "team": "Patriots",
+        "label": "목요일 경기 · 최종 출전 상태",
+        "title": "Patriots 가드 두 명·코너 세 명 OUT…A.J. Brown은 경기 상태 해제",
+        "summary": "수요일 최종 보고에서 Ben Brown과 Alijah Vera-Tucker는 OUT으로 확정됐다. Channing Canada·Carlton Davis III·Karon Prunty도 결장한다. A.J. Brown은 FP로 올라 별도 경기 상태가 없고, Morgan Moses는 Questionable이다. Bears의 Jonah Jackson도 FP로 올라 경기 상태가 없으며 Kyle Monangai와 Jack Sanborn은 OUT이다.",
+        "commentary": "전날 참여도 보고에서 실제 결장 판정으로 넘어갔다. Patriots는 가드 공백뿐 아니라 코너 뎁스까지 동시에 관리해야 한다. A.J. Brown의 상태 호전은 반가운 변화지만 보호가 흔들리면 리시버 복귀만으로 해결되지 않는다. 경기 초반에는 이름값보다 내부 압박을 넘기는 조합과 수비 교대가 유지되는지 보자.",
+        "watch": "한국시간 10월 23일 오전 9시 15분 Bears전. Moses의 최종 액티브 여부와 가드 선발 조합을 먼저 확인하자.",
+        "takeaway": "연습 불참과 결장 확정을 구분할 때다. 내부 보호선과 코너 교대가 동시에 시험받는다.",
+        "sources": [
+          {
+            "label": "Patriots · 수요일 최종 보고",
+            "url": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears"
+          },
+          {
+            "label": "NFL · 리그 부상 종합",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21"
+          },
+          {
+            "label": "NFL · 공식 Week 7 일정",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          }
+        ],
+        "changeSummary": "화요일 DNP 이후 수요일 최종 경기 상태에서 가드 두 명의 결장이 확정됐다.",
+        "changeEvidence": {
+          "url": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears",
+          "before": "계속 불참(DNP)",
+          "after": "OUT으로 확정됐다",
+          "quote": "Ben Brown과 Alijah Vera-Tucker는 OUT으로 확정됐다.",
+          "originalQuote": "OUT\nOL Ben Brown - Knee (DNP)",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.patriots.com/news/week-7-injury-report-patriots-at-bears"
+        }
+      },
+      {
+        "id": "2026-week7-chiefs-seahawks-oct21-practice",
+        "eventKey": "2026-week7-chiefs-seahawks-oct21-practice",
+        "team": "Chiefs",
+        "label": "새 주차 · 수요일 공식 보고",
+        "title": "Chiefs 보호선 점검: Moore·Simmons DNP, Kelce는 제한 참여",
+        "summary": "Chiefs의 현지 10월 21일 보고에서 Jaylon Moore는 뇌진탕으로 DNP, Josh Simmons는 등 부상·개인 사유로 DNP였다. Rashee Rice도 DNP였고 Travis Kelce는 발목으로 LP, Patrick Mahomes는 무릎으로 FP였다. 상대 Seahawks의 Zach Charbonnet은 FP로 기록됐다.",
+        "commentary": "이번 점검의 핵심은 Rice의 지난주 결장을 반복하는 것이 아니라 Seattle전을 앞둔 보호선과 짧은 패스 연결 자원의 조합이다. 태클 두 명의 참여 제한과 Kelce의 훈련 상태를 함께 보면 긴 전개를 얼마나 안전하게 호출할 수 있는지 관찰할 기준이 생긴다. 수요일 보고만으로 일요일 결장을 확정할 수는 없다.",
+        "watch": "후속 연습에서 태클들이 복귀하는지와 Kelce의 참여도를 확인하자. Charbonnet의 FP도 IR 활성화·출전 확정과 구분한다.",
+        "takeaway": "Seattle전은 보호선과 짧은 패스 연결을 함께 봐야 한다. 수요일 참여도가 최종 출전 판정은 아니다.",
+        "sources": [
+          {
+            "label": "Chiefs · Week 7 공식 연습 보고",
+            "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+          },
+          {
+            "label": "NFL · 수요일 업데이트",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21"
+          }
+        ]
+      },
+      {
+        "id": "2026-week6-49ers-evans-achilles-game-exit",
+        "eventKey": "2026-week6-49ers-evans-achilles-game-exit",
+        "team": "49ers",
+        "label": "경기 후 부상 · 연습 후속",
+        "title": "Evans, Falcons전 첫 보고는 DNP…낙관적 전망 뒤 실제 참여도 확인",
+        "summary": "49ers의 Mike Evans는 갈비뼈·아킬레스 문제로 수요일 훈련에 불참했다. NFL 수요일 보고에서 Deebo Samuel과 Nick Bosa, Mykel Williams도 DNP로 기록됐다. 경기 직후의 복귀 희망과 달리 첫 훈련에서 Evans가 참여하지 못했다는 점이 새로 확인됐다.",
+        "commentary": "훈련 불참은 이전 전망을 취소한 공식 결장 발표가 아니다. 다만 감독의 희망적 발언만으로 주말 공격 계획을 고정해서도 안 된다. Evans가 제한될 경우 바깥 리시버 역할을 누가 나누는지, 수비에서는 주요 패스러셔들의 참여도가 개선되는지를 별도로 추적하는 것이 좋다.",
+        "watch": "Falcons전 최종 상태 발표까지 Evans의 DNP→LP·FP 변화와 수비 라인 복귀 여부를 나누어 확인하자.",
+        "takeaway": "복귀 희망 뒤 첫 실제 보고는 DNP다. 주말 결장은 아직 확정되지 않았다.",
+        "sources": [
+          {
+            "label": "NFL · 49ers 수요일 연습 보고",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21"
+          }
+        ],
+        "changeSummary": "경기 직후 복귀 희망 발언 이후 첫 주간 연습 보고에서 Evans의 불참이 확인됐다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21",
+          "before": "Week 7 출전을 희망한다고 밝혔다",
+          "after": "수요일 훈련에 불참했다",
+          "quote": "Mike Evans는 수요일 훈련에 불참했다.",
+          "originalQuote": "(ribs/Achilles) did not practice on Wednesday.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21"
+        }
+      }
+    ],
+    "leagueWide": [
+      {
+        "eventKey": "2026-10-21-coaches-referee-conduct-fines",
+        "team": "NFL",
+        "label": "징계 · ESPN 취재 보도",
+        "title": "Sirianni·Vrabel·Glenn에 25만 달러 벌금 보도…집행은 보류",
+        "why": "ESPN의 Tim McManus는 현지 10월 21일 소식통을 인용해 Nick Sirianni에게 심판을 대하는 행동으로 25만 달러 벌금이 부과됐다고 보도했다. Mike Vrabel과 Aaron Glenn에게도 같은 금액이 부과됐다는 Sports Illustrated 보도를 함께 전했다. 벌금은 현재 집행 보류 상태이며 향후 행동에 따라 철회될 수 있다는 설명이다. 실제 납부 완료나 출전정지로 읽으면 안 된다. 심판과의 소통을 관리하는 리그 차원의 경고라는 맥락에서, 적용 사건과 집행 조건의 후속 확인을 기다리자.",
+        "takeaway": "확인된 보도는 조건부·집행 보류 벌금이다. 납부 완료나 경기 출장 정지와 다르다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50244013/sirianni-vrabel-glenn-fined-250k-ref-conduct",
+        "sources": [
+          {
+            "label": "ESPN · Tim McManus, 소식통 확인 및 SI 보도 인용",
+            "url": "https://www.espn.com/nfl/story/_/id/50244013/sirianni-vrabel-glenn-fined-250k-ref-conduct"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-21-bills-sam-franklin-suspension",
+        "team": "Bills",
+        "label": "리그 징계 · 새 대상",
+        "title": "Bills Sam Franklin도 한 경기 정지…Gardner-Johnson 징계와 별개",
+        "why": "NFL은 Raiders전 상대 선수에게 침을 뱉은 Sam Franklin에게 무급 한 경기 출장 정지를 부과했다고 전했다. Bills의 Week 7 바이위크가 끝난 10월 26일부터 적용되고 11월 2일 복귀 자격이 생긴다. 앞서 발행한 C.J. Gardner-Johnson 징계와는 대상 선수가 다른 새 조치다. NFL은 Franklin의 이의 제기 계획에 관한 ESPN 보도도 전했다. 같은 팀의 두 징계를 하나로 합치지 말고, 항소 결과와 다음 경기 수비 백·스페셜팀 명단을 확인하자.",
+        "takeaway": "다른 선수에게 내려진 별도 징계다. 바이위크를 출장 정지 소화 경기로 세면 안 된다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21",
+        "sources": [
+          {
+            "label": "NFL · Franklin 징계 및 적용 일정",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-21-laporta-extension-comments",
+        "team": "Lions",
+        "label": "계약 · 선수 발언",
+        "title": "LaPorta, 재계약 불만 공개…이적 확정이나 트레이드 요청은 아니다",
+        "why": "ESPN은 현지 10월 21일 Sam LaPorta가 Pardon My Take 팟캐스트에서 Lions와의 계약 연장 상황에 불만을 드러내고, 남지 못하면 다른 곳에서 보수를 받겠다는 취지로 말했다고 전했다. 그는 신인 계약 마지막 시즌이며 2027년 자유계약 자격을 앞두고 있다. 이번 변화는 선수가 공개적으로 밝힌 입장이다. 계약 체결·협상 재개·트레이드 요청이 확정됐다는 뜻은 아니다. 다음으로 구단의 답변과 실제 협상 조치가 나오는지 보자.",
+        "takeaway": "새 사실은 선수의 공개 발언이다. 감정 표현을 확정된 이적 소식으로 확대하지 않는다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50240100/sam-laporta-extension-not-feeling-love-lions",
+        "sources": [
+          {
+            "label": "ESPN · LaPorta 팟캐스트 발언 보도",
+            "url": "https://www.espn.com/nfl/story/_/id/50240100/sam-laporta-extension-not-feeling-love-lions"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-week7-oct21-jackson-mayfield-practice-return",
+        "team": "Ravens / Buccaneers",
+        "label": "쿼터백 복귀 경로",
+        "title": "Jackson은 LP, Mayfield는 FP…복귀 훈련과 선발 확정을 나눠 보자",
+        "why": "NFL 수요일 보고에서 Lamar Jackson은 발목 문제로 제한 참여(LP), Baker Mayfield는 오른손 엄지 부상 이후 전체 참여(FP)를 기록했다. Todd Bowles는 Panthers전 선발 결정을 현지 금요일에 내릴 것으로 예상한다고 말했다. 같은 복귀 훈련이라도 두 선수의 참여 수준과 결정 절차는 다르다. LP·FP를 순서대로 비교하되, 이를 경기력 회복률이나 승리 확률로 환산해서는 안 된다. 최종 출전 등급과 선발 발표를 먼저 확인하고 경기에서는 이동·릴리스와 보호 조합을 보자.",
+        "takeaway": "두 쿼터백의 복귀 단계가 다르다. Mayfield의 FP도 선발 확정 발표를 대신하지 않는다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21",
+        "sources": [
+          {
+            "label": "NFL · Jackson·Mayfield 수요일 상태",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21"
+          },
+          {
+            "label": "Yahoo · Week 7 부상 업데이트",
+            "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-week-7-145620221.html"
+          }
+        ]
+      }
+    ],
+    "tactics": [],
+    "highlights": [],
+    "schedule": [
+      {
+        "gameId": "401873010",
+        "gameDate": "2026-10-23",
+        "date": "10/23",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Chicago Bears",
+        "note": "가드 두 명과 코너 세 명 결장 속 Patriots의 보호 배정, Moses의 최종 액티브 여부를 확인하자.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-22T18:02:54.359+09:00",
+        "lastConfirmedEdition": "2026-10-22",
+        "verified": true
+      },
+      {
+        "gameDate": "2026-10-25",
+        "date": "10/25",
+        "weekday": "일",
+        "time": "22:30",
+        "status": "경기 예정",
+        "matchup": "Pittsburgh Steelers at New Orleans Saints",
+        "note": "국제 경기의 이른 킥오프를 확인하고 Steelers와 Saints의 최종 출전 명단을 살펴보자.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-22T18:02:54.359+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-22"
+      },
+      {
+        "gameId": "401873017",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "San Francisco 49ers at Atlanta Falcons",
+        "note": "Evans의 최종 경기 상태와 49ers 수비 라인 출전 명단을 확인하자. 수요일 DNP는 결장 확정이 아니다.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-22T18:02:54.359+09:00",
+        "lastConfirmedEdition": "2026-10-22",
+        "verified": true
+      },
+      {
+        "gameId": "401873022",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "09:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Seattle Seahawks",
+        "note": "Chiefs 태클들의 최종 상태와 Kelce의 활용, Seattle의 Charbonnet 활성화 여부를 확인하자.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-22T18:02:54.359+09:00",
+        "lastConfirmedEdition": "2026-10-22",
+        "verified": true
+      },
+      {
+        "gameDate": "2026-10-27",
+        "date": "10/27",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Dallas Cowboys at Philadelphia Eagles",
+        "note": "Eagles의 경기 계획과 쿼터백 운용을 확인하자. Hurts 의료 조사 논의와 경기 준비는 별개다.",
+        "source": {
+          "label": "NFL · Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-22T18:02:54.359+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-22"
+      }
+    ]
+  },
+  {
     "date": "2026-10-21",
     "weekday": "수요일",
     "edition": "2026 WEEK 7 · 저녁 검증판",
