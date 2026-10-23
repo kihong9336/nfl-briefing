@@ -21,7 +21,7 @@ export const briefings = [
         "label": "TNF 결과 · 공식 경기 기록",
         "title": "Bears 30-24 승리…Maye의 321야드보다 갈림길은 레드존과 마지막 킥",
         "summary": "Bears가 Patriots를 30-24로 꺾어 5승 2패가 됐고 Patriots는 4승 3패가 됐다. 공식 게임북에서 Caleb Williams는 33회 중 22회 성공, 308패싱야드·2TD, Drake Maye는 31회 중 24회 성공, 321패싱야드·2TD·1INT다. Maye는 러싱 TD도 기록했다. Cairo Santos는 종료 1분 34초 전 58야드 필드골을 성공했다.",
-        "commentary": "New England는 전반 마지막 Stevenson의 48야드 캐치앤런 TD와 후반 Raridon의 30야드 TD로 따라붙었다. 하지만 2쿼터 레드존 인터셉션 뒤 Chicago가 80야드 TD 드라이브를 완성한 교환이 컸다. 마지막에는 색으로 긴 킥을 남기고도 Santos가 성공해 두 번의 득점이 필요한 격차를 만들었다. 패싱야드가 더 많았다는 사실만으로 공격 운영까지 우세했다고 평가할 수 없다. 한 경기의 QB 수치를 시즌 실력 순위로 확대하지 말자.",
+        "commentary": "New England는 전반 마지막 Stevenson의 48야드 캐치앤런 TD와 후반 Raridon의 30야드 TD로 따라붙었다. 하지만 2쿼터 레드존 인터셉션 뒤 Chicago가 80야드 TD 드라이브를 완성한 교환이 컸다. 마지막에는 색으로 긴 킥을 남기고도 Santos가 종료 1분 34초 전 58야드 필드골을 성공해 27–21을 30–21, 두 번의 득점이 필요한 9점 차로 벌렸다. Patriots가 종료 37초 전 Borregales의 47야드 필드골로 30–24까지 좁혔지만 승부를 뒤집지는 못했다. 패싱야드가 더 많았다는 사실만으로 공격 운영까지 우세했다고 평가할 수 없다. 한 경기의 QB 수치를 시즌 실력 순위로 확대하지 말자.",
         "watch": "Bears의 3다운 전진과 Patriots의 첫 태클, 레드존에서 공을 지키는 판단을 나누어 보자. Bears의 Cole Kmet은 무릎 부상으로 카트에 실려 나갔지만 진단·결장 기간은 아직 확정하지 않는다.",
         "takeaway": "321야드와 세 차례 득점 관여에도 승리는 오지 않았다. 득점권 턴오버와 긴 필드골이 접전을 갈랐다.",
         "sources": [
@@ -246,8 +246,79 @@ export const briefings = [
         ]
       }
     ],
-    "tactics": [],
-    "highlights": [],
+    "tactics": [
+      {
+        "id": "2026-10-23-patriots-stevenson-flat-48",
+        "team": "Patriots",
+        "label": "실전 전술 · 전반 마지막 플레이",
+        "title": "엔드존 대신 빈 공간으로: Stevenson의 48야드 터치다운",
+        "narrativeMode": "integrated",
+        "concept": "전반 종료 3초 전, Chicago 48야드에서 필요한 것은 긴 패스 자체가 아니라 터치다운이었다. Patriots는 깊은 곳을 향하는 리시버와 짧게 공을 받는 러닝백을 연결했다.",
+        "easy": "모두가 먼 출구를 지키게 한 뒤 가까운 통로로 들어가 달리는 방식이다. 공이 날아간 거리보다, 받은 뒤 달릴 공간을 누가 만들어 주는지가 중요하다.",
+        "gameUse": "2026년 10월 22일 미국 현지 Patriots–Bears전, 2쿼터 0:03, 1st-and-10 CHI 48. 공식 게임북은 Maye의 짧은 오른쪽 패스를 Stevenson의 48야드 TD로 기록한다. 추가점 뒤 전반 점수는 Bears 20–14였다.",
+        "whyItWorks": "깊은 경로로 수비의 시선을 끌고 짧은 수신 공간을 만든 다음, 다운필드 블록을 전진 거리로 바꾸는 연결이다. 도식에서는 공의 짧은 이동과 주자의 긴 이동을 다른 선으로 구분한다.",
+        "defenseCounter": "대응 원리는 깊은 패스를 지키면서도 짧은 수신자에게 접근할 각도를 남기는 것이다. 가까운 수비수가 전진을 늦추고 뒤의 추격자가 안쪽 컷백 통로를 지키면, 공격은 같은 짧은 패스를 해도 긴 전진을 얻기 어렵다.",
+        "breakdown": [
+          {
+            "label": "1 · 스냅 전: 긴 패스를 기다리는 수비",
+            "text": "Evan Lazar의 구단 분석에 따르면 Patriots는 3×1로 섰고 Bears는 골라인에 세이프티 둘을 둔 Hail Mary 대비 정렬이었다. 여기서 3×1은 패스 수신 대상을 한쪽 셋, 반대쪽 하나로 나눈 배치다.",
+            "meaning": "종료 직전이라고 공을 반드시 엔드존까지 던져야 하는 것은 아니다. 깊은 공간을 지키는 수비와 공 가까이의 공간을 함께 읽는다."
+          },
+          {
+            "label": "2 · 움직임: 깊이 달리고, 짧은 통로를 연다",
+            "text": "Lazar는 오른쪽의 세 리시버가 수직으로 달리고, 반대쪽 A.J. Brown은 필드를 가로질렀다고 설명한다. Brown이 자기 쪽 공간을 비우는 움직임과 함께 Stevenson이 플랫으로 빠져나왔다. 플랫은 사이드라인 가까운 짧은 패스 공간이다.",
+            "meaning": "서로 다른 깊이의 경로를 한꺼번에 보여 주는 것이 핵심이다. Stevenson에게 공을 주는 동작만 보면, 그 전에 공간을 여는 리시버들의 역할을 놓친다."
+          },
+          {
+            "label": "3 · 판단: 짧은 패스를 전진의 시작으로",
+            "text": "Maye는 Stevenson에게 짧은 오른쪽 패스를 연결했다. Lazar는 Chicago가 다섯 명을 압박에 보냈다고 설명한다. 수비가 깊은 곳을 지키는 동안, 공을 가까운 러닝백에게 넘겨 직접 달릴 기회를 만든 것이다.",
+            "meaning": "짧게 받는 순간은 끝이 아니라 시작이다. 관전할 때 공이 떨어지는 곳에서 시선을 멈추지 말고 주자 앞의 통로로 옮긴다."
+          },
+          {
+            "label": "4 · 결과와 대응: 블록 뒤 안쪽으로 전환",
+            "text": "Lazar가 짚은 결정적 도움은 DeMario Douglas의 블록이다. Stevenson은 그 도움으로 가운데로 방향을 바꿔 마지막 20야드를 달렸다. 공식 결과는 48야드 TD, 추가점 뒤 20–14다.",
+            "counter": "수비가 다시 대비한다면 첫 접근자는 바깥으로만 몰리지 않고 속도를 늦추게 하고, 뒤따르는 수비는 안쪽 전환을 막는 각도를 유지해야 한다. 이것이 깊은 패스 방어와 짧은 패스 뒤 추격을 함께 설계해야 하는 이유다."
+          }
+        ],
+        "watchOrder": [
+          "스냅 전에는 깊은 수비 위치와 3×1의 양쪽을 본다.",
+          "공보다 먼저 수직 경로와 Brown의 가로 이동을 따라간다.",
+          "Stevenson의 캐치 뒤에는 Douglas의 블록과 안쪽 전환을 본다."
+        ],
+        "diagram": {
+          "kind": "catch-and-run",
+          "caption": "짧은 패스·리시버 블록·캐치 후 전진의 관계를 보여주는 개념도입니다. 실제 선수 배치와 거리를 재현한 그림은 아닙니다."
+        },
+        "source": {
+          "label": "Evan Lazar · Patriots Game Observations",
+          "url": "https://www.patriots.com/news/game-observations-8-takeaways-from-the-patriots-loss-to-the-bears-on-thursday-night-football-in-week-7"
+        },
+        "sources": [
+          {
+            "label": "구단 분석: 배치·경로·블록 설명",
+            "url": "https://www.patriots.com/news/game-observations-8-takeaways-from-the-patriots-loss-to-the-bears-on-thursday-night-football-in-week-7"
+          },
+          {
+            "label": "공식 게임북: 상황·패스 방향·득점 순서",
+            "url": "https://static.clubs.nfl.com/image/upload/patriots/ljqhr0hqaxegvay37i11.pdf"
+          }
+        ],
+        "video": {
+          "title": "Stevenson의 48야드 TD · 스냅 전부터 보기 (2:50)",
+          "type": "Patriots 공식 영상 · 실제 장면 확인",
+          "url": "https://www.youtube.com/watch?v=MY9cWucyTMo&t=170s"
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Patriots–Bears 경기 하이라이트",
+        "channel": "New England Patriots",
+        "type": "Patriots 공식 YouTube · 경기 주요 장면",
+        "url": "https://www.youtube.com/watch?v=MY9cWucyTMo",
+        "note": "Stevenson의 전반 마지막 48야드 TD와 Raridon의 후반 30야드 TD를 함께 본다. 짧은 패스가 긴 전진으로 바뀌는 순간에는 공을 받는 선수뿐 아니라 앞서 달리는 동료들의 움직임을 따라가 보자."
+      }
+    ],
     "schedule": [
       {
         "gameId": "401873010",
@@ -257,7 +328,7 @@ export const briefings = [
         "time": "09:15",
         "status": "종료",
         "matchup": "New England Patriots at Chicago Bears",
-        "note": "Bears가 30-24로 승리했다. Santos의 종료 1분 34초 전 58야드 필드골이 추격을 어렵게 만들었다.",
+        "note": "Bears가 30–24로 승리했다. Santos의 58야드 필드골로 종료 1분 34초 전 30–21이 됐고, Patriots의 종료 37초 전 47야드 필드골로 최종 6점 차가 됐다.",
         "source": {
           "label": "NFL 공식 게임북",
           "url": "https://static.clubs.nfl.com/image/upload/patriots/ljqhr0hqaxegvay37i11.pdf"

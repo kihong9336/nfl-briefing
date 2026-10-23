@@ -106,7 +106,29 @@ function fourthDownDbBlitz(item) {
   </svg>`;
 }
 
+function catchAndRun(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="run-title run-desc">
+    <title id="run-title">${escapeXml(item.title)}</title>
+    <desc id="run-desc">개념도: 짧은 패스로 공을 받은 러닝백이 리시버의 블록 옆으로 전진하는 원리. 실제 선수 배치나 거리 재현이 아니다.</desc>
+    <defs><marker id="run-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="mini-label" x="24" y="30">짧은 패스 → 블록 → 캐치 후 전진 · 개념도</text>
+    <text class="field-label" x="24" y="65">공격 방향 ↑</text>
+    <path class="line-scrimmage" d="M18 290H702"/>
+    <text class="field-label" x="24" y="280">출발선</text>
+    <path data-action="short-pass" class="pass-path" d="M350 340 Q440 355 510 300" marker-end="url(#run-arrow)"/>
+    <path data-action="run-after-catch" class="route-path" d="M530 280 Q610 240 600 110" marker-end="url(#run-arrow)"/>
+    <path data-action="downfield-block" class="pressure-path" d="M470 220 L490 190"/>
+    <path class="pressure-path" d="M478 180 L506 201"/>
+    ${player(350,340,'QB')}${player(530,300,'RB')}${player(455,235,'WR')}${player(505,165,'D','defense')}
+    <text class="callout accent" x="375" y="390">① 짧게 연결</text>
+    <text class="callout light" x="205" y="205">② 리시버의 블록</text>
+    <text class="callout accent" x="405" y="80">③ 열린 쪽으로 전진</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'catch-and-run') return catchAndRun(item);
   if (item?.diagram?.kind === 'fourth-down-db-blitz') return fourthDownDbBlitz(item);
   if (item?.diagram?.kind === 'hook-and-ladder') return hookAndLadder(item);
   if (item?.diagram?.kind === 'blitz-hot-read') return blitzHotRead(item);
