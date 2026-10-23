@@ -10,6 +10,7 @@ import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-partition
 import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-partition2';
 import { renderIntegratedTactic } from './tactic-reading-flow.js?v=20261020-integrated';
 
+import { teamPlacementNotice } from './editorial-readiness.js';
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
 const storySheet = $('#storySheet');
@@ -159,7 +160,7 @@ function storyCard(story) {
 }
 function renderStories(news) {
   const stories = news.favorites;
-  $('#storyList').innerHTML = stories.map(storyCard).join('') || '<p>추가 소식 없음</p>';
+  $('#storyList').innerHTML = stories.map(storyCard).join('') || `<p>${h(teamPlacementNotice(news.topStories, currentFilter))}</p>${news.topStories.some(s => currentFilter === 'all' || s.team === currentFilter) ? '<a href="#leadStory">상단 기사 보기 ↑</a>' : ''}`;
   bindStoryButtons($('#storyList'), stories);
 }
 
@@ -289,6 +290,7 @@ function render() {
   $('#editionShare').setAttribute('href', `./editions/${briefing.date}/`);
   const news = partitionNews(briefing, currentFilter);
   renderRoundup(news);
+  if (briefing.editorialNotice) $('#leadStory').insertAdjacentHTML('afterbegin', `<p role="status" class="editorial-notice">${h(briefing.editorialNotice)}</p>`);
   renderStories(news);
   renderTactics(briefing);
   renderHighlights(briefing);

@@ -12,7 +12,7 @@ test('build is deterministic and publisher automatically regenerates all static 
   const temp = await mkdtemp(join(tmpdir(), 'nfl-static-'));
   try {
     for (const dir of ['src', 'scripts']) await mkdir(join(temp, dir));
-    for (const file of ['package.json', 'src/data.js', 'src/publish.js', 'src/schedule-continuity.js', 'src/publication-guard.js', 'src/video-policy.js', 'src/static-pages.js', 'src/tactic-reading-flow.js', 'src/tactic-visuals.js', 'src/render-utils.js', 'scripts/publish-edition.mjs', 'scripts/build-pages.mjs']) await cp(join(root, file), join(temp, file));
+    for (const file of ['package.json', 'src/data.js', 'src/publish.js', 'src/schedule-continuity.js', 'src/publication-guard.js', 'src/video-policy.js', 'src/editorial-readiness.js', 'src/static-pages.js', 'src/tactic-reading-flow.js', 'src/tactic-visuals.js', 'src/render-utils.js', 'scripts/publish-edition.mjs', 'scripts/build-pages.mjs']) await cp(join(root, file), join(temp, file));
     execFileSync(process.execPath, ['scripts/build-pages.mjs'], { cwd: temp });
     const original = await readFile(join(temp, 'editions/index.html'), 'utf8');
     execFileSync(process.execPath, ['scripts/build-pages.mjs'], { cwd: temp });
@@ -45,5 +45,16 @@ test('build is deterministic and publisher automatically regenerates all static 
     assert.equal(emptyReport.exclusions[0].previousDate, '2026-10-18');
     assert.equal(await readFile(join(temp, 'src/data.js'), 'utf8'), publishedData);
     assert.equal(await readFile(join(temp, 'input.json'), 'utf8'), duplicateInput);
+    edition.date='2026-10-23'; edition.weekday='금요일';
+    edition.sections[0].eventKey='test-editorial-incomplete';
+    edition.sections[0].summary='Another distinct publication test: missing lesson and film after a completed game.';
+    edition.tactics=[]; edition.highlights=[];
+    await writeFile(join(temp,'input.json'),JSON.stringify(edition));
+    assert.throws(()=>execFileSync(process.execPath,['scripts/publish-edition.mjs','input.json'],{cwd:temp,stdio:'pipe'}),e=>e.status===4);
+    assert.equal(await readFile(join(temp,'src/data.js'),'utf8'),publishedData);
+    execFileSync(process.execPath,['scripts/publish-edition.mjs','input.json','--partial'],{cwd:temp,stdio:'pipe'});
+    const partial=JSON.parse(await readFile(join(temp,'input.publication-report.json'),'utf8'));
+    assert.equal(partial.status,'published-partial');
+    assert.match(await readFile(join(temp,'editions/2026-10-23/index.html'),'utf8'),/일부 보완 중/);
   } finally { await rm(temp, { recursive: true, force: true }); }
 });
