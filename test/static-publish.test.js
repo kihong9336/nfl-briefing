@@ -50,9 +50,8 @@ test('build is deterministic and publisher automatically regenerates all static 
     edition.sections[0].summary='Another distinct publication test: missing lesson and film after a completed game.';
     edition.tactics=[]; edition.highlights=[];
     await writeFile(join(temp,'input.json'),JSON.stringify(edition));
-    assert.throws(()=>execFileSync(process.execPath,['scripts/publish-edition.mjs','input.json'],{cwd:temp,stdio:'pipe'}),e=>e.status===4);
-    assert.equal(await readFile(join(temp,'src/data.js'),'utf8'),publishedData);
-    execFileSync(process.execPath,['scripts/publish-edition.mjs','input.json','--partial'],{cwd:temp,stdio:'pipe'});
+    // Verified news must ship without an override even if optional film sections are incomplete.
+    execFileSync(process.execPath,['scripts/publish-edition.mjs','input.json'],{cwd:temp,stdio:'pipe'});
     const partial=JSON.parse(await readFile(join(temp,'input.publication-report.json'),'utf8'));
     assert.equal(partial.status,'published-partial');
     assert.match(await readFile(join(temp,'editions/2026-10-23/index.html'),'utf8'),/일부 보완 중/);
