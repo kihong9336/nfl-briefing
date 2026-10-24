@@ -1,5 +1,564 @@
 export const briefings = [
   {
+    "date": "2026-10-24",
+    "weekday": "토요일",
+    "edition": "2026 WEEK 7 · 주말 전력 검증판",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 7,
+    "dek": "Mayfield의 복귀 계획과 Kmet의 시즌 종료가 주말 전력의 중심이다. Franklin의 징계 변경, 49ers·Chiefs 최종 결장과 리그의 장기 부상·계약 발언·국제 경기 소식을 구분해 읽는다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 주말 전력 변화",
+      "title": "Mayfield 복귀 예고, Kmet 시즌 종료…Franklin 징계는 철회",
+      "summary": "Mayfield는 감독이 출전 계획을 밝혔지만 공식 Questionable 등급은 남았다. Bears는 Kmet을 잃었고 Bills의 Franklin은 항소로 출전 자격을 되찾았다. 49ers와 Chiefs도 최종 OUT 발표에 맞춰 준비를 바꾼다."
+    },
+    "sections": [
+      {
+        "id": "2026-week6-49ers-evans-achilles-game-exit",
+        "eventKey": "2026-week6-49ers-evans-achilles-game-exit",
+        "team": "49ers",
+        "label": "주말 전력 · 최종 보고",
+        "title": "Evans·Samuel·Bosa OUT…Kirk는 FP에도 출전 미정",
+        "summary": "금요일 최종 보고에서 Evans의 Falcons전 결장이 확정됐다. Deebo Samuel과 Nick Bosa도 OUT이다. Christian Kirk는 사흘 모두 FP였지만 Questionable이며, Mykel Williams는 금요일 FP로 올라 별도 경기 상태가 없다.",
+        "commentary": "수요일의 훈련 불참과 일요일의 결장 확정은 다른 정보다. 이제 49ers는 Evans 없이 패스 대상을 나눠야 한다. Kirk의 훈련량 회복은 긍정적이지만 경기 명단까지 보장하지는 않는다. 수비에서는 Bosa의 결장과 Mykel Williams의 상태 개선을 별개로 보자. 한 선수의 복귀 가능성이 다른 선수의 공백을 자동으로 메우지는 않는다.",
+        "watch": "Kirk의 최종 액티브 여부, Jordan Watkins의 정렬과 표적 배분, Mykel Williams의 실제 수비 투입을 확인하자.",
+        "takeaway": "Evans의 결장이 확정됐다. Kirk의 FP를 출전 확정으로 읽지 않는 것이 이번 주말의 핵심이다.",
+        "sources": [
+          {
+            "label": "49ers Rule Out Mike Evans vs. Falcons; Christian Kirk Questionable Ahead of Week 7 #SFvsATL",
+            "url": "https://www.49ers.com/news/49ers-rule-out-mike-evans-vs-falcons-christian-kirk-questionable-ahead-of-week-7-sfvsatl"
+          },
+          {
+            "label": "49ers Injury Report | San Francisco 49ers - 49ers.com",
+            "url": "https://www.49ers.com/team/injury-report"
+          },
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          }
+        ],
+        "changeSummary": "연습 참여도 단계에서 금요일 최종 OUT 발표로 바뀌었다. 구단 원문으로 Christian Kirk의 이름도 대조했다.",
+        "changeEvidence": {
+          "url": "https://www.49ers.com/news/49ers-rule-out-mike-evans-vs-falcons-christian-kirk-questionable-ahead-of-week-7-sfvsatl",
+          "before": "수요일 훈련에 불참했다",
+          "after": "Evans의 Falcons전 결장이 확정됐다",
+          "quote": "Evans의 Falcons전 결장이 확정됐다.",
+          "originalQuote": "Evans has been ruled out after missing all three practices this week with rib and Achilles injuries.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.49ers.com/news/49ers-rule-out-mike-evans-vs-falcons-christian-kirk-questionable-ahead-of-week-7-sfvsatl"
+        }
+      },
+      {
+        "id": "2026-week7-chiefs-seahawks-oct21-practice",
+        "eventKey": "2026-week7-chiefs-seahawks-oct21-practice",
+        "team": "Chiefs",
+        "label": "주말 전력 · 최종 보고",
+        "title": "Moore·Rice 결장 확정…Kelce는 LP지만 경기 상태는 없다",
+        "summary": "Chiefs의 금요일 최종 보고에서 Moore와 Rice는 OUT이다. Brashard Smith도 OUT, L’Jarius Sneed와 Cooper McDonald는 Questionable이다. Travis Kelce는 LP로 마쳤지만 별도 경기 상태가 없고 Patrick Mahomes는 FP였다.",
+        "commentary": "전날의 연습 불참에서 실제 경기 결장으로 넘어갔다. 보호선과 짧은 패스 표적이 함께 빠질 때는 누가 태클을 맡는지뿐 아니라 TE·RB를 보호에 남길지, 패스 루트로 보낼지의 선택이 중요하다. Kelce의 LP만으로 결장이나 제한 스냅을 단정하지 않는다.",
+        "watch": "Seattle전 첫 두 드라이브의 태클 조합, 추가 블로커 배치와 빠른 패스의 수신 대상을 함께 보자.",
+        "takeaway": "훈련 불참이 경기 OUT으로 확정됐다. Kelce의 참여도와 경기 출전 등급은 서로 다른 정보다.",
+        "sources": [
+          {
+            "label": "Week 7 Injury Report | Chiefs vs. Seahawks",
+            "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+          },
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          }
+        ],
+        "changeSummary": "금요일 최종 보고에서 두 선수의 OUT이 확정됐고 Kelce는 경기 상태 없이 마쳤다.",
+        "changeEvidence": {
+          "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026",
+          "before": "Jaylon Moore와 Rashee Rice는 DNP",
+          "after": "Moore와 Rice는 OUT",
+          "quote": "Moore와 Rice는 OUT이다.",
+          "originalQuote": "OL Jaylon Moore - Concussion - DNP |\nGame Status: Out\nWR Rashee Rice - Hamstring / Knee - DNPÂ |\nGame Status: Out",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+        }
+      }
+    ],
+    "leagueWide": [
+      {
+        "eventKey": "2026-week7-bears-kmet-season-ending-ir",
+        "team": "Bears",
+        "label": "리그 · 새 변화",
+        "title": "Kmet 시즌 종료·IR 등록…승리 다음 날 드러난 장기 공백",
+        "why": "Ben Johnson 감독은 Patriots전에서 무릎을 다친 Cole Kmet의 시즌이 끝났다고 확인했다. Bears도 금요일 IR 등록을 발표했다. 같은 발표에서 Montez Sweat의 출장 정지 해제도 확인됐다. 단순 경기 중 이탈에서 남은 시즌의 인력 재편으로 문제가 커졌다. Kmet의 리시빙뿐 아니라 두 타이트엔드 배치에서의 블로킹 역할을 누구에게 나눌지 보자. Sweat의 수비 복귀는 반가운 변화지만 공격의 공백을 직접 메우는 조치는 아니다.",
+        "takeaway": "Kmet은 부상 정도를 기다리던 단계에서 시즌 종료로 바뀌었다. Chicago는 TE 조합을 다시 설계해야 한다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23",
+        "sources": [
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          },
+          {
+            "label": "Roster Moves: Chicago Bears place Cole Kmet on IR",
+            "url": "https://www.chicagobears.com/news/roster-moves-chicago-bears-place-cole-kmet-on-ir"
+          },
+          {
+            "label": "Bears' Cole Kmet likely facing season-ending knee injury after being carted off - CBS Sports",
+            "url": "https://www.cbssports.com/nfl/news/bears-cole-kmet-season-ending-knee-injury"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-week7-oct21-jackson-mayfield-practice-return",
+        "team": "Buccaneers / Ravens",
+        "label": "쿼터백 · 복귀 후속",
+        "title": "Mayfield는 감독이 복귀 예고, Jackson은 여전히 Questionable",
+        "why": "Bowles 감독은 Mayfield가 Panthers전에 복귀한다고 밝혔다. 다만 공식 경기 등급은 Questionable이며 Egbuka·Goedeke·Winfield Jr.는 OUT이다. Ravens의 Lamar Jackson도 Questionable이고 이번 주 내내 LP였다. Baltimore는 Tavius Robinson의 시즌 종료도 발표했다. 두 QB 모두 최종 경기 명단을 확인해야 하지만, Tampa Bay는 감독의 출전 계획까지 나온 반면 Baltimore는 불확실성이 남아 있다. 복귀 의사와 실제 건강·정상 경기력을 하나로 묶지 말고, 공 교환과 이동, 보호 조합을 따로 관찰하자.",
+        "takeaway": "Mayfield는 조건부 전망에서 감독의 출전 계획으로 진전했다. 공식 Questionable 등급은 그대로다.",
+        "url": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence",
+        "sources": [
+          {
+            "label": "Buccaneers' Baker Mayfield (thumb) will start Sunday vs. Panthers after three-game absence | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence"
+          },
+          {
+            "label": "Buccaneers-Panthers Injury Report Oct.22: Egbuka, Goedeke and Winfield Jr. Ruled Out; Mayfield Questionable",
+            "url": "https://www.buccaneers.com/news/buccaneers-panthers-injury-report-oct-23-week-7-2026"
+          },
+          {
+            "label": "Ravens' Lamar Jackson (ankle) questionable to make return Sunday vs. Bengals | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/ravens-lamar-jackson-ankle-questionable-to-make-return-sunday-vs-bengals"
+          },
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          }
+        ],
+        "changeSummary": "목요일 조건부 복귀 전망 이후 금요일 감독의 출전 계획이 나왔다. 공식 Questionable은 해제되지 않았다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence",
+          "before": "추가 문제가 없다면 Mayfield가 일요일 복귀할 전망",
+          "after": "Bowles 감독은 Mayfield가 Panthers전에 복귀한다고 밝혔다",
+          "quote": "Bowles 감독은 Mayfield가 Panthers전에 복귀한다고 밝혔다.",
+          "originalQuote": "Mayfield will make his return for the Tampa Bay Buccaneers on Sunday against the Carolina Panthers, coach Todd Bowles told reporters Friday.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence"
+        }
+      },
+      {
+        "eventKey": "2026-10-21-bills-sam-franklin-suspension",
+        "team": "Bills",
+        "label": "징계 · 항소 결과",
+        "title": "Franklin 출장 정지 철회, 벌금으로 변경…Gardner-Johnson과 다른 결론",
+        "why": "Sam Franklin의 한 경기 출장 정지는 철회됐다. NFL은 항소 뒤 처분이 14,926달러 벌금으로 바뀌었다고 발표했다. 따라서 Franklin은 Week 8 Ravens전 출전 자격을 갖는다. 앞서 항소가 기각된 C.J. Gardner-Johnson과는 다른 결과다. 같은 경기에서 발생한 별개 사안이므로 한 선수의 항소 결과를 다른 선수에게 적용하면 안 된다. 출전 자격 회복과 실제 액티브 등록·스페셜팀 역할도 나누어 확인하자.",
+        "takeaway": "이번에는 출장 정지 유지가 아니라 철회다. Bills 두 선수의 항소 결과를 구분해야 한다.",
+        "url": "https://www.nfl.com/news/bills-safety-sam-franklin-jr-s-suspension-rescinded-reduced-to-fine-after-appeal",
+        "sources": [
+          {
+            "label": "Bills safety Sam Franklin Jr.'s suspension rescinded, reduced to fine after appeal | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/bills-safety-sam-franklin-jr-s-suspension-rescinded-reduced-to-fine-after-appeal"
+          },
+          {
+            "label": "Bills S Sam Franklin's suspension for spitting is reduced to a fine after appeal - NBC Sports",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-s-sam-franklins-suspension-for-spitting-is-reduced-to-a-fine-after-appeal"
+          },
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          }
+        ],
+        "changeSummary": "수요일 발표된 출장 정지가 금요일 항소 결과 벌금으로 변경됐다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/bills-safety-sam-franklin-jr-s-suspension-rescinded-reduced-to-fine-after-appeal",
+          "before": "무급 한 경기 출장 정지를 부과",
+          "after": "한 경기 출장 정지는 철회됐다",
+          "quote": "Sam Franklin의 한 경기 출장 정지는 철회됐다.",
+          "originalQuote": "one-game suspension has been rescinded upon appeal by hearing officer James Thrash, the NFL announced Friday.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.nfl.com/news/bills-safety-sam-franklin-jr-s-suspension-rescinded-reduced-to-fine-after-appeal"
+        }
+      },
+      {
+        "eventKey": "2026-10-22-rams-nacua-calf-practice-exit",
+        "team": "Rams",
+        "label": "부상 · 최종 등급",
+        "title": "Nacua, 금요일 DNP 뒤 Questionable…McVay의 낙관과 등급은 별개",
+        "why": "금요일 최종 보고에서 Nacua는 Questionable이다. 종아리 문제로 훈련하지 못했지만 McVay 감독은 부상을 경미한 문제로 설명했다. Trent McDuffie도 Questionable, Nate Landman은 OUT이며 감독은 Eric Kendricks의 연습조 승격 계획을 밝혔다. 긍정적인 설명이 있어도 Nacua의 경기 출전은 확정되지 않았다. 패스 공격의 표적 분배와 함께 내부 수비 지휘·태클 역할이 어떻게 나뉘는지도 확인하자.",
+        "takeaway": "감독은 경미하다고 설명했지만 최종 등급은 Questionable이다. 낙관적 발언을 출전 확정으로 바꾸지 않는다.",
+        "url": "https://www.therams.com/news/rams-injury-report-week-7-2026-at-raiders-puka-nacua-trent-mcduffie-questionable-nate-landman-out",
+        "sources": [
+          {
+            "label": "Rams Injury Report, Week 7 at Raiders: Puka Nacua and Trent McDuffie questionable, Nate Landman ruled out",
+            "url": "https://www.therams.com/news/rams-injury-report-week-7-2026-at-raiders-puka-nacua-trent-mcduffie-questionable-nate-landman-out"
+          },
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          }
+        ],
+        "changeSummary": "목요일 LP·훈련 이탈에서 금요일 DNP 및 최종 Questionable로 정보가 구체화됐다.",
+        "changeEvidence": {
+          "url": "https://www.therams.com/news/rams-injury-report-week-7-2026-at-raiders-puka-nacua-trent-mcduffie-questionable-nate-landman-out",
+          "before": "공식 연습 보고는 LP다",
+          "after": "Nacua는 Questionable",
+          "quote": "Nacua는 Questionable이다.",
+          "originalQuote": "Puka Nacua\n(calf) is questionable for Sunday's game against the Raiders",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.therams.com/news/rams-injury-report-week-7-2026-at-raiders-puka-nacua-trent-mcduffie-questionable-nate-landman-out"
+        }
+      },
+      {
+        "eventKey": "2026-10-22-seahawks-charbonnet-activation-arroyo-ir",
+        "team": "Seahawks",
+        "label": "로스터 · 출전 후속",
+        "title": "활성화했지만 Charbonnet OUT…Macdonald는 재악화 아니라고 설명",
+        "why": "Charbonnet은 Chiefs전 OUT이다. PUP에서 활성화되고 이번 주 FP를 기록했지만 일요일에는 뛰지 않는다. Macdonald 감독은 재악화가 아니라 계획에 따른 결정이며 다음 주 상황을 보겠다고 설명했다. 로스터 복귀·연습 참여·경기 출전은 별도의 단계라는 사례다. Seattle은 이번 경기의 러닝백 운용을 기존 가용 인원으로 준비해야 하며, 이 발표에서 다음 주 출전 확정까지 앞당겨 읽어서는 안 된다.",
+        "takeaway": "로스터에 돌아와도 당장 경기에는 나서지 않는다. 결장은 확정됐지만 재악화라는 해석은 감독 설명과 다르다.",
+        "url": "https://www.seahawks.com/news/zach-charbonnet-ruled-out-other-seahawks-injury-updates-from-mike-macdonald",
+        "sources": [
+          {
+            "label": "Zach Charbonnet Ruled Out & Other Seahawks Injury Updates From Mike Macdonald",
+            "url": "https://www.seahawks.com/news/zach-charbonnet-ruled-out-other-seahawks-injury-updates-from-mike-macdonald"
+          },
+          {
+            "label": "Week 7 Injury Report | Chiefs vs. Seahawks",
+            "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+          }
+        ],
+        "changeSummary": "목요일 PUP 활성화 뒤 금요일 Chiefs전 OUT이 확정됐다.",
+        "changeEvidence": {
+          "url": "https://www.seahawks.com/news/zach-charbonnet-ruled-out-other-seahawks-injury-updates-from-mike-macdonald",
+          "before": "Chiefs전 출전을 보장하지 않는다고",
+          "after": "Charbonnet은 Chiefs전 OUT",
+          "quote": "Charbonnet은 Chiefs전 OUT이다.",
+          "originalQuote": "was able to practice fully this week, but was ruled out on Friday's injury report.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.seahawks.com/news/zach-charbonnet-ruled-out-other-seahawks-injury-updates-from-mike-macdonald"
+        }
+      },
+      {
+        "eventKey": "2026-10-23-jaguars-harrison-season-ending-update",
+        "team": "Jaguars",
+        "label": "보호선 · 기명 취재",
+        "title": "Harrison, 수술 중 ACL 파열 확인 보도…복귀 기대에서 시즌 종료로",
+        "why": "NFL Network의 Ian Rapoport는 Anton Harrison이 목요일 무릎 수술 중 ACL 파열이 확인돼 남은 시즌을 뛰지 못한다고 보도했다. CBS도 ESPN을 인용해 시즌 종료를 전했다. 이미 IR에 있던 선수가 복귀할 수 있으리라는 기대에서 장기 대체 계획으로 바뀐 소식이다. CBS는 Walker Little을 현재의 대안으로 설명한다. 관심은 한 경기 보호 성공 여부뿐 아니라 대체 태클 뒤의 뎁스다. 기사에 나온 외부 영입 후보는 제안일 뿐 실제 협상이나 트레이드 합의로 소개하지 않는다.",
+        "takeaway": "새 소식은 IR 등록 자체가 아니라 잔여 시즌 복귀가 어렵다는 추가 진단 보도다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23",
+        "sources": [
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          },
+          {
+            "label": "Anton Harrison injury: Jaguars LT out for season after surgery reveals torn ACL - CBS Sports",
+            "url": "https://www.cbssports.com/nfl/news/anton-harrison-injury-jaguars-lt-out-for-season-torn-acl"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-23-giants-edmunds-golston-season-ending",
+        "team": "Giants",
+        "label": "수비 · 장기 공백 보도",
+        "title": "Edmunds·Golston 시즌 종료 보도…Giants 수비 인력 재편",
+        "why": "NFL은 ESPN 보도를 인용해 Tremaine Edmunds가 가슴 근육 파열로 시즌을 마감하며, 이미 IR에 있는 Chauncey Golston도 남은 시즌에 복귀하지 못한다고 전했다. Giants의 Texans전 공식 보고는 Edmunds와 Greg Newsome II의 OUT을 확인한다. 공식 경기 결장과 취재 보도로 나온 장기 전망의 근거를 구분하자. 한 주의 수비 조합 변경을 넘어 역할을 장기간 나눠야 하는 문제이므로, 다음 경기에서는 내부 수비 신호와 짧은 패스 구역의 인계가 안정적인지 보자.",
+        "takeaway": "이번 경기 OUT과 시즌 종료 보도는 확인 경로가 다르다. 장기 수비 공백이라는 의미는 크다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23",
+        "sources": [
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          },
+          {
+            "label": "Giants vs. Texans Week 7 Injury Report: Tremaine Edmunds, Greg Newsome II ruled out",
+            "url": "https://www.giants.com/news/giants-vs-texans-week-7-injury-report-tremaine-edmunds-jevon-holland-jermaine-eluemunor-andrew-thomas"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-21-laporta-extension-comments",
+        "team": "Lions",
+        "label": "계약 · 선수 발언 후속",
+        "title": "LaPorta, 계약 불만 뒤 잔류 의사 설명…합의 발표는 아니다",
+        "why": "LaPorta는 금요일 Lions에서 뛰고 싶다고 밝혔다. 앞선 계약 관련 발언으로 팀에 방해가 됐다면 미안하다고 설명했고, 가족과 함께 Detroit에 남고 싶다는 의사를 전했다. NFL과 NBC/PFT가 발언을 보도했다. 새 변화는 계약 금액이나 체결이 아니라 공개 입장의 보완이다. 선수의 잔류 의지와 구단의 실제 계약 제안을 구분하며, 이후에는 합의 여부나 구단의 공식 발표를 확인하자.",
+        "takeaway": "LaPorta는 잔류 의사를 분명히 했지만 계약 연장이 성사된 것은 아니다.",
+        "url": "https://www.nfl.com/news/lions-te-sam-laporta-walks-back-contract-comments-i-want-to-play-for-this-team",
+        "sources": [
+          {
+            "label": "Lions TE Sam LaPorta walks back contract comments: 'I want to play for this team' | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/lions-te-sam-laporta-walks-back-contract-comments-i-want-to-play-for-this-team"
+          },
+          {
+            "label": "Lions' Sam LaPorta clarifies contract comments: \"I want to play for this team\" - NBC Sports",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-sam-laporta-clarifies-contract-comments-i-want-to-play-for-this-team"
+          }
+        ],
+        "changeSummary": "수요일 불만 표출 뒤 금요일 잔류 의사와 팀에 대한 설명이 추가됐다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/lions-te-sam-laporta-walks-back-contract-comments-i-want-to-play-for-this-team",
+          "before": "계약 연장 상황에 불만",
+          "after": "Lions에서 뛰고 싶다고 밝혔다",
+          "quote": "LaPorta는 Lions에서 뛰고 싶다고 밝혔다.",
+          "originalQuote": "My intentions are I want to play for this team",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.nfl.com/news/lions-te-sam-laporta-walks-back-contract-comments-i-want-to-play-for-this-team"
+        }
+      },
+      {
+        "eventKey": "2026-10-23-goodell-tokyo-future-game",
+        "team": "NFL",
+        "label": "리그 운영 · 국제 경기",
+        "title": "Goodell, Tokyo 경기 가능성 언급…연도·대진 확정은 아직",
+        "why": "Goodell은 금요일 NFL Daily 인터뷰에서 Tokyo가 검토 목록에 있으며 내년 또는 그다음 해를 언급했다. 이는 국제 경기 확대 방향을 보여주는 발언이지만 개최 연도·경기장·참가 팀이 확정됐다는 발표는 아니다. 한국 팬에게도 가까운 지역에서 정규시즌 경기를 볼 가능성과 연결되는 소식이다. 실제 관전 계획으로 옮기기 전에는 리그의 개최 확정과 대진·판매 공지를 기다리자.",
+        "takeaway": "Tokyo는 구체적으로 거론됐지만 확정 일정은 아니다. 가능성 발표와 티켓 계획을 분리한다.",
+        "url": "https://www.nfl.com/news/commissioner-goodell-teases-future-tokyo-game-sees-new-opportunities-for-international-growth",
+        "sources": [
+          {
+            "label": "Commissioner Goodell teases future Tokyo game, sees 'new opportunities' for international growth | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/commissioner-goodell-teases-future-tokyo-game-sees-new-opportunities-for-international-growth"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-23-rams-lawrence-mccutcheon-obituary",
+        "team": "Rams",
+        "label": "리그 인물 · 추모",
+        "title": "Rams의 Lawrence McCutcheon 별세…선수와 프런트를 잇던 발자취",
+        "why": "Rams와 유족은 Lawrence McCutcheon이 76세로 별세했다고 발표했다. 그는 Rams에서 다섯 차례 Pro Bowl에 뽑힌 러닝백이었으며 선수 생활 뒤에도 오랫동안 구단 프런트에서 일했다. 한 시대의 러닝 공격을 이끌고 다음 세대 선수단 구성에도 참여한 인물이라는 점에서 단순한 옛 기록 이상의 의미가 있다. 구단의 추모와 회고를 통해 선수 시절과 스카우팅·운영 경력을 함께 살펴보자.",
+        "takeaway": "McCutcheon은 Rams의 선수 역사와 프런트 역사를 함께 남긴 인물이다.",
+        "url": "https://www.therams.com/news/rams-legend-lawrence-mccutcheon-passes-away-at-age-76",
+        "sources": [
+          {
+            "label": "Rams legend Lawrence McCutcheon passes away at age 76",
+            "url": "https://www.therams.com/news/rams-legend-lawrence-mccutcheon-passes-away-at-age-76"
+          },
+          {
+            "label": "Lawrence McCutcheon, five-time Pro Bowl running back with Rams, dies at 76 | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/lawrence-mccutcheon-five-time-pro-bowl-running-back-with-rams-dies-at-76"
+          }
+        ]
+      }
+    ],
+    "tactics": [],
+    "highlights": [
+      {
+        "title": "Patriots–Bears 공식 경기 하이라이트",
+        "channel": "New England Patriots",
+        "type": "공식 YouTube · 전체 경기 주요 장면",
+        "url": "https://www.youtube.com/watch?v=MY9cWucyTMo",
+        "note": "주말 경기에 앞서 목요일 경기를 복습하는 영상이다. Stevenson의 전반 마지막 득점과 후반 추격을 경기 흐름 안에서 보자. 새 경기 영상이 아니라 기존 경기의 검증된 하이라이트다."
+      }
+    ],
+    "schedule": [
+      {
+        "gameDate": "2026-10-25",
+        "date": "10/25",
+        "weekday": "일",
+        "time": "22:30",
+        "status": "경기 예정",
+        "matchup": "Pittsburgh Steelers at New Orleans Saints",
+        "note": "국제 경기의 이른 킥오프와 Steelers·Saints 최종 경기 명단을 확인하자.",
+        "source": {
+          "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-24T09:02:19.048674+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-24"
+      },
+      {
+        "gameId": "401873017",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "San Francisco 49ers at Atlanta Falcons",
+        "note": "Evans·Samuel·Bosa는 OUT이다. Kirk의 최종 액티브 여부와 Mykel Williams의 실제 수비 투입을 확인하자.",
+        "source": {
+          "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-24T09:02:19.048674+00:00",
+        "lastConfirmedEdition": "2026-10-24",
+        "verified": true,
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "49ers Rule Out Mike Evans vs. Falcons; Christian Kirk Questionable Ahead of Week 7 #SFvsATL",
+            "url": "https://www.49ers.com/news/49ers-rule-out-mike-evans-vs-falcons-christian-kirk-questionable-ahead-of-week-7-sfvsatl"
+          }
+        ]
+      },
+      {
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "Cincinnati Bengals at Baltimore Ravens",
+        "note": "Jackson의 최종 액티브 여부가 첫 확인점이다. LP 복귀와 경기 출전은 다르다.",
+        "source": {
+          "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "Ravens' Lamar Jackson (ankle) questionable to make return Sunday vs. Bengals | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/ravens-lamar-jackson-ankle-questionable-to-make-return-sunday-vs-bengals"
+          }
+        ],
+        "checkedAt": "2026-10-24T09:02:19.048674+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-24"
+      },
+      {
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "Tampa Bay Buccaneers at Carolina Panthers",
+        "note": "Mayfield의 복귀 계획과 Questionable 등급을 함께 확인하고, 공 교환과 보호 조합을 보자.",
+        "source": {
+          "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "Buccaneers' Baker Mayfield (thumb) will start Sunday vs. Panthers after three-game absence | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence"
+          },
+          {
+            "label": "Buccaneers-Panthers Injury Report Oct.22: Egbuka, Goedeke and Winfield Jr. Ruled Out; Mayfield Questionable",
+            "url": "https://www.buccaneers.com/news/buccaneers-panthers-injury-report-oct-23-week-7-2026"
+          }
+        ],
+        "checkedAt": "2026-10-24T09:02:19.048674+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-24"
+      },
+      {
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "05:25",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Rams at Las Vegas Raiders",
+        "note": "Nacua·McDuffie의 최종 액티브 여부와 Landman 공백의 대체 역할을 확인하자.",
+        "source": {
+          "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "Rams Injury Report, Week 7 at Raiders: Puka Nacua and Trent McDuffie questionable, Nate Landman ruled out",
+            "url": "https://www.therams.com/news/rams-injury-report-week-7-2026-at-raiders-puka-nacua-trent-mcduffie-questionable-nate-landman-out"
+          }
+        ],
+        "checkedAt": "2026-10-24T09:02:19.048674+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-24"
+      },
+      {
+        "gameId": "401873022",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "09:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Seattle Seahawks",
+        "note": "Moore·Rice와 상대 Charbonnet은 OUT이다. Chiefs의 보호 조합과 Seattle의 러닝백 분담을 보자.",
+        "source": {
+          "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-24T09:02:19.048674+00:00",
+        "lastConfirmedEdition": "2026-10-24",
+        "verified": true,
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "Week 7 Injury Report | Chiefs vs. Seahawks",
+            "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+          },
+          {
+            "label": "Zach Charbonnet Ruled Out & Other Seahawks Injury Updates From Mike Macdonald",
+            "url": "https://www.seahawks.com/news/zach-charbonnet-ruled-out-other-seahawks-injury-updates-from-mike-macdonald"
+          }
+        ]
+      },
+      {
+        "gameDate": "2026-10-27",
+        "date": "10/27",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Dallas Cowboys at Philadelphia Eagles",
+        "note": "월요일 경기의 최종 보고를 기다린다. 금요일 Barkley의 LP와 주요 패스 자원의 DNP를 곧바로 결장 확정으로 읽지 않는다.",
+        "source": {
+          "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "checkedAt": "2026-10-24T09:02:19.048674+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-24",
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "NFL news roundup: Bears' Cole Kmet goes on injured reserve after season-ending injury | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-23",
     "weekday": "금요일",
     "edition": "2026 WEEK 7 · 저녁 검증판",
