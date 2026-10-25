@@ -127,7 +127,35 @@ function catchAndRun(item) {
   </svg>`;
 }
 
+function doubleDig(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="dig-title dig-desc">
+    <title id="dig-title">${escapeXml(item.title)}</title>
+    <desc id="dig-desc">두 깊이의 안쪽 루트와 가운데 존 수비수를 읽는 관계도. 공격은 위쪽이며 노란 실선은 루트, 파란 점선은 수비 구역이다.</desc>
+    <defs><marker id="dig-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="field-label" x="24" y="30">스냅 전 압박 위장 → 스냅 후 존 · 공격 ↑</text>
+    <g fill="#78c8ff" fill-opacity="0.12" stroke="#78c8ff" stroke-dasharray="7 5">
+      <rect data-zone="deep-left" x="45" y="50" width="300" height="55" rx="15"/>
+      <rect data-zone="deep-right" x="375" y="50" width="300" height="55" rx="15"/>
+      <ellipse data-zone="middle" cx="480" cy="175" rx="95" ry="60"/>
+    </g>
+    <text class="mini-label" x="145" y="85">왼쪽 깊은 존</text>
+    <text class="mini-label" x="470" y="85">오른쪽 깊은 존</text>
+    <path class="line-scrimmage" d="M45 300H675"/>
+    <path data-action="inside-dig" class="route-path" d="M230 320 V220 H430" marker-end="url(#dig-arrow)"/>
+    <path data-action="outside-dig" class="route-path" d="M100 320 V140 H430" marker-end="url(#dig-arrow)"/>
+    <path data-action="middle-zone-read" class="pass-path" d="M360 340 Q550 300 505 210" marker-end="url(#dig-arrow)"/>
+    ${player(100,340,'WR')}${player(230,340,'WR')}${player(360,365,'QB')}${player(480,175,'D','defense')}
+    <text class="mini-label" x="120" y="125">② 바깥 디그</text>
+    <text class="mini-label" x="245" y="255">① 안쪽 디그</text>
+    <text class="mini-label" x="580" y="180">가운데 존</text>
+    <text class="mini-label" x="525" y="285">QB 읽기</text>
+    <text class="mini-label" x="24" y="410">관계 개념도 · 실제 배치 재현 아님 · 거리 비례 아님</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'double-dig-vs-tampa2') return doubleDig(item);
   if (item?.diagram?.kind === 'catch-and-run') return catchAndRun(item);
   if (item?.diagram?.kind === 'fourth-down-db-blitz') return fourthDownDbBlitz(item);
   if (item?.diagram?.kind === 'hook-and-ladder') return hookAndLadder(item);

@@ -21,16 +21,32 @@ export function neighboringDates(date, briefings) {
   };
 }
 
-// The headline selection is edition-wide; the team filter applies only to remaining favorites.
+// Headlines are editorial navigation, not a partition of the canonical categories.
 export function partitionNews(briefing, filter = 'all') {
-  const topStories = briefing.sections.slice(0, 3);
-  const topLeague = (briefing.leagueWide ?? []).slice(0, 1);
-  const remaining = briefing.sections.slice(3);
+  const sections = briefing.sections ?? [];
+  const leagueItems = briefing.leagueWide ?? [];
+  const isFavorite = story => ['49ers', 'Chiefs', 'Patriots'].includes(story.team);
+  const stories = sections.map(item => ({kind: 'story', item}));
+  const league = leagueItems.map(item => ({kind: 'league', item}));
+  const all = [...stories, ...league];
+  // Older editions: stable interleaving, not an assertion of editorial importance.
+  const fallback = [];
+  for (let i = 0; i < Math.max(stories.length, league.length); i++) {
+    if (stories[i]) fallback.push(stories[i]);
+    if (league[i]) fallback.push(league[i]);
+  }
+  const editorial = Array.isArray(briefing.topStoryKeys);
+  const selected = editorial
+    ? briefing.topStoryKeys.map(key => all.find(entry => entry.item.eventKey === key || entry.item.id === key)).filter(Boolean)
+    : fallback;
+  const headlines = [...new Set(selected)].slice(0, 5);
   return {
-    topStories, topLeague,
-    leagueStories: remaining.filter(story => story.team === 'NFL'),
-    leagueItems: (briefing.leagueWide ?? []).slice(1),
-    favorites: remaining.filter(story => story.team !== 'NFL' && (filter === 'all' || story.team === filter)),
+    headlines, editorial,
+    topStories: headlines.filter(entry => entry.kind === 'story').map(entry => entry.item),
+    topLeague: headlines.filter(entry => entry.kind === 'league').map(entry => entry.item),
+    leagueStories: sections.filter(story => !isFavorite(story)),
+    leagueItems,
+    favorites: sections.filter(story => isFavorite(story) && (filter === 'all' || story.team === filter)),
   };
 }
 

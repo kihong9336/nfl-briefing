@@ -413,14 +413,75 @@ export const briefings = [
         ]
       }
     ],
-    "tactics": [],
+    "tactics": [
+      {
+        "id": "bears-double-dig-tampa2-20261025",
+        "team": "Patriots",
+        "label": "오늘의 전술 · 더블 디그",
+        "title": "두 개의 안쪽 패스 길로 수비의 선택을 흔들기",
+        "concept": "Bears가 4쿼터 3다운에서 9야드를 전진해야 했던 장면이다. 디그는 리시버가 전진하다 필드 안쪽으로 꺾는 패스 경로다. 더블 디그는 두 리시버가 다른 깊이에서 안으로 들어와 가운데 수비수에게 두 선택지를 보여 준다.",
+        "easy": "같은 문을 두 사람이 시간차로 지나간다고 생각하자. QB는 먼저 들어오는 리시버만 보지 않고, 가운데 수비수가 움직인 뒤 다음 패스 길이 열리는지 확인한다.",
+        "gameUse": "10월 22일 Patriots–Bears전 4쿼터 4:59, Chicago의 자기 진영 10야드에서 3rd & 9. 공식 게임북은 Caleb Williams가 Rome Odunze에게 21야드 패스를 연결해 31야드까지 전진했다고 기록한다. Patriots 기자 Evan Lazar는 이 장면을 더블 디그 대 위장 Tampa-2로 분석했다. 그의 설명에 따르면 수비는 커버 제로처럼 보이다 깊은 양쪽 존으로 전환했고, Marcus Jones가 한쪽 딥하프, Kevin Byard가 깊은 가운데를 맡았다. Williams가 안쪽 디그에서 바깥쪽 디그로 읽기를 옮기자 Byard가 시선을 따라갔지만 패스 저지에 조금 못 미쳤다.",
+        "whyItWorks": "핵심은 루트 두 개 자체보다 QB의 읽기와 패스 타이밍이다. 가운데 수비수가 첫 위협에 반응하는 동안 다른 깊이로 들어오는 리시버에게 던질 틈을 찾는다.",
+        "defenseCounter": "수비의 일반적인 대응은 아래 존과 깊은 가운데 수비수가 루트 인계를 맞추고, 첫 루트에만 끌려가지 않는 것이다. 이 장면에서도 Byard가 거의 공에 닿았다는 분석이므로 Tampa-2가 자동으로 무너지는 조합은 아니다.",
+        "breakdown": [
+          {
+            "label": "1. 수비를 다시 읽기",
+            "text": "스냅 전 압박 모양만 믿지 말고 스냅 뒤 깊은 양쪽 존과 가운데 수비수가 형성되는지 확인한다."
+          },
+          {
+            "label": "2. 두 깊이로 들어가기",
+            "text": "안쪽과 바깥쪽 리시버가 각각 안으로 꺾는다. 두 루트가 같은 지점에 겹치지 않아 수비에게 서로 다른 위협이 된다.",
+            "meaning": "핵심은 루트 두 개 자체보다 QB의 읽기와 패스 타이밍이다. 가운데 수비수가 첫 위협에 반응하는 동안 다른 깊이로 들어오는 리시버에게 던질 틈을 찾는다."
+          },
+          {
+            "label": "3. 다음 패스 길 찾기",
+            "text": "QB는 안쪽 디그에서 바깥쪽 디그로 읽기를 옮긴다. 가운데 수비수가 어디를 따라가는지 보고 열린 틈에 제때 던지는 것이 핵심이다.",
+            "counter": "수비의 일반적인 대응은 아래 존과 깊은 가운데 수비수가 루트 인계를 맞추고, 첫 루트에만 끌려가지 않는 것이다. 이 장면에서도 Byard가 거의 공에 닿았다는 분석이므로 Tampa-2가 자동으로 무너지는 조합은 아니다."
+          },
+          {
+            "label": "실제 경기: 4쿼터 4:59",
+            "text": "10월 22일 Bears의 3rd & 9에서 Williams→Odunze 21야드 전진은 공식 게임북으로 확인했다. Lazar는 Patriots가 압박 모양에서 Tampa-2로 전환했고, 가운데의 Byard가 QB의 안쪽→바깥쪽 읽기를 따라가다 패스 저지에 조금 못 미쳤다고 분석했다."
+          }
+        ],
+        "watchOrder": [
+          "스냅 전 압박 모양과 스냅 후 존을 구분하기",
+          "서로 깊이가 다른 두 안쪽 루트 찾기",
+          "가운데 수비수의 반응과 QB의 다음 읽기 연결하기"
+        ],
+        "diagram": {
+          "kind": "double-dig-vs-tampa2",
+          "caption": "두 루트의 깊이 차이와 가운데 수비수를 읽는 관계만 나타낸 개념도다."
+        },
+        "source": {
+          "label": "Patriots · Evan Lazar의 필름 분석 (10/23)",
+          "url": "https://www.patriots.com/news/after-further-review-drake-maye-film-breakdown-defense-review-and-quick-hit-film-notes-from-week-7-loss-to-the-bears"
+        },
+        "video": {
+          "title": "Patriots–Bears 전체 경기 하이라이트",
+          "type": "NFL 공식 전체 경기 하이라이트",
+          "url": "https://www.youtube.com/watch?v=Urfce838vEc"
+        },
+        "narrativeMode": "integrated",
+        "sources": [
+          {
+            "label": "Patriots · Evan Lazar의 필름 분석 (10/23)",
+            "url": "https://www.patriots.com/news/after-further-review-drake-maye-film-breakdown-defense-review-and-quick-hit-film-notes-from-week-7-loss-to-the-bears"
+          },
+          {
+            "label": "NFL 공식 게임북 · 다운·거리·결과 확인",
+            "url": "https://static.clubs.nfl.com/image/upload/patriots/ljqhr0hqaxegvay37i11.pdf"
+          }
+        ]
+      }
+    ],
     "highlights": [
       {
-        "title": "Patriots–Bears 공식 전체 경기 하이라이트",
+        "title": "Patriots–Bears 경기 복습",
         "channel": "NFL",
         "type": "NFL 공식 YouTube · 경기 복습",
         "url": "https://www.youtube.com/watch?v=Urfce838vEc",
-        "note": "목요일 30–24 경기의 공식 전체 하이라이트다. 이미 끝난 경기를 새 결과로 소개하지 않고, 전반 마지막 Stevenson의 득점과 후반 추격을 경기 흐름 속에서 복습하자."
+        "note": "10월 22일 미국 현지 경기의 복습 영상이다. 오늘 전술교실에서는 두 개의 안쪽 패스 경로로 가운데 수비수에게 선택을 요구하는 더블 디그의 원리를 설명한다. 영상은 해당 장면 바로가기가 아닌 전체 경기 하이라이트다."
       }
     ],
     "schedule": [
@@ -775,6 +836,12 @@ export const briefings = [
         "verified": true,
         "lastConfirmedEdition": "2026-10-25"
       }
+    ],
+    "topStoryKeys": [
+      "2026-week7-oct21-jackson-mayfield-practice-return",
+      "2026-week6-49ers-evans-achilles-game-exit",
+      "2026-11-01-us-dst-end-korea-viewing",
+      "2026-10-20-u2-thanksgiving-eve-halftime"
     ]
   },
   {
