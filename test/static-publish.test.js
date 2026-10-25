@@ -49,6 +49,8 @@ test('build is deterministic and publisher automatically regenerates all static 
     edition.sections[0].eventKey='test-editorial-incomplete';
     edition.sections[0].summary='Another distinct publication test: missing lesson and film after a completed game.';
     edition.tactics=[]; edition.highlights=[];
+    // Pin the completed-game condition instead of depending on the latest live edition.
+    edition.schedule=[{...edition.schedule[0],gameDate:'2026-10-23',date:'10/23',weekday:'금',status:'종료'}];
     await writeFile(join(temp,'input.json'),JSON.stringify(edition));
     // Verified news must ship without an override even if optional film sections are incomplete.
     execFileSync(process.execPath,['scripts/publish-edition.mjs','input.json'],{cwd:temp,stdio:'pipe'});

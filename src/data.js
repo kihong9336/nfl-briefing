@@ -1,5 +1,783 @@
 export const briefings = [
   {
+    "date": "2026-10-25",
+    "weekday": "일요일",
+    "edition": "2026 WEEK 7 · 일요일 킥오프 전 브리핑",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 7,
+    "dek": "주말의 쿼터백·로스터 변화와 함께 서머타임 시청 안내, U2 공연, Kamara의 기록, 리그 사건까지 살핍니다. 이전에 놓친 소식은 실제 발표·발생일을 밝혀 함께 전합니다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 일요일 전력 변화",
+      "title": "Lamar 세 경기 연속 OUT…Jacobs·Branch 복귀로 달라진 주말",
+      "summary": "Ravens는 Huntley의 선발을 확정했다. Packers와 Lions는 핵심 자원을 로스터에 되돌렸고, 49ers의 Kirk도 출전 미정 등급을 벗었다. Eagles는 Barkley의 최종 명단을 기다려야 한다."
+    },
+    "sections": [
+      {
+        "id": "2026-week6-49ers-evans-achilles-game-exit",
+        "eventKey": "2026-week6-49ers-evans-achilles-game-exit",
+        "team": "49ers",
+        "label": "주말 전력 · 새 변화",
+        "title": "Kirk IR 활성화·Questionable 해제…Falcons전 패스 선택지 회복",
+        "summary": "49ers는 토요일 Christian Kirk를 IR에서 활성화했고 Kirk의 Questionable 등급을 해제했다. Ogbo Okoronkwo를 연습조에 계약한 뒤 Jalen Graham과 함께 경기용 승격했다. Evans·Samuel·Bosa의 기존 결장 발표와는 별개의 복귀 조치다.",
+        "commentary": "전날까지는 정상 훈련을 해도 경기 등급이 남아 있었지만 이제 구단이 등급까지 해제했다. 해설: 패스 대상이 늘어나는 것과 Kirk가 곧바로 풀타임을 소화하는 것은 다르다. Falcons도 A.J. Terrell을 IR에서 활성화해 경기 등급을 없앴으므로 리시버 복귀만으로 매치업 우위를 단정하지 말자.",
+        "watch": "Kirk의 첫 드라이브 정렬과 표적 배분, Atlanta의 Terrell 수비 배치를 함께 보자.",
+        "takeaway": "Kirk는 로스터 복귀와 경기 등급 해제를 모두 확인했다. 남은 질문은 출전 가능성보다 실제 역할과 물량이다.",
+        "sources": [
+          {
+            "label": "49ers Announce Roster Moves Ahead of #SFvsATL",
+            "url": "https://www.49ers.com/news/49ers-announce-roster-moves-ahead-of-sfvsatl"
+          },
+          {
+            "label": "49ers Rule Out Mike Evans vs. Falcons; Christian Kirk Questionable Ahead of Week 7 #SFvsATL",
+            "url": "https://www.49ers.com/news/49ers-rule-out-mike-evans-vs-falcons-christian-kirk-questionable-ahead-of-week-7-sfvsatl"
+          },
+          {
+            "label": "NFL news roundup: Lions activate safety Brian Branch; Texans WR Tank Dell comes off PUP list | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24"
+          }
+        ],
+        "changeSummary": "금요일 출전 미정에서 토요일 IR 활성화 및 경기 등급 해제로 바뀌었다.",
+        "changeEvidence": {
+          "url": "https://www.49ers.com/news/49ers-announce-roster-moves-ahead-of-sfvsatl",
+          "before": "Christian Kirk는 사흘 모두 FP였지만 Questionable",
+          "after": "Kirk의 Questionable 등급을 해제했다",
+          "quote": "Kirk의 Questionable 등급을 해제했다",
+          "originalQuote": "*The 49ers have removed Kirk's questionable game status for Sunday's game at the Atlanta Falcons",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.49ers.com/news/49ers-announce-roster-moves-ahead-of-sfvsatl"
+        }
+      },
+      {
+        "id": "2026-week7-chiefs-seahawks-oct21-practice",
+        "eventKey": "2026-week7-chiefs-seahawks-oct21-practice",
+        "team": "Chiefs",
+        "label": "주말 전력 · 새 변화",
+        "title": "Brashard Smith IR 이동, McDonald 복귀…Sneed는 여전히 출전 미정",
+        "summary": "Chiefs는 Brashard Smith를 IR에 등록했다. Cooper McDonald는 IR에서 활성화됐고 Questionable 등급도 해제됐다. Justin Watson은 연습조에서 경기용 승격됐다. NFL은 L’Jarius Sneed가 개인 사유로 따로 이동해 Seattle에서 합류할 예정이며 무릎 부상의 Questionable은 남았다고 전했다.",
+        "commentary": "금요일 OUT이었던 Smith의 상태가 장기 로스터 조치로 바뀌었다. 해설: McDonald의 복귀와 Watson의 승격은 서로 다른 포지션의 선택지를 늘리는 조치다. Sneed의 별도 이동을 결장 확정으로 확대해서 읽으면 안 된다.",
+        "watch": "최종 명단에서 Sneed를 확인하고 Watson의 패스·스페셜팀 역할, McDonald의 수비 투입을 나누어 보자.",
+        "takeaway": "Smith는 단순 경기 결장에서 IR로 이동했다. Sneed의 이동 방식과 실제 출전 여부는 별개다.",
+        "sources": [
+          {
+            "label": "Kansas City Chiefs Official Team Website | Chiefs.com",
+            "url": "https://www.chiefs.com/team/transactions/2026"
+          },
+          {
+            "label": "NFL news roundup: Lions activate safety Brian Branch; Texans WR Tank Dell comes off PUP list | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24"
+          },
+          {
+            "label": "Week 7 Injury Report | Chiefs vs. Seahawks",
+            "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+          }
+        ],
+        "changeSummary": "금요일 OUT 이후 IR 등록이 이뤄졌고 McDonald의 로스터 복귀가 확인됐다.",
+        "changeEvidence": {
+          "url": "https://www.chiefs.com/team/transactions/2026",
+          "before": "Brashard Smith도 OUT",
+          "after": "Brashard Smith를 IR에 등록했다",
+          "quote": "Brashard Smith를 IR에 등록했다",
+          "originalQuote": "Brashard Smith (RB) placed on Reserve/Injured.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.chiefs.com/team/transactions/2026"
+        }
+      },
+      {
+        "id": "2026-10-20-betmgm-49ers-super-bowl-favorite",
+        "eventKey": "2026-10-20-betmgm-49ers-super-bowl-favorite",
+        "team": "49ers",
+        "label": "우승 전망 · 10월 20일 시장 평가",
+        "title": "6연승 뒤 높아진 49ers 평가…BetMGM 우승 배당 선두",
+        "summary": "BetMGM의 10월 20일 업데이트에서 49ers는 슈퍼볼 LXI 우승 배당 +550으로 가장 낮은 배당을 받았다. Bills는 +700, Chiefs는 +800이었다. 49ers가 Commanders를 꺾고 6승 무패가 된 뒤의 평가다.",
+        "commentary": "같은 사업자의 우승 배당이 낮다는 것은 그 시장에서 우승 가능성을 상대적으로 높게 평가한다는 뜻이다. 6연승과 NFC West 경쟁 구도가 시즌 전망을 어떻게 바꿨는지 보여주는 참고 자료이며, 경기 결과를 예측하는 확정 수치는 아니다.",
+        "watch": "이는 10월 20일 BetMGM의 시점별 평가다. 이후 주전 가용 인원과 경기 결과에 따라 전망이 어떻게 바뀌는지 보자.",
+        "takeaway": "무패 출발이 우승 기대 상승으로 이어졌다. 단일 사업자의 당시 평가와 현재 리그 순위는 구분한다.",
+        "sources": [
+          {
+            "label": "BetMGM · 2026년 10월 20일 업데이트",
+            "url": "https://sports.betmgm.com/en/blog/nfl/super-bowl-odds-nfl-betting-bm06/"
+          }
+        ]
+      }
+    ],
+    "leagueWide": [
+      {
+        "team": "NFL",
+        "label": "시청 안내",
+        "title": "11월 1일 미국 서머타임 종료…한국 시청 시간은 한 시간 늦어진다",
+        "why": "미국의 서머타임이 현지 11월 1일 새벽 2시에 끝난다. 같은 미국 동부시간에 시작하는 경기라도 한국에서는 한 시간 늦게 보게 된다. 일요일 오후 1시 경기는 한국 월요일 오전 2시에서 3시로, 오후 4시 5분·25분 경기는 오전 6시 5분·25분으로 바뀐다. 선데이 나이트의 동부 오후 8시 20분은 한국 월요일 오전 10시 20분이다.",
+        "takeaway": "11월 2일부터 미국 일요일 경기 알람을 다시 맞추자. 해외 개최 경기나 편성이 변경된 경기는 개별 한국시간 일정을 확인한다.",
+        "eventKey": "2026-11-01-us-dst-end-korea-viewing",
+        "url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst"
+      },
+      {
+        "team": "NFL",
+        "label": "문화·공연",
+        "title": "U2, Thanksgiving Eve 하프타임 확정…한국 11월 26일 오전 경기",
+        "why": "NFL과 Netflix는 10월 20일, U2가 현지 11월 25일 SoFi Stadium의 Packers–Rams전 하프타임 무대에 오른다고 발표했다. NFL의 첫 추수감사절 전야 경기이며 Netflix로 생중계한다. 2002년 슈퍼볼 하프타임에 섰던 U2의 NFL 무대 복귀이자, 결성 50주년의 공연이다.",
+        "takeaway": "한국시간 11월 26일 오전 10시에 경기 시작. U2 공연은 경기 도중 하프타임에 열린다.",
+        "eventKey": "2026-10-20-u2-thanksgiving-eve-halftime",
+        "url": "https://www.nfl.com/news/u2-to-headline-halftime-of-nfl-s-first-ever-thanksgiving-eve-gameday-live-on-netflix"
+      },
+      {
+        "team": "Saints",
+        "label": "기록 · 10월 18일 달성",
+        "title": "Kamara, 러싱·리시빙 각각 5,000야드…NFL 역대 여섯 번째",
+        "why": "Alvin Kamara가 10월 18일 Giants전에서 러싱과 리시빙 통산 각각 5,000야드를 달성했다. Saints 공식 경기 노트에 따르면 Marshall Faulk·Lenny Moore·Marcus Allen·Christian McCaffrey·Tiki Barber에 이은 NFL 역대 여섯 번째다. 러닝백이 공을 들고 뛰는 역할과 패스를 받아 전진하는 역할을 모두 오래 수행해 온 기록이다.",
+        "takeaway": "합계 5,000야드가 아니라 러싱과 리시빙이 각각 5,000야드다. Kamara의 가치를 볼 때 두 공격 경로를 함께 살펴보자.",
+        "eventKey": "2026-10-18-kamara-5000-rushing-receiving",
+        "url": "https://www.neworleanssaints.com/news/2026-nfl-week-6-new-york-giants-vs-new-orleans-saints-game-notes"
+      },
+      {
+        "eventKey": "2026-10-19-colts-richardson-marijuana-charge",
+        "team": "Colts",
+        "label": "사건·10월 23일 보도",
+        "title": "Richardson, 대마 소지 경범죄 혐의로 기소",
+        "why": "NFL이 게재한 AP의 10월 23일 보도와 USA TODAY의 별도 취재에 따르면, Indiana 검찰은 10월 12일 교통 단속에서 비롯된 대마 소지 경범죄 혐의를 10월 19일 제기했습니다. Colts는 관련 사실을 인지하고 추가 정보를 수집 중이라고 밝혔습니다. 이는 혐의 제기 단계이며 유죄 판결이나 NFL 징계 확정을 뜻하지 않습니다.",
+        "takeaway": "Colts는 사실관계를 파악 중이라고 밝혔다. 혐의 제기와 유죄 판결, 리그의 징계 결정은 별개의 단계다.",
+        "url": "https://fantasy-www.nfl.com/news/colts-qb-anthony-richardson-faces-marijuana-possession-charge-after-traffic-stop-in-indiana",
+        "sources": [
+          {
+            "label": "NFL·Associated Press, 2026-10-23",
+            "url": "https://fantasy-www.nfl.com/news/colts-qb-anthony-richardson-faces-marijuana-possession-charge-after-traffic-stop-in-indiana"
+          },
+          {
+            "label": "USA TODAY 원문 재전재(AOL), 2026-10-23",
+            "url": "https://www.aol.com/articles/colts-quarterback-charged-misdemeanor-marijuana-165640000.html"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-week7-seahawks-emmanwori-hip-questionable",
+        "team": "Seahawks",
+        "label": "부상·10월 24일 재확인",
+        "title": "Emmanwori 고관절 부상…Chiefs전 앞둔 Seattle 수비의 변수",
+        "why": "10월 23일 공식 부상표에 Nick Emmanwori가 고관절 부상으로 제한 훈련·Questionable에 올랐습니다. 10월 24일 Chiefs 공식 프리뷰도 해당 상태를 유지하며 Demarcus Lawrence와 Uchenna Nwosu 역시 Questionable이라고 확인했습니다. Emmanwori의 결장은 아직 확정되지 않았습니다.",
+        "takeaway": "Lawrence·Nwosu도 출전 미정이다. Chiefs의 공격을 볼 때 Seattle의 최종 수비 명단과 교대 조합을 함께 확인하자.",
+        "url": "https://www.chiefs.com/news/five-things-to-watch-on-sunday-chiefs-vs-seahawks",
+        "sources": [
+          {
+            "label": "Chiefs 공식 프리뷰, 2026-10-24",
+            "url": "https://www.chiefs.com/news/five-things-to-watch-on-sunday-chiefs-vs-seahawks"
+          },
+          {
+            "label": "Chiefs 공식 양 팀 부상 보고서, 2026-10-23",
+            "url": "https://www.chiefs.com/news/week-7-injury-report-chiefs-vs-seahawks-2026"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-week7-jets-hall-quad-questionable-mitchell-return",
+        "team": "Jets",
+        "label": "복귀·부상·10월 24일",
+        "title": "Jets, Mitchell 복귀 예고…Hall은 제한 훈련 뒤 출전 미정",
+        "why": "Jets는 손가락 부상으로 네 경기를 쉰 Adonai Mitchell이 Dolphins전에 복귀할 예정이라고 밝혔다. Breece Hall은 대퇴사두근 문제로 수요일 훈련을 쉬었고 목·금요일에는 제한적으로 참여했으며, 최종 상태는 Questionable이다. Aaron Glenn 감독은 Hall과 가드 Dylan Parham의 상태를 경기 당일까지 지켜보겠다고 설명했다.",
+        "takeaway": "패스 표적의 복귀와 러닝백의 출전 불확실성이 동시에 있다. Mitchell의 활용과 Hall의 최종 명단을 함께 본다.",
+        "url": "https://www.newyorkjets.com/news/adonai-mitchell-to-return-against-miami-dolphins-breece-hall-dylan-parham-questionable-10-23-2026",
+        "sources": [
+          {
+            "label": "Jets 공식 노트북, 화면 게시일 2026-10-24",
+            "url": "https://www.newyorkjets.com/news/adonai-mitchell-to-return-against-miami-dolphins-breece-hall-dylan-parham-questionable-10-23-2026"
+          },
+          {
+            "label": "Jets 공식 금요일 부상 보고서, 2026-10-23",
+            "url": "https://www.newyorkjets.com/news/jets-injury-report-week-7-vs-dolphins-friday-10-23-2026"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-20-jay-z-super-bowl-lxi-report",
+        "team": "NFL",
+        "label": "공연 · 취재 보도",
+        "title": "Jay-Z의 슈퍼볼 LXI 하프타임 출연설…Puck 보도를 NBC가 전해",
+        "why": "NBC/PFT는 10월 20일 Dave Brooks의 Puck 취재를 인용해, 슈퍼볼 하프타임 제작을 맡아온 Jay-Z가 다음 무대의 출연자로 자신을 선택했다고 보도했다. Justin Bieber와 Miley Cyrus도 검토됐다는 내용이다. 해당 기사는 당시 공식 발표가 없다고 명시했다. 확정된 U2의 추수감사절 전야 공연과는 발표 단계가 다르다.",
+        "takeaway": "출연 후보에 관한 취재 보도로 읽되, NFL의 공식 헤드라이너 발표와 구분하자.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jay-z-selects-jay-z-to-do-super-bowl-lxi-halftime-show"
+      },
+      {
+        "eventKey": "2026-week7-oct21-jackson-mayfield-practice-return",
+        "team": "Ravens",
+        "label": "리그 · 새 변화",
+        "title": "Lamar Jackson 세 경기 연속 결장 확정…Huntley가 Bengals전 선발",
+        "why": "Ravens는 Jackson의 Bengals전 결장을 확정했다. 발목 부상으로 세 경기 연속 빠지며 Tyler Huntley가 다시 선발을 맡는다. 금요일 Questionable에서 토요일 OUT으로 바뀐 것이다. Jackson은 달릴 때 통증이 남아 있다고 설명했다. 해설: 같은 지구 상대와의 경기에서 복귀를 기다리는 준비가 아니라 Huntley를 중심으로 한 운영이 확정됐다. 초반 공격 이후에도 긴 드라이브를 이어갈 수 있는지, 압박을 받을 때 패스 선택지가 남는지 보자.",
+        "takeaway": "훈련 복귀가 경기 복귀로 이어지지는 않았다. Baltimore의 이번 주 선발은 Huntley다.",
+        "url": "https://www.baltimoreravens.com/news/lamar-jackson-out-against-bengals-week-7-tyler-huntley-third-straight-start",
+        "sources": [
+          {
+            "label": "Lamar Jackson Ruled Out vs. Bengals",
+            "url": "https://www.baltimoreravens.com/news/lamar-jackson-out-against-bengals-week-7-tyler-huntley-third-straight-start"
+          },
+          {
+            "label": "Ravens rule out QB Lamar Jackson (ankle) for third straight game; Tyler Huntley to start vs. Bengals | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/ravens-rule-out-lamar-jackson-ankle-for-third-straight-game"
+          }
+        ],
+        "changeSummary": "전날 남아 있던 출전 가능성이 토요일 공식 OUT 발표로 정리됐다. 같은 묶음의 Mayfield 소식은 변화 없이 반복하지 않는다.",
+        "changeEvidence": {
+          "url": "https://www.baltimoreravens.com/news/lamar-jackson-out-against-bengals-week-7-tyler-huntley-third-straight-start",
+          "before": "Lamar Jackson도 Questionable",
+          "after": "Jackson의 Bengals전 결장을 확정했다",
+          "quote": "Jackson의 Bengals전 결장을 확정했다",
+          "originalQuote": "Lamar Jackson (ankle) has been ruled out for Sunday's game against the Cincinnati Bengals.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.baltimoreravens.com/news/lamar-jackson-out-against-bengals-week-7-tyler-huntley-third-straight-start"
+        }
+      },
+      {
+        "eventKey": "2026-week7-packers-jacobs-lions-branch-activation",
+        "team": "Packers / Lions",
+        "label": "리그 · 새 변화",
+        "title": "Jacobs 활성화, Lions는 Branch·Mays 복귀…지구 맞대결 인력 변화",
+        "why": "Packers는 Josh Jacobs를 로스터 면제 상태에서 활성화했고 DT Jordon Riley도 PUP에서 복귀시켰다. NFL은 Adam Schefter를 인용해 Jacobs의 일요일 출전을 예상했지만 실제 활용량은 미정이라고 전했다. Lions는 Brian Branch를 PUP에서, Cade Mays를 IR에서 활성화했으며 두 선수의 경기 등급은 없다. 해설: 한쪽의 러닝 선택지와 다른 쪽의 수비·중앙 보호선이 함께 바뀐다. 첫 경기부터 과거 물량을 기대하기보다 Jacobs의 터치 배분, Branch의 정렬, 센터와 가드의 호흡을 따로 보자.",
+        "takeaway": "로스터 복귀가 양쪽에서 동시에 이뤄졌다. 출전 자격과 정상적인 경기 물량은 구분해야 한다.",
+        "url": "https://www.packers.com/news/packers-activate-rb-josh-jacobs-dt-jordon-riley-oct-24-2026",
+        "sources": [
+          {
+            "label": "Packers activate RB Josh Jacobs, DT Jordon Riley",
+            "url": "https://www.packers.com/news/packers-activate-rb-josh-jacobs-dt-jordon-riley-oct-24-2026"
+          },
+          {
+            "label": "Packers activate RB Josh Jacobs from exempt status ahead of Sunday's game vs. Lions | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/packers-activate-rb-josh-jacobs-from-exempt-list-ahead-of-sunday-s-game-vs-lions"
+          },
+          {
+            "label": "NFL news roundup: Lions activate safety Brian Branch; Texans WR Tank Dell comes off PUP list | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24"
+          },
+          {
+            "label": "Green Bay Packers vs. Detroit Lions Week 7 injury report and game designations: Friday, Oct. 23",
+            "url": "https://www.detroitlions.com/news/lions-vs-packers-injury-report-oct-23-mays-branch-yasin"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-week7-eagles-barkley-practice-return",
+        "team": "Eagles",
+        "label": "리그 · 새 변화",
+        "title": "Barkley FP에도 Questionable…Smith·Wicks 결장, Goedert는 출전 가능",
+        "why": "Eagles의 토요일 최종 보고에서 Barkley는 전체 참여(FP)로 올라왔지만 Questionable이다. DeVonta Smith와 Dontayvion Wicks는 OUT, Dallas Goedert는 FP로 돌아와 경기 출전이 가능하다. 정상 훈련을 마쳤다는 사실과 경기 출전 확정은 다르다. 해설: 러닝백의 복귀 기대만큼 패스 표적 두 명의 공백도 중요하다. 월요일 최종 명단과 Goedert의 패스·블로킹 역할, Barkley가 뛴다면 실제 터치 배분을 확인하자.",
+        "takeaway": "FP는 회복 신호이지 출전 확정이 아니다. Barkley의 Questionable과 리시버 두 명의 OUT을 함께 읽자.",
+        "url": "https://www.philadelphiaeagles.com/news/cowboys-vs-eagles-injury-report-2026-nfl-week-7-saquon-barkley-jalyx-hunt",
+        "sources": [
+          {
+            "label": "Cowboys vs. Eagles Injury Report",
+            "url": "https://www.philadelphiaeagles.com/news/cowboys-vs-eagles-injury-report-2026-nfl-week-7-saquon-barkley-jalyx-hunt"
+          },
+          {
+            "label": "Eagles RB Saquon Barkley (hamstring) logs full practice, questionable to play Monday vs. Cowboys  | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/eagles-rb-saquon-barkley-hamstring-questionable-to-play-monday-vs-cowboys-after-full-practice"
+          }
+        ],
+        "changeSummary": "목요일 LP 이후 토요일 FP와 최종 Questionable을 확인했다. 목록 요약의 출전 확정 표현은 채택하지 않았다.",
+        "changeEvidence": {
+          "url": "https://www.philadelphiaeagles.com/news/cowboys-vs-eagles-injury-report-2026-nfl-week-7-saquon-barkley-jalyx-hunt",
+          "before": "목요일 제한 훈련에 복귀",
+          "after": "Barkley는 전체 참여(FP)로 올라왔지만 Questionable",
+          "quote": "Barkley는 전체 참여(FP)로 올라왔지만 Questionable",
+          "originalQuote": "Running back Saquon Barkley (hamstring) took a step forward and was a full participant at practice on Saturday after being limited previously in the week. The running back is listed as questionable for Monday night.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.philadelphiaeagles.com/news/cowboys-vs-eagles-injury-report-2026-nfl-week-7-saquon-barkley-jalyx-hunt"
+        }
+      },
+      {
+        "eventKey": "2026-week7-texans-tank-dell-return",
+        "team": "Texans",
+        "label": "리그 · 새 변화",
+        "title": "Tank Dell PUP 활성화…감독의 복귀 계획이 로스터 조치로",
+        "why": "Texans는 Tank Dell을 PUP에서 활성화했다. NFL은 Giants전 경기 등급도 없어졌다고 전했다. 앞서 Ryans 감독이 밝힌 복귀 계획이 실제 로스터 조치로 이어졌다. 해설: 오랜 재활 뒤 패스 공격의 선택지를 되찾는 변화지만, 활성화만으로 예전 스냅 수나 폭발력을 보장하지는 않는다. 첫 경기의 정렬·표적·교체 빈도를 보고, 긴 패스 한두 번보다 드라이브마다 역할이 유지되는지 확인하자.",
+        "takeaway": "출전 계획에서 실제 PUP 활성화로 진전했다. 복귀 첫 경기의 역할과 물량은 따로 확인해야 한다.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-activate-wr-tank-dell-to-the-active-roster",
+        "sources": [
+          {
+            "label": "Texans activate WR Tank Dell to the active roster - NBC Sports",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-activate-wr-tank-dell-to-the-active-roster"
+          },
+          {
+            "label": "NFL news roundup: Lions activate safety Brian Branch; Texans WR Tank Dell comes off PUP list | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24"
+          },
+          {
+            "label": "Tank Dell Returning vs. Giants, Says DeMeco Ryans",
+            "url": "https://www.houstontexans.com/news/tank-dell-return-giants-demeco-ryans"
+          }
+        ],
+        "changeSummary": "감독의 출전 계획에 이어 토요일 공식 로스터 복귀가 보도됐다.",
+        "changeEvidence": {
+          "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-activate-wr-tank-dell-to-the-active-roster",
+          "before": "Week 7 Giants전에 뛸 것이라고 밝혔다",
+          "after": "Tank Dell을 PUP에서 활성화했다",
+          "quote": "Tank Dell을 PUP에서 활성화했다",
+          "originalQuote": "The team officially activated the wide receiver back to the active roster from reserve/PUP.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-activate-wr-tank-dell-to-the-active-roster"
+        }
+      },
+      {
+        "eventKey": "2026-10-24-browns-maliek-collins-extension",
+        "team": "Browns",
+        "label": "계약 · 에이전트발 보도",
+        "title": "Collins 2년 3천만 달러 연장 합의 보도…시즌 중 수비 핵심 유지",
+        "why": "NBC/PFT는 에이전트 Drew Rosenhaus의 설명을 인용해 Browns와 Maliek Collins가 2년 3천만 달러 연장에 합의했으며 보장액은 2천3백만 달러라고 보도했다. 구단 공식 서명 발표로 바꾸어 소개하지 않는다. 해설: 시즌 중 수비 라인 자원을 유지하려는 결정이라는 의미가 있다. 계약 총액과 실제 연도별 지급 구조는 다르므로 세부 조건을 추정하지 않고, 구단 확인과 후속 조건 공개를 기다리자.",
+        "takeaway": "연장 합의는 에이전트발 보도다. 공식 체결 확인과 세부 지급 구조는 아직 별도 확인 대상이다.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-extend-dt-maliek-collins-by-two-years",
+        "sources": [
+          {
+            "label": "Browns extend DT Maliek Collins by two years - NBC Sports",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-extend-dt-maliek-collins-by-two-years"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-23-giants-edmunds-golston-season-ending",
+        "team": "Giants",
+        "label": "리그 · 새 변화",
+        "title": "Edmunds IR 등록·Adebo 복귀…Holland와 Theo Johnson은 OUT",
+        "why": "Giants는 Tremaine Edmunds를 IR에 등록했다. 동시에 Paulson Adebo를 활성화하고 Jalin Hyatt와 Raheem Layne을 경기용 승격했다. NFL은 Jevon Holland와 Theo Johnson의 Texans전 OUT 변경도 전했다. 전날의 장기 결장 보도 뒤 실제 로스터 조치와 추가 경기 결장이 확인된 것이다. 해설: 코너 복귀가 세이프티·라인배커 공백을 그대로 대체하지는 않는다. 새로운 뒷선 조합의 커버리지 인계와 타이트엔드 없이 짧은 패스 대상을 어떻게 배분하는지 보자.",
+        "takeaway": "Adebo의 복귀와 Holland의 결장은 다른 자리의 변화다. 수비가 한꺼번에 정상화됐다고 볼 수는 없다.",
+        "url": "https://www.giants.com/news/giants-activate-cb-paulson-adebo-off-ir-place-lb-tremaine-edmunds-on-ir-week-7-houston-texans",
+        "sources": [
+          {
+            "label": "Giants activate CB Paulson Adebo, place LB Tremaine Edmunds on IR",
+            "url": "https://www.giants.com/news/giants-activate-cb-paulson-adebo-off-ir-place-lb-tremaine-edmunds-on-ir-week-7-houston-texans"
+          },
+          {
+            "label": "NFL news roundup: Lions activate safety Brian Branch; Texans WR Tank Dell comes off PUP list | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24"
+          }
+        ],
+        "changeSummary": "시즌 종료 보도 이후 토요일 실제 IR 등록, Adebo 활성화와 추가 OUT을 확인했다.",
+        "changeEvidence": {
+          "url": "https://www.giants.com/news/giants-activate-cb-paulson-adebo-off-ir-place-lb-tremaine-edmunds-on-ir-week-7-houston-texans",
+          "before": "Edmunds와 Greg Newsome II의 OUT",
+          "after": "Tremaine Edmunds를 IR에 등록했다",
+          "quote": "Tremaine Edmunds를 IR에 등록했다",
+          "originalQuote": "Reserve/Injured\nLB Tremaine Edmunds",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        },
+        "update": {
+          "kind": "followup",
+          "evidence": "https://www.giants.com/news/giants-activate-cb-paulson-adebo-off-ir-place-lb-tremaine-edmunds-on-ir-week-7-houston-texans"
+        }
+      },
+      {
+        "eventKey": "2026-10-24-league-roster-returns",
+        "team": "Broncos / Vikings / Browns / Steelers / Seahawks",
+        "label": "리그 · 새 변화",
+        "title": "Coleman·Mason·Sampson 복귀…일요일 앞두고 달라진 가용 인원",
+        "why": "NFL 토요일 업데이트에서 Denver는 Jonah Coleman을 IR에서 활성화하고 Tyler Badie·Jonah Elliss를 IR에 올렸다. Minnesota는 Jordan Mason, Cleveland는 Dylan Sampson을 활성화했으며 두 러닝백 모두 경기 등급이 없다. Browns의 Grant Delpit도 뇌진탕 프로토콜을 통과해 경기 등급이 없어졌다. Steelers의 DeShon Elliott와 Seahawks의 Anthony Bradford도 IR에서 복귀했다. 해설: 같은 복귀라는 단어라도 러닝백 터치, 수비 커버리지, 공격 라인 조합에 각각 다른 영향을 준다. 최종 명단과 첫 드라이브 인원을 기준으로 실제 역할을 확인하자.",
+        "takeaway": "복귀와 IR 이동이 동시에 진행됐다. 팀별로 회복한 역할과 새 공백을 나누어 확인할 주말이다.",
+        "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24",
+        "sources": [
+          {
+            "label": "NFL news roundup: Lions activate safety Brian Branch; Texans WR Tank Dell comes off PUP list | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24"
+          }
+        ]
+      },
+      {
+        "eventKey": "2026-10-24-raiders-pete-banaszak-obituary",
+        "team": "Raiders",
+        "label": "리그 · 추모",
+        "title": "Raiders의 첫 슈퍼볼 우승 멤버 Pete Banaszak 별세, 향년 82세",
+        "why": "Raiders는 Pete Banaszak의 별세를 발표했다고 NFL이 전했다. 향년 82세다. 그는 구단에서 13시즌을 보냈고 Super Bowl XI 우승 경기에서 두 번의 터치다운을 기록했다. 현재의 순위 경쟁과는 별개로 구단 첫 우승 세대의 유산을 돌아볼 소식이다. 추모 기사에서는 선수 시절의 역할과 동료들의 회고를 함께 읽어보자.",
+        "takeaway": "첫 슈퍼볼 우승을 함께한 러닝백을 Raiders가 추모하고 있다.",
+        "url": "https://www.nfl.com/news/former-raiders-rb-pete-banaszak-who-won-super-bowl-xi-with-oakland-dies-at-82",
+        "sources": [
+          {
+            "label": "Former Raiders RB Pete Banaszak, who won Super Bowl XI with Oakland, dies at 82 | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/former-raiders-rb-pete-banaszak-who-won-super-bowl-xi-with-oakland-dies-at-82"
+          }
+        ]
+      }
+    ],
+    "tactics": [],
+    "highlights": [
+      {
+        "title": "Patriots–Bears 공식 전체 경기 하이라이트",
+        "channel": "NFL",
+        "type": "NFL 공식 YouTube · 경기 복습",
+        "url": "https://www.youtube.com/watch?v=Urfce838vEc",
+        "note": "목요일 30–24 경기의 공식 전체 하이라이트다. 이미 끝난 경기를 새 결과로 소개하지 않고, 전반 마지막 Stevenson의 득점과 후반 추격을 경기 흐름 속에서 복습하자."
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873011",
+        "gameDate": "2026-10-25",
+        "date": "10/25",
+        "weekday": "일",
+        "time": "22:30",
+        "status": "경기 예정",
+        "matchup": "Pittsburgh Steelers at New Orleans Saints",
+        "note": "한국시간 오늘 밤 파리 경기다. Elliott 복귀 뒤 Steelers의 수비 백 조합과 최종 경기 명단을 확인하자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873012",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "Cincinnati Bengals at Baltimore Ravens",
+        "note": "Jackson은 OUT, Huntley가 선발이다. 초반 이후에도 패스 공격의 전진이 이어지는지 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873013",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "Cleveland Browns at Tennessee Titans",
+        "note": "최종 액티브 명단과 첫 드라이브의 선발 조합을 확인하고, 복귀 선수의 실제 역할을 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873014",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "Indianapolis Colts at Minnesota Vikings",
+        "note": "최종 액티브 명단과 첫 드라이브의 선발 조합을 확인하고, 복귀 선수의 실제 역할을 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873015",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "Miami Dolphins at New York Jets",
+        "note": "최종 액티브 명단과 첫 드라이브의 선발 조합을 확인하고, 복귀 선수의 실제 역할을 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873016",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "New York Giants at Houston Texans",
+        "note": "Dell의 복귀 물량과 Adebo가 돌아온 Giants의 커버리지 조합을 함께 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873017",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "San Francisco 49ers at Atlanta Falcons",
+        "note": "Kirk의 Questionable은 해제됐다. 실제 표적 배분과 Atlanta의 Terrell 복귀 뒤 매치업을 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873018",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "경기 예정",
+        "matchup": "Tampa Bay Buccaneers at Carolina Panthers",
+        "note": "Mayfield의 최종 액티브 명단과 경기 초반 공 교환·패스 보호를 확인하자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873019",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "05:05",
+        "status": "경기 예정",
+        "matchup": "Denver Broncos at Arizona Cardinals",
+        "note": "최종 액티브 명단과 첫 드라이브의 선발 조합을 확인하고, 복귀 선수의 실제 역할을 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873020",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "05:25",
+        "status": "경기 예정",
+        "matchup": "Green Bay Packers at Detroit Lions",
+        "note": "Jacobs의 터치 배분과 Branch·Mays 복귀가 양쪽 경기 운영에 주는 영향을 확인하자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873021",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "05:25",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Rams at Las Vegas Raiders",
+        "note": "최종 액티브 명단과 첫 드라이브의 선발 조합을 확인하고, 복귀 선수의 실제 역할을 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873022",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "09:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Seattle Seahawks",
+        "note": "Sneed의 최종 명단과 McDonald 복귀, Watson 승격 뒤 역할 분담을 확인하자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      },
+      {
+        "gameId": "401873009",
+        "gameDate": "2026-10-27",
+        "date": "10/27",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Dallas Cowboys at Philadelphia Eagles",
+        "note": "Barkley는 FP지만 Questionable이다. Smith·Wicks의 공백과 Goedert의 활용을 함께 보자.",
+        "source": {
+          "label": "NFL Week 7 공식 일정",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 7 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+          },
+          {
+            "label": "ESPN · Week 7 일정·스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+          }
+        ],
+        "checkedAt": "2026-10-25T18:03:36+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-25"
+      }
+    ]
+  },
+  {
     "date": "2026-10-24",
     "weekday": "토요일",
     "edition": "2026 WEEK 7 · 주말 전력 검증판",
