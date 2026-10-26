@@ -1,5 +1,755 @@
 export const briefings = [
   {
+    "date": "2026-10-26",
+    "weekday": "월요일",
+    "edition": "2026 WEEK 7 · 무패 구도가 바뀐 월요일",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 7,
+    "dek": "49ers와 Chiefs가 첫 패배를 당하고 Vikings만 무패로 남았다. 일요일 전 경기 결과와 기록, 트레이드 보도, 리그 공동 검토를 정리하고 화요일 Cowboys–Eagles전 및 서머타임 종료 뒤 일정을 함께 확인한다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 무패 경쟁 변화",
+      "title": "49ers·Chiefs 첫 패배…마지막 무패는 6승 Vikings",
+      "summary": "Minnesota가 수비로 6연승을 지켰고 Atlanta와 Seattle은 각각 49ers·Chiefs의 무패 행진을 끝냈다. Bengals의 후반 35점 반격, Giants의 연장 승리와 베테랑들의 기록도 함께 살핀다."
+    },
+    "sections": [
+      {
+        "id": "2026-week7-chiefs-seahawks-result",
+        "eventKey": "2026-week7-chiefs-seahawks-result",
+        "team": "Chiefs",
+        "label": "경기 결과 · 10월 25일",
+        "title": "Chiefs 첫 패배, Seattle에 3-20…총 213야드로 묶였다",
+        "takeaway": "러닝을 막힌 뒤 패스로 회복하지 못했다. 한 경기의 부진을 시즌 전체 붕괴로 일반화하지는 말자.",
+        "sources": [
+          {
+            "label": "Seahawks' Mike Macdonald Tips Cap To ‘Warriors’ On Defense After Dominant Win Over Chiefs",
+            "url": "https://www.seahawks.com/news/seahawks-mike-macdonald-tips-cap-to-warriors-on-defense-after-dominant-win-over-chiefs"
+          },
+          {
+            "label": "Seahawks Show ‘We’re Still A Championship-Caliber Team’ In Week 7 Win Over Chiefs",
+            "url": "https://www.seahawks.com/news/seahawks-show-we-re-still-a-championship-caliber-team-in-week-7-win-over-chiefs"
+          },
+          {
+            "label": "2026 NFL season, Week 7: What We Learned from Sunday's games",
+            "url": "https://fantasy-www.nfl.com/news/2026-nfl-season-week-7-what-we-learned-from-sunday-s-games"
+          }
+        ],
+        "summary": "Chiefs가 Seattle 원정에서 3-20으로 패해 5승 1패가 됐다. Seattle은 4승 3패다. Kansas City는 총 213야드와 퍼스트다운 11개에 그쳤고 레드존에 한 번도 진입하지 못했다. Walker는 14회 러싱 36야드, Mahomes는 33회 시도에서 165패싱야드를 기록했다. 상대 Smith-Njigba는 9리셉션 150야드·1TD로 공격을 이끌었다.",
+        "commentary": "Seattle 구단 분석은 첫 태클 뒤에도 여러 수비수가 합류한 런 수비를 핵심으로 꼽았다. 색 숫자만 세면 압박 효과를 놓친다. Emmanwori의 압박과 접촉은 Okada의 인터셉션으로 이어졌다. 공격의 전진 실패와 Butker의 필드골 실패는 별개로 점검할 문제다.",
+        "watch": "다음 Denver전에서 러닝의 첫 접촉 이후 전진과 압박 뒤 짧은 패스 연결을 따로 확인하자."
+      },
+      {
+        "id": "2026-week7-49ers-falcons-result",
+        "eventKey": "2026-week7-49ers-falcons-result",
+        "team": "49ers",
+        "label": "경기 결과 · 10월 25일",
+        "title": "49ers도 첫 패배…네 차례 턴오버에 Atlanta전 20-29",
+        "takeaway": "많이 전진한 것과 득점을 완성한 것은 달랐다. 공을 지키지 못한 공격이 무패 행진을 끝냈다.",
+        "sources": [
+          {
+            "label": "49ers Move to 6-1 Following Week 7 Matchup vs. Falcons; Takeaways from #SFvsATL",
+            "url": "https://www.49ers.com/news/49ers-move-to-6-1-following-week-7-matchup-vs-falcons-takeaways-from-sfvsatl"
+          },
+          {
+            "label": "2026 NFL season, Week 7: What We Learned from Sunday's games",
+            "url": "https://fantasy-www.nfl.com/news/2026-nfl-season-week-7-what-we-learned-from-sunday-s-games"
+          }
+        ],
+        "summary": "49ers는 Falcons에 20-29로 패해 6승 1패가 됐다. 초반 14-3 리드를 잡았지만 네 차례 턴오버가 흐름을 바꿨다. McCaffrey는 경기 중 이탈했다가 후반 복귀해 러싱 39야드와 리시빙 61야드를 기록했다. 6경기 연속 러싱 TD는 구단 러닝백 최장 연속 기록과 동률이다.",
+        "commentary": "총야드만으로 경기의 우열을 결론 내리면 안 된다. San Francisco는 400야드로 Atlanta의 295야드보다 많이 전진했지만 공격권을 잃었다. 4쿼터 Juszczyk의 TD로 추격했어도 마지막 반격을 완성하지 못했다. McCaffrey의 당일 복귀를 부상 완치로 해석하지 않는다.",
+        "watch": "Week 8 휴식기에 볼 것은 공 보유 안정성과 부상자의 회복이다. 다음 경기는 현지 11월 8일 Raiders전이다."
+      },
+      {
+        "id": "2026-week7-kelce-receptions-fifth",
+        "eventKey": "2026-week7-kelce-receptions-fifth",
+        "team": "Chiefs",
+        "label": "기록 · National Tight Ends Day",
+        "title": "National Tight Ends Day의 이정표…Kelce 통산 리셉션 역대 5위",
+        "takeaway": "통산 순위 상승은 확인된 기록이다. 경기 중 1,103개와 최종 1,104개를 혼동하지 말자.",
+        "sources": [
+          {
+            "label": "Travis Kelce moves to No. 5 all-time in receptions, passes Marvin Harrison, Cris Carter - NBC Sports",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-moves-to-no-5-all-time-in-receptions-passes-marvin-harrison-cris-carter"
+          },
+          {
+            "label": "2026 NFL season, Week 7: What We Learned from Sunday's games",
+            "url": "https://fantasy-www.nfl.com/news/2026-nfl-season-week-7-what-we-learned-from-sunday-s-games"
+          }
+        ],
+        "summary": "Kelce는 Seahawks전에서 리셉션 4개·44야드를 기록했다. 경기 중 통산 1,103번째 캐치로 Marvin Harrison을 넘어 역대 5위에 올랐고 경기 종료 시 누적은 1,104개였다. NBC/PFT의 경기 중 집계와 NFL의 종료 후 집계는 서로 다른 시점의 숫자다.",
+        "commentary": "National Tight Ends Day에 나온 장기 누적 성과다. 통산 리셉션은 오래 쌓은 생산량을 뜻하며 이번 경기의 공격 효율이나 승리 여부와 같은 지표는 아니다. 팀 패배 속에서도 기록의 의미는 따로 남는다.",
+        "watch": "다음 경기에는 기록 순위보다 3다운에서 Kelce에게 연결되는 패스의 성공 여부를 함께 보자."
+      },
+      {
+        "id": "2026-week6-warner-two-fines",
+        "eventKey": "2026-week6-warner-two-fines",
+        "team": "49ers",
+        "label": "징계 · 10월 24일 공개",
+        "title": "Warner 두 차례 접촉에 벌금…현장 판정과 사후 징계는 별개",
+        "takeaway": "경기 중 페널티 판정과 사후 안전 규정 집행은 다르다. 벌금을 출전정지로 바꾸어 읽지 않는다.",
+        "sources": [
+          {
+            "label": "NFL Football Operations | NFL Football Operations",
+            "url": "https://operations.nfl.com/rules-officiating/enforcement/accountability"
+          },
+          {
+            "label": "NFL Fines Fred Warner $65,673 for Hits Officials Let Go Against Commanders - Yahoo Sports",
+            "url": "https://sports.yahoo.com/articles/nfl-fines-fred-warner-65-234123538.html"
+          }
+        ],
+        "summary": "NFL의 Week 6 벌금 공개 목록은 Fred Warner에게 헬멧 사용 47,762달러와 무방비 선수 접촉 17,911달러의 벌금을 기재했다. Washington전 Chig Okonkwo를 상대한 두 장면에 관한 조치이며, 10월 25일 SI의 Yahoo 재전재 기사도 이를 보도했다.",
+        "commentary": "현장에서 깃발이 유지되지 않아도 사후 검토 결과 벌금이 나올 수 있다. 다만 이것이 경기 점수 변경이나 출전정지 발표를 뜻하지는 않는다. 공개된 두 처분을 넘어서 항소 결과를 추정하지 않는다.",
+        "watch": "후속 항소·처분 변경이 실제 발표되는지 확인하고, 확정되지 않은 출장 정지 가능성을 붙이지 않는다."
+      }
+    ],
+    "leagueWide": [
+      {
+        "id": "2026-week7-vikings-colts-result",
+        "eventKey": "2026-week7-vikings-colts-result",
+        "team": "Vikings",
+        "label": "경기 결과 · 10월 25일",
+        "title": "마지막 무패는 Vikings…16-10 승리와 Smith의 통산 40번째 INT",
+        "takeaway": "무패의 기반은 수비다. Smith의 마지막 공 가로채기와 Cashman의 압박·패스 저지를 함께 봐야 한다.",
+        "sources": [
+          {
+            "label": "Mailbag: 6-0 Vikings are NFL’s Last Unbeaten; Harrison Smith Adds to Hall of Fame Candidacy",
+            "url": "https://www.vikings.com/news/2026-undefeated-team-harrison-smith-hall-of-fame-candidacy-mailbag"
+          },
+          {
+            "label": "Vikings vs. Colts Game Observations: Another 4th Quarter Lockdown",
+            "url": "https://www.vikings.com/news/colts-week-7-game-observations-4th-quarter-lockdown"
+          },
+          {
+            "label": "Blake Cashman’s Epic Day Continues Chaos-Causing Efforts for Vikings Against Colts",
+            "url": "https://www.vikings.com/news/blake-cashman-epic-day-chaos-causing-efforts-against-colts"
+          }
+        ],
+        "why": "Minnesota가 Colts를 16-10으로 꺾어 6승 무패를 지켰다. 같은 날 49ers와 Chiefs가 첫 패배를 당하면서 리그의 유일한 무패 팀이 됐다. Harrison Smith의 마지막 인터셉션은 통산 40번째였고, Cashman은 12태클·색 2개·패스 저지 4회를 기록했다. 화려한 득점보다 수비가 승리의 여유를 만들어 주는 팀이다. 다음 Detroit 원정에서는 공격이 수비에 기대는 부담을 얼마나 줄이는지 보자.",
+        "url": "https://www.vikings.com/news/2026-undefeated-team-harrison-smith-hall-of-fame-candidacy-mailbag"
+      },
+      {
+        "id": "2026-week7-bengals-ravens-result",
+        "eventKey": "2026-week7-bengals-ravens-result",
+        "team": "Bengals",
+        "label": "경기 결과 · 10월 25일",
+        "title": "전반 0-13에서 후반 35-0…Burrow 4TD로 지구 경쟁 재점화",
+        "takeaway": "Burrow의 후반 폭발만큼 상대를 무득점으로 묶은 수비가 중요했다.",
+        "sources": [
+          {
+            "label": "Bengals-Ravens Final Score and Game Recap",
+            "url": "https://www.bengals.com/news/bengals-ravens-recap-postgame-notes-quotes-stats-week-7-2026"
+          }
+        ],
+        "why": "Cincinnati는 Baltimore를 35-13으로 꺾었다. Burrow는 전체 30회 중 22회 성공, 292야드·4TD였으며 후반에만 18회 중 16회 성공과 249야드를 기록했다. Bengals 수비도 후반 무실점과 경기 전체 색 4개를 만들었다. 같은 경기 안에서 전후반 성과가 극단적으로 달랐다. 쿼터백의 반등과 수비의 연속 저지를 함께 봐야 한다. 다음 Titans전에서도 초반부터 패스 리듬을 유지하는지가 관전 포인트다.",
+        "url": "https://www.bengals.com/news/bengals-ravens-recap-postgame-notes-quotes-stats-week-7-2026"
+      },
+      {
+        "id": "2026-week7-giants-texans-result",
+        "eventKey": "2026-week7-giants-texans-result",
+        "team": "Giants",
+        "label": "경기 결과 · 10월 25일",
+        "title": "McCarthy 첫 선발 승리…Skattebo·Singletary가 연장 27-21 완성",
+        "takeaway": "새 선발 QB와 러닝 지원이 함께 만든 승리다. 한 번의 선발 표본으로 장기 해답을 단정할 수 없다.",
+        "sources": [
+          {
+            "label": "Instant Analysis: Giants enter bye week with 27-21 OT win over Texans",
+            "url": "https://www.giants.com/news/instant-analysis-giants-enter-bye-week-with-27-21-ot-win-over-texans"
+          }
+        ],
+        "why": "Giants는 Texans를 연장 27-21로 꺾어 4승 2패 1무로 휴식기에 들어간다. McCarthy의 뉴욕 첫 선발 경기에서 Skattebo가 러싱 124야드를 기록했고, 연장에는 그의 42야드 전진 직후 Singletary가 30야드 결승 TD를 만들었다. 선발 교체의 성공을 QB 한 명의 결과로만 설명하지 말자. 러닝백 두 명의 연속 장거리 전진과 연장 첫 수비의 펀트 유도가 함께 승리를 만들었다. 다음으로 공격 조합의 지속성과 러닝백 몸 상태를 확인한다.",
+        "url": "https://www.giants.com/news/instant-analysis-giants-enter-bye-week-with-27-21-ot-win-over-texans"
+      },
+      {
+        "id": "2026-week7-lions-packers-result",
+        "eventKey": "2026-week7-lions-packers-result",
+        "team": "Lions",
+        "label": "경기 결과 · 10월 25일",
+        "title": "Bates의 종료 순간 킥…Lions가 Packers에 20-17 승리",
+        "takeaway": "다음 주 Vikings전은 두 팀의 패스 공격과 압박 대응을 비교할 좋은 시험대다.",
+        "sources": [
+          {
+            "label": "WEEK 7 RECAP: Green Bay Packers vs. Detroit Lions, Sunday October 25",
+            "url": "https://www.detroitlions.com/news/recap-lions-vs-packers-goff-williams-stbrown-branch"
+          },
+          {
+            "label": "Mailbag: 6-0 Vikings are NFL’s Last Unbeaten; Harrison Smith Adds to Hall of Fame Candidacy",
+            "url": "https://www.vikings.com/news/2026-undefeated-team-harrison-smith-hall-of-fame-candidacy-mailbag"
+          }
+        ],
+        "why": "Detroit가 Jake Bates의 종료 순간 22야드 필드골로 Green Bay를 20-17로 꺾어 4승 2패가 됐다. St. Brown은 9리셉션 153야드, Jameson Williams는 5리셉션 91야드와 TD 2개를 기록했다. 두 리시버의 생산력이 지구 첫 맞대결 승리로 이어졌다. 다음 상대는 무패 Vikings다. 이번 경기의 패스 전진이 더 강한 압박을 만나서도 이어질지, 긴 드라이브를 득점으로 끝낼 수 있을지 보자.",
+        "url": "https://www.detroitlions.com/news/recap-lions-vs-packers-goff-williams-stbrown-branch"
+      },
+      {
+        "id": "2026-week7-steelers-saints-result",
+        "eventKey": "2026-week7-steelers-saints-result",
+        "team": "Steelers",
+        "label": "경기 결과 · 10월 25일",
+        "title": "파리 첫 NFL 정규시즌 승자는 Steelers…16-10, Saints 러싱 18야드",
+        "takeaway": "프랑스 첫 승리의 실질적 기반은 런 수비와 득점권 턴오버였다.",
+        "sources": [
+          {
+            "label": "Steelers beat Saints, 16-10, in Paris",
+            "url": "https://www.steelers.com/news/steelers-beat-saints-16-10-in-paris"
+          },
+          {
+            "label": "Rodgers throws historic TD pass as Steelers win 1st Paris game - ESPN",
+            "url": "https://www.espn.com/nfl/story/_/id/50277960/rodgers-throws-historic-td-pass-steelers-win-1st-paris-game"
+          }
+        ],
+        "why": "Steelers가 프랑스 첫 NFL 경기에서 Saints를 16-10으로 꺾었다. Rodgers는 TD 패스 한 개를 보태 통산 540개로 Peyton Manning을 넘어 역대 단독 3위에 올랐다. Payton Wilson은 3쿼터 득점권에서 인터셉션으로 상대의 역전 기회를 끊었다. Pittsburgh는 Saints의 러싱을 18야드로 묶었고 Warren은 18회 러싱 101야드를 기록했다. 국제 경기라는 무대뿐 아니라 공수 라인 경쟁의 차이가 중요했다. 다음 Browns전에서는 이 런 수비와 짧은 거리 공격의 성공이 같은 지구 상대에게도 이어지는지 보자.",
+        "url": "https://www.steelers.com/news/steelers-beat-saints-16-10-in-paris"
+      },
+      {
+        "id": "2026-week7-buccaneers-panthers-result",
+        "eventKey": "2026-week7-buccaneers-panthers-result",
+        "team": "Buccaneers",
+        "label": "경기 결과 · 10월 25일",
+        "title": "Mayfield 복귀전은 러닝이 주인공…Bucs 43-13 완승",
+        "takeaway": "QB 복귀와 공격 의존도는 별개다. 러닝과 수비가 Mayfield의 부담을 낮춘 승리였다.",
+        "sources": [
+          {
+            "label": "Bucs 43, Panthers 13 - Bucs Defeat the Carolina Panthers in Week 7",
+            "url": "https://www.buccaneers.com/news/bucs-win-carolina-panthers-week-7-2026-score-43-13"
+          }
+        ],
+        "why": "Tampa Bay가 Carolina를 43-13으로 꺾었다. 복귀한 Mayfield는 패스를 11번 시도해 7번 성공, 64야드·1TD를 기록했다. Irving은 24회 러싱 106야드·2TD, Diaby는 색 3개를 올렸다. 복귀 QB의 패싱야드가 작다고 공격이 부진했던 경기는 아니다. 러닝과 수비가 경기 부담을 분담했다. 다음 경기에는 점수 차가 작을 때도 이런 균형이 유지되는지, Mayfield가 더 많은 패스 상황을 소화하는지 보자.",
+        "url": "https://www.buccaneers.com/news/bucs-win-carolina-panthers-week-7-2026-score-43-13"
+      },
+      {
+        "id": "2026-week7-browns-titans-result",
+        "eventKey": "2026-week7-browns-titans-result",
+        "team": "Browns",
+        "label": "경기 결과 · 10월 25일",
+        "title": "또 마지막 필드골…Browns 27-24, 5승 2패로 지구 선두 유지",
+        "takeaway": "끝내기 능력은 빛났지만 매번 역전을 요구받는 출발은 별도 개선 과제다.",
+        "sources": [
+          {
+            "label": "Browns 27, Titans 24 | Final Score, Stats & Game Recap",
+            "url": "https://www.clevelandbrowns.com/news/browns-27-titans-24-final-score-stats-game-recap"
+          }
+        ],
+        "why": "Cleveland는 종료 순간 Szmyt의 32야드 필드골로 Tennessee를 27-24로 꺾었다. Watson은 36회 중 25회 성공, 308패싱야드를 기록했고 마지막 동점 허용 뒤 4플레이 55야드로 킥 기회를 만들었다. Fannin의 36야드 리셉션이 결정적이었다. 접전 마무리는 강점이지만 초반 0-14로 뒤진 문제까지 지워주지는 않는다. 다음 Pittsburgh 원정에서 초반 런 수비와 마지막 공격 운영을 함께 보자.",
+        "url": "https://www.clevelandbrowns.com/news/browns-27-titans-24-final-score-stats-game-recap"
+      },
+      {
+        "id": "2026-week7-broncos-cardinals-result",
+        "eventKey": "2026-week7-broncos-cardinals-result",
+        "team": "Broncos",
+        "label": "경기 결과 · 10월 25일",
+        "title": "Nix 62야드 러싱 TD·Harvey 52야드 TD…Denver 30-16",
+        "takeaway": "폭발적 플레이 두 개와 레드존 수비가 결합했다. 이제 Chiefs와의 맞대결이 기다린다.",
+        "sources": [
+          {
+            "label": "Cover 4: Broncos deliver slew of explosive plays to secure 30-16 win over the Arizona Cardinals",
+            "url": "https://www.denverbroncos.com/news/cover-4-broncos-deliver-slew-of-explosive-plays-to-secure-30-16-win-over-the-arizona-cardinals"
+          }
+        ],
+        "why": "Denver는 Arizona를 30-16으로 꺾고 3연승했다. Nix의 62야드 러싱 TD와 Harvey의 52야드 스크린 패스 TD가 긴 전진을 만들었다. 수비는 Arizona의 레드존 기회 다섯 번 가운데 TD를 한 번만 허용했다. 쿼터백의 직접 전진, 캐치 뒤 달리기, 득점권 수비가 서로 다른 경로로 승리를 도왔다. 다음 Chiefs전에서도 장거리 플레이가 나오지 않는 공격권을 어떻게 이어갈지 확인하자.",
+        "url": "https://www.denverbroncos.com/news/cover-4-broncos-deliver-slew-of-explosive-plays-to-secure-30-16-win-over-the-arizona-cardinals"
+      },
+      {
+        "id": "2026-week7-rams-raiders-result",
+        "eventKey": "2026-week7-rams-raiders-result",
+        "team": "Rams",
+        "label": "경기 결과 · 10월 25일",
+        "title": "Rams 35-21 반등…Stafford, 구단 통산 패싱 TD 155개로 새 선두",
+        "takeaway": "Stafford의 구단 기록 경신과 승리를 함께 확인하되 후반 추격 허용도 기억하자.",
+        "sources": [
+          {
+            "label": "Matthew Stafford becomes Rams' franchise leader in passing touchdowns",
+            "url": "https://www.therams.com/news/matthew-stafford-becomes-passing-touchdown-leader-in-rams-franchise-history-2026"
+          },
+          {
+            "label": "Game Recap: Rams defeat Raiders 35-21 in Las Vegas",
+            "url": "https://www.therams.com/news/game-recap-rams-defeat-raiders-35-21-in-las-vegas"
+          }
+        ],
+        "why": "Rams가 Raiders를 35-21로 꺾었다. Stafford는 TD 패스 3개를 보태 Rams 소속 통산 155개를 기록, Roman Gabriel의 154개를 넘어섰다. 전반 28-6 리드 이후 추격을 허용했지만 Corum의 후반 TD로 간격을 다시 확보했다. 역사적 기록과 경기 운영 평가는 분리하자. 기록 달성은 분명한 성과지만 큰 리드를 안정적으로 끝내는 문제는 남는다. 다음에는 러닝 지원과 후반 공격권 관리가 함께 이어지는지 보자.",
+        "url": "https://www.therams.com/news/matthew-stafford-becomes-passing-touchdown-leader-in-rams-franchise-history-2026"
+      },
+      {
+        "id": "2026-week7-dolphins-jets-result",
+        "eventKey": "2026-week7-dolphins-jets-result",
+        "team": "Dolphins",
+        "label": "경기 결과 · 10월 25일",
+        "title": "Dolphins 첫 승 28-25…다음 상대 Patriots가 볼 두 가지",
+        "takeaway": "Patriots의 다음 상대가 첫 승으로 분위기를 바꿨다. QB 이동과 첫 태클이 핵심 관전 과제다.",
+        "sources": [
+          {
+            "label": "Game Recap: Dolphins Secure 28-25 Victory Over Jets in Divisional Matchup",
+            "url": "https://www.miamidolphins.com/news/game-recap-dolphins-secure-28-25-victory-over-jets-in-divisional-matchup"
+          }
+        ],
+        "why": "Miami가 Jets를 28-25로 꺾어 Jeff Hafley 감독의 첫 NFL 감독 승리를 만들었다. Willis는 패스 21회 중 14회 성공, 208야드·2TD에 러싱 TD를 더했다. Douglas의 두 리셉션은 모두 TD였고 마지막 4다운 1야드 QB 키퍼로 공격권을 지켰다. 다음 상대 Patriots는 Willis의 이동과 짧은 패스 뒤 전진을 함께 막아야 한다. 한 경기 첫 승을 시즌 전체 공격 안정성으로 확대하지 않고, 첫 태클과 짧은 거리 수비를 관찰하자.",
+        "url": "https://www.miamidolphins.com/news/game-recap-dolphins-secure-28-25-victory-over-jets-in-divisional-matchup"
+      },
+      {
+        "id": "2026-10-20-nflpa-hurts-medical-care-investigation",
+        "eventKey": "2026-10-20-nflpa-hurts-medical-care-investigation",
+        "team": "NFL",
+        "label": "리그 운영 · 새 변화",
+        "title": "Hurts 진료 논란, 조사 요구에서 NFL·NFLPA 공동 검토로",
+        "takeaway": "공동 검토 시작과 책임 확정은 다르다. 결과가 나오기 전 진료 적절성을 단정하지 않는다.",
+        "sources": [
+          {
+            "label": "NFL, players' union working together to review handling of Jalen Hurts' blood clot diagnosis | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/nfl-players-union-working-together-review-handling-jalen-hurts-blood-clot-diagnosis"
+          }
+        ],
+        "why": "NFL과 NFLPA는 10월 25일 공동 성명을 통해 Hurts의 혈전 진단 대응을 함께 검토하고 있다고 밝혔다. 앞서 선수노조가 조사를 요구하고 Goodell이 환영 입장을 밝힌 단계에서 양측의 공동 검토로 진행된 것이다. 이는 의료 과실이나 규정 위반이 확인됐다는 뜻이 아니다. 다음 관찰점은 검토의 결론과 절차 개선 발표이며, 선수의 복귀 일정은 별도 공식 발표로 확인해야 한다.",
+        "url": "https://www.nfl.com/news/nfl-players-union-working-together-review-handling-jalen-hurts-blood-clot-diagnosis",
+        "changeSummary": "조사 요구에 대한 환영 입장 이후 양측 공동 성명과 실제 공동 검토가 확인됐다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/nfl-players-union-working-together-review-handling-jalen-hurts-blood-clot-diagnosis",
+          "before": "조사를 환영한다고 밝혔다",
+          "after": "함께 검토하고 있다고 밝혔다",
+          "quote": "양측은 일요일 공동 성명을 통해 함께 검토하고 있다고 밝혔다",
+          "originalQuote": "released a joint statement Sunday saying they are looking into it after the NFLPA called for an investigation earlier in the week.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-22-colts-taylor-trade-interest",
+        "eventKey": "2026-10-22-colts-taylor-trade-interest",
+        "team": "Colts",
+        "label": "트레이드 · 취재 보도",
+        "title": "Colts 트레이드 관심은 확대…매각 결정·Taylor 이적 확정은 아니다",
+        "takeaway": "시장 관심은 넓어졌지만 Colts의 매각 확정이나 합의된 이적은 아직 확인되지 않았다.",
+        "sources": [
+          {
+            "label": "Sources - Decisions loom for Colts before NFL trade deadline - ESPN",
+            "url": "https://www.espn.com/nfl/story/_/id/50272352/sources-decisions-loom-colts-nfl-trade-deadline"
+          }
+        ],
+        "why": "ESPN의 10월 25일 취재 보도는 여러 팀이 Taylor·Nelson·Buckner·Stewart 영입 시나리오를 검토하고 있다고 전했다. Colts가 이들을 모두 내보내기로 결정했다는 보도는 아니다. 구단은 11월 10일 마감 전 경기 결과를 보고 방향을 정할 계획이라고 소식통들이 설명했다. 같은 날 Vikings전 패배는 결정의 배경이지만 매각 확정을 뜻하지 않는다. 실제 제안과 구단 결정을 구분해 추적하자.",
+        "url": "https://www.espn.com/nfl/story/_/id/50272352/sources-decisions-loom-colts-nfl-trade-deadline",
+        "changeSummary": "Taylor 단독 관심 보도 뒤 다른 핵심 자원에 대한 관심과 조건부 의사결정 방향이 추가 보도됐다.",
+        "changeEvidence": {
+          "url": "https://www.espn.com/nfl/story/_/id/50272352/sources-decisions-loom-colts-nfl-trade-deadline",
+          "before": "여러 팀이 Jonathan Taylor 트레이드에 관심이 있다고 보도했다",
+          "after": "여러 팀이 Taylor·Nelson·Buckner·Stewart 영입 시나리오를 검토하고 있다고 전했다",
+          "quote": "여러 팀이 Taylor·Nelson·Buckner·Stewart 영입 시나리오를 검토하고 있다고 전했다",
+          "originalQuote": "a Colts roster that includes running back Jonathan Taylor, guard Quenton Nelson, and defensive tackles DeForest Buckner and Grover Stewart",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-week7-oct25-game-injuries",
+        "eventKey": "2026-week7-oct25-game-injuries",
+        "team": "Panthers / Giants / Seahawks",
+        "label": "경기 후 부상",
+        "title": "Moton 비골 골절·Skattebo 햄스트링 호소…경기 후 상태를 구분하자",
+        "takeaway": "확정 진단, 선수의 증상 설명, 당일 경기 이탈은 서로 다른 정보다.",
+        "sources": [
+          {
+            "label": "Notable injuries, news from Sunday's Week 7 games: Giants' Tyrone Tracy Jr. injures  hamstring | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-7-games-2026"
+          }
+        ],
+        "why": "NFL의 일요일 부상 종합에서 Carolina의 Taylor Moton은 비골 골절로 한동안 빠질 전망이라고 Canales 감독이 밝혔다. Giants의 Tracy는 햄스트링으로 복귀하지 못했고 Skattebo도 연장 42야드 전진 때 햄스트링에 이상을 느꼈다고 말했다. Seattle의 Shaheed는 무릎 문제로 경기에서 제외됐다. 진단이 확인된 Moton과 선수의 증상 설명·경기 중 OUT을 같은 장기 결장 확정으로 묶어서는 안 된다. 다음 검사와 구단 발표를 기다리자.",
+        "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-7-games-2026"
+      }
+    ],
+    "tactics": [
+      {
+        "id": "cashman-loop-pressure-20261025",
+        "team": "NFL",
+        "label": "상황 전술 · 압박 경로 바꾸기",
+        "title": "처음 달린 곳과 뚫은 곳이 다르다: Cashman의 루프 압박",
+        "concept": "블리츠는 단순히 사람을 더 보내는 것만이 아니다. 러셔가 교차하거나 돌아 들어가면 보호 라인은 담당을 서로 넘겨야 한다.",
+        "easy": "문 앞에 사람이 보인다고 그 문으로만 들어오는 것은 아니다. 옆 문으로 돌아갈 때 누가 따라갈지 정하지 못하면 틈이 난다.",
+        "gameUse": "Vikings 구단 분석에 따르면 전반 종료 19초 전, Minnesota 14야드 지점의 2다운 골 상황에서 Cashman은 처음 오른쪽 태클을 향했다가 반대쪽으로 돌아 왼쪽 태클과 가드 사이를 통과해 Jones를 쓰러뜨렸다.",
+        "whyItWorks": "전술적 해석: 최초 접근 방향은 블로커의 시선과 몸 방향을 끌고, 뒤늦게 바뀌는 진입 경로는 선수 간 인계를 요구한다. 상대가 늦으면 쿼터백이 던질 시간이 줄어든다. 이것은 작동 원리의 설명이며 콜 이름과 모든 수비 배정을 확인한 것은 아니다.",
+        "defenseCounter": "공격은 돌아오는 러셔를 말과 시선으로 인계하고 필요하면 러닝백 보호나 빠른 패스로 대응한다. 수비는 압박 뒤 비는 공간을 감수하므로 첫 태클과 커버리지 책임을 남겨야 한다.",
+        "breakdown": [
+          {
+            "label": "1 · 골라인보다 먼저 다운과 시간을 본다",
+            "text": "전반 종료 19초 전 2다운 골이다. 터치다운을 노리는 공격에 큰 손실을 안기면 다음 선택이 더 제한된다. 다운은 남은 공격 기회다. 시간이 짧아지면 큰 손실 한 번이 터치다운 시도를 필드골 선택으로 바꿀 수 있다."
+          },
+          {
+            "label": "2 · 처음 접근한 쪽과 실제 통과한 틈을 나눈다",
+            "text": "구단 분석은 Cashman이 오른쪽 태클을 향한 뒤 반대쪽 왼쪽 태클·가드 사이로 돌아왔다고 설명한다. 핵심은 속도만이 아니라 보호 인계다. 옆 문으로 돌아 들어오는 사람처럼, 첫 방향으로 블로커의 시선을 끈 뒤 다른 틈을 노리는 원리다."
+          },
+          {
+            "label": "3 · 색 이후의 공격 선택까지 연결한다",
+            "text": "이 색 뒤 Colts는 전반을 필드골로 마쳤다. 압박은 쿼터백을 쓰러뜨리는 숫자뿐 아니라 득점권 선택을 바꾼 결과로 읽는다."
+          },
+          {
+            "label": "4 · 공격의 해답도 함께 생각한다",
+            "text": "보호선이 루프를 미리 인계하거나 빠른 패스로 공을 내보내면 수비도 뒤 공간을 지켜야 한다. 무조건 압박 인원을 늘리는 것이 정답은 아니다. 러닝백을 보호에 남기는 방법도 있지만 패스로 나갈 선수가 줄어든다. 수비 역시 압박 뒤 공간을 지킬 책임을 남겨야 한다."
+          }
+        ],
+        "watchOrder": [
+          "스냅 전 2다운 골과 남은 시간을 본다.",
+          "Cashman의 첫 접근 방향과 최종 진입 틈을 비교한다.",
+          "공격 라인이 돌아오는 러셔를 인계하는지 본다."
+        ],
+        "source": {
+          "label": "Blake Cashman’s Epic Day Continues Chaos-Causing Efforts for Vikings Against Colts",
+          "url": "https://www.vikings.com/news/blake-cashman-epic-day-chaos-causing-efforts-against-colts"
+        },
+        "video": {
+          "title": "Colts–Vikings 전체 경기 하이라이트",
+          "type": "NFL 공식 YouTube · 전체 경기",
+          "url": "https://www.youtube.com/watch?v=4PyjDuD7-4I"
+        },
+        "diagram": {
+          "kind": "loop-stunt",
+          "caption": "압박 경로 변경과 보호 인계를 설명하는 개념도다. 실제 모든 선수의 정렬·수비 배치를 재현하지 않는다."
+        },
+        "narrativeMode": "integrated"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Indianapolis Colts vs. Minnesota Vikings Game Highlights | NFL 2026 Season Week 7",
+        "channel": "NFL 공식 YouTube",
+        "type": "전체 경기 하이라이트",
+        "note": "2026 Week 7 전체 경기 하이라이트다. 경기 흐름을 확인하는 영상이며 특정 플레이의 시작 시점을 지정한 링크가 아니다.",
+        "url": "https://www.youtube.com/watch?v=4PyjDuD7-4I"
+      },
+      {
+        "title": "Kansas City Chiefs vs. Seattle Seahawks Game Highlights | NFL 2026 Season Week 7",
+        "channel": "NFL 공식 YouTube",
+        "type": "전체 경기 하이라이트",
+        "note": "2026 Week 7 전체 경기 하이라이트다. 경기 흐름을 확인하는 영상이며 특정 플레이의 시작 시점을 지정한 링크가 아니다.",
+        "url": "https://www.youtube.com/watch?v=dIfN83Krivs"
+      },
+      {
+        "title": "Cincinnati Bengals vs. Baltimore Ravens Game Highlights | 2026 NFL Season Week 7",
+        "channel": "NFL 공식 YouTube",
+        "type": "전체 경기 하이라이트",
+        "note": "2026 Week 7 전체 경기 하이라이트다. 경기 흐름을 확인하는 영상이며 특정 플레이의 시작 시점을 지정한 링크가 아니다.",
+        "url": "https://www.youtube.com/watch?v=LJRRMbR4BrE"
+      },
+      {
+        "title": "San Francisco 49ers vs Atlanta Falcons Game Highlights | 2026 NFL Season Week 7",
+        "channel": "NFL 공식 YouTube",
+        "type": "전체 경기 하이라이트",
+        "note": "2026 Week 7 전체 경기 하이라이트다. 경기 흐름을 확인하는 영상이며 특정 플레이의 시작 시점을 지정한 링크가 아니다.",
+        "url": "https://www.youtube.com/watch?v=6PDASNSZQFI"
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873010",
+        "gameDate": "2026-10-23",
+        "date": "10/23",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "종료",
+        "matchup": "New England Patriots at Chicago Bears",
+        "note": "Chicago Bears 30 · New England Patriots 24로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873011",
+        "gameDate": "2026-10-25",
+        "date": "10/25",
+        "weekday": "일",
+        "time": "22:30",
+        "status": "종료",
+        "matchup": "Pittsburgh Steelers at New Orleans Saints",
+        "note": "New Orleans Saints 10 · Pittsburgh Steelers 16로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873017",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "종료",
+        "matchup": "San Francisco 49ers at Atlanta Falcons",
+        "note": "Atlanta Falcons 29 · San Francisco 49ers 20로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873013",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "종료",
+        "matchup": "Cleveland Browns at Tennessee Titans",
+        "note": "Tennessee Titans 24 · Cleveland Browns 27로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873014",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "종료",
+        "matchup": "Indianapolis Colts at Minnesota Vikings",
+        "note": "Minnesota Vikings 16 · Indianapolis Colts 10로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873015",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "종료",
+        "matchup": "Miami Dolphins at New York Jets",
+        "note": "New York Jets 25 · Miami Dolphins 28로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873018",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "종료",
+        "matchup": "Tampa Bay Buccaneers at Carolina Panthers",
+        "note": "Carolina Panthers 13 · Tampa Bay Buccaneers 43로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873012",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "종료",
+        "matchup": "Cincinnati Bengals at Baltimore Ravens",
+        "note": "Baltimore Ravens 13 · Cincinnati Bengals 35로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873016",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "02:00",
+        "status": "종료",
+        "matchup": "New York Giants at Houston Texans",
+        "note": "Houston Texans 21 · New York Giants 27로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873019",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "05:05",
+        "status": "종료",
+        "matchup": "Denver Broncos at Arizona Cardinals",
+        "note": "Arizona Cardinals 16 · Denver Broncos 30로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873020",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "05:25",
+        "status": "종료",
+        "matchup": "Green Bay Packers at Detroit Lions",
+        "note": "Detroit Lions 20 · Green Bay Packers 17로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873021",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "05:25",
+        "status": "종료",
+        "matchup": "Los Angeles Rams at Las Vegas Raiders",
+        "note": "Las Vegas Raiders 21 · Los Angeles Rams 35로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873022",
+        "gameDate": "2026-10-26",
+        "date": "10/26",
+        "weekday": "월",
+        "time": "09:20",
+        "status": "종료",
+        "matchup": "Kansas City Chiefs at Seattle Seahawks",
+        "note": "Seattle Seahawks 20 · Kansas City Chiefs 3로 종료됐다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873009",
+        "gameDate": "2026-10-27",
+        "date": "10/27",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Dallas Cowboys at Philadelphia Eagles",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-26T18:02:52.945+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873030",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Minnesota Vikings at Detroit Lions",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료가 반영된 한국시간이다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-26T18:08:50.256+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873027",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Cleveland Browns at Pittsburgh Steelers",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료가 반영된 한국시간이다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-26T18:08:50.256+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873033",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Denver Broncos",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료가 반영된 한국시간이다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-26T18:08:50.256+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      },
+      {
+        "gameId": "401873034",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Miami Dolphins",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료가 반영된 한국시간이다.",
+        "source": {
+          "label": "ESPN 공식 일정·스코어보드",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-26T18:08:50.256+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-26"
+      }
+    ],
+    "topStoryKeys": [
+      "2026-week7-vikings-colts-result",
+      "2026-week7-chiefs-seahawks-result",
+      "2026-week7-49ers-falcons-result",
+      "2026-week7-bengals-ravens-result",
+      "2026-10-20-nflpa-hurts-medical-care-investigation"
+    ]
+  },
+  {
     "date": "2026-10-25",
     "weekday": "일요일",
     "edition": "2026 WEEK 7 · 일요일 킥오프 전 브리핑",

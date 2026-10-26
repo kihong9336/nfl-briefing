@@ -154,7 +154,29 @@ function doubleDig(item) {
   </svg>`;
 }
 
+function loopStunt(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="loop-title loop-desc">
+    <title id="loop-title">${escapeXml(item.title)}</title>
+    <desc id="loop-desc">개념도: Cashman이 오른쪽 태클로 접근한 뒤 반대쪽 LT와 LG 사이로 돌아오는 압박 경로. 실제 전체 정렬 재현이 아니다.</desc>
+    <defs><marker id="loop-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#ff5b68" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="field-label" x="24" y="30">루프 압박 개념도 · 공격 방향 ↑</text>
+    <text class="mini-label" x="24" y="65">① RT 접근 → ② 반대편 틈 → ③ QB 압박</text>
+    <path class="line-scrimmage" d="M30 245H690"/>
+    <rect data-zone="protection-handoff" x="249" y="228" width="42" height="72" rx="12" fill="#78c8ff" fill-opacity="0.18" stroke="#78c8ff" stroke-dasharray="5 4"/>
+    <path data-action="initial-approach" class="pressure-path" d="M510 130 L510 215" stroke-dasharray="6 6" marker-end="url(#loop-arrow)"/>
+    <path data-action="loop-pressure" class="pressure-path" d="M510 175 C460 125 270 125 270 215 L270 285 Q285 340 334 350" marker-end="url(#loop-arrow)"/>
+    ${player(240,270,'LT')}${player(300,270,'LG')}${player(370,270,'C')}${player(440,270,'RG')}${player(510,270,'RT')}${player(360,355,'QB')}${player(510,105,'LB','defense')}
+    <text class="mini-label" x="545" y="110">Cashman</text>
+    <text class="mini-label" x="45" y="185">② 돌아오는 경로</text>
+    <text class="mini-label" x="35" y="325">LT–LG 보호 인계</text>
+    <text class="mini-label" x="420" y="355">③ 던질 시간 축소</text>
+    <text class="mini-label" x="24" y="410">점선: 첫 접근 · 곡선: 실제 진입 방향 · 배치·거리 비례 아님</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'loop-stunt') return loopStunt(item);
   if (item?.diagram?.kind === 'double-dig-vs-tampa2') return doubleDig(item);
   if (item?.diagram?.kind === 'catch-and-run') return catchAndRun(item);
   if (item?.diagram?.kind === 'fourth-down-db-blitz') return fourthDownDbBlitz(item);
