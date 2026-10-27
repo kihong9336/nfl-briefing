@@ -12,6 +12,9 @@
 6. `git add -- src/data.js editions/` 후 `content: publish NFL briefing <date>`로 커밋한다. 변경 없으면 빈 커밋을 만들지 않는다. `git push origin main`; 로컬 HEAD와 `git ls-remote origin refs/heads/main` SHA를 비교한다. 3단계의 검증된 전술 도식 보완 파일 외의 코드·UI·설정·.incoming은 stage하지 않는다.
 7. `gh api repos/kihong9336/nfl-briefing/pages/builds/latest`의 commit이 위 SHA이고 status=built인지 확인한다. 진행 중이면 최대90초 제한 안에서 재확인한다. 공개 /editions/<date>/ HTTP200, 실제 제목·og:title·canonical·원문링크 및 공개 src/data.js의 날짜·내용을 readback한다. 다른 SHA의 built를 이번 성공으로 부르지 않는다. 입력·audit·ready·증거는 삭제하지 않고 내부 보존한다.
 
+## 지정 채널 영상 발행
+`docs/followed-youtube-channels.json`의 미식축구 읽어주는 남자(@ireadfootball)·픽다운(@peakdown_NFL)은 사용자 지정 시청 채널이다. 발행 프로그램의 기본 수집으로 발행 직전 새 공개 영상을 확인하고, 확인된 새 영상을 `오늘 볼 하이라이트`에 추가한다. 공식 경기 영상만 허용한다는 해석으로 이 두 채널을 제외하지 않는다. 이미 발행된 영상 ID는 다시 신규로 소개하지 않되 같은 날짜 재발행에서는 유효한 기존 항목을 보존한다. 업로드 날짜·채널명·개별 영상 링크를 확인하고, 시청하지 않은 영상 내용은 요약하지 않는다. 피드 실패는 '새 영상 없음'으로 보고하지 않고 채널 페이지/개별 메타데이터 대체 조회 결과를 남긴다. 일부 채널 실패는 전체 뉴스 발행 차단 사유가 아니다. `--followed-videos`는 실제 검증한 manifest를 재현할 때만, `--skip-followed`는 명시적인 오프라인 복구 사유가 있을 때만 사용한다.
+
 ## 최우선 원칙 — 소식 전달 우선
 - 정기 발행 시각은 누락 보완의 대기 사유가 아니다. 확인된 사용자 요청 수정은 준비되는 대로 공개한다.
 - `topStoryKeys`가 오늘의 중요도 순서인지 확인한다. 상단 요약에 있는 기사도 리그·관심팀의 해당 전체 목록에서 열려야 하며, 상세 본문은 같은 기사로 연결한다.

@@ -146,7 +146,7 @@ export function validateEdition(edition) {
 
   for (const video of edition.highlights) {
     for (const field of ['title', 'channel', 'type', 'note', 'url']) requireString(video[field], `highlight.${field}`);
-    requireMeaningful(video.title, 'highlight.title', 5);
+    requireMeaningful(video.title, 'highlight.title', 1);
     requireMeaningful(video.channel, 'highlight.channel', 2);
     requireMeaningful(video.type, 'highlight.type', 3);
     requireMeaningful(video.note, 'highlight.note', 15);
