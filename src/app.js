@@ -9,7 +9,7 @@ import {
 import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-partition2';
 import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-partition2';
 import { renderIntegratedTactic } from './tactic-reading-flow.js?v=20261020-integrated';
-import { createNflChat } from './nfl-chat.js?v=20261027';
+import { createNflChat } from './nfl-chat.js?v=20261027-shared-v2';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;

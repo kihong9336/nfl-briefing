@@ -130,6 +130,40 @@ class Quota:
             db.execute('UPDATE requests SET active = 0 WHERE id = ?', (token,))
 
 
+class History:
+    """Public per-edition snapshots. A revision survives clearing (no ABA resurrection)."""
+    def __init__(self, path):
+        self.path = Path(path)
+
+    def connect(self):
+        self.path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+        fd = os.open(self.path, os.O_CREAT | os.O_RDWR, 0o600)
+        os.close(fd)
+        os.chmod(self.path, 0o600)
+        db = sqlite3.connect(str(self.path), timeout=5)
+        db.execute('CREATE TABLE IF NOT EXISTS history (date TEXT PRIMARY KEY, revision INTEGER NOT NULL, messages TEXT NOT NULL)')
+        return db
+
+    def read(self, date):
+        with closing(self.connect()) as db:
+            return self.snapshot(db, date)
+
+    @staticmethod
+    def snapshot(db, date):
+        row = db.execute('SELECT revision, messages FROM history WHERE date = ?', (date,)).fetchone()
+        return {'date': date, 'revision': row[0] if row else 0, 'messages': json.loads(row[1]) if row else []}
+
+    def replace(self, date, revision, messages):
+        with closing(self.connect()) as db, db:
+            db.execute('BEGIN IMMEDIATE')
+            current = self.snapshot(db, date)
+            if current['revision'] != revision:
+                return False, current
+            state = {'date': date, 'revision': revision + 1, 'messages': messages[-100:]}
+            db.execute('INSERT INTO history VALUES (?, ?, ?) ON CONFLICT(date) DO UPDATE SET revision=excluded.revision, messages=excluded.messages', (date, state['revision'], json.dumps(state['messages'], ensure_ascii=False)))
+            return True, state
+
+
 def openrouter(payload, key):
     # No retries, redirects, client tools, streaming, or request-selected endpoints.
     with requests.post('https://openrouter.ai/api/v1/chat/completions', headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'}, json=payload, timeout=60, allow_redirects=False) as response:
@@ -156,6 +190,7 @@ def create_blueprint(config=None, provider=None):
     loader = config.get('edition_loader', load_editions)
     clock = config.get('clock', time.time)
     quota = Quota(config.get('quota_path', QUOTA_PATH))
+    history = History(config.get('history_path', Path(quota.path).parent / 'history.db'))
     bp = Blueprint('nfl_chat', __name__)
 
     @bp.after_request
@@ -165,12 +200,106 @@ def create_blueprint(config=None, provider=None):
         response.headers['Vary'] = 'Origin'
         if request.headers.get('Origin') in ORIGINS:
             response.headers['Access-Control-Allow-Origin'] = request.headers['Origin']
-            response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, POST, DELETE, OPTIONS'
             response.headers['Access-Control-Allow-Headers'] = 'Content-Type, ngrok-skip-browser-warning'
         return response
 
     def error(code, status):
         return jsonify(error=code), status
+
+    @bp.route('/api/nfl-chat/history', methods=['GET', 'DELETE', 'OPTIONS'])
+    def history_endpoint():
+        if request.headers.get('Origin') not in ORIGINS:
+            return error('origin_not_allowed', 403)
+        if request.method == 'OPTIONS':
+            return '', 204
+        data = None
+        if request.method == 'DELETE':
+            if not request.is_json:
+                return error('invalid_json', 400)
+            if request.content_length is not None and request.content_length > 65536:
+                return error('request_too_large', 413)
+            try:
+                raw = request.stream.read(65537)
+                if len(raw) > 65536:
+                    return error('request_too_large', 413)
+                data = json.loads(raw)
+                if not isinstance(data, dict) or type(data.get('revision')) is not int or data['revision'] < 0:
+                    raise ValueError()
+            except (ValueError, TypeError, UnicodeError):
+                return error('invalid_request', 400)
+        date = data.get('date') if data else request.args.get('date')
+        if not isinstance(date, str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', date):
+            return error('invalid_request', 400)
+        try:
+            if not any(item.get('date') == date for item in loader()):
+                return error('unknown_edition', 400)
+            if request.method == 'DELETE':
+                saved, current = history.replace(date, data['revision'], [])
+                if not saved:
+                    return jsonify(error='history_conflict', **current), 409
+                return jsonify(current)
+            return jsonify(history.read(date))
+        except Exception:
+            return error('unavailable', 503)
+
+    @bp.route('/api/nfl-chat/history/import', methods=['POST', 'OPTIONS'])
+    def import_history():
+        if request.headers.get('Origin') not in ORIGINS:
+            return error('origin_not_allowed', 403)
+        if request.method == 'OPTIONS':
+            return '', 204
+        if request.content_length is not None and request.content_length > 524288:
+            return error('request_too_large', 413)
+        if not request.is_json:
+            return error('invalid_json', 400)
+        raw = request.stream.read(524289)
+        if len(raw) > 524288:
+            return error('request_too_large', 413)
+        try:
+            data = json.loads(raw)
+            if not isinstance(data, dict) or type(data.get('revision')) is not int or data['revision'] != 0:
+                raise ValueError()
+            date, messages = data.get('date'), data.get('messages')
+            if not isinstance(date, str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', date):
+                raise ValueError()
+            if not isinstance(messages, list) or not 1 <= len(messages) <= 100:
+                raise ValueError()
+            clean = []
+            for i, item in enumerate(messages):
+                if not isinstance(item, dict) or item.get('role') != ('user' if i % 2 == 0 else 'assistant'):
+                    raise ValueError()
+                content = item.get('content')
+                if not isinstance(content, str) or not content.strip() or len(content) > 20000:
+                    raise ValueError()
+                sources = []
+                for source in item.get('sources', []) if isinstance(item.get('sources'), list) else []:
+                    if isinstance(source, dict) and safe_url(source.get('url')) and source['url'].startswith('https://'):
+                        label = source.get('label', '출처')
+                        label = re.sub(r'[<>\x00-\x1f]', '', label if isinstance(label, str) else '출처')[:200]
+                        sources.append({'label': label, 'url': source['url']})
+                    if len(sources) == 8:
+                        break
+                clean.append({'role': item['role'], 'content': content, 'sources': sources, 'imported': True, 'searched': False})
+        except (ValueError, TypeError, UnicodeError):
+            return error('invalid_request', 400)
+        try:
+            if not any(item.get('date') == date for item in loader()):
+                return error('unknown_edition', 400)
+            state = history.read(date)
+            if state['revision'] != 0 or state['messages']:
+                return jsonify(error='history_conflict', **state), 409
+            key = config['api_key'] if 'api_key' in config else read_key()
+            if key:
+                for item in clean:
+                    item['content'] = item['content'].replace(key, '[비공개 정보 제외]')
+                    item['sources'] = [{'label': s['label'].replace(key, '[비공개 정보 제외]'), 'url': s['url']} for s in item['sources'] if key not in s['url']]
+            saved, current = history.replace(date, 0, clean)
+            if not saved:
+                return jsonify(error='history_conflict', **current), 409
+            return jsonify(current)
+        except Exception:
+            return error('unavailable', 503)
 
     @bp.route('/api/nfl-chat', methods=['GET', 'POST', 'OPTIONS'])
     def endpoint():
@@ -192,6 +321,8 @@ def create_blueprint(config=None, provider=None):
             if not isinstance(data, dict):
                 raise ValueError()
             date, messages = data.get('date'), data.get('messages')
+            if 'revision' in data and (type(data['revision']) is not int or data['revision'] < 0):
+                raise ValueError()
             if not isinstance(date, str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', date):
                 raise ValueError()
             if not isinstance(messages, list) or not 1 <= len(messages) <= 10:
@@ -212,6 +343,13 @@ def create_blueprint(config=None, provider=None):
             edition = next((item for item in loader() if item.get('date') == date), None)
             if edition is None:
                 return error('unknown_edition', 400)
+            state = history.read(date)
+            if 'revision' in data and data['revision'] != state['revision']:
+                return jsonify(error='history_conflict', **state), 409
+            question = clean[-1]
+            clean = [{'role': item['role'], 'content': item['content'][:2000]} for item in state['messages'][-9:]] + [question]
+            while sum(len(item['content']) for item in clean) > 12000:
+                clean.pop(0)
             context, sources = curate(edition)
             key = config['api_key'] if 'api_key' in config else read_key()
             if not key:
@@ -243,17 +381,22 @@ def create_blueprint(config=None, provider=None):
                 if not any(source['url'] == url for source in grounded):
                     label = citation.get('title')
                     label = label if isinstance(label, str) and label.strip() else (urlsplit(url).hostname or '출처')
-                    grounded.append({'label': label[:200].replace(key, '[비공개 정보 제외]'), 'url': url})
+                    grounded.append({'label': re.sub(r'[<>\x00-\x1f]', '', label)[:200].replace(key, '[비공개 정보 제외]'), 'url': url})
             count = message.get('_verified_search_requests')
             searched = bool(grounded) or (type(count) is int and count > 0)
             allowed = {s['url'] for s in sources + grounded}
             answer = re.sub(r'https?://[^\s<>\[\]()]+', lambda m: m.group(0) if m.group(0).rstrip('.,;') in allowed else '[확인되지 않은 링크 제외]', answer)
             answer = answer.replace(key, '[비공개 정보 제외]')
-            cited = [s for s in sources if s['url'] in answer]
+            cited = [{'label': re.sub(r'[<>\x00-\x1f]', '', s['label']).replace(key, '[비공개 정보 제외]'), 'url': s['url']} for s in sources if s['url'] in answer and s['url'].startswith('https://') and key not in s['url']]
             for source in grounded:
                 if not any(s['url'] == source['url'] for s in cited):
                     cited.append(source)
-            return jsonify(answer=answer, sources=cited[:8], date=date, searched=searched, model='google/gemini-3.8-flash', modelLabel='Gemini 3.8 Flash')
+            question = {'role': 'user', 'content': question['content'].replace(key, '[비공개 정보 제외]')}
+            assistant = {'role': 'assistant', 'content': answer, 'sources': cited[:8], 'searched': searched, 'model': 'google/gemini-3.8-flash'}
+            saved, current = history.replace(date, state['revision'], state['messages'] + [question, assistant])
+            if not saved:
+                return jsonify(error='history_conflict', **current), 409
+            return jsonify(answer=answer, sources=cited[:8], searched=searched, model='google/gemini-3.8-flash', modelLabel='Gemini 3.8 Flash', **current)
         except requests.Timeout:
             return error('unavailable', 503)
         except Exception:

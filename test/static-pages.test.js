@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { briefings } from '../src/data.js';
 import { generateStaticPages } from '../src/static-pages.js';
 // Editorial text remains fully readable without JS; only the opt-in chat is enhanced.
-const withoutChatBootstrap = html => html.replace(/<script type="module">import \{ createNflChat \} from '\.\.\/\.\.\/src\/nfl-chat\.js\?v=20261027-gemini'; createNflChat\(document\.querySelector\('#nflChat'\)\)\.setDate\('\d{4}-\d{2}-\d{2}'\);<\/script>/g, '');
+const withoutChatBootstrap = html => html.replace(/<script type="module">import \{ createNflChat \} from '\.\.\/\.\.\/src\/nfl-chat\.js\?v=20261027-shared-v2'; createNflChat\(document\.querySelector\('#nflChat'\)\)\.setDate\('\d{4}-\d{2}-\d{2}'\);<\/script>/g, '');
 
 test('archive groups actual season/week metadata and separates samples without inventing weeks', () => {
   const pages = generateStaticPages(briefings);

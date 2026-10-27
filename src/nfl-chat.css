@@ -27,3 +27,6 @@
 .nfl-chat [data-send] { background:#e4bc6a; color:#17191d; border-color:#e4bc6a; font-weight:700; flex-shrink:0; }
 .nfl-chat [hidden] { display:none; }
 @media(max-width:600px) { .nfl-chat { padding:18px; margin-bottom:calc(96px + env(safe-area-inset-bottom)); } .nfl-chat .nfl-chat-heading { align-items:flex-start; } .nfl-chat .nfl-chat-log { max-height:60vh; } .nfl-chat .nfl-chat-actions { align-items:flex-end; } }
+
+.nfl-chat .nfl-chat-shared { color:#dfbc77; font-size:14px; }
+.nfl-chat [data-legacy] { color:#b9bdc6; font-size:12px; }

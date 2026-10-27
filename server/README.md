@@ -40,6 +40,20 @@ Timeout=60 is the requests connection/read timeout, not a strict overall wall-cl
 ## Local host deployment
 The existing stock web host mounts this isolated service through `stock_scout.nfl_extension`. It reads `server/deployment.json` (`enabled: true`); the optional server environment `NFL_CHAT_ENABLED=0` disables it. No stock account or favorites data is available to the model. The existing web process must be reloaded for Python changes; its LaunchAgent/tunnel continue to provide the public endpoint. Mac sleep/shutdown interrupts chat even though GitHub Pages remains available.
 
+## Shared public history (no login)
+
+All visitors share **one public conversation per edition**, including deletion. Do not enter private information. This is explicitly public, not a private cross-device account; Origin restrictions are browser safeguards, not authentication. No browser-local history is automatically imported.
+
+- `GET /api/nfl-chat/history?date=YYYY-MM-DD` → `{date,revision,messages}`. Only actual edition-loader dates are accepted. GET makes no provider call and consumes no AI quota.
+- `POST /api/nfl-chat` accepts `{date,messages,revision}`. The server uses its own history plus only the final user message; client assistant history is validated but ignored. Omit `revision` only for legacy rollout. Success retains answer/date/model/modelLabel/searched/sources and adds `revision,messages`.
+- `DELETE /api/nfl-chat/history` accepts JSON `{date,revision}` and returns the cleared snapshot with incremented revision. Clearing never resets revision to zero.
+- A stale revision, simultaneous completion, or clear during generation returns HTTP 409 `{error:"history_conflict",date,revision,messages}`. Clients should display that snapshot rather than retrying automatically. No failed completion is stored.
+- Optional explicit `POST /api/nfl-chat/history/import` accepts `{date,revision:0,messages}` only before that edition has ever been written or cleared. It returns a snapshot; any existing revision conflicts. Offer a deliberate share-old-local-history button, never automatic migration. Import allows 1–100 alternating user/assistant messages starting with user, each ≤20,000 characters, total body ≤512 KiB; unsafe source URLs are discarded, HTTPS sources capped at eight. Imported messages carry `imported:true,searched:false`; they are not provider-verified. Keep the local copy if import conflicts.
+
+Every history route, including GET, requires an exact allowed Origin (CLI tools must send it). All responses are `Cache-Control: no-store`; preflight allows DELETE as well as GET/POST. Exclude the **entire `/api/nfl-chat` route prefix** from host wildcard CORS overrides. Render content/labels as text, never HTML.
+
+History lives in `/Users/user/.hermes/profiles/personal/cache/nfl-chat/history.db`, separate from quota, with mode 0600 and parameterized SQL. Tests derive `history.db` from the temporary `quota_path` parent; trusted config may explicitly provide `history_path`. No real history DB is touched by tests. Latest 100 messages are retained, full provider answers up to 20,000 characters for display; model conversation context is limited to the last ten messages, 2,000 characters each and 12,000 combined (edition reference context has its separate existing bound). Updates use SQLite atomic revision compare-and-swap. Global Gemini quotas are unchanged. Server files and secrets are never exposed as frontend assets.
+
 ## Test
 
 ```sh
