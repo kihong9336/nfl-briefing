@@ -1,0 +1,29 @@
+.nfl-chat { box-sizing:border-box; margin:48px 0 32px; padding:28px; background:#181a1d; color:#eceef2; border:1px solid #393c43; border-radius:16px; scroll-margin-bottom:100px; min-width:0; }
+.nfl-chat * { box-sizing:border-box; }
+.nfl-chat .nfl-chat-heading { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.nfl-chat h2 { margin:6px 0; color:#f6f7f9; font-size:clamp(21px,4vw,28px); line-height:1.4; }
+.nfl-chat p[data-date], .nfl-chat .nfl-chat-note { color:#b9bdc6; font-size:14px; }
+.nfl-chat button { font:inherit; cursor:pointer; border:1px solid #555b65; border-radius:9px; padding:10px 14px; min-height:44px; background:#252931; color:#f0f2f7; }
+.nfl-chat button:disabled { opacity:.5; cursor:wait; }
+.nfl-chat button:focus-visible, .nfl-chat textarea:focus-visible, .nfl-chat a:focus-visible { outline:2px solid #e4bc6a; outline-offset:3px; }
+.nfl-chat [data-clear] { flex-shrink:0; font-size:12px; }
+.nfl-chat .nfl-chat-chips { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; }
+.nfl-chat .nfl-chat-chips button { font-size:13px; text-align:left; }
+.nfl-chat .nfl-chat-log { max-height:560px; overflow:auto; overscroll-behavior:contain; }
+.nfl-chat .nfl-chat-message { margin:12px 0; padding:16px; background:#23262d; border-radius:12px; overflow-wrap:anywhere; }
+.nfl-chat .nfl-chat-message.user { margin-left:28px; background:#30343d; }
+.nfl-chat .nfl-chat-message strong { color:#dfbc77; font-size:12px; }
+.nfl-chat .nfl-chat-message p { white-space:pre-wrap; margin:8px 0; font-size:16px; line-height:1.8; }
+.nfl-chat .nfl-chat-message .nfl-chat-provenance { margin-top:16px; color:#b9bdc6; font-size:12px; }
+.nfl-chat .nfl-chat-sources { display:flex; flex-wrap:wrap; gap:8px; }
+.nfl-chat .nfl-chat-message a { display:inline-flex; align-items:center; max-width:100%; min-height:44px; padding:8px 12px; border:1px solid #475467; border-radius:10px; color:#bdd9ff; font-size:13px; line-height:1.5; text-decoration:underline; text-underline-offset:3px; }
+.nfl-chat .nfl-chat-status { color:#e4bc6a; font-size:14px; }
+.nfl-chat form { margin-top:20px; }
+.nfl-chat label { display:block; font-size:14px; margin-bottom:8px; }
+.nfl-chat textarea { display:block; width:100%; min-height:100px; resize:vertical; padding:14px; font:inherit; font-size:16px; line-height:1.6; color:#f6f7f9; background:#101216; border:1px solid #555b65; border-radius:10px; scroll-margin-bottom:110px; }
+.nfl-chat textarea::placeholder { color:#9299a6; }
+.nfl-chat .nfl-chat-actions { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:12px; }
+.nfl-chat small { color:#b9bdc6; font-size:12px; }
+.nfl-chat [data-send] { background:#e4bc6a; color:#17191d; border-color:#e4bc6a; font-weight:700; flex-shrink:0; }
+.nfl-chat [hidden] { display:none; }
+@media(max-width:600px) { .nfl-chat { padding:18px; margin-bottom:calc(96px + env(safe-area-inset-bottom)); } .nfl-chat .nfl-chat-heading { align-items:flex-start; } .nfl-chat .nfl-chat-log { max-height:60vh; } .nfl-chat .nfl-chat-actions { align-items:flex-end; } }

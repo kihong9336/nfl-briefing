@@ -9,11 +9,13 @@ import {
 import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-partition2';
 import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-partition2';
 import { renderIntegratedTactic } from './tactic-reading-flow.js?v=20261020-integrated';
+import { createNflChat } from './nfl-chat.js?v=20261027';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
 const storySheet = $('#storySheet');
 const storySheetContent = $('#storySheetContent');
+const nflChat = createNflChat($('#nflChat'));
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -283,6 +285,7 @@ function renderLeagueWide(news) {
 
 function render() {
   const briefing = briefingForDate(currentDate, briefings);
+  nflChat.setDate(briefing.date);
   renderDates();
   $('#demoNotice').hidden = briefing.sample === false;
   $('#editionMeta').innerHTML = `<span>${h(briefing.edition.replace('검증 발행본', '일일 브리핑'))}</span><time>${h(briefing.date.replaceAll('-', '.'))} · ${h(briefing.weekday)}</time>`;

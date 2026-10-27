@@ -52,6 +52,23 @@ npm test
 - 적합한 공식 유튜브 영상이 없거나 확인할 수 없을 때만 NFL·구단 공식 사이트 영상으로 대체하고 플랫폼을 명시한다. 추측한 영상 ID·재생 시점은 넣지 않는다.
 - 기존 발행본의 영상도 교체할 때에는 동일 경기·내용임을 확인한 뒤 변경한다.
 
+## 읽기 전용 NFL 채팅 백엔드
+
+`server/nfl_chat.py`는 선택 브리핑 문맥과 **Gemini 3.8 Flash** (`google/gemini-3.8-flash`)를 사용합니다. OpenRouter `web` 플러그인의 `engine: native`로 Google 네이티브 검색을 사용하며, **Google AI Mode 제품을 임베드하는 것이 아닙니다**. 기존 서버 전용 `OPENROUTER_API_KEY`만 사용하고 별도 Google 키나 프런트엔드 키는 필요하지 않습니다. 기존 환경변수/개인 프로필 dotenv 키 로딩 경로를 유지합니다.
+
+- 고정 요청: `max_tokens: 3000`, `reasoning: {effort: low, exclude: true}`, `temperature: 0.3`. 클라이언트가 모델·검색 엔진·서버 날짜를 바꿀 수 없습니다.
+- 일반 규칙/용어는 지식으로, 선택 판 질문은 해당 판 문맥으로 답변합니다. 최신/속보 질문은 Google 검색 확인과 실제 사건·보도 날짜를 요구합니다. 시스템 프롬프트에 서버 현재 KST 날짜와 선택 판 날짜를 별도로 주입합니다.
+- 응답: `answer`, `sources` (최대 8개), `date`, `model`, `modelLabel`, `searched`. 검색 여부는 유효한 제공자 `url_citation` 또는 실제 `usage.server_tool_use_details.web_search_requests > 0`에서만 계산합니다. 플러그인 설정/모델의 주장/클라이언트 값만으로 검색했다고 표시하지 않습니다.
+- HTTPS 검색 인용(공급자가 반환한 Google grounding redirect 포함)과 선택 판 출처만 허용하며 답변의 임의 URL은 제외합니다. 인용 URL을 서버가 직접 방문하거나 리디렉션을 해석하지 않습니다. 인용은 출처이지 사실 정확성의 보증은 아닙니다.
+- 브리핑·대화·검색 자료는 비신뢰 데이터입니다. Hermes 도구/파일/계정/실행 접근은 없고 제공자 검색만 읽기 전용으로 사용합니다.
+- 기존 CORS 허용 목록, 20 KB 요청 제한, 60초 upstream timeout, 클라이언트당 분당 6회·전체 시간당 10회/일 50회·동시 2회 제한을 유지합니다. 실패 요청도 과금 시도로 집계하며 장애로 남은 동시성 lease는 120초 후 해제하되 사용량은 유지합니다. 검색은 추가 비용이 들고 한 답변에서 여러 검색이 발생할 수 있으므로 요청 수 제한은 달러 단위 지출 상한이 아닙니다.
+- 이 변경은 백엔드 코드만 제공하며 호스트 마운트/활성화·배포는 별도 작업입니다.
+
+네트워크/유료 제공자 호출 없는 회귀 테스트:
+```bash
+uv run --with flask --with requests python -m unittest discover -s server -p test_nfl_chat.py
+```
+
 ## 공개 배포
 
 - 저장소: `kihong9336/nfl-briefing`

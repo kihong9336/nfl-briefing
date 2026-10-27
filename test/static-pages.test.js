@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { briefings } from '../src/data.js';
 import { generateStaticPages } from '../src/static-pages.js';
+// Editorial text remains fully readable without JS; only the opt-in chat is enhanced.
+const withoutChatBootstrap = html => html.replace(/<script type="module">import \{ createNflChat \} from '\.\.\/\.\.\/src\/nfl-chat\.js\?v=20261027-gemini'; createNflChat\(document\.querySelector\('#nflChat'\)\)\.setDate\('\d{4}-\d{2}-\d{2}'\);<\/script>/g, '');
 
 test('archive groups actual season/week metadata and separates samples without inventing weeks', () => {
   const pages = generateStaticPages(briefings);
@@ -26,7 +28,7 @@ test('all content is escaped, unsafe URLs are never links, and unsafe dates are 
   edition.sections[0].sources = [{ label: '<img src=x onerror=alert(1)>', url: 'javascript:alert(1)' }, { label: 'Safe & sound', url: 'https://example.com/?a=1&b=2' }];
   const html = generateStaticPages([edition])[`editions/${edition.date}/index.html`];
   assert.ok(html.includes('&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt;'));
-  assert.doesNotMatch(html, /<script|<img|href="javascript:/);
+  assert.doesNotMatch(withoutChatBootstrap(html), /<script|<img|href="javascript:/);
   assert.ok(html.includes('href="https://example.com/?a=1&amp;b=2"'));
   assert.throws(() => generateStaticPages([{ ...edition, date: '../../escape' }]), /date/);
   assert.throws(() => generateStaticPages([{ ...edition, date: '2026-02-30' }]), /date/);
@@ -47,7 +49,7 @@ test('dated pages contain original text, source links and date-specific crawler 
     assert.ok(html.includes('property="og:title"'));
     assert.ok(html.includes('property="og:description"'));
     assert.match(html, /property="og:image" content="https:\/\/kihong9336.github.io\/nfl-briefing\/assets\/icons\//);
-    assert.doesNotMatch(html, /<script\b/);
+    assert.doesNotMatch(withoutChatBootstrap(html), /<script\b/);
     assert.equal(html.includes('data-sample-warning'), edition.sample !== false);
     for (const story of edition.sections) {
       assert.ok(html.includes(story.commentary));
