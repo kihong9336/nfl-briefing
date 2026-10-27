@@ -176,15 +176,22 @@ test('the sidebar uses its space for league-wide news instead of static filler',
   assert.doesNotMatch(index, />OUR TEAMS<|텔레그램에는/);
 });
 
-test('the upcoming games board clearly labels KST dates, weekdays, and status', () => {
+test('the upcoming games board clearly labels KST dates, weekdays, and status', async () => {
   const edition = briefingForDate('2026-10-16', publishedBriefings);
   const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
 
   assert.ok(edition.schedule.every((game) => game.date && game.weekday && game.time));
-  assert.match(app, /주요 경기 보드/);
-  assert.match(app, /한국시간\(KST\)/);
-  assert.match(app, /경기 예정/);
-  assert.match(app, /item\.status/);
+  const { renderScheduleBoard } = await import('../src/schedule-board.js');
+  const html = renderScheduleBoard(edition.schedule);
+  assert.match(app, /renderScheduleBoard\(briefing.schedule\)/);
+  assert.match(html, /주요 경기 보드/);
+  assert.match(html, /한국시간/);
+  for (const game of edition.schedule) {
+    assert.ok(html.includes(game.status));
+    assert.ok(html.includes(game.date));
+    assert.ok(html.includes(game.weekday));
+    assert.ok(html.includes(game.time));
+  }
 });
 
 test('new links have an explicit visible focus treatment', () => {

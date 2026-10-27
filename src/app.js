@@ -9,6 +9,7 @@ import {
 import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-partition2';
 import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-partition2';
 import { renderIntegratedTactic } from './tactic-reading-flow.js?v=20261020-integrated';
+import { renderScheduleBoard } from './schedule-board.js?v=20261027-compact';
 import { createNflChat } from './nfl-chat.js?v=20261027-shared-v2';
 
 const $ = (selector) => document.querySelector(selector);
@@ -243,18 +244,7 @@ function renderHighlights(briefing) {
 }
 
 function renderSchedule(briefing) {
-  $('#scheduleBoard').innerHTML = `
-    <div class="section-rule"><span>SELECTED GAMES</span></div>
-    <div class="board-heading"><div><h2>주요 경기 보드</h2><p>선별한 경기 · 한국시간(KST)</p></div></div>
-    <div id="scheduleList">${briefing.schedule
-      .map((item) => {
-        const date = item.date ?? item.time;
-        const weekday = item.weekday ?? '';
-        const time = item.date ? item.time : '';
-        const status = item.status ?? '경기 예정';
-        return `<div class="schedule-item"><time><strong>${h(date)}</strong><span>${h(weekday)}</span>${time ? `<b>${h(time)}</b>` : ''}</time><div><small class="game-status">${h(status)}</small><strong>${h(item.matchup)}</strong><details><summary>관전 제안</summary><p>${h(item.note)}</p></details></div></div>`;
-      })
-      .join('')}</div>`;
+  $('#scheduleBoard').innerHTML = renderScheduleBoard(briefing.schedule);
 }
 
 function bindLeagueButtons(container, items) {
