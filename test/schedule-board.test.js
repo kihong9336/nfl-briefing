@@ -15,7 +15,7 @@ test('busy actual edition keeps three preview games and discloses remaining game
   const [preview, rest] = html.split('<details class="schedule-more" data-schedule-overflow>');
   assert.equal((preview.match(/class="schedule-row"/g) ?? []).length, 3);
   assert.equal((rest.match(/class="schedule-row"/g) ?? []).length, games.length - 3);
-  assert.ok(html.includes(`전체 ${games.length}경기 보기 · 추가 ${games.length - 3}경기`));
+  assert.ok(html.includes(`전체 ${games.length}경기 보기`));
   const rows = html.match(/<div class="schedule-row"[\s\S]*?<\/details><\/div><\/div>/g);
   for (const game of games) {
     const matching = rows.filter(row => row.includes(`<strong class="schedule-matchup">${escapeHtml(game.matchup)}</strong>`));

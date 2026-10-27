@@ -1,5 +1,6 @@
 // Static HTML is deliberately independent of the interactive app and its JavaScript.
 import { renderScheduleBoard } from './schedule-board.js';
+import { highlightNote } from './render-utils.js';
 import { renderIntegratedTactic } from './tactic-reading-flow.js';
 export const SITE_BASE = 'https://kihong9336.github.io/nfl-briefing/';
 const escape = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -10,7 +11,7 @@ function safeLink(value) {
 function content(value, key = '') {
   if (value === undefined || value === null) return '';
   if (Array.isArray(value)) return `<ul>${value.map((item) => `<li>${content(item)}</li>`).join('')}</ul>`;
-  if (typeof value === 'object') return `<dl>${Object.entries(value).filter(([name]) => name !== 'id' && name !== 'kind').map(([name, item]) => `<dt>${escape(labels[name] ?? name)}</dt><dd>${content(item, name)}</dd>`).join('')}</dl>`;
+  if (typeof value === 'object') return `<dl>${Object.entries(value).filter(([name]) => name !== 'id' && name !== 'kind' && value[name] !== undefined).map(([name, item]) => `<dt>${escape(labels[name] ?? name)}</dt><dd>${content(item, name)}</dd>`).join('')}</dl>`;
   if (key === 'url' || key === 'evidence') {
     const href = safeLink(value);
     return href ? `<a href="${escape(href)}" rel="noopener noreferrer">${escape(value)}</a>` : escape(value);
@@ -25,9 +26,9 @@ function document(title, description, canonical, body, date) {
 <meta property="og:type" content="${date ? 'article' : 'website'}"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="NFL 브리핑">
 <meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:url" content="${escape(canonical)}"><meta property="og:image" content="${image}"><meta property="og:image:alt" content="NFL 브리핑 앱 아이콘"><meta property="og:image:width" content="512"><meta property="og:image:height" content="512">
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="${escape(title)}"><meta name="twitter:description" content="${escape(description)}"><meta name="twitter:image" content="${image}">
-${date ? '<link rel="stylesheet" href="../../src/schedule-board.css?v=20261027-compact">' : ''}
+${date ? '<link rel="stylesheet" href="../../src/schedule-board.css?v=20261027-reader">' : ''}
 <style>body{font:17px/1.8 system-ui,sans-serif;max-width:850px;margin:auto;padding:24px;color:#172132;background:#faf9f6}a{color:#174c9c;overflow-wrap:anywhere}h1,h2,h3{line-height:1.35}article,section{margin:2rem 0;border-top:1px solid #ccd2db;padding-top:1rem}dt{font-weight:700}dd{margin:0 0 1rem 1rem}p{white-space:pre-wrap}nav{display:flex;gap:1rem;flex-wrap:wrap}aside{padding:1rem;border:2px solid #a15d00}ul{padding-left:1.4rem}</style></head>
-<body>${body}${date ? `<link rel="stylesheet" href="../../src/nfl-chat.css?v=20261027-shared-v2"><script type="module">import { createNflChat } from '../../src/nfl-chat.js?v=20261027-shared-v2'; createNflChat(document.querySelector('#nflChat')).setDate('${date}');</script>` : ''}</body></html>\n`;
+<body>${body}${date ? `<link rel="stylesheet" href="../../src/nfl-chat.css?v=20261027-reader"><script type="module">import { createNflChat } from '../../src/nfl-chat.js?v=20261027-reader'; createNflChat(document.querySelector('#nflChat')).setDate('${date}');</script>` : ''}</body></html>\n`;
 }
 function renderEdition(edition) {
   const sample = edition.sample === true || /샘플|sample/i.test(edition.edition ?? '');
@@ -37,8 +38,8 @@ function renderEdition(edition) {
   const body = `<header><nav aria-label="브리핑 탐색"><a href="${SITE_BASE}?date=${edition.date}">이 날짜를 앱에서 읽기</a><a href="${SITE_BASE}editions/">전체 아카이브</a></nav><p><time datetime="${edition.date}">${edition.date}</time> ${escape(edition.weekday)} · ${escape(edition.edition)}</p><h1>${escape(edition.lead.title)}</h1><p>${escape(edition.dek)}</p></header>
 ${sample ? '<aside data-sample-warning="true"><strong>디자인 샘플</strong> — 실제 뉴스 발행본이 아닙니다. 아래 내용은 화면 구성 예시입니다.</aside>' : ''}
 <main><section aria-label="오늘의 핵심"><h2>${escape(edition.lead.kicker)}</h2><p>${escape(edition.lead.summary)}</p></section>
-${sections.map(([key, label]) => key === 'schedule' ? `<section id="scheduleBoard" aria-label="주요 경기 보드">${renderScheduleBoard(edition.schedule)}</section>` : `<section><h2>${label}</h2>${(edition[key] ?? []).map((item) => key === 'tactics' && item.narrativeMode === 'integrated' ? renderIntegratedTactic(item) : `<article><h3>${escape(item.title ?? item.matchup ?? label)}</h3>${content(Object.fromEntries(Object.entries(item).filter(([name]) => name !== 'title')))}</article>`).join('') || '<p>등록된 항목이 없습니다.</p>'}</section>`).join('\n')}
-${['takeaway', 'weeklyQuestion'].filter((key) => edition[key] !== undefined).map((key) => `<section><h2>${labels[key]}</h2>${content(edition[key])}</section>`).join('')}<section id="nflChat" aria-labelledby="nflChatTitle"></section></main><footer><p>이 문서는 ${edition.date} 발행분의 원문 보관본입니다. 내용과 경기 상태는 해당 발행 시점 기준이며 자동 재검증되지 않습니다.</p><a href="${SITE_BASE}">최신 브리핑</a></footer>`;
+${sections.map(([key, label]) => key === 'schedule' ? `<section id="scheduleBoard" aria-label="주요 경기 보드">${renderScheduleBoard(edition.schedule)}</section>` : `<section><h2>${label}</h2>${(edition[key] ?? []).map((item) => key === 'tactics' && item.narrativeMode === 'integrated' ? renderIntegratedTactic(item) : `<article><h3>${escape(item.title ?? item.matchup ?? label)}</h3>${content(key === 'highlights' ? {channel: item.channel, type: item.type, note: highlightNote(item.note) || undefined, url: item.url} : Object.fromEntries(Object.entries(item).filter(([name]) => name !== 'title')))}</article>`).join('') || '<p>등록된 항목이 없습니다.</p>'}</section>`).join('\n')}
+${['takeaway', 'weeklyQuestion'].filter((key) => edition[key] !== undefined).map((key) => `<section><h2>${labels[key]}</h2>${content(edition[key])}</section>`).join('')}<section id="nflChat" aria-labelledby="nflChatTitle"></section></main><footer><p>${edition.date} 발행 시점 기준</p><a href="${SITE_BASE}">최신 브리핑</a></footer>`;
   return document(title, description, `${SITE_BASE}editions/${edition.date}/`, body, edition.date);
 }
 export function generateStaticPages(briefings) {
@@ -60,7 +61,7 @@ export function generateStaticPages(briefings) {
     if (!groups.has(group)) groups.set(group, []);
     groups.get(group).push(`<li><a href="${SITE_BASE}editions/${edition.date}/"><time datetime="${edition.date}">${edition.date}</time> · ${escape(edition.lead.title)}</a> — ${escape(edition.edition)}${sample ? ' (샘플)' : ''}</li>`);
   }
-  const body = `<header><a href="${SITE_BASE}">최신 브리핑 앱</a><h1>NFL 브리핑 아카이브</h1><p>발행분의 시즌·주차 표기를 기준으로 묶었습니다. 표기가 없는 날짜의 주차는 추정하지 않습니다.</p></header><main>${[...groups].map(([group, entries]) => `<section><h2>${escape(group)}</h2><ul>${entries.join('')}</ul></section>`).join('')}</main>`;
+  const body = `<header><a href="${SITE_BASE}">최신 브리핑 앱</a><h1>NFL 브리핑 아카이브</h1></header><main>${[...groups].map(([group, entries]) => `<section><h2>${escape(group)}</h2><ul>${entries.join('')}</ul></section>`).join('')}</main>`;
   pages['editions/index.html'] = document('NFL 브리핑 · 날짜별 아카이브', '시즌과 주차별로 읽는 NFL 브리핑 원문 보관본', `${SITE_BASE}editions/`, body);
   return pages;
 }

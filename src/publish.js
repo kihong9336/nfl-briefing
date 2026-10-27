@@ -145,11 +145,12 @@ export function validateEdition(edition) {
   }
 
   for (const video of edition.highlights) {
-    for (const field of ['title', 'channel', 'type', 'note', 'url']) requireString(video[field], `highlight.${field}`);
+    for (const field of ['title', 'channel', 'type', 'url']) requireString(video[field], `highlight.${field}`);
     requireMeaningful(video.title, 'highlight.title', 1);
     requireMeaningful(video.channel, 'highlight.channel', 2);
     requireMeaningful(video.type, 'highlight.type', 3);
-    requireMeaningful(video.note, 'highlight.note', 15);
+    if (video.note !== undefined && typeof video.note !== 'string') throw new Error('highlight.note must be a string when provided');
+    if (video.note?.trim()) requireMeaningful(video.note, 'highlight.note', 1);
     requireHttps(video.url, 'highlight.url');
   }
 

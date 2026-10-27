@@ -1,24 +1,24 @@
 /* Shared by the interactive app and script-free dated editions. */
-.compact-schedule { min-width: 0; font: 14px/1.45 system-ui, sans-serif; }
-.compact-schedule .section-rule { margin: 0 0 10px; font-size: 10px; letter-spacing: .1em; color: #666; }
+.compact-schedule { min-width: 0; font: inherit; }
+.compact-schedule .section-rule { margin: 0 0 16px; }
 .compact-schedule .board-heading { margin: 0 0 10px; }
-#scheduleBoard .compact-schedule h2 { margin: 0 0 5px; font: 700 24px/1.2 system-ui, sans-serif; letter-spacing: -.6px; }
+/* Section headings inherit the same typography as neighboring sections. */
 .compact-schedule .board-heading p { margin: 0; color: #666; font-size: 11px; }
-.compact-schedule .schedule-row { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 10px; padding: 9px 0; border-top: 1px solid #d6d3cd; }
-.compact-schedule .schedule-when { font-size: 12px; color: #9c2029; overflow-wrap: anywhere; }
-.compact-schedule .schedule-when span { color: #666; font-size: 10px; }
-.compact-schedule .schedule-when b { display: block; font-size: 13px; }
+.compact-schedule .schedule-row { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 14px; padding: 12px 0; border-top: 1px solid #d6d3cd; }
+.compact-schedule .schedule-when { font-size: 1em; color: var(--red, #9c2029); overflow-wrap: anywhere; }
+.compact-schedule .schedule-when span { color: var(--muted, #666); font-size: .8125em; }
+.compact-schedule .schedule-when b { display: block; font-size: 1em; }
 .compact-schedule .schedule-game { min-width: 0; overflow-wrap: anywhere; }
 .compact-schedule .schedule-line { line-height: 1.5; }
-.compact-schedule .schedule-status { display: inline; padding: 2px 4px; margin-right: 3px; background: #e5e9e2; color: #334c34; font-size: 10px; font-weight: 600; }
-.compact-schedule .schedule-matchup { display: inline; font-size: 13px; }
-.compact-schedule .schedule-note { margin-top: 2px; font-size: 12px; }
+.compact-schedule .schedule-status { display: inline; padding: 2px 4px; margin-right: 3px; background: #e5e9e2; color: #334c34; font-size: .75em; font-weight: 600; }
+.compact-schedule .schedule-matchup { display: inline; font-size: 1em; }
+.compact-schedule .schedule-note { margin-top: 4px; font-size: .875em; }
 .compact-schedule summary { cursor: pointer; }
 .compact-schedule summary:focus-visible { outline: 2px solid #174c9c; outline-offset: 3px; }
-.compact-schedule .schedule-note summary { min-height: 28px; padding: 4px 0; color: #56534f; }
+.compact-schedule .schedule-note summary { min-height: 44px; padding: 10px 0; color: var(--muted, #56534f); font-size: inherit; }
 .compact-schedule .schedule-note p { margin: 5px 0; white-space: pre-wrap; line-height: 1.65; }
 .compact-schedule .schedule-more { border-top: 1px solid #d6d3cd; border-bottom: 1px solid #d6d3cd; }
-.compact-schedule .schedule-more > summary { padding: 12px 0; font-size: 12px; font-weight: 700; }
+.compact-schedule .schedule-more > summary { padding: 12px 0; font-size: .875em; font-weight: 700; }
 .compact-schedule .schedule-hide { display: none; }
 .compact-schedule .schedule-more[open] > summary .schedule-hide { display: inline; }
 .compact-schedule .schedule-more[open] > summary .schedule-show { display: none; }

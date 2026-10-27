@@ -6,11 +6,11 @@ import {
   neighboringDates,
   normalizeDateParam,
 } from './briefing.js?v=20261025-editorial-headlines';
-import { escapeHtml, safeHttpsUrl } from './render-utils.js?v=20261018-partition2';
+import { escapeHtml, safeHttpsUrl, highlightNote } from './render-utils.js?v=20261027-reader';
 import { renderTacticDiagram } from './tactic-visuals.js?v=20261018-partition2';
 import { renderIntegratedTactic } from './tactic-reading-flow.js?v=20261020-integrated';
-import { renderScheduleBoard } from './schedule-board.js?v=20261027-compact';
-import { createNflChat } from './nfl-chat.js?v=20261027-shared-v2';
+import { renderScheduleBoard } from './schedule-board.js?v=20261027-reader';
+import { createNflChat } from './nfl-chat.js?v=20261027-reader';
 
 const $ = (selector) => document.querySelector(selector);
 const h = escapeHtml;
@@ -115,7 +115,7 @@ function showDetailSheet(detail, restore = false) {
     ${blocks.map((block, index) => `<details class="story-stage ${block.emphasis ? 'sheet-analysis' : ''}" ${index === 0 ? 'open' : ''}><summary>${h(block.label)}</summary><p>${h(block.text)}</p></details>`).join('')}
     ${sources.length ? `<div class="story-sources">${sources.map((source) => `<a href="${h(safeHttpsUrl(source.url))}" target="_blank" rel="noreferrer">↗ ${h(source.label)}${source.publishedAt ? ` · 원문 게시 ${h(source.publishedAt)}` : ''}</a>`).join('')}</div>` : ''}`;
   document.body.classList.add('sheet-open');
-  storySheetContent.insertAdjacentHTML('beforeend', `<details class="glossary"><summary>용어 도움말 · 탭하여 펼치기</summary><dl><dt>FP</dt><dd>훈련 전면 참가</dd><dt>LP</dt><dd>훈련 제한 참가</dd><dt>DNP</dt><dd>훈련 불참</dd><dt>out</dt><dd>해당 경기 결장</dd><dt>questionable</dt><dd>경기 출전 여부 불확실</dd></dl><p>훈련 참가와 경기 출전 상태는 다릅니다. 이 설명은 기사에 보도된 상태를 바꾸지 않습니다.</p></details>`);
+  storySheetContent.insertAdjacentHTML('beforeend', `<details class="glossary"><summary>용어 도움말</summary><dl><dt>FP</dt><dd>훈련 전면 참가</dd><dt>LP</dt><dd>훈련 제한 참가</dd><dt>DNP</dt><dd>훈련 불참</dd><dt>out</dt><dd>해당 경기 결장</dd><dt>questionable</dt><dd>경기 출전 여부 불확실</dd></dl></details>`);
   storySheet.showModal();
   $('#storySheetClose').focus();
 }
@@ -147,7 +147,7 @@ function renderRoundup(news) {
   const cards = news.headlines.map(({kind, item}) => kind === 'story'
     ? `<li class="story"><button data-story-id="${h(item.id)}"><span>${h(teamMeta(item.team).code)}</span><h3>${h(plainTitle(item.title))}</h3><b aria-hidden="true">→</b></button></li>`
     : `<li class="quick-hit"><button data-league-index="${news.topLeague.indexOf(item)}"><span>NFL</span><h3>${h(plainTitle(item.title))}</h3><b aria-hidden="true">→</b></button></li>`).join('');
-  $('#leadStory').innerHTML = `<span class="eyebrow">TODAY’S BRIEFING</span><h2 id="leadTitle">오늘의 짧은 브리핑</h2><p>${news.editorial ? '편집자가 고른 오늘의 헤드라인' : '발행본 기사 바로가기 · 등록 순서로 교차 표시'} · 팀 필터와 관계없이 표시합니다.</p><ul class="roundup-list">${cards}</ul>${news.headlines.length === 0 ? '<p>이 발행본에 선택된 헤드라인이 없습니다.</p>' : ''}<nav aria-label="기사 섹션 바로가기"><a href="#leagueWide">리그 모든 소식 →</a> · <a href="#favoriteTeams">관심 팀별 모든 소식 →</a></nav>`;
+  $('#leadStory').innerHTML = `<span class="eyebrow">TODAY’S BRIEFING</span><h2 id="leadTitle">오늘의 짧은 브리핑</h2><ul class="roundup-list">${cards}</ul>${news.headlines.length === 0 ? '<p>이 발행본에 선택된 헤드라인이 없습니다.</p>' : ''}<nav aria-label="기사 섹션 바로가기"><a href="#leagueWide">리그 모든 소식 →</a> · <a href="#favoriteTeams">관심 팀별 모든 소식 →</a></nav>`;
   bindStoryButtons($('#leadStory'), news.topStories);
   bindLeagueButtons($('#leadStory'), news.topLeague);
 }
@@ -180,8 +180,7 @@ function renderTactics(briefing) {
   section.innerHTML = `
     <div class="section-rule"><span>TACTICS · FILM ROOM</span></div>
     <div class="tactics-heading">
-      <div><span class="eyebrow">전략을 알면 경기가 다르게 보입니다</span><h2 id="tacticsTitle">오늘의 전술 교실</h2></div>
-      <p>어려운 용어는 생활 속 비유로 풀고, 실제 경기에서 무엇을 보면 되는지까지 연결합니다.</p>
+      <div><h2 id="tacticsTitle">오늘의 전술 교실</h2></div>
     </div>
     <div class="tactic-list">
       ${tactics.map((item) => {
@@ -201,7 +200,7 @@ function renderTactics(briefing) {
               ${renderTacticDiagram(item)}
               <figcaption>${h(item.diagram?.caption ?? '과거 디자인 샘플: 실제 플레이 배치가 연결되지 않은 개념 카드입니다.')}</figcaption>
             </figure></div>
-          <details class="tactic-deep"><summary>플레이 순서와 깊은 설명 펼치기</summary><p class="evidence-note">개념 도식과 관전 제안입니다. 특정 영상의 장면 분석은 아닙니다.</p><div class="diagram-lesson">
+          <details class="tactic-deep"><summary>플레이 순서와 깊은 설명 펼치기</summary><p class="evidence-note">전술 개념도</p><div class="diagram-lesson">
             <div class="play-steps">
               <span class="eyebrow">PLAY, STEP BY STEP</span>
               <h4>플레이가 이렇게 진행돼</h4>
@@ -215,7 +214,7 @@ function renderTactics(briefing) {
             <section><span>수비의 대응</span><p>${h(item.defenseCounter ?? '실제 경기 사례와 함께 보강할 예정인 과거 디자인 샘플입니다.')}</p></section>
             <section class="watch-sequence"><span>중계에서 보는 순서</span><ol>${watchOrder.map((point) => `<li>${h(point)}</li>`).join('')}</ol></section>
           </div>
-          <footer class="tactic-source"><span>설명 근거</span><a href="${h(safeHttpsUrl(source.url))}" target="_blank" rel="noreferrer">${h(source.label)} ↗</a><p>관련 자료입니다. 링크 존재가 개별 장면의 검증을 뜻하지는 않습니다.</p></footer>
+          <footer class="tactic-source"><span>설명 근거</span><a href="${h(safeHttpsUrl(source.url))}" target="_blank" rel="noreferrer">${h(source.label)} ↗</a></footer>
           </details>${item.video?.url ? `<a class="film-link" href="${h(safeHttpsUrl(item.video.url))}" target="_blank" rel="noreferrer"><span>▶</span><div><strong>${h(plainTitle(item.video.title))}</strong><small>${h(item.video.type)}</small></div></a>` : ''}
         </article>`;
       }).join('')}
@@ -237,7 +236,7 @@ function renderHighlights(briefing) {
       ${briefing.highlights.map((video) => `
         <a class="video-card" href="${h(safeHttpsUrl(video.url))}" target="_blank" rel="noreferrer">
           <div class="video-poster"><span class="play">▶</span><small>${h(video.type)}</small></div>
-          <div><span class="story-label">${h(video.channel)}</span><h3>${h(plainTitle(video.title))}</h3><p>${h(video.note)}</p></div>
+          <div><span class="story-label">${h(video.channel)}</span><h3>${h(plainTitle(video.title))}</h3>${highlightNote(video.note) ? `<p>${h(highlightNote(video.note))}</p>` : ''}</div>
         </a>
       `).join('')}
     </div>`;
@@ -268,7 +267,7 @@ function renderLeagueWide(news) {
   const section = $('#leagueWide');
   const leagueStories = news.leagueStories;
   section.hidden = false;
-  section.innerHTML = `<div class="section-rule"><span>AROUND THE LEAGUE</span></div><h2>리그 뉴스</h2><p class="league-wide-dek">관심 팀 이외의 팀·리그 모든 소식 · 상단 헤드라인 포함, 팀 필터와 관계없이 표시합니다.</p>${leagueStories.map(storyCard).join('')}<div class="quick-hit-list">${leagueCards(items)}</div>${!items.length && !leagueStories.length ? '<p>이 발행본에는 리그 기사가 없습니다.</p>' : ''}`;
+  section.innerHTML = `<div class="section-rule"><span>AROUND THE LEAGUE</span></div><h2>리그 뉴스</h2>${leagueStories.map(storyCard).join('')}<div class="quick-hit-list">${leagueCards(items)}</div>${!items.length && !leagueStories.length ? '<p>이 발행본에는 리그 기사가 없습니다.</p>' : ''}`;
   bindStoryButtons(section, leagueStories);
   bindLeagueButtons(section, items);
 }
