@@ -211,17 +211,16 @@ class ChatTest(unittest.TestCase):
         self.assertIsNone(limiter.acquire('c', now))
         limiter.release(first)
         limiter.release(second)
-        for i in range(8):
+        for i in range(28):
             token = limiter.acquire(str(i), now)
             self.assertIsNotNone(token)
             limiter.release(token)
         self.assertIsNone(limiter.acquire('extra', now))
-        for hour in range(1,5):
-            for i in range(10):
-                token = limiter.acquire(str(i), now + hour*3601)
-                self.assertIsNotNone(token)
-                limiter.release(token)
-        self.assertIsNone(limiter.acquire('daycap', now + 5*3601))
+        for i in range(20):
+            token = limiter.acquire(str(i), now + 3601)
+            self.assertIsNotNone(token)
+            limiter.release(token)
+        self.assertIsNone(limiter.acquire('daycap', now + 2*3601))
 
 if __name__ == '__main__':
     unittest.main()

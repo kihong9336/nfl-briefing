@@ -119,7 +119,7 @@ class Quota:
             # Recover crashed workers after twice the upstream timeout; preserve charged attempts.
             db.execute('UPDATE requests SET active = 0 WHERE active = 1 AND ts <= ?', (now-120,))
             day, hour, minute, active = db.execute('SELECT SUM(ts > ?), SUM(ts > ?), SUM(client = ? AND ts > ?), SUM(active) FROM requests', (now-86400, now-3600, client, now-60)).fetchone()
-            if (day or 0) >= 50 or (hour or 0) >= 10 or (minute or 0) >= 6 or (active or 0) >= 2:
+            if (day or 0) >= 50 or (hour or 0) >= 30 or (minute or 0) >= 6 or (active or 0) >= 2:
                 return None
             token = uuid.uuid4().hex
             db.execute('INSERT INTO requests VALUES (?, ?, ?, 1)', (token, client, now))

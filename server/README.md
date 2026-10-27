@@ -31,7 +31,7 @@ The Korean system prompt restricts answers to NFL, redirects unrelated questions
 
 ## Persistent limits / operational caveats
 
-SQLite: `/Users/user/.hermes/profiles/personal/cache/nfl-chat/quota.sqlite`. Atomic BEGIN IMMEDIATE reservations enforce rolling global 50/24h, 10/hour, per-client 6/minute, and two active provider requests across processes. Requests are charged before upstream calls and persist across restarts. Missing keys do not charge. Counts are not authentication: non-browser clients can forge Origin and consume the public budget. Configure a provider-side spending cap as additional defense.
+SQLite: `/Users/user/.hermes/profiles/personal/cache/nfl-chat/quota.sqlite`. Atomic BEGIN IMMEDIATE reservations enforce rolling global 50/24h, 30/hour, per-client 6/minute, and two active provider requests across processes. Requests are charged before upstream calls and persist across restarts. Missing keys do not charge. Counts are not authentication: non-browser clients can forge Origin and consume the public budget. Configure a provider-side spending cap as additional defense.
 
 Client buckets use hashed `request.remote_addr`, deliberately ignoring untrusted forwarding headers. Behind ngrok all users may share one bucket unless trusted proxy configuration is carefully deployed; never blindly trust X-Forwarded-For. Active concurrency leases expire after 120 seconds to recover crashed requests; rolling request counts remain intact. Do not delete the quota database to recover concurrency.
 
