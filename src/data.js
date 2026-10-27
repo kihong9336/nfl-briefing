@@ -1,5 +1,645 @@
 export const briefings = [
   {
+    "date": "2026-10-27",
+    "weekday": "화요일",
+    "edition": "2026 WEEK 7 · Dallas 반등과 슈퍼볼 무대 확정",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 7,
+    "dek": "Cowboys의 38-21 원정승과 Eagles의 5연패, Jay-Z 하프타임 공식 발표를 함께 짚는다. McCaffrey 검사 결과와 주요 계약·선발 결정, 새 공식 하이라이트 및 한국어 채널 영상도 확인한다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 월요일 밤의 두 소식",
+      "title": "Dallas 38-21 반등…Jay-Z 슈퍼볼 하프타임 공식 확정",
+      "summary": "Cowboys는 204러싱야드로 Eagles를 꺾고 지구 경쟁을 이어갔다. 같은 경기 중 Jay-Z의 슈퍼볼 LXI 출연도 공식 발표됐다. Eagles의 연속 패배와 부상, 49ers의 휴식기 회복 과제를 살핀다."
+    },
+    "sections": [
+      {
+        "id": "2026-week7-49ers-falcons-result",
+        "eventKey": "2026-week7-49ers-falcons-result",
+        "team": "49ers",
+        "label": "공식 발표 · 10월 26일",
+        "title": "McCaffrey는 경미한 햄스트링 부상…휴식기 뒤 복귀는 낙관, 확정은 아냐",
+        "summary": "Shanahan은 10월 26일 McCaffrey에게 경미한 햄스트링 염좌가 확인됐다고 밝혔다. 처음에는 허벅지 문제로 여겼지만 추가 평가로 부위가 확인됐다. 구단은 Week 8 휴식기 뒤 회복에 낙관적이다. Bosa·Evans·Samuel 등도 복귀 가능성이 있지만 보장된 것은 아니다.",
+        "commentary": "경기 중 다시 뛰었다는 사실과 다음 날 검사 결과는 별개다. 휴식기는 회복 시간을 주지만 출전 허가를 대신하지 않는다. Shanahan은 WR·수비 라인의 부상 공백을 언급하며 전력 보강 가능성도 열어뒀다. 특정 트레이드 협상이 확인됐다는 뜻은 아니다.",
+        "watch": "휴식기 다음 주 훈련 참여와 Raiders전 최종 상태, 실제 보강 발표를 확인하자.",
+        "takeaway": "당일 복귀 후 추가 평가에서 햄스트링 염좌가 확인됐다. 낙관적인 전망을 출전 확정으로 읽지 않는다.",
+        "sources": [
+          {
+            "label": "www.49ers.com",
+            "url": "https://www.49ers.com/news/after-further-review-shanahan-provides-mccaffrey-injury-update-breaks-down-week-7-game"
+          },
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-26"
+          }
+        ],
+        "changeSummary": "경기 중 복귀 사실 이후 월요일 추가 평가 결과와 휴식기 회복 전망이 확인됐다.",
+        "changeEvidence": {
+          "url": "https://www.49ers.com/news/after-further-review-shanahan-provides-mccaffrey-injury-update-breaks-down-week-7-game",
+          "before": "49ers는 Falcons에 20-29로 패해 6승 1패가 됐다. 초반 14-3 리드를 잡았지만 네 차례 턴오버가 흐름을 바꿨다. McCaffrey는 경기 중 이탈했다가 후반 복귀해 러싱 39야드와 리시빙 61야드를 기록했다. 6경기 연속 러싱 TD는 구단 러닝백 최장 연속 기록과 동률이다.",
+          "after": "경미한 햄스트링 염좌가 확인됐다고 밝혔다",
+          "quote": "경미한 햄스트링 염좌가 확인됐다고 밝혔다",
+          "originalQuote": "sustained a mild hamstring strain during Sunday's game against Atlanta.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-26-patriots-ramirez-rizy-baringer-roster",
+        "eventKey": "2026-10-26-patriots-ramirez-rizy-baringer-roster",
+        "team": "Patriots",
+        "label": "공식 발표 · 10월 26일",
+        "title": "Patriots, Ramirez 연습조 복귀·Baringer IR 명단에서 방출",
+        "summary": "Patriots는 10월 26일 Jose Ramirez를 연습조에 재영입하고 Jacob Rizy를 연습조에서 방출했다. 펀터 Bryce Baringer도 IR 명단에서 방출했다.",
+        "commentary": "연습조 영입과 53인 로스터 승격은 서로 다른 조치다. 이번 발표만으로 Ramirez의 Dolphins전 출전이나 새 펀터 영입을 확정할 수는 없다. 부상자 명단에서의 방출을 단순한 경기 액티브 제외로 읽지 말자.",
+        "watch": "Miami전까지 정식 로스터 승격과 경기용 승격 여부, 실제 스페셜팀 명단을 확인한다.",
+        "takeaway": "세 이동의 명단 종류를 구분하자. Ramirez는 연습조, Baringer는 IR에서의 방출이다.",
+        "sources": [
+          {
+            "label": "www.patriots.com",
+            "url": "https://www.patriots.com/news/patriots-sign-lb-jose-ramirez-to-the-practice-squad-release-ol-jacob-rizy-from-the-practice-squad-release-p-bryce-baringer-from-injured-reserve-list"
+          }
+        ]
+      }
+    ],
+    "leagueWide": [
+      {
+        "id": "2026-week7-cowboys-eagles-result",
+        "eventKey": "2026-week7-cowboys-eagles-result",
+        "team": "Cowboys",
+        "label": "경기 결과 · 10월 26일",
+        "title": "Cowboys 38-21 반등…Williams 155야드, Eagles는 5연패",
+        "why": "Dallas가 Philadelphia 원정에서 38-21로 이겨 3승 4패가 됐다. Eagles는 2승 5패다. Javonte Williams는 25회 러싱 155야드·1TD, Prescott은 27회 중 15회 성공으로 212야드·3TD를 기록했다. 팀 러싱은 204야드였다. 패스 시도량을 늘리는 대신 러닝을 계속 사용해 공격 균형을 되찾았다는 것이 구단과 NFL 분석의 공통점이다. 다만 한 경기 반등을 시즌 전체 효율 회복으로 단정하지 않는다. 다음 Arizona전에서 같은 균형을 유지하는지가 관건이다.",
+        "takeaway": "패스 3TD 뒤에는 시즌 최고 러닝 지원이 있었다. 공격 반등과 장기 안정성은 나누어 보자.",
+        "url": "https://www.dallascowboys.com/news/game-recap-cowboys-run-over-eagles-38-21",
+        "sources": [
+          {
+            "label": "www.dallascowboys.com",
+            "url": "https://www.dallascowboys.com/news/game-recap-cowboys-run-over-eagles-38-21"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/cowboys-eagles-on-monday-night-football-what-we-learned-from-dallas-38-21-win"
+          },
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-cowboys-run-past-eagles-38-21"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-20-jay-z-super-bowl-lxi-report",
+        "eventKey": "2026-10-20-jay-z-super-bowl-lxi-report",
+        "team": "NFL",
+        "label": "공연 · 공식 확정",
+        "title": "출연설에서 공식 발표로…Jay-Z가 슈퍼볼 LXI 하프타임 맡는다",
+        "why": "NFL·Apple Music·Roc Nation이 Jay-Z의 슈퍼볼 LXI 하프타임 출연을 공식 발표했다. 현지 10월 26일 Cowboys–Eagles 경기 중 공개됐으며, 무대는 2027년 2월 14일 Inglewood의 SoFi Stadium이다. 앞서 소개했던 취재 보도에서 공식 확정으로 단계가 바뀌었다. 제작에 참여해 온 아티스트가 직접 헤드라이너가 되는 소식이다. 게스트 명단과 공연 곡은 이번 발표로 확인되지 않았으므로 별도 발표를 기다리자.",
+        "takeaway": "Jay-Z 출연은 이제 공식 확정이다. 동반 출연자에 관한 추측은 확정 명단과 구분한다.",
+        "url": "https://www.nfl.com/news/jay-z-to-headline-super-bowl-lxi-at-sofi-stadium-in-inglewood",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/jay-z-to-headline-super-bowl-lxi-at-sofi-stadium-in-inglewood"
+          },
+          {
+            "label": "www.ksat.com",
+            "url": "https://www.ksat.com/entertainment/2026/10/27/jay-z-will-headline-the-super-bowl-halftime-show-at-sofi-stadium-in-southern-california/"
+          }
+        ],
+        "changeSummary": "기존 Puck 인용 보도에서 NFL·Apple Music·Roc Nation 공식 발표로 전환됐다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/jay-z-to-headline-super-bowl-lxi-at-sofi-stadium-in-inglewood",
+          "before": "NBC/PFT는 10월 20일 Dave Brooks의 Puck 취재를 인용해, 슈퍼볼 하프타임 제작을 맡아온 Jay-Z가 다음 무대의 출연자로 자신을 선택했다고 보도했다. Justin Bieber와 Miley Cyrus도 검토됐다는 내용이다. 해당 기사는 당시 공식 발표가 없다고 명시했다. 확정된 U2의 추수감사절 전야 공연과는 발표 단계가 다르다.",
+          "after": "Jay-Z의 슈퍼볼 LXI 하프타임 출연을 공식 발표했다",
+          "quote": "Jay-Z의 슈퍼볼 LXI 하프타임 출연을 공식 발표했다",
+          "originalQuote": "Roc Nation, the NFL and Apple Music announced.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-week7-eagles-barkley-practice-return",
+        "eventKey": "2026-week7-eagles-barkley-practice-return",
+        "team": "Eagles",
+        "label": "부상 · 복귀전 후속",
+        "title": "Barkley 복귀전 다시 이탈…등 부상과 러닝백 가용 인원 점검",
+        "why": "Barkley는 Cowboys전에서 등 부상으로 경기에서 이탈했다. 7회 러싱 62야드·1TD를 기록했지만 제한된 스냅에 그쳤고, Pierce도 4쿼터에 이탈했다. NFL과 NBC는 Eagles가 마지막 공격들에서 Mitchell에게 의존해야 했다고 전했다. 복귀 가능 여부와 경기 전체를 소화할 수 있는지는 다른 문제다. 다음 Washington전을 앞두고 등 부상의 검사 결과와 러닝백 명단이 중요한 관찰점이며, 이번 이탈만으로 장기 결장을 확정할 수는 없다.",
+        "takeaway": "복귀 후 생산성은 있었지만 끝까지 뛸 수 없었다. 다음 경기 가용 인원을 다시 확인해야 한다.",
+        "url": "https://www.nfl.com/news/cowboys-eagles-on-monday-night-football-what-we-learned-from-dallas-38-21-win",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/cowboys-eagles-on-monday-night-football-what-we-learned-from-dallas-38-21-win"
+          },
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-cowboys-run-past-eagles-38-21"
+          },
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-26"
+          }
+        ],
+        "changeSummary": "훈련 복귀·출전 전망에서 실제 출전 뒤 새 부상 이탈로 상태가 바뀌었다.",
+        "changeEvidence": {
+          "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-cowboys-run-past-eagles-38-21",
+          "before": "Eagles의 토요일 최종 보고에서 Barkley는 전체 참여(FP)로 올라왔지만 Questionable이다. DeVonta Smith와 Dontayvion Wicks는 OUT, Dallas Goedert는 FP로 돌아와 경기 출전이 가능하다. 정상 훈련을 마쳤다는 사실과 경기 출전 확정은 다르다. 해설: 러닝백의 복귀 기대만큼 패스 표적 두 명의 공백도 중요하다. 월요일 최종 명단과 Goedert의 패스·블로킹 역할, Barkley가 뛴다면 실제 터치 배분을 확인하자.",
+          "after": "등 부상으로 경기에서 이탈했다",
+          "quote": "등 부상으로 경기에서 이탈했다",
+          "originalQuote": "left with a back injury.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-26-raiders-cousins-week8-starter",
+        "eventKey": "2026-10-26-raiders-cousins-week8-starter",
+        "team": "Raiders",
+        "label": "선발 결정 · 10월 26일",
+        "title": "Raiders, Jets전도 Cousins 선발…Mendoza 투입 시점은 미정",
+        "why": "Kubiak 감독은 월요일 Week 8 Jets전 선발을 Cousins로 유지한다고 밝혔다. 전날 모든 방안을 검토하겠다는 발언 뒤 나온 구체적 결정이다. Raiders는 3연승 출발 뒤 4연패했지만 감독은 신인 Mendoza가 언젠가 뛸 것이라는 말과 이번 주 교체를 분리했다. NFL 분석도 패스 생산과 러닝·수비의 문제를 구분했다. QB만 바꾸면 연패가 해결된다고 가정하지 말고 Jets전의 러닝 지원과 수비 실점을 함께 살펴보자.",
+        "takeaway": "Mendoza의 장래 기회와 이번 주 선발은 다르다. Jets전은 Cousins가 맡는다.",
+        "url": "https://www.nfl.com/news/raiders-klint-kubiak-sticking-with-kirk-cousins-as-starting-qb-for-week-8-game-vs-jets",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/raiders-klint-kubiak-sticking-with-kirk-cousins-as-starting-qb-for-week-8-game-vs-jets"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-24-browns-maliek-collins-extension",
+        "eventKey": "2026-10-24-browns-maliek-collins-extension",
+        "team": "Browns",
+        "label": "계약 · 공식 서명",
+        "title": "Collins 2년 연장 공식 서명…합의 보도에서 구단 확정으로",
+        "why": "Browns는 10월 26일 Collins가 2년 계약 연장에 서명했다고 공식 발표했다. 앞서 에이전트발 합의 보도와 달리 이제 구단의 체결 확인이 나왔다. 구단 발표 기준 이번 시즌 7경기 모두 선발로 뛰며 3.5색을 기록했다. 이는 내부 패스러시의 생산량이며 경기 수·역할이 다른 선수와 그대로 우열을 매길 지표는 아니다. 계약 기간 확인과 미공개 지급 구조는 구분하고, 앞으로 내부 압박과 젊은 라인맨 지원 역할을 보자.",
+        "takeaway": "연장 합의 보도에 공식 서명이 더해졌다. 구단이 밝히지 않은 금액·지급 구조를 새 확정 사실로 붙이지 않는다.",
+        "url": "https://www.clevelandbrowns.com/news/maliek-collins-signs-2-year-contract-extension-with-the-browns",
+        "sources": [
+          {
+            "label": "www.clevelandbrowns.com",
+            "url": "https://www.clevelandbrowns.com/news/maliek-collins-signs-2-year-contract-extension-with-the-browns"
+          }
+        ],
+        "changeSummary": "에이전트발 합의 보도에 이어 구단 공식 서명이 확인됐다.",
+        "changeEvidence": {
+          "url": "https://www.clevelandbrowns.com/news/maliek-collins-signs-2-year-contract-extension-with-the-browns",
+          "before": "NBC/PFT는 에이전트 Drew Rosenhaus의 설명을 인용해 Browns와 Maliek Collins가 2년 3천만 달러 연장에 합의했으며 보장액은 2천3백만 달러라고 보도했다. 구단 공식 서명 발표로 바꾸어 소개하지 않는다. 해설: 시즌 중 수비 라인 자원을 유지하려는 결정이라는 의미가 있다. 계약 총액과 실제 연도별 지급 구조는 다르므로 세부 조건을 추정하지 않고, 구단 확인과 후속 조건 공개를 기다리자.",
+          "after": "2년 계약 연장에 서명했다고 공식 발표했다",
+          "quote": "2년 계약 연장에 서명했다고 공식 발표했다",
+          "originalQuote": "he signed a two-year contract extension with the Browns.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-week7-oct25-game-injuries",
+        "eventKey": "2026-week7-oct25-game-injuries",
+        "team": "Panthers",
+        "label": "부상 · 공식 로스터 후속",
+        "title": "Moton IR 등록…Panthers의 오른쪽 태클 공백이 현실로",
+        "why": "Panthers는 10월 26일 Moton을 IR에 등록했다. 전날 비골 골절 발표에 이어 실제 로스터 이동이 이뤄졌다. NFL의 월요일 종합은 발목 수술로 시즌을 마칠 예정이며 비골 자체에는 수술이 필요하지 않다고 전했다. Panthers는 연습조의 외곽 라인배커 Nick Hampton을 정식 로스터로 올렸다. 이는 태클 포지션을 직접 대체하는 영입이 아니다. 짧은 준비 뒤 Packers전을 치르는 만큼 보호선 구성과 첫 접촉에서 밀리는 장면을 관찰하자.",
+        "takeaway": "장기 결장 전망에서 IR 등록으로 바뀌었다. 올라온 Hampton은 같은 포지션 대체 선수가 아니다.",
+        "url": "https://www.panthers.com/news/panthers-place-right-tackle-taylor-moton-on-injured-reserve",
+        "sources": [
+          {
+            "label": "www.panthers.com",
+            "url": "https://www.panthers.com/news/panthers-place-right-tackle-taylor-moton-on-injured-reserve"
+          },
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-26"
+          }
+        ],
+        "changeSummary": "비골 골절 확인 뒤 월요일 IR 등록과 수술 전망이 추가됐다.",
+        "changeEvidence": {
+          "url": "https://www.panthers.com/news/panthers-place-right-tackle-taylor-moton-on-injured-reserve",
+          "before": "NFL의 일요일 부상 종합에서 Carolina의 Taylor Moton은 비골 골절로 한동안 빠질 전망이라고 Canales 감독이 밝혔다. Giants의 Tracy는 햄스트링으로 복귀하지 못했고 Skattebo도 연장 42야드 전진 때 햄스트링에 이상을 느꼈다고 말했다. Seattle의 Shaheed는 무릎 문제로 경기에서 제외됐다. 진단이 확인된 Moton과 선수의 증상 설명·경기 중 OUT을 같은 장기 결장 확정으로 묶어서는 안 된다. 다음 검사와 구단 발표를 기다리자.",
+          "after": "Moton을 IR에 등록했다",
+          "quote": "Moton을 IR에 등록했다",
+          "originalQuote": "The Panthers placed the veteran right tackle on injured reserve Monday, as was expected.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-26-caleb-williams-cleats-fine",
+        "eventKey": "2026-10-26-caleb-williams-cleats-fine",
+        "team": "Bears",
+        "label": "징계 · 취재 보도",
+        "title": "Caleb Williams 신발 로고에 11,941달러 벌금 보도…항소 중",
+        "why": "NBC/PFT의 Mike Florio는 10월 26일 소식통을 인용해 Caleb Williams가 Week 6 Falcons전 신발의 미승인 로고로 11,941달러 벌금을 받았다고 전했다. 벌금 통지 날짜는 10월 20일이며 선수가 항소했다고 보도했다. Williams가 신발의 안전성을 주장한다는 것과 더 안전하다는 객관적 입증은 별개다. 출전정지가 아니라 장비 규정 관련 금전 징계 보도이며, 항소 결과와 다음 경기 착용 여부가 관찰점이다.",
+        "takeaway": "구단·리그 확정 공지가 아닌 기명 취재 보도다. 안전성 주장과 실제 검증 결과를 혼동하지 않는다.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-caleb-williams-11-941-for-displaying-unauthorized-logo-on-his-shoes-in-week-6",
+        "sources": [
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-caleb-williams-11-941-for-displaying-unauthorized-logo-on-his-shoes-in-week-6"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-25-cowboys-miranda-lambert-thanksgiving",
+        "eventKey": "2026-10-25-cowboys-miranda-lambert-thanksgiving",
+        "team": "NFL",
+        "label": "문화 · 10월 25일 발표",
+        "title": "추수감사절 Cowboys–Eagles 하프타임은 Miranda Lambert",
+        "why": "Cowboys는 10월 25일 Miranda Lambert가 현지 11월 26일 AT&T Stadium에서 열리는 Eagles전 하프타임에 공연한다고 발표했다. Salvation Army Red Kettle Kickoff의 30번째 연속 추수감사절 쇼다. Jay-Z의 슈퍼볼 무대와 다른 행사이므로 일정과 장소를 나누어 기억하자. 이번 경기의 라이벌 구도가 다시 이어지는 날에 경기와 공연을 함께 즐길 수 있다. 공연의 세트리스트·게스트는 별도 발표를 확인한다.",
+        "takeaway": "Miranda Lambert의 무대는 슈퍼볼이 아니라 Dallas의 추수감사절 라이벌전이다.",
+        "url": "https://www.dallascowboys.com/news/miranda-lambert-to-perform-cowboys-30th-annual-thanksgiving-halftime-show",
+        "sources": [
+          {
+            "label": "www.dallascowboys.com",
+            "url": "https://www.dallascowboys.com/news/miranda-lambert-to-perform-cowboys-30th-annual-thanksgiving-halftime-show"
+          }
+        ]
+      }
+    ],
+    "tactics": [
+      {
+        "id": "2026-week7-eagles-lemon-crossing-space",
+        "team": "NFL",
+        "label": "장면 읽기 · 크로싱 루트",
+        "title": "Lemon의 21야드 크로싱: 공을 잡을 곳과 달릴 공간을 함께 보기",
+        "concept": "크로싱 루트는 리시버가 필드 가로 방향으로 이동하며 패스를 받는 경로다. 수신 지점만 아니라 이동 앞쪽 공간도 중요하다.",
+        "easy": "달리는 친구에게 공을 전달할 때 그 친구의 현재 자리뿐 아니라 다음에 갈 자리까지 보는 상황을 떠올리자.",
+        "gameUse": "Eagles 공식 리캡의 1쿼터 11분 19초, Dallas 34야드의 1다운 10야드 장면이다. McKee가 왼쪽으로 가로지르는 Lemon에게 연결해 21야드를 전진, Dallas 13야드에 도달했다. 기사 기반 설명이며 영상 프레임을 직접 분석한 것은 아니다.",
+        "whyItWorks": "원리 해설: 가로 이동은 수비가 따라가는 방향을 바꾸게 한다. 패스 이후에도 이동할 공간이 남으면 전진을 이어갈 수 있다. 여기서 21야드는 플레이의 전체 전진량이다. 이를 전부 캐치 뒤 전진이라고 부르면 패스로 이동한 거리를 놓치므로 수신 위치와 최종 위치를 따로 본다.",
+        "defenseCounter": "일반적인 대응은 가까운 수비수가 수신자를 추적하고 주변 수비수가 이동 앞쪽의 태클 각도를 유지하는 것이다. 모든 선수가 공 쪽으로만 몰리면 바깥 공간을 내줄 수 있다. 이는 원리 설명이지 Dallas의 실제 커버리지 지시를 재현한 것은 아니다.",
+        "breakdown": [
+          {
+            "label": "1 · 먼저 다운과 목표선",
+            "text": "Dallas 34야드에서 1다운 10야드였다. 깊은 곳만 보는 대신 가로 이동하는 수신자의 경로와 필요한 거리를 함께 확인한다."
+          },
+          {
+            "label": "2 · 이동 중 패스 연결",
+            "text": "공식 기록은 McKee가 왼쪽 크로싱의 Lemon에게 연결했다고 설명한다. 일반적으로 공격은 수신자의 이동을 살리고 수비는 추격 방향을 유지하려고 한다."
+          },
+          {
+            "label": "3 · 수신 뒤 통로까지 보기",
+            "text": "Lemon은 공간으로 빠져나가 총 21야드 전진을 완성했다. 영상에서는 캐치 위치와 최종 태클 위치를 각각 확인하자. 수비 관점에서는 첫 태클 각도와 주변 지원을 나누어 살피면 좋다."
+          }
+        ],
+        "watchOrder": [
+          "1쿼터 11분 19초의 다운과 출발 위치를 본다.",
+          "Lemon이 왼쪽으로 가로지르는 경로를 따라간다.",
+          "캐치 지점과 최종 전진 지점을 구분한다."
+        ],
+        "diagram": {
+          "kind": "catch-and-run",
+          "caption": "수신 뒤 전진 공간을 설명하는 일반 개념도이며 이 플레이의 실제 정렬·커버리지 재현이 아니다."
+        },
+        "source": {
+          "label": "Eagles 공식 리캡 · 1쿼터 플레이 기록",
+          "url": "https://www.philadelphiaeagles.com/news/cowboys-vs-eagles-game-recap-2026-nfl-week-7-monday-night-football-saquon-barkley-dak-prescott"
+        },
+        "video": {
+          "title": "Cowboys–Eagles 전체 경기 하이라이트",
+          "type": "전체 경기 하이라이트",
+          "url": "https://www.youtube.com/watch?v=6Hdk00wyWZk"
+        },
+        "narrativeMode": "integrated"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Dallas Cowboys vs Philadelphia Eagles Game Highlights | 2026 NFL Season Week 7",
+        "channel": "NFL",
+        "type": "전체 경기 하이라이트",
+        "url": "https://www.youtube.com/watch?v=6Hdk00wyWZk",
+        "publishedAt": "2026-10-27T03:34:11+00:00"
+      },
+      {
+        "title": "현재 논란인 심판 판정 수준",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "6kayXDV7rG4",
+        "type": "채널 해설/리뷰",
+        "note": "업로드: 2026-10-27 16:37 KST",
+        "url": "https://www.youtube.com/watch?v=6kayXDV7rG4",
+        "publishedAt": "2026-10-27T07:37:06+00:00",
+        "evidence": {
+          "checkedAt": "2026-10-27T09:01:38.132299+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCKF-sV1lgtP_exBfQ8cm9ag",
+            "https://www.youtube.com/watch?v=6kayXDV7rG4"
+          ],
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag"
+        }
+      },
+      {
+        "title": "머리를 너무 함부로 써서 심판들이 말리고 있는 상황",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "rC4zmS6--q0",
+        "type": "채널 해설/리뷰",
+        "note": "업로드: 2026-10-27 13:00 KST",
+        "url": "https://www.youtube.com/watch?v=rC4zmS6--q0",
+        "publishedAt": "2026-10-27T04:00:29+00:00",
+        "evidence": {
+          "checkedAt": "2026-10-27T09:01:38.132299+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCKF-sV1lgtP_exBfQ8cm9ag",
+            "https://www.youtube.com/watch?v=6kayXDV7rG4",
+            "https://www.youtube.com/watch?v=FBahj7I1SqY",
+            "https://www.youtube.com/watch?v=rC4zmS6--q0"
+          ],
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag"
+        }
+      },
+      {
+        "title": "진짜 예측 다 틀려버리네... 역시 NFL 이래서 꿀잼이지!!!!",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "MBm8SXHefAU",
+        "type": "채널 해설/리뷰",
+        "note": "업로드: 2026-10-27 00:19 KST",
+        "url": "https://www.youtube.com/watch?v=MBm8SXHefAU",
+        "publishedAt": "2026-10-26T15:19:55+00:00",
+        "evidence": {
+          "checkedAt": "2026-10-27T09:01:38.132299+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCKF-sV1lgtP_exBfQ8cm9ag",
+            "https://www.youtube.com/watch?v=6kayXDV7rG4",
+            "https://www.youtube.com/watch?v=FBahj7I1SqY",
+            "https://www.youtube.com/watch?v=rC4zmS6--q0",
+            "https://www.youtube.com/watch?v=MBm8SXHefAU"
+          ],
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag"
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873009",
+        "gameDate": "2026-10-27",
+        "date": "10/27",
+        "weekday": "화",
+        "time": "09:15",
+        "status": "종료",
+        "matchup": "Dallas Cowboys at Philadelphia Eagles",
+        "note": "Cowboys가 38-21로 이겼다. 러닝 지원으로 공격 균형을 되찾았다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=7"
+        },
+        "checkedAt": "2026-10-27T18:03:36.044+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873023",
+        "gameDate": "2026-10-30",
+        "date": "10/30",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Carolina Panthers at Green Bay Packers",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873026",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Baltimore Ravens at Buffalo Bills",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873031",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Tennessee Titans at Cincinnati Bengals",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873024",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Arizona Cardinals at Dallas Cowboys",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873030",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Minnesota Vikings at Detroit Lions",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873029",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Las Vegas Raiders at New York Jets",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873027",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Cleveland Browns at Pittsburgh Steelers",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873025",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Atlanta Falcons at Tampa Bay Buccaneers",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873028",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Indianapolis Colts at Jacksonville Jaguars",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873032",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:05",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Chargers at Los Angeles Rams",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873033",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Denver Broncos",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873034",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Miami Dolphins",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873035",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Philadelphia Eagles at Washington Commanders",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      },
+      {
+        "gameId": "401873036",
+        "gameDate": "2026-11-03",
+        "date": "11/03",
+        "weekday": "화",
+        "time": "10:15",
+        "status": "경기 예정",
+        "matchup": "Chicago Bears at Seattle Seahawks",
+        "note": "예정 경기다. 최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC 일정을 KST로 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-27T18:04:26.011+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-27"
+      }
+    ],
+    "topStoryKeys": [
+      "2026-week7-cowboys-eagles-result",
+      "2026-10-20-jay-z-super-bowl-lxi-report",
+      "2026-week7-eagles-barkley-practice-return",
+      "2026-week7-49ers-falcons-result",
+      "2026-10-26-raiders-cousins-week8-starter"
+    ]
+  },
+  {
     "date": "2026-10-26",
     "weekday": "월요일",
     "edition": "2026 WEEK 7 · 무패 구도가 바뀐 월요일",
