@@ -1,5 +1,588 @@
 export const briefings = [
   {
+    "date": "2026-10-28",
+    "weekday": "수요일",
+    "edition": "2026 WEEK 8 · NFC West 라인 보강과 4다운의 판단",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 8,
+    "dek": "Buckner의 49ers 복귀와 Nelson의 Seattle행이 중심이다. Goff가 설명한 4다운 선택, Sweat 복귀, 목요일 경기 준비와 국제전 시청 지표를 함께 살핀다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · NFC West의 라인 보강",
+      "title": "Buckner는 49ers로, Nelson은 Seattle로…Colts의 두 건의 트레이드",
+      "summary": "Colts가 Buckner를 49ers로 보내고, Seattle은 신체검사 조건으로 Nelson 영입을 발표했다. 지구 경쟁팀들의 라인 보강과 미래 지명권 확보를 함께 읽고, Goff의 4다운 판단·Sweat 복귀와 다음 경기 관전 포인트를 짚는다."
+    },
+    "sections": [
+      {
+        "id": "2026-10-27-buckner-trade-49ers",
+        "eventKey": "2026-10-27-buckner-trade-49ers",
+        "team": "49ers",
+        "label": "트레이드 · 구단 공식 발표",
+        "title": "Buckner가 49ers로 돌아온다…Colts에 2027년 4라운드 지명권",
+        "summary": "Colts는 현지 10월 27일 DeForest Buckner를 49ers로 보내고 2027년 4라운드 지명권을 받았다고 발표했다. 2016년 San Francisco가 지명하고 2020년 Indianapolis로 보냈던 수비 태클의 복귀다. Colts 공식 발표 기준 이번 시즌 첫 7경기에서 4색을 기록했다.",
+        "commentary": "49ers의 수비 라인 부상 공백에 즉시 전력 자원을 더하는 선택이다. 같은 날 Seattle도 Colts의 Nelson을 데려오면서 NFC West 경쟁팀들이 라인 전력을 보강했다. 다만 과거 이름값과 현재 기여는 구분해야 한다. 4색은 7경기의 생산량이지 상대·스냅 수를 보정한 효율 지표가 아니며, 새 팀에서 맡을 스냅과 동료 복귀에 따라 쓰임이 달라질 수 있다.",
+        "watch": "바이위크 뒤 첫 출전 명단, 내부 패스러시 조합과 실제 스냅 배분을 보자.",
+        "takeaway": "49ers는 미래 4라운드 지명권으로 익숙한 수비 핵심을 되찾았다. 복귀의 의미는 실제 로테이션에서 확인한다.",
+        "sources": [
+          {
+            "label": "www.colts.com",
+            "url": "https://www.colts.com/news/colts-acquire-2027-fourth-round-pick-in-exchange-for-dt-deforest-buckner-in-trade-with-san-francisco-49ers"
+          },
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/colts-to-trade-deforest-buckner-to-49ers-for-fourth-round-pick"
+          },
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50301125/colts-trade-de-deforest-buckner-49ers"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-27-chiefs-kingdoms-greetings",
+        "eventKey": "2026-10-27-chiefs-kingdoms-greetings",
+        "team": "Chiefs",
+        "label": "팬 문화 · 10월 27일 발표",
+        "title": "Arrowhead의 겨울 행사, 11월 27일 시작…경기와는 별도 일정",
+        "summary": "Chiefs는 현지 11월 27일부터 12월 29일 사이 지정일에 Arrowhead의 Kingdom’s Greetings 행사를 연다고 발표했다. 예약은 현지 10월 29일 오전 10시에 시작하며, 구단 안내의 기본 예약가는 1인 27달러부터다.",
+        "commentary": "경기장 클럽 층을 음식·장식·포토존이 있는 연말 행사장으로 꾸미는 팬 프로그램이다. 경기 관람권이나 매일 열리는 구장 투어와는 다르다. 이번에는 별도 프라이빗 스위트와 12월 13일 주간 프로그램도 소개됐다. 방문을 계획한다면 기본 입장과 추가 체험의 포함 항목을 나누어 확인하는 편이 좋다.",
+        "watch": "운영일별 예약 가능 여부와 별도 체험 요금, 휴무일을 공식 예약 안내에서 확인하자.",
+        "takeaway": "경기 결과 밖에서도 즐길 거리가 생긴다. 날짜별 행사 예약을 경기 티켓과 혼동하지 말자.",
+        "sources": [
+          {
+            "label": "www.chiefs.com",
+            "url": "https://www.chiefs.com/news/kingdom-s-greetings-returns-to-arrowhead-beginning-november-27"
+          }
+        ]
+      }
+    ],
+    "leagueWide": [
+      {
+        "id": "2026-10-27-nelson-trade-seahawks",
+        "eventKey": "2026-10-27-nelson-trade-seahawks",
+        "team": "Seahawks",
+        "label": "트레이드 · 신체검사 조건",
+        "title": "Seattle도 라인 보강…Nelson 영입 발표, 신체검사는 남았다",
+        "why": "Seahawks는 현지 10월 27일 Colts의 가드 Quenton Nelson 영입을 발표했다. 대가는 2027년 3라운드와 2028년 5라운드 지명권이며, 발표에는 신체검사 통과 조건이 명시됐다. 8시즌 연속 Pro Bowl에 선정된 왼쪽 가드를 더하는 결정이다. 내부 보호와 러닝 블로킹의 선택지를 넓히지만 가드 한 명의 명성만으로 공격 전체의 안정이 보장되지는 않는다. Bears전을 앞두고 검사·등록 완료와 라인 호흡, 기존 선수의 역할 조정을 확인하자.",
+        "takeaway": "두 장의 미래 지명권으로 내부 라인을 강화한다. 구단 발표의 신체검사 조건까지 함께 읽어야 한다.",
+        "url": "https://www.seahawks.com/news/seahawks-acquire-all-pro-guard-quenton-nelson-in-trade-with-colts-pending-physical",
+        "sources": [
+          {
+            "label": "www.seahawks.com",
+            "url": "https://www.seahawks.com/news/seahawks-acquire-all-pro-guard-quenton-nelson-in-trade-with-colts-pending-physical"
+          },
+          {
+            "label": "www.colts.com",
+            "url": "https://www.colts.com/news/colts-trade-g-quenton-nelson-to-seattle-seahawks-for-2-future-nfl-draft-picks"
+          },
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50298913/sources-seahawks-get-pro-bowl-guard-nelson-trade-colts"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-27-goff-fourth-down-decision-comments",
+        "eventKey": "2026-10-27-goff-fourth-down-decision-comments",
+        "team": "Lions",
+        "label": "전술 · Goff의 화요일 설명",
+        "title": "Goff가 옹호한 4다운 도박…필드 위치보다 마지막 공격권을 봤다",
+        "why": "NBC/PFT는 10월 27일 Goff가 라디오 인터뷰에서 Packers전의 4다운 결정을 지지했다고 전했다. 동점인 4쿼터 4분 53초에 4다운 1야드를 시도했지만 Gibbs는 2야드를 잃었다. Goff와 Campbell이 설명한 논리는 펀트 뒤 상대가 시간을 모두 쓰는 위험보다, 실패해도 다시 공격할 시간을 남기는 쪽을 택했다는 것이다. 실제로는 Wonnum이 필드골을 막았고 Detroit는 마지막 킥으로 이겼다. 승리 결과가 판단의 최적성을 자동 증명하지는 않는다. 성공 가능성·남은 타임아웃·상대가 쓸 수 있는 시간을 함께 보는 사례다.",
+        "takeaway": "4다운 판단은 전진 거리만의 문제가 아니다. 실패했을 때의 필드 위치와 다음 공격 기회까지 함께 본다.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-backs-dan-campbells-decision-to-go-for-it-deep-in-lions-own-end",
+        "sources": [
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-backs-dan-campbells-decision-to-go-for-it-deep-in-lions-own-end"
+          },
+          {
+            "label": "www.detroitlions.com",
+            "url": "https://www.detroitlions.com/news/recap-lions-vs-packers-goff-williams-stbrown-branch"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-27-sweat-return-comments",
+        "eventKey": "2026-10-27-sweat-return-comments",
+        "team": "Bears",
+        "label": "징계 후 복귀 · 선수 발언",
+        "title": "Sweat, 2경기 정지 뒤 복귀 설명…Seattle전 앞두고 책임 인정",
+        "why": "ESPN은 Montez Sweat가 10월 23일 복귀 자격을 회복했으며 27일 금지약물 관련 2경기 출장 정지에 대해 공개적으로 설명했다고 보도했다. 그는 비의도적 복용이었다고 주장하면서 책임을 인정했고, 구체적인 물질·검사 시점은 밝히지 않았다. 비의도적이었다는 설명은 선수의 입장이지 징계 취소나 면책 결정이 아니다. Bears가 Seattle전을 준비하면서 수비 라인 운용 선택지를 되찾는 변화다. 실제 액티브 등록과 복귀전 스냅, 패스러시 역할을 확인하자.",
+        "takeaway": "새 소식은 징계 부과가 아니라 복귀 이후의 설명이다. 선수의 의도 주장과 리그 조치를 구분한다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50301493/montez-sweat-back-bears-devastating-2-game-suspension",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50301493/montez-sweat-back-bears-devastating-2-game-suspension"
+          },
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill"
+          }
+        ]
+      },
+      {
+        "id": "2026-week8-packers-franklin-out",
+        "eventKey": "2026-week8-packers-franklin-out",
+        "team": "Packers",
+        "label": "목요일 경기 · 결장 발표",
+        "title": "Packers, Franklin은 Panthers전 결장…중앙 수비 역할 재점검",
+        "why": "LaFleur 감독은 현지 10월 27일 Zaire Franklin이 목요일 Panthers전에 나서지 못한다고 밝혔다. NBC/PFT는 지난 경기에서 Ty’Ron Hopper가 자리를 메웠고 Isaiah McDuffie가 수비 통신용 그린닷을 맡았다고 설명했다. 선수 한 명의 태클 생산뿐 아니라 수비 콜 전달과 인원 교대가 관전 포인트다. 한국시간 10월 30일 오전 9시 15분 경기에서 같은 역할 분담이 유지되는지 보자. Parsons의 다음 주 훈련 복귀 희망 발언은 이번 경기 출전 확정과 별개다.",
+        "takeaway": "결장 자체와 수비 콜 전달자의 역할을 함께 보자. 다른 부상자의 복귀 기대가 이번 주 공백을 메우지는 않는다.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-lb-zaire-franklin-wont-play-thursday-night",
+        "sources": [
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-lb-zaire-franklin-wont-play-thursday-night"
+          },
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-oct-27"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-27-bengals-all-ir-grandy-signing",
+        "eventKey": "2026-10-27-bengals-all-ir-grandy-signing",
+        "team": "Bengals",
+        "label": "로스터 · 구단 공식 발표",
+        "title": "Bengals, Erick All IR 등록·Cam Grandy 영입으로 TE 공백 대응",
+        "why": "Bengals는 현지 10월 27일 무릎을 다친 Erick All Jr.를 IR에 올리고 Vikings 연습조의 Cam Grandy와 계약했다고 발표했다. Josh Kattus는 연습조 부상 명단으로 옮겼고 Caden Prieskorn은 연습조에 합류했다. 공식 발표가 확인한 것은 무릎 부상과 명단 이동이다. 정식 선수단 보강과 연습조 보강을 나누어 봐야 한다. 다음 Titans전에서 새 타이트엔드의 패스 경로뿐 아니라 러닝 블로킹·보호 임무가 어떻게 배분되는지가 중요하다.",
+        "takeaway": "Grandy 영입은 실제 인력 대응이다. 연습조 계약과 정식 로스터 계약을 같은 출전 보장으로 읽지 않는다.",
+        "url": "https://www.bengals.com/news/cam-grandy-signed-erick-all-jr-reserve-injured-list-bengals-roster-update",
+        "sources": [
+          {
+            "label": "www.bengals.com",
+            "url": "https://www.bengals.com/news/cam-grandy-signed-erick-all-jr-reserve-injured-list-bengals-roster-update"
+          },
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-oct-27"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-27-paris-nfl-network-audience",
+        "eventKey": "2026-10-27-paris-nfl-network-audience",
+        "team": "NFL",
+        "label": "국제 경기 · 시청 지표",
+        "title": "파리 경기 평균 시청자 770만 명…NFL Network 국제전 세 번째 규모",
+        "why": "NBC/PFT는 10월 27일 ESPN을 인용해 Steelers–Saints 파리 경기의 평균 시청자가 770만 명이며 NFL Network 국제 경기 중 세 번째로 큰 시청 규모였다고 전했다. 10월의 유럽 4경기 평균은 710만 명이라고 보도했다. 비교 범위는 NFL Network 국제 경기다. 이를 NFL 전체 역대 순위나 파리 현장 관중 수로 바꾸어 읽으면 안 된다. 조기 일요일 경기의 시청 기반을 보여주는 수치지만, 다른 시간대·플랫폼의 경기와 단순 우열을 매기기보다 앞으로의 편성 확대와 함께 보자.",
+        "takeaway": "770만 명은 보도된 방송 평균 시청자 수다. 관중 수나 NFL 전체 최고 기록과 구분한다.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-saints-in-paris-generates-7-7-million-on-sunday-morning",
+        "sources": [
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-saints-in-paris-generates-7-7-million-on-sunday-morning"
+          }
+        ]
+      },
+      {
+        "id": "2026-week8-nfl-shook-power-rankings",
+        "eventKey": "2026-week8-nfl-shook-power-rankings",
+        "team": "NFL",
+        "label": "전망 · 기자의 파워랭킹",
+        "title": "Vikings 1위·Chiefs 7위…Week 8 파워랭킹은 순위표가 아니다",
+        "why": "NFL.com의 Nick Shook은 현지 10월 27일 Week 8 파워랭킹에서 Vikings를 1위, Bills를 2위, 49ers를 3위, Seahawks를 4위에 놓았다. Chiefs는 7위, Patriots는 10위다. 이는 기자의 전력 평가이며 공식 플레이오프 시드나 우승 확률이 아니다. 특히 Seattle의 수비·러닝 균형과 Kansas City의 러닝 의존도에 대한 평가 차이를 읽을 만하다. 한 경기로 전력의 본질이 모두 바뀌었다고 단정하지 말고, Vikings–Lions와 Chiefs–Broncos 등 다음 경기에서 같은 강점과 약점이 이어지는지 살펴보자.",
+        "takeaway": "전력 평가는 다음 경기의 질문을 만드는 자료다. 파워랭킹 숫자를 공식 순위나 우승 확률로 바꾸지 않는다.",
+        "url": "https://amp.nfl.com/news/nfl-power-rankings-week-8-2026-nfl-season",
+        "sources": [
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-power-rankings-week-8-2026-nfl-season"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-27-giants-tracy-ir-desrosiers-signing",
+        "eventKey": "2026-10-27-giants-tracy-ir-desrosiers-signing",
+        "team": "Giants",
+        "label": "로스터 · 부상 후속",
+        "title": "Giants, Tracy IR 등록·Desrosiers 영입…GM은 시즌 종료 아냐",
+        "why": "Giants는 현지 10월 27일 Tyrone Tracy Jr.를 IR에 등록하고 Chargers 연습조의 Gregory Desrosiers를 정식 로스터로 영입했다고 발표했다. 앞서 소개한 경기 중 햄스트링 이탈 이후 실제 명단 조치가 나온 것이다. Joe Schoen 단장은 시즌을 끝내는 부상은 아니라고 설명했다. IR 등록과 시즌 아웃은 같은 뜻이 아니다. Week 8 휴식기 이후 Cam Skattebo·Devin Singletary의 역할과 신인 Desrosiers의 경기 등록을 보되, 영입만으로 즉시 큰 역할을 맡는다고 단정하지 않는다.",
+        "takeaway": "부상 전망에서 명단 조치로 넘어갔다. 시즌 종료는 아니라는 GM 설명과 실제 복귀 날짜 확정은 구분한다.",
+        "url": "https://www.giants.com/news/tyrone-tracy-jr-injured-reserve-gregory-desrosiers-dean-lowry-practice-squad-roster-moves-bye-week-joe-schoen",
+        "sources": [
+          {
+            "label": "www.giants.com",
+            "url": "https://www.giants.com/news/tyrone-tracy-jr-injured-reserve-gregory-desrosiers-dean-lowry-practice-squad-roster-moves-bye-week-joe-schoen"
+          },
+          {
+            "label": "amp.nfl.com",
+            "url": "https://amp.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-oct-27"
+          }
+        ],
+        "changeSummary": "10/26판의 복수 구단 경기 중 부상 종합에서 언급한 Tracy에게 구단 공식 IR 등록과 대체 인력 영입이 추가됐다.",
+        "changeEvidence": {
+          "url": "https://www.giants.com/news/tyrone-tracy-jr-injured-reserve-gregory-desrosiers-dean-lowry-practice-squad-roster-moves-bye-week-joe-schoen",
+          "before": "Giants의 Tracy는 햄스트링으로 복귀하지 못했고",
+          "after": "Tyrone Tracy Jr.를 IR에 등록하고",
+          "quote": "Giants는 Tyrone Tracy Jr.를 IR에 등록하고",
+          "originalQuote": "Running back Tyrone Tracy Jr., who had scored three touchdowns in the last two games, was placed on injured reserve as the Giants enter their Week 8 bye.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      }
+    ],
+    "tactics": [
+      {
+        "id": "2026-week7-lions-fourth-down-clock",
+        "team": "NFL",
+        "label": "장면 읽기 · 다운과 시간",
+        "title": "4다운 1야드, 남은 4분 53초: 거리가 아니라 다음 공격권까지 보기",
+        "concept": "4다운 선택은 성공 시 전진과 실패 시 필드 위치뿐 아니라 남은 시간·공격권을 함께 평가하는 결정이다.",
+        "easy": "공을 멀리 보내는 것이 항상 안전한 것은 아니다. 상대가 남은 시간을 다 쓰면 우리에게 다시 공격할 기회가 오지 않을 수 있다.",
+        "gameUse": "10월 25일 Packers전 동점 상황에서 Lions는 4쿼터 4분 53초의 4다운 1야드를 시도했다. Gibbs가 2야드를 잃었지만 이후 Wonnum의 필드골 블록과 마지막 득점으로 Detroit가 이겼다. 이 설명은 공식 리캡과 Goff의 인터뷰를 전한 보도에 근거한다.",
+        "whyItWorks": "Campbell과 Goff가 제시한 논리는 공격권을 유지할 기회를 먼저 사고, 실패하더라도 상대의 짧은 필드 공격 뒤 다시 공을 받을 시간을 남기겠다는 것이다. 이는 그들의 판단 근거이며 검증된 승리확률 최적해라는 뜻은 아니다.",
+        "defenseCounter": "수비의 우선 과제는 필요한 1야드를 내주지 않는 것이다. 공격권을 넘겨받은 뒤에는 득점뿐 아니라 시간 소모와 상대의 재공격 가능성도 계산한다. 어느 선택이 유리한지는 타임아웃·성공 확률 등 조건에 따라 달라진다.",
+        "video": {
+          "title": "Packers–Lions 전체 경기 하이라이트",
+          "type": "전체 경기 하이라이트",
+          "url": "https://www.youtube.com/watch?v=r3NBIs-ABLA"
+        },
+        "diagram": {
+          "kind": "fourth-down-clock-decision",
+          "caption": "거리·시간·공격권의 선택지를 설명하는 개념도이며 실제 선수 정렬 재현이 아니다."
+        },
+        "breakdown": [
+          {
+            "label": "1 · 공을 놓기 전에 시계를 본다",
+            "text": "동점, 4분 53초, 4다운 1야드라는 세 조건을 함께 읽는다. 펀트는 필드 위치를 개선할 수 있지만 다음 공격권을 보장하지 않는다.",
+            "meaning": "펀트는 공을 차서 상대 진영 깊숙이 넘기는 선택이다. 필드 위치를 얻는 대신 공격권을 내주므로, 상대가 시계를 다 쓰면 다시 공격하지 못한다."
+          },
+          {
+            "label": "2 · 성공과 실패를 둘 다 그린다",
+            "text": "성공하면 공격을 이어가고, 실패하면 짧은 필드를 내준다. 감독이 기대한 것은 실패해도 다시 공격할 시간을 확보하는 것이며, 실제 잔여 시간은 상대의 플레이와 시간 관리에 달려 있다.",
+            "counter": "수비는 필요한 1야드를 막는 것이 우선이다. 공격권을 얻은 뒤에는 득점과 시간 소모를 함께 노린다. 짧은 필드가 곧 빠른 공격 종료를 보장하지는 않는다."
+          },
+          {
+            "label": "3 · 결과와 판단을 따로 채점한다",
+            "text": "Gibbs는 멈췄고 다음 필드골은 블록됐다. 이후 승리를 근거로 매번 같은 선택이 정답이라고 결론내리지 말고, 상대가 킥에 성공했다면 무엇이 달라졌을지도 생각해 본다.",
+            "meaning": "다음 공격권을 중시했다는 것은 감독과 쿼터백의 설명이다. 실제 선택의 우열은 성공 확률과 남은 타임아웃까지 비교해야 하며, 이 경기의 승리만으로 최적의 결정이었다고 단정할 수 없다."
+          }
+        ],
+        "watchOrder": [
+          "4쿼터의 점수와 남은 시간을 먼저 확인한다.",
+          "4다운 실패 뒤 상대의 공격 시작 위치를 본다.",
+          "필드골 시도 뒤 Detroit가 다시 공을 잡을 때의 시간을 본다."
+        ],
+        "source": {
+          "label": "www.nbcsports.com",
+          "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-backs-dan-campbells-decision-to-go-for-it-deep-in-lions-own-end"
+        },
+        "sources": [
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-backs-dan-campbells-decision-to-go-for-it-deep-in-lions-own-end"
+          },
+          {
+            "label": "www.detroitlions.com",
+            "url": "https://www.detroitlions.com/news/recap-lions-vs-packers-goff-williams-stbrown-branch"
+          }
+        ],
+        "narrativeMode": "integrated"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Green Bay Packers vs Detroit Lions Game Highlights | 2026 NFL Season Week 7",
+        "channel": "NFL",
+        "type": "전체 경기 하이라이트",
+        "url": "https://www.youtube.com/watch?v=r3NBIs-ABLA",
+        "publishedAt": "2026-10-25T16:52:56-07:00",
+        "note": "4쿼터의 다운·남은 시간과 두 팀의 마지막 공격을 함께 보자.",
+        "evidence": {
+          "checkedAt": "2026-10-28T09:07:02.574+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=r3NBIs-ABLA"
+          ],
+          "authorVerified": true,
+          "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+          "metadataFile": "lions-video.metadata.json"
+        }
+      },
+      {
+        "title": "혼돈의 NFL! 뒤죽박죽 7주차 파워랭킹 방송",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "FBahj7I1SqY",
+        "type": "채널 해설/리뷰",
+        "note": "업로드: 2026-10-28 00:03 KST",
+        "url": "https://www.youtube.com/watch?v=FBahj7I1SqY",
+        "publishedAt": "2026-10-27T15:03:22+00:00",
+        "evidence": {
+          "checkedAt": "2026-10-28T09:02:14.831778+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCKF-sV1lgtP_exBfQ8cm9ag",
+            "https://www.youtube.com/watch?v=FBahj7I1SqY"
+          ],
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag"
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873023",
+        "gameDate": "2026-10-30",
+        "date": "10/30",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "경기 예정",
+        "matchup": "Carolina Panthers at Green Bay Packers",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873026",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Baltimore Ravens at Buffalo Bills",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873031",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Tennessee Titans at Cincinnati Bengals",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873024",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Arizona Cardinals at Dallas Cowboys",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873030",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Minnesota Vikings at Detroit Lions",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873029",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Las Vegas Raiders at New York Jets",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873027",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Cleveland Browns at Pittsburgh Steelers",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873025",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Atlanta Falcons at Tampa Bay Buccaneers",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873028",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Indianapolis Colts at Jacksonville Jaguars",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873032",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:05",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Chargers at Los Angeles Rams",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873033",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Denver Broncos",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873034",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Miami Dolphins",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873035",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Philadelphia Eagles at Washington Commanders",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      },
+      {
+        "gameId": "401873036",
+        "gameDate": "2026-11-03",
+        "date": "11/03",
+        "weekday": "화",
+        "time": "10:15",
+        "status": "경기 예정",
+        "matchup": "Chicago Bears at Seattle Seahawks",
+        "note": "최종 출전 명단과 킥오프 변경 공지를 확인하자. 미국 서머타임 종료 뒤 한국시간 기준이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-28T09:03:12.285+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-28"
+      }
+    ],
+    "topStoryKeys": [
+      "2026-10-27-buckner-trade-49ers",
+      "2026-10-27-nelson-trade-seahawks",
+      "2026-10-27-goff-fourth-down-decision-comments",
+      "2026-10-27-sweat-return-comments",
+      "2026-week8-packers-franklin-out"
+    ]
+  },
+  {
     "date": "2026-10-27",
     "weekday": "화요일",
     "edition": "2026 WEEK 7 · Dallas 반등과 슈퍼볼 무대 확정",

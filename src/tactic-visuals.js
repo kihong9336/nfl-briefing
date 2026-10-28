@@ -175,7 +175,21 @@ function loopStunt(item) {
   </svg>`;
 }
 
+function fourthDownClockDecision(item) {
+  return `<section class="clock-decision" aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <p><strong>동점 · 4Q 4:53 · 4th &amp; 1</strong></p>
+    <p>↓ 필드 위치와 다음 공격권을 함께 비교</p>
+    <ol style="padding-inline-start:1.5em">
+      <li><strong>펀트</strong><p>상대를 뒤로 보낼 수 있다. 하지만 상대가 시간을 쓰면 다음 공격권이 돌아오지 않을 수 있다.</p></li>
+      <li><strong>시도 성공</strong><p>공격권을 유지하며 전진한다. 득점과 시간 사용을 계속 선택할 수 있다.</p></li>
+      <li><strong>시도 실패</strong><p>상대에게 짧은 필드를 내준다. 다시 공을 받을 시간은 상대의 시간 관리와 득점 과정에 달려 있다.</p></li>
+    </ol>
+    <p>성공 확률·타임아웃도 함께 판단한다. 승리 결과만으로 선택의 우열을 확정하지 않는다.</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'fourth-down-clock-decision') return fourthDownClockDecision(item);
   if (item?.diagram?.kind === 'loop-stunt') return loopStunt(item);
   if (item?.diagram?.kind === 'double-dig-vs-tampa2') return doubleDig(item);
   if (item?.diagram?.kind === 'catch-and-run') return catchAndRun(item);
