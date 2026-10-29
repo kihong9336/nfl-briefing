@@ -188,7 +188,19 @@ function fourthDownClockDecision(item) {
   </section>`;
 }
 
+function rbRotationOptions(item) {
+  return `<section class="rb-rotation-options" aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <p><strong>Williams ↔ Corum</strong><br>교대해도 같은 공격 선택지</p>
+    <p>↓ 공통 메뉴 ↓</p>
+    <details open><summary>1 · 러닝백 교대</summary><p>Williams 또는 Corum이 들어온다. 선수 이름만으로 다음 플레이를 정하지 않는다.</p></details>
+    <details open><summary>2 · 두 선수의 공통 메뉴</summary><p><strong>러닝 ↔ 패스 참여·보호</strong><br>누가 뛰어도 러닝과 패스 선택지를 남긴다. 모든 임무를 한 플레이에서 동시에 수행한다는 뜻은 아니다.</p></details>
+    <details open><summary>3 · 수비의 책임</summary><p><strong>러닝 갭 ↔ 패스 커버</strong><br>수비는 교체 선수만 보고 단정하지 않고 다운·거리·정렬과 스냅 뒤 움직임을 읽는다.</p></details>
+    <p>공격 선택지의 관계 개념도 · 실제 정렬이나 블로킹 재현 아님</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'rb-rotation-options') return rbRotationOptions(item);
   if (item?.diagram?.kind === 'fourth-down-clock-decision') return fourthDownClockDecision(item);
   if (item?.diagram?.kind === 'loop-stunt') return loopStunt(item);
   if (item?.diagram?.kind === 'double-dig-vs-tampa2') return doubleDig(item);
