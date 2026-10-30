@@ -1,5 +1,634 @@
 export const briefings = [
   {
+    "date": "2026-10-30",
+    "weekday": "금요일",
+    "edition": "2026 WEEK 8 · Simmons 트레이드와 TNF",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 8,
+    "dek": "Bears가 Simmons 영입에 미래 1라운드 두 장을 건다. Packers의 27-19 승리와 Watson의 경기 복귀, Caleb Williams의 추가 벌금 보도, 무패 Vikings의 압박 수비와 관심팀 관전 포인트를 짚는다. 미국 서머타임 종료로 한국 월요일 이른 경기들은 오전 3시에 시작한다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 트레이드와 목요일 경기",
+      "title": "Bears, Simmons 영입에 1라운드 두 장…Packers는 27-19 승리",
+      "summary": "Chicago가 우승 경쟁을 위해 미래 지명권을 내놓았다. Green Bay는 수비의 여섯 차례 색으로 접전을 버텼고, Watson은 병원 검사 뒤 경기로 돌아왔다."
+    },
+    "sections": [
+      {
+        "id": "2026-week8-patriots-dolphins-oct28-practice",
+        "eventKey": "2026-week8-patriots-dolphins-oct28-practice",
+        "team": "Patriots",
+        "label": "Dolphins전 · 부상 후속",
+        "title": "Patriots A.J. Brown DNP로 변경…Henderson도 질병으로 불참",
+        "summary": "현지 10월 29일 공식 보고에서 A.J. Brown은 목요일 훈련 불참으로 바뀌었다. 원인은 발목·무릎으로 기재됐고 TreVeyon Henderson은 질병으로 DNP다. Drake Maye는 오른쪽 어깨로 FP, Ben Brown과 Morgan Moses는 LP를 유지했다.",
+        "commentary": "전날 불참자가 없던 공격 준비에 새 변수가 생겼다. 수신 표적과 러닝백 가용 인원이 동시에 영향을 받을 수 있지만, 목요일 보고만으로 Miami전 결장을 확정할 수는 없다. Maye의 정상 훈련과 주변 자원의 가용성은 따로 살펴야 한다.",
+        "watch": "한국시간 11월 2일 오전 6시 25분 Miami전 전까지 최종 등급과 액티브 명단을 확인하자.",
+        "takeaway": "Brown의 참여도 하락과 Henderson의 신규 불참이 핵심 변화다. 경기 결장 확정과는 구분한다.",
+        "sources": [
+          {
+            "label": "www.patriots.com",
+            "url": "https://www.patriots.com/news/week-8-injury-report-patriots-at-dolphins-x9227"
+          },
+          {
+            "label": "NFL 공식 Week 8 일정",
+            "url": "https://www.nfl.com/scores/2026/week-8"
+          }
+        ],
+        "changeSummary": "이전 보도 이후 확인된 변화: 목요일 훈련 불참으로 바뀌었다",
+        "changeEvidence": {
+          "url": "https://www.patriots.com/news/week-8-injury-report-patriots-at-dolphins-x9227",
+          "before": "훈련 불참 선수가 없었다",
+          "after": "목요일 훈련 불참으로 바뀌었다",
+          "quote": "A.J. Brown은 목요일 훈련 불참으로 바뀌었다.",
+          "originalQuote": "THURSDAY, OCTOBER 29, 2026\nNEW ENGLAND PATRIOTS\nDID NOT PARTICIPATE\nWR A.J. Brown - Ankle / Knee",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-week8-patriots-dolphins-self-scout",
+        "eventKey": "2026-week8-patriots-dolphins-self-scout",
+        "team": "Patriots",
+        "label": "관전 심화 · 구단 필름 분석",
+        "title": "Maye만으로 풀 수 없는 숙제…Miami전에는 러닝과 구역수비를 보자",
+        "summary": "Evan Lazar의 10월 29일 구단 분석은 Patriots가 첫 7주 패싱 EPA 5위지만 러싱 EPA는 27위라고 설명했다. 언더센터 플레이액션도 31위로, 러닝을 보여 주고 패스로 바꾸는 기존 접근의 생산성이 낮았다.",
+        "commentary": "Lazar는 샷건·피스톨과 RPO 활용 확대를 대안으로 제안했지만 이는 새 전술 도입 확정이 아니다. 수비에서도 사람을 따라가는 맨커버리지와 공간을 맡는 존커버리지의 결과가 달랐다. 상대·다운·압박 선택이 다른 표본이므로 순위 차이만으로 한 방식이 항상 우월하다고 단정하지 않는다. Miami전에는 Malik Willis의 이동을 쫓다 빈 공간을 만들지 않는 것이 관전 과제다.",
+        "watch": "스냅 전 QB 위치, 러닝 뒤 남는 거리, 존수비에서 짧은 공간을 인계하는 과정을 보자.",
+        "takeaway": "공격의 강점은 패싱이지만 러닝과 존수비의 실행이 다음 단계다. 전술 변경 제안과 실제 호출을 구분한다.",
+        "sources": [
+          {
+            "label": "www.patriots.com",
+            "url": "https://www.patriots.com/news/patriots-gameplan-self-scouting-the-pats-through-seven-games-and-prepping-for-the-dolphins-in-week-8"
+          }
+        ]
+      },
+      {
+        "id": "2026-week8-chiefs-broncos-oct29-practice",
+        "eventKey": "2026-week8-chiefs-broncos-oct29-practice",
+        "team": "Chiefs",
+        "label": "Broncos전 · 공식 훈련 보고",
+        "title": "Chiefs, Sneed는 LP 복귀·Kelce는 LP…Moore FP는 유지",
+        "summary": "Chiefs의 10월 29일 공식 보고에서 L’Jarius Sneed는 수요일 DNP에서 목요일 LP로 돌아왔고 Travis Kelce는 FP에서 LP로 내려갔다. Jaylon Moore와 Patrick Mahomes는 FP, Rashee Rice는 LP다. Mansoor Delane은 어깨로 DNP에 추가됐다.",
+        "commentary": "전날 키커 영입 소식과 별개로 Denver전에 필요한 공격 보호와 패스 수비의 가용 인원이 변하고 있다. Sneed의 훈련 복귀는 긍정적 단계지만 정상 스냅 물량을 보장하지 않는다. Kelce와 Rice의 실제 활용, Moore의 경기 등록을 함께 확인해야 첫 패배 뒤 공격의 반등을 평가할 수 있다.",
+        "watch": "한국시간 11월 2일 오전 6시 25분 Denver전 최종 명단과 태클·코너 조합을 보자.",
+        "takeaway": "같은 LP라도 복귀와 참여도 하락은 다르다. 이번 변화의 방향과 실제 경기 역할을 나누어 본다.",
+        "sources": [
+          {
+            "label": "www.chiefs.com",
+            "url": "https://www.chiefs.com/news/week-8-injury-report-chiefs-vs-broncos-2026"
+          },
+          {
+            "label": "NFL 공식 Week 8 일정",
+            "url": "https://www.nfl.com/scores/2026/week-8"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-29-49ers-flag-mexico-city",
+        "eventKey": "2026-10-29-49ers-flag-mexico-city",
+        "team": "49ers",
+        "label": "국제 확장 · 유소년 프로그램",
+        "title": "49ers, Mexico City 49개 학교로 무료 플래그풋볼 확대",
+        "summary": "49ers는 현지 10월 29일 49ers Flag Mexico 프로그램을 Mexico City로 확대한다고 발표했다. 전날 행사에는 지역 49개 학교가 참여했고 체육 교사 70명에게 지도 교육을 제공했다. Los Cabos·Monterrey를 포함한 전체 네트워크는 약 100개 학교라고 구단은 설명했다.",
+        "commentary": "국제 확장은 정규시즌 경기 한 번의 개최만을 뜻하지 않는다. 학교 체육에 무료 플래그풋볼을 넣고 교사를 양성하면 팬이 경기를 보는 것을 넘어 직접 참여하는 기반이 생긴다. 다만 이번 발표는 새로운 NFL 정규시즌 대진이나 티켓 판매 공지가 아니다.",
+        "watch": "향후 학교 수 확대와 프로그램 운영 결과를 보자. 정규시즌 국제전 일정은 별도 리그 발표로 확인한다.",
+        "takeaway": "경기 수출과 참여 기반 조성은 다르다. 이번 소식은 학교와 교사에 투자하는 국제 확장이다.",
+        "sources": [
+          {
+            "label": "www.49ers.com",
+            "url": "https://www.49ers.com/news/49ers-expand-in-school-youth-football-program-into-mexico-city"
+          }
+        ]
+      }
+    ],
+    "leagueWide": [
+      {
+        "id": "2026-10-29-simmons-trade-bears",
+        "eventKey": "2026-10-29-simmons-trade-bears",
+        "team": "Bears / Titans",
+        "label": "트레이드 · 구단 합의 발표",
+        "title": "Bears, Simmons에 1라운드 두 장…우승 도전의 비용을 먼저 지불했다",
+        "why": "Titans는 현지 10월 29일 Jeffery Simmons를 Bears로 보내는 거래 합의를 발표했다. Tennessee는 2027·2028년 1라운드와 2027년 4라운드 지명권을 받고, Chicago는 Simmons와 2028년 5라운드 지명권을 받는다. 구단 발표에는 신체검사 조건이 남아 있다. NFL은 5승 2패 Bears가 1승 6패 Titans와 서로 다른 시간표를 택한 거래라고 분석했다. Chicago는 당장의 수비 중앙을 강화하는 대신 다음 두 드래프트의 최상위 선택권을 내놓았다. 이것은 우승 확정이 아니라 우승 가능성을 위해 미래 선택지를 줄인 결정이다. 다음 Seattle전 등록과 Simmons의 실제 스냅·인사이드 압박 역할을 보자. 한국시간 경기는 11월 3일 오전 10시 15분이다.",
+        "takeaway": "즉시 전력과 미래 1라운드 지명권의 교환이다. 신체검사와 새 수비에서의 역할은 다음 확인점이다.",
+        "url": "https://www.tennesseetitans.com/news/titans-trade-dt-jeffery-simmons-to-the-chicago-bears-in-exchange-for-two-first-round-picks",
+        "sources": [
+          {
+            "label": "www.tennesseetitans.com",
+            "url": "https://www.tennesseetitans.com/news/titans-trade-dt-jeffery-simmons-to-the-chicago-bears-in-exchange-for-two-first-round-picks"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/jeffery-simmons-bears-titans-trade"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ]
+      },
+      {
+        "id": "2026-week8-panthers-packers-result",
+        "eventKey": "2026-week8-panthers-packers-result",
+        "team": "Packers / Panthers",
+        "label": "TNF 결과 · 경기 기록",
+        "title": "Packers 27-19 승리…6색의 수비가 흔들리는 마무리를 버텼다",
+        "why": "한국시간 10월 30일 Green Bay가 Carolina를 27-19로 꺾어 5승 3패가 됐고 Panthers는 3승 4패가 됐다. 구단 리캡과 경기 기록에서 Jordan Love는 41회 중 30회 성공, 288야드·3패싱 TD·1INT다. Green Bay 수비는 Bryce Young을 여섯 번 색으로 잡고 후반 두 차례 4다운을 막았다. 특히 27-19에서 마지막 3분 안쪽의 4th-and-5 패스 실패가 추격을 끊었다. 그러나 세 차례 턴오버와 66야드에 그친 러싱은 승리로 가려지지 않는다. Josh Jacobs도 21회 러싱 39야드였고, 종료를 향해 시간을 소모하는 공격이 원활하지 않았다. NFC North에서 승수가 더 많아도 편하게 순위를 지킬 수 없는 경쟁이 계속된다. 다음에는 패스의 생산량뿐 아니라 앞선 상황의 러닝과 마지막 공격권 관리가 개선되는지 보자.",
+        "takeaway": "Love의 3패싱 TD와 수비의 6색이 승리를 만들었다. 리드 관리와 러닝은 여전히 숙제다.",
+        "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-panthers-week-8-2026",
+        "sources": [
+          {
+            "label": "www.packers.com",
+            "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-panthers-week-8-2026"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873023"
+          },
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-packers-hold-on-for-27-19-win-over-panthers"
+          }
+        ]
+      },
+      {
+        "id": "2026-week8-watson-rib-hospital-return",
+        "eventKey": "2026-week8-watson-rib-hospital-return",
+        "team": "Packers",
+        "label": "경기 중 부상 · 복귀 확인",
+        "title": "Watson, 병원 검사 뒤 경기 복귀…갈비뼈 골절은 별도 과제",
+        "why": "Christian Watson은 Panthers전 53야드 리셉션 뒤 쓰러졌고, 구단 리캡은 피가 섞인 기침 때문에 병원으로 이동해 검사를 받았다고 설명했다. 갈비뼈 골절이 확인됐지만 경기 후반 다시 출전했으며 최종 기록은 8리셉션 113야드였다. ESPN도 현장 취재로 복귀 경위를 전했다. 큰 패스 플레이와 선수의 건강 상태를 분리해 읽어야 한다. 복귀했다는 사실은 다음 경기까지 영향이 없다는 뜻도, 같은 증상의 다른 선수에게 안전한 기준이 된다는 뜻도 아니다. 향후 구단의 연습 보고와 경기 상태 발표를 확인하자.",
+        "takeaway": "당일 복귀와 부상 소멸은 다르다. 113야드 활약 이후에도 다음 출전 상태는 다시 확인해야 한다.",
+        "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-panthers-week-8-2026",
+        "sources": [
+          {
+            "label": "www.packers.com",
+            "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-panthers-week-8-2026"
+          },
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50324081/packers-christian-watson-hospital-chest-injury-panthers"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-26-caleb-williams-cleats-fine",
+        "eventKey": "2026-10-26-caleb-williams-cleats-fine",
+        "team": "Bears",
+        "label": "장비 규정 · 벌금 후속 보도",
+        "title": "Caleb Williams, 신발 로고로 두 번째 벌금 23,882달러 보도",
+        "why": "ESPN의 Courtney Cronin은 현지 10월 29일 소식통을 인용해 Williams가 Week 7 신발 로고로 23,882달러 벌금을 받았다고 전했다. 앞서 Week 6에 부과된 11,941달러와는 별도 위반 보도다. ESPN에 따르면 선수는 Seattle전에도 Caddix 로고를 가릴 계획이 없다고 밝혔고 첫 벌금에는 항소했다. 출전정지가 아니라 장비·로고 규정 관련 금전 징계다. 선수와 제조사가 제시하는 착용감·안전성 주장은 임상적으로 입증된 부상 예방 효과와 구분한다. 다음에는 항소 결과와 월요일 경기의 실제 착용, 추가 징계 발표를 보자.",
+        "takeaway": "첫 벌금의 단순 반복이 아니라 Week 7에 대한 두 번째 처분 보도다. 안전성 홍보와 규정 문제는 별개다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50323203/bears-quarterback-caleb-williams-fined-again-cleats",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50323203/bears-quarterback-caleb-williams-fined-again-cleats"
+          }
+        ],
+        "changeSummary": "이전 보도 이후 확인된 변화: 23,882달러 벌금을 받았다고",
+        "changeEvidence": {
+          "url": "https://www.espn.com/nfl/story/_/id/50323203/bears-quarterback-caleb-williams-fined-again-cleats",
+          "before": "11,941달러 벌금을 받았다고",
+          "after": "23,882달러 벌금을 받았다고",
+          "quote": "Williams는 Week 7에 23,882달러 벌금을 받았다고 소식통이 확인했다.",
+          "originalQuote": "quarterback $23,882 for sporting Caddix cleats in Week 7, a source confirmed to ESPN on Thursday.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-22-colts-taylor-trade-interest",
+        "eventKey": "2026-10-22-colts-taylor-trade-interest",
+        "team": "Colts",
+        "label": "트레이드 시장 · 선수 입장 후속",
+        "title": "Taylor는 트레이드를 요청하지 않았다…시장의 관심과 구분할 것",
+        "why": "ESPN의 Stephen Holder가 현지 10월 29일 전한 인터뷰에서 Jonathan Taylor는 트레이드를 요청하지 않았다고 확인했다. 팀에 남아 경쟁하고 싶다는 뜻을 밝히면서도 구단의 사업적 결정을 통제할 수 없다고 설명했다. 앞서 Nelson·Buckner가 이적했고 Downs의 이적 요청이 보도됐다고 해서 Taylor의 의사까지 같다고 볼 수는 없다. 여러 팀의 관심은 이어지지만 Colts가 Taylor를 내보낼지는 여전히 불명확하다고 ESPN은 전했다. 다음 Jaguars전 준비와 실제 구단 협상·합의 발표를 나누어 추적하자.",
+        "takeaway": "영입 관심, 선수의 이적 요청, 구단의 매각 결정은 서로 다른 사실이다. Taylor의 요청은 없다고 확인됐다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50319874/colts-jonathan-taylor-confirms-requested-trade",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50319874/colts-jonathan-taylor-confirms-requested-trade"
+          }
+        ],
+        "changeSummary": "이전 보도 이후 확인된 변화: 트레이드를 요청하지 않았다고 확인했다",
+        "changeEvidence": {
+          "url": "https://www.espn.com/nfl/story/_/id/50319874/colts-jonathan-taylor-confirms-requested-trade",
+          "before": "여러 팀이 Taylor·Nelson·Buckner·Stewart 영입 시나리오를 검토하고 있다고",
+          "after": "트레이드를 요청하지 않았다고 확인했다",
+          "quote": "Taylor는 트레이드를 요청하지 않았다고 확인했다.",
+          "originalQuote": "confirmed he has not asked for a trade amid the team's roster overhaul",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-29-vikings-blitz-rate-analysis",
+        "eventKey": "2026-10-29-vikings-blitz-rate-analysis",
+        "team": "Vikings",
+        "label": "전술 분석 · 표본과 상대 수준",
+        "title": "Vikings의 69.9% 블리츠…더 많이 보내는 것만이 비결은 아니다",
+        "why": "ESPN의 Kevin Seifert는 10월 29일 분석에서 Minnesota의 시즌 블리츠 비율을 69.9%, 직전 Colts전 비율을 85.3%로 제시했다. 이 기사에서 블리츠는 다섯 명 이상을 패스러시에 보내는 경우다. 비교 기준인 28.9%는 2006년 이후 ESPN 집계 기간의 리그 평균이며 올해만의 평균은 아니다. Flores는 반복 훈련으로 선수들이 비는 공간과 책임을 이해한다고 설명했다. ESPN은 첫 다운 수비가 상대에게 긴 2·3다운을 남기는 효과도 짚었다. 하지만 FPI 기준 지금까지 상대 일정은 아홉 번째로 쉬웠고 남은 일정은 여섯 번째로 어렵다. 6승 0패의 성과를 인정하되 상대 수준을 완전히 보정한 역대 최강 판정은 피하자. 한국시간 11월 2일 오전 3시 Lions전에서는 압박 인원뿐 아니라 압박을 접고 커버리지로 돌아가는 순간을 함께 보자.",
+        "takeaway": "높은 블리츠 비율은 설명의 출발점이다. 긴 다운을 만드는 과정과 더 강해질 상대 일정까지 봐야 한다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50306991/vikings-astronomical-blitz-rate-brian-flores-sack",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50306991/vikings-astronomical-blitz-rate-brian-flores-sack"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ]
+      },
+      {
+        "id": "2026-10-29-june-jones-obituary",
+        "eventKey": "2026-10-29-june-jones-obituary",
+        "team": "NFL",
+        "label": "리그 인물 · 추모",
+        "title": "June Jones 별세, 향년 73세…런앤드슛의 유산을 남기다",
+        "why": "NFL이 게재한 AP 보도에 따르면 June Jones가 현지 10월 29일 73세로 별세했다. Hawaii 풋볼 프로그램은 사인을 공개하지 않았다. 그는 1990년대 Atlanta Falcons 감독으로 세 시즌을 보냈고 이후 Hawaii에서 런앤드슛 공격과 함께 큰 족적을 남겼다. 이 공격의 특징은 네 리시버가 수비 반응에 맞춰 경로를 조정한다는 점이다. 긴 패스를 많이 던지는 공격이라는 인상만으로 설명하기보다 쿼터백과 리시버가 같은 수비를 읽는 체계로 이해하면 좋다. 대학에서 남긴 유산과 NFL 지도자 경력을 함께 돌아볼 인물이다.",
+        "takeaway": "Jones의 유산은 화려한 패싱 기록만이 아니라 수비를 함께 읽는 공격 철학에 있다.",
+        "url": "https://www.nfl.com/news/june-jones-former-atlanta-falcons-head-coach-dies-at-age-73",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/june-jones-former-atlanta-falcons-head-coach-dies-at-age-73"
+          }
+        ]
+      }
+    ],
+    "tactics": [
+      {
+        "id": "2026-week8-hopper-pass-tip-interception",
+        "team": "NFL",
+        "label": "실전 전술 · 패스 길목",
+        "title": "색이 아니어도 공격은 끝난다: Hopper의 패스 굴절과 인터셉션",
+        "narrativeMode": "integrated",
+        "concept": "쿼터백까지 도달하는 압박과 패스가 지나갈 길을 막는 동작은 서로 다른 수비 수단이다. Hopper의 장면은 공의 이동 경로를 방해한 뒤 소유권까지 바꾼 사례다.",
+        "easy": "던지는 사람을 잡지 못해도 공이 지나가는 문을 닫을 수 있다. 손에 맞은 뒤에도 플레이는 끝나지 않아, 떠 있는 공을 확보하는 두 번째 동작이 중요하다.",
+        "gameUse": "Packers 구단 리캡에 따르면 Panthers전 2쿼터 3다운에서 Ty’Ron Hopper가 스크리미지 라인에서 패스를 쳐 올린 뒤 직접 인터셉션했다. 이후 공격의 터치다운으로 전반 점수는 20-10이 됐다.",
+        "whyItWorks": "이 장면의 확인 가능한 핵심은 압박 수나 수비 커버리지 이름이 아니라 패스 궤적을 바꾼 손과 후속 포구다. 구단 리캡에 근거한 설명이며 특정 보호 실수나 QB의 시선까지 단정하지 않는다.",
+        "defenseCounter": "수비 관전에서는 공이 떠 있는 동안 누가 끝까지 추적하는지 본다. 공격의 일반적 대응은 가까운 수비수의 손과 패스 경로를 함께 읽고 던질 각도·타이밍을 바꾸는 것이지만, 이 플레이에서 다른 선택이 반드시 성공했을 것이라고 단정할 수는 없다.",
+        "breakdown": [
+          {
+            "label": "1 · 득점보다 앞선 3다운",
+            "text": "2쿼터 Panthers의 3다운에서 시작한다. 공격이 필요한 거리를 채우려는 순간, 라인 가까이의 수비수가 패스 경로에 관여했다는 구단 설명을 기준으로 본다."
+          },
+          {
+            "label": "2 · 쿼터백 대신 공의 길을 막는다",
+            "text": "Hopper가 라인에서 패스를 쳐 올렸다. 색이 없으면 압박이 실패했다고만 생각하지 말고, 공이 손을 떠난 뒤의 궤적 변화도 수비의 결과로 읽자.",
+            "meaning": "QB를 넘어뜨리는 것과 공의 길을 끊는 것은 별도 수단이다."
+          },
+          {
+            "label": "3 · 굴절 다음의 포구까지 이어간다",
+            "text": "Hopper는 굴절된 공을 직접 잡아 소유권을 바꿨다. 손에 맞은 뒤에도 플레이는 끝나지 않는다. 수비는 떠 있는 공을 끝까지 추적해 두 번째 동작인 포구를 완성해야 한다."
+          },
+          {
+            "label": "4 · 수비 성과를 다음 공격과 연결한다",
+            "text": "구단 리캡은 이 턴오버 뒤 터치다운으로 전반 20-10이 됐다고 설명한다. 인터셉션 자체가 득점한 것은 아니다. 공을 빼앗는 장면과 이후 공격의 득점을 분리해 연결하자.",
+            "counter": "공격은 가까운 수비의 손을 읽고 패스 각도·타이밍을 조정하는 것이 일반 원리다."
+          }
+        ],
+        "watchOrder": [
+          "3다운에서 공과 가까운 수비수의 위치를 먼저 본다.",
+          "던진 공이 굴절되는 순간과 이후 포구를 구분한다.",
+          "소유권 변화 뒤 이어진 공격의 득점을 연결한다."
+        ],
+        "video": {
+          "title": "Panthers–Packers 전체 경기 하이라이트",
+          "type": "NFL 공식 · 전체 경기 하이라이트",
+          "url": "https://www.youtube.com/watch?v=L6m1RUIXLB4"
+        },
+        "diagram": {
+          "kind": "pass-tip-interception",
+          "caption": "패스 경로·굴절·소유권 변화를 설명하는 개념도이며 실제 정렬과 선수 간 거리를 재현한 그림이 아니다."
+        },
+        "source": {
+          "label": "www.packers.com",
+          "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-panthers-week-8-2026"
+        },
+        "sources": [
+          {
+            "label": "www.packers.com",
+            "url": "https://www.packers.com/news/game-recap-5-takeaways-from-packers-victory-over-panthers-week-8-2026"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873023"
+          }
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Carolina Panthers vs Green Bay Packers Game Highlights | 2026 NFL Season Week 8",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "L6m1RUIXLB4",
+        "type": "NFL 공식 · 전체 경기 하이라이트",
+        "url": "https://www.youtube.com/watch?v=L6m1RUIXLB4",
+        "publishedAt": "2026-10-29T20:45:33-07:00",
+        "note": "업로드: 2026-10-30 12:45 KST",
+        "evidence": {
+          "checkedAt": "2026-10-30T09:05:51.162631+00:00",
+          "authorVerified": true,
+          "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=L6m1RUIXLB4"
+          ],
+          "metadataFile": "video-metadata.json"
+        }
+      },
+      {
+        "title": "상대 선수 멘탈 나가게 만드는 탑 수비수 유망주",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "s304JrxW7aU",
+        "type": "채널 해설/리뷰",
+        "url": "https://www.youtube.com/watch?v=s304JrxW7aU",
+        "publishedAt": "2026-10-29T21:18:55-07:00",
+        "note": "업로드: 2026-10-30 13:18 KST",
+        "evidence": {
+          "checkedAt": "2026-10-30T09:05:51.166836+00:00",
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=s304JrxW7aU"
+          ],
+          "metadataFile": "video-metadata.json"
+        }
+      },
+      {
+        "title": "NFL 8주차 승부예측!! 시카고 vs 시애틀 진짜 재밌겠다 ㄷㄷ",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "wVChVCkP64U",
+        "type": "채널 해설/리뷰",
+        "url": "https://www.youtube.com/watch?v=wVChVCkP64U",
+        "publishedAt": "2026-10-29T08:04:05-07:00",
+        "note": "업로드: 2026-10-30 00:04 KST",
+        "evidence": {
+          "checkedAt": "2026-10-30T09:05:51.167157+00:00",
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=wVChVCkP64U"
+          ],
+          "metadataFile": "video-metadata.json"
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873023",
+        "gameDate": "2026-10-30",
+        "date": "10/30",
+        "weekday": "금",
+        "time": "09:15",
+        "status": "종료",
+        "matchup": "Carolina Panthers at Green Bay Packers",
+        "note": "Packers 27-19 승리. Love 3패싱 TD와 수비의 6색, 두 차례 후반 4다운 저지가 중심이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873026",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Baltimore Ravens at Buffalo Bills",
+        "note": "Jackson의 최종 경기 상태와 선발 발표를 확인하자. 미국 서머타임 종료 뒤 한국시간이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873031",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Tennessee Titans at Cincinnati Bengals",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873024",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Arizona Cardinals at Dallas Cowboys",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873030",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Minnesota Vikings at Detroit Lions",
+        "note": "Vikings의 압박 인원과 Lions의 대응을 보자. 미국 서머타임 종료 뒤 KST 오전 3시다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873029",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Las Vegas Raiders at New York Jets",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873027",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Cleveland Browns at Pittsburgh Steelers",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873025",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Atlanta Falcons at Tampa Bay Buccaneers",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873028",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Indianapolis Colts at Jacksonville Jaguars",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873032",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:05",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Chargers at Los Angeles Rams",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873033",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Denver Broncos",
+        "note": "Moore·Kelce·Rice·Sneed의 최종 가용 인원과 실제 역할을 보자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873034",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Miami Dolphins",
+        "note": "Brown·Henderson 최종 명단과 Patriots 러닝·존수비의 실행을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873035",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Philadelphia Eagles at Washington Commanders",
+        "note": "최종 출전 명단을 확인하자. 미국 서머타임 종료 뒤 한국시간을 반영했다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      },
+      {
+        "gameId": "401873036",
+        "gameDate": "2026-11-03",
+        "date": "11/03",
+        "weekday": "화",
+        "time": "10:15",
+        "status": "경기 예정",
+        "matchup": "Chicago Bears at Seattle Seahawks",
+        "note": "Simmons 영입 합의 뒤 Bears의 실제 등록과 수비 조합을 확인하자. 한국 화요일 오전 경기다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+        },
+        "checkedAt": "2026-10-30T09:02:44.377243+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-30"
+      }
+    ],
+    "topStoryKeys": [
+      "2026-10-29-simmons-trade-bears",
+      "2026-week8-panthers-packers-result",
+      "2026-week8-watson-rib-hospital-return",
+      "2026-10-26-caleb-williams-cleats-fine",
+      "2026-10-29-vikings-blitz-rate-analysis"
+    ]
+  },
+  {
     "date": "2026-10-29",
     "weekday": "목요일",
     "edition": "2026 WEEK 8 · 트레이드 시장과 선수 안전",

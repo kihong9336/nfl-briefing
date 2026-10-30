@@ -199,7 +199,30 @@ function rbRotationOptions(item) {
   </section>`;
 }
 
+function passTipInterception(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="tip-title tip-desc">
+    <title id="tip-title">${escapeXml(item.title)}</title>
+    <desc id="tip-desc">패스 길목에서 손으로 공을 굴절한 뒤 직접 포구하는 과정. 실제 정렬 재현 아님. 위로 튀는 공은 곡선으로 표현하며 거리 비례가 아니다.</desc>
+    <defs><marker id="tip-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="mini-label" x="24" y="32">패스 → 굴절 → 포구 · 개념도</text>
+    <path class="line-scrimmage" d="M24 255H696"/>
+    <text class="field-label" x="24" y="245">LINE OF SCRIMMAGE</text>
+    <path data-action="intended-pass" class="pass-path" d="M180 335 L365 255 L550 175" stroke-dasharray="8 7"/>
+    <path data-action="deflection" class="route-path" d="M365 255 Q320 85 450 125 Q525 160 460 220" marker-end="url(#tip-arrow)"/>
+    <circle class="catch-point" cx="365" cy="255" r="12"/>
+    ${player(165,350,'QB')}${player(460,245,'LB','defense')}
+    <text class="mini-label" x="24" y="305">① 패스</text>
+    <text class="mini-label" x="215" y="205">② 손 접촉</text>
+    <text class="mini-label" x="340" y="85">공이 위로 굴절</text>
+    <text data-action="possession" class="mini-label" x="505" y="265">③ Hopper 포구</text>
+    <text class="mini-label" x="24" y="390">④ 소유권 전환 → 다음 공격의 TD</text>
+    <text class="field-label" x="24" y="417">점선: 원래 패스 경로 · 곡선: 굴절 뒤 공</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'pass-tip-interception') return passTipInterception(item);
   if (item?.diagram?.kind === 'rb-rotation-options') return rbRotationOptions(item);
   if (item?.diagram?.kind === 'fourth-down-clock-decision') return fourthDownClockDecision(item);
   if (item?.diagram?.kind === 'loop-stunt') return loopStunt(item);
