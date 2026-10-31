@@ -221,7 +221,41 @@ function passTipInterception(item) {
   </svg>`;
 }
 
+function scrambleDrillLevels(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="scramble-title scramble-desc" style="max-width:100%;height:auto">
+    <title id="scramble-title">${escapeXml(item.title)}</title>
+    <desc id="scramble-desc">스크램블 드릴 개념도. QB는 오른쪽으로 이동하고 Chism은 크로싱을 끊어 사이드라인으로 되돌아간다. 깊은·중간·짧은 표적 구역은 일반 원칙이며 실제 정렬 재현이 아니다.</desc>
+    <defs>
+      <marker id="scramble-yellow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker>
+      <marker id="scramble-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#ff5b68" d="M0 0L10 5L0 10z"/></marker>
+    </defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="field-label" x="24" y="30">스크램블 드릴 · 공격 ↑</text>
+    <g fill="#78c8ff" fill-opacity="0.12" stroke="#78c8ff" stroke-dasharray="6 5">
+      <rect data-depth="deep" x="510" y="50" width="175" height="50" rx="12"/>
+      <rect data-depth="middle" x="510" y="120" width="175" height="50" rx="12"/>
+      <rect data-depth="short" x="510" y="190" width="175" height="50" rx="12"/>
+    </g>
+    <text class="mini-label" x="545" y="82">깊은 표적</text>
+    <text class="mini-label" x="545" y="152">중간 표적</text>
+    <text class="mini-label" x="545" y="222">짧은 출구</text>
+    <text class="mini-label" x="270" y="65">④ 깊이를 나눈다</text>
+    <path class="line-scrimmage" d="M24 280H696"/>
+    <text class="field-label" x="24" y="270">LINE OF SCRIMMAGE</text>
+    <path data-action="free-rusher" class="pressure-path" d="M430 300 Q420 335 375 350" marker-end="url(#scramble-red)"/>
+    <path data-action="qb-rollout" class="route-path" d="M315 355 Q420 405 575 350" marker-end="url(#scramble-yellow)"/>
+    <path class="route-stem" d="M355 205 H245" stroke-dasharray="6 5"/>
+    <path data-action="receiver-return" class="route-path" d="M245 205 Q200 160 270 140 H475" marker-end="url(#scramble-yellow)"/>
+    ${player(290,355,'QB')}${player(430,280,'D','defense',18)}${player(375,205,'WR')}
+    <text class="mini-label" x="24" y="325">① 자유 러셔</text>
+    <text class="mini-label" x="505" y="315">② QB 이동 →</text>
+    <text class="mini-label" x="24" y="115">③ Chism 경로 변경 →</text>
+    <text class="mini-label" x="24" y="415">점선: 원래 크로싱 · 노랑: 새 이동 · 빨강: 압박</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'scramble-drill-levels') return scrambleDrillLevels(item);
   if (item?.diagram?.kind === 'pass-tip-interception') return passTipInterception(item);
   if (item?.diagram?.kind === 'rb-rotation-options') return rbRotationOptions(item);
   if (item?.diagram?.kind === 'fourth-down-clock-decision') return fourthDownClockDecision(item);
