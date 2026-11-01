@@ -254,7 +254,29 @@ function scrambleDrillLevels(item) {
   </svg>`;
 }
 
+function coordinatedPocketCompression(item) {
+  return `<section class="pocket-compression" aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-label="양쪽과 내부 압박의 관계 개념도" style="max-width:100%;height:auto">
+      <rect class="field-bg" width="720" height="430" rx="12"/>
+      <text class="field-label" x="24" y="35">공격 ↑ · 실제 배치 재현 아님</text>
+      <path class="line-scrimmage" d="M24 175H696"/>
+      <defs><marker id="pocket-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#ff5b68" d="M0 0L10 5L0 10z"/></marker></defs>
+      <path data-action="edge-compression" class="pressure-path" d="M160 130 Q140 300 295 340 M560 130 Q580 300 425 340" marker-end="url(#pocket-arrow)"/>
+      <path data-action="interior-push" class="pressure-path" d="M330 130 L330 275" marker-end="url(#pocket-arrow)"/>
+      <path data-action="finish" class="pressure-path" d="M420 145 Q465 245 380 320" marker-end="url(#pocket-arrow)"/>
+      ${player(205,210,'OT')}${player(515,210,'OT')}${player(330,210,'G')}${player(360,345,'QB')}
+      <text class="mini-label" x="35" y="105">Van Ness</text><text class="mini-label" x="555" y="105">Sorrell</text>
+      <text class="mini-label" x="265" y="95">Brooks</text><text class="mini-label" x="400" y="95">Wyatt</text>
+      <text class="mini-label" x="280" y="400">Young · 탈출 공간 축소</text>
+    </svg>
+    <details open><summary><strong>① 양쪽을 좁힌다</strong></summary><p>Van Ness와 Sorrell의 압박이 양옆 출구를 줄인다. 한쪽만 깊이 돌면 반대편 탈출구가 남을 수 있어 두 엣지의 깊이를 함께 본다.</p></details>
+    <details open><summary><strong>② 앞쪽도 막는다</strong></summary><p>Brooks가 가드를 밀어 QB가 앞으로 올라올 공간도 줄인다. 포켓은 QB를 보호하는 공간이며, 옆문과 앞문을 함께 닫는 원리다.</p></details>
+    <details open><summary><strong>③ Wyatt가 마무리한다</strong></summary><p>색 기록은 Wyatt의 것이지만 압박 과정은 공동 작업이다. 공격은 빠른 패스나 보호 보조로 대응할 수 있어, 수비는 서로의 깊이와 탈출 통로를 맞춰야 한다.</p></details>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'coordinated-pocket-compression') return coordinatedPocketCompression(item);
   if (item?.diagram?.kind === 'scramble-drill-levels') return scrambleDrillLevels(item);
   if (item?.diagram?.kind === 'pass-tip-interception') return passTipInterception(item);
   if (item?.diagram?.kind === 'rb-rotation-options') return rbRotationOptions(item);

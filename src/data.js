@@ -1,5 +1,845 @@
 export const briefings = [
   {
+    "date": "2026-11-01",
+    "weekday": "일요일",
+    "edition": "2026 WEEK 8 · 트레이드 시장과 주말 관전",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 8,
+    "topStoryKeys": [
+      "2026-10-22-colts-taylor-trade-interest",
+      "2026-10-30-jacobs-police-records-additional-allegations",
+      "2026-10-31-henry-career-rushing-seventh-watch",
+      "2026-week8-chiefs-broncos-oct29-practice",
+      "2026-week8-patriots-dolphins-oct28-practice"
+    ],
+    "dek": "Taylor 협상이 실제 제안 단계로 움직였다는 보도와 Jacobs 의혹에 대한 리그 입장을 짚는다. Chiefs·Patriots의 토요일 결장 변경, Henry의 기록 도전, 새 유니폼도 확인한다. 서머타임 종료가 반영된 11월 2일 이른 경기는 오전 3시, Chiefs·Patriots는 오전 6시 25분이다.",
+    "lead": {
+      "kicker": "오늘의 핵심 · 트레이드 시장",
+      "title": "Colts, Taylor 거래에도 열렸다…보도된 제안과 확정된 이적을 나눠 보자",
+      "summary": "ESPN·NFL Network가 Taylor를 둘러싼 진행 중 협상을 보도했다. 리그의 Jacobs 추가 의혹 검토, 두 관심팀의 실제 결장 변경, Henry의 누적 기록 도전을 함께 살핀다."
+    },
+    "sections": [
+      {
+        "id": "2026-week8-chiefs-broncos-oct29-practice",
+        "eventKey": "2026-week8-chiefs-broncos-oct29-practice",
+        "team": "Chiefs",
+        "label": "Broncos전 · 토요일 명단 변경",
+        "title": "Chiefs, Sneed IR·Delane OUT…Denver전 코너백 두 자리 공백",
+        "takeaway": "공격 자원의 회복과 별개로 코너백 가용성은 악화됐다. 새 수비 조합의 역할 분담이 중요하다.",
+        "sources": [
+          {
+            "label": "Chiefs Transactions | Kansas City Chiefs - Chiefs.com",
+            "url": "https://www.chiefs.com/team/transactions"
+          },
+          {
+            "label": "Week 8 Injury Report | Chiefs vs. Broncos",
+            "url": "https://www.chiefs.com/news/week-8-injury-report-chiefs-vs-broncos-2026"
+          },
+          {
+            "label": "NFL news roundup: Broncos places RJ Harvey (knee) on IR; Bears RB Kyle Monangai out again | Latest NFL News, Analysis & ",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-31"
+          }
+        ],
+        "summary": "Chiefs는 현지 10월 31일 Sneed를 IR에 등록했다. Delane도 어깨 부상으로 OUT으로 바뀌었다. 구단 거래 기록은 Melvin Smith의 정식 로스터 계약과 Tyreke Smith의 경기용 승격을 확인한다. 전날 두 코너백의 Questionable에서 실제 결장·로스터 이동으로 진행됐다.",
+        "commentary": "수비수를 보강했다고 기존 두 코너의 역할이 자동으로 대체되지는 않는다. 첫 드라이브에서 바깥 매치업과 세이프티의 지원 위치를 함께 보자. R Mason Thomas의 개인 사유와 별도 이동은 코너백 두 명의 결장과 다른 사안이다.",
+        "watch": "11월 2일 오전 6시 25분 Denver전, 대체 코너의 스냅과 깊은 패스 지원 방식을 확인하자.",
+        "changeSummary": "이전 발행 이후 확인된 변화: Sneed를 IR에 등록했다",
+        "changeEvidence": {
+          "url": "https://www.chiefs.com/team/transactions",
+          "before": "Sneed·Delane·R Mason Thomas는 Questionable",
+          "after": "Sneed를 IR에 등록했다",
+          "quote": "Sneed를 IR에 등록했다",
+          "originalQuote": "L'Jarius Sneed placed on Reserve/Injured.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-week8-patriots-dolphins-oct28-practice",
+        "eventKey": "2026-week8-patriots-dolphins-oct28-practice",
+        "team": "Patriots",
+        "label": "Dolphins전 · 결장 확정",
+        "title": "A.J. Brown·Henderson 결장 확정…Larison 계약·Miller 승격",
+        "takeaway": "출전 미정에서 결장 확정으로 바뀌었다. Maye의 패스 선택지와 러닝백 교대 계획을 다시 봐야 한다.",
+        "sources": [
+          {
+            "label": "Roster Analysis: Patriots downgrade WR A.J. Brown, RB TreVeyon Henderson to out for Week 8 vs. Dolphins",
+            "url": "https://www.patriots.com/news/roster-analysis-patriots-downgrade-wr-a-j-brown-rb-treveyon-henderson-to-out-for-week-8-vs-dolphins"
+          },
+          {
+            "label": "NFL news roundup: Broncos places RJ Harvey (knee) on IR; Bears RB Kyle Monangai out again | Latest NFL News, Analysis & ",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-31"
+          }
+        ],
+        "summary": "Patriots는 현지 10월 31일 Brown과 Henderson의 결장을 확정했다. 두 선수는 Miami 원정에 동행하지 않았다. 구단은 RB Lan Larison을 53인 로스터로 올리고 WR Ryan Miller를 경기용 승격했다. Marcus Bryant도 이번 주 IR에서 활성화하지 않아 OUT이다.",
+        "commentary": "구단 분석은 Henry·Raridon의 동시 활용 확대 가능성과 Stevenson의 큰 역할을 예상했다. 이는 확정된 경기 계획이 아니라 로스터에 근거한 전망이다. 리시버 공백은 단순 타깃 재배분뿐 아니라 킥 리턴 인원 선택에도 영향을 줄 수 있다.",
+        "watch": "11월 2일 오전 6시 25분, 타이트엔드 두 명의 동시 출전과 Stevenson 뒤 러닝백의 실제 역할을 보자.",
+        "changeSummary": "이전 발행 이후 확인된 변화: Brown과 Henderson의 결장을 확정했다",
+        "changeEvidence": {
+          "url": "https://www.patriots.com/news/roster-analysis-patriots-downgrade-wr-a-j-brown-rb-treveyon-henderson-to-out-for-week-8-vs-dolphins",
+          "before": "A.J. Brown과 Henderson은 Questionable",
+          "after": "Brown과 Henderson의 결장을 확정했다",
+          "quote": "Brown과 Henderson의 결장을 확정했다",
+          "originalQuote": "Brown and Henderson didn't travel with the team to Miami and won't play vs. the Dolphins on Sunday.",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      }
+    ],
+    "leagueWide": [
+      {
+        "id": "2026-10-22-colts-taylor-trade-interest",
+        "eventKey": "2026-10-22-colts-taylor-trade-interest",
+        "team": "Colts",
+        "label": "트레이드 · 공동 취재 보도",
+        "title": "Taylor 협상, 관심 단계 넘어섰다…Colts가 거래에 열려 있다는 공동 취재",
+        "takeaway": "선수의 이적 요청 여부와 구단의 협상 의사는 별개다. 이번 변화는 Colts가 실제 제안을 듣고 있다는 보도다.",
+        "sources": [
+          {
+            "label": "Sources - Colts willing to trade star RB Jonathan Taylor - ESPN",
+            "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor"
+          },
+          {
+            "label": "NFL Network: Colts willing to trade RB Jonathan Taylor; talks are active, ongoing | Latest NFL News, Analysis & Updates ",
+            "url": "https://www.nfl.com/news/nfl-network-colts-willing-to-trade-rb-jonathan-taylor-talks-are-active-ongoing"
+          }
+        ],
+        "why": "현지 10월 31일 ESPN·NFL Network는 Colts가 Taylor를 트레이드할 의사가 있다고 보도했다. 여러 팀과 협상이 진행 중이며 ESPN은 2라운드 지명권과 추가 보상을 포함한 제안이 최소 하나 들어왔다고 전했다. Denver·Green Bay·Minnesota·Giants의 관심이 보도됐고 NFL 기사에는 Seattle도 포함됐다. 이는 합의·이적 확정이 아니다. Nelson·Buckner를 보낸 뒤 러닝백까지 시장에 나올 가능성이 커졌다. 선수의 잔류 의사와 구단의 재건 방향은 다를 수 있다는 점이 핵심이다. 보도상 Taylor와 Downs는 Jaguars전 출전이 예상된다. 11월 10일 미국 현지 마감까지 실제 상대 구단·보상·공식 발표를 확인하자.",
+        "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+        "changeSummary": "이전 발행 이후 확인된 변화: Colts가 Taylor를 트레이드할 의사가 있다고 보도했다",
+        "changeEvidence": {
+          "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+          "before": "Colts가 Taylor를 내보낼지는 여전히 불명확",
+          "after": "Colts가 Taylor를 트레이드할 의사가 있다고 보도했다",
+          "quote": "Colts가 Taylor를 트레이드할 의사가 있다고 보도했다",
+          "originalQuote": "are now open to trading star running back",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-30-jacobs-police-records-additional-allegations",
+        "eventKey": "2026-10-30-jacobs-police-records-additional-allegations",
+        "team": "Packers",
+        "label": "사건 · 리그 입장 후속",
+        "title": "Jacobs 추가 의혹, NFL이 검토 방침 밝혀…새 징계 확정은 아니다",
+        "takeaway": "전날의 기록 공개에서 리그의 검토 방침으로 진행됐다. 추가 의혹과 확정된 처분을 구분한다.",
+        "sources": [
+          {
+            "label": "NFL to review additional allegations against Packers' Jacobs - ESPN",
+            "url": "https://www.espn.com/nfl/story/_/id/50338005/nfl-review-additional-allegations-packers-jacobs"
+          },
+          {
+            "label": "NFL \"will review\" the new allegations against Josh Jacobs - NBC Sports",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-will-review-the-new-allegations-against-josh-jacobs"
+          }
+        ],
+        "why": "ESPN은 현지 10월 31일 NFL이 추가 의혹을 검토하겠다고 밝혔다고 전했다. 리그는 기존 조사가 열린 상태이며 이번에 공개된 주장도 검토한다고 설명했다. Jacobs 측 변호인들은 해당 주장들이 오래되고 확인되지 않았으며 검찰이 이미 조사했다고 반박했다. 새 출장 정지나 추가 유죄 판단이 발표됐다는 뜻은 아니다. 리그의 검토 방침과 변호인 측 반론은 추가 주장에 대한 최종 판단을 대신하지 않는다. 향후 리그의 조사 결과와 공식 로스터·징계 발표를 확인하자.",
+        "url": "https://www.espn.com/nfl/story/_/id/50338005/nfl-review-additional-allegations-packers-jacobs",
+        "changeSummary": "이전 발행 이후 확인된 변화: NFL이 추가 의혹을 검토하겠다고 밝혔다",
+        "changeEvidence": {
+          "url": "https://www.espn.com/nfl/story/_/id/50338005/nfl-review-additional-allegations-packers-jacobs",
+          "before": "리그의 추가 조사·징계 발표 여부가 다음 확인점이다",
+          "after": "NFL이 추가 의혹을 검토하겠다고 밝혔다",
+          "quote": "NFL이 추가 의혹을 검토하겠다고 밝혔다",
+          "originalQuote": "We will review these allegations as part of the investigation which has remained open",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-31-harvey-ir",
+        "eventKey": "2026-10-31-harvey-ir",
+        "team": "Broncos",
+        "label": "로스터 · 구단 공식 발표",
+        "title": "Harvey, 한 경기 OUT에서 IR로…Denver의 백필드 공백이 길어진다",
+        "takeaway": "Harvey의 결장은 Chiefs전에만 한정되지 않는다. 복귀 가능 시점과 실제 복귀 확정을 나누어 보자.",
+        "sources": [
+          {
+            "label": "Broncos promote S Taylor Rapp to active roster, place RB RJ Harvey on injured reserve",
+            "url": "https://www.denverbroncos.com/news/broncos-promote-s-taylor-rapp-to-active-roster-place-rb-rj-harvey-on-injured-reserve"
+          },
+          {
+            "label": "NFL news roundup: Broncos places RJ Harvey (knee) on IR; Bears RB Kyle Monangai out again | Latest NFL News, Analysis & ",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-31"
+          }
+        ],
+        "why": "Broncos는 현지 10월 31일 RJ Harvey를 IR에 등록하고 S Taylor Rapp을 정식 로스터로 올렸다. Cody Schrader와 Gavin Ortega는 경기용 승격됐다. 구단은 Harvey가 앞으로 네 경기를 쉬어야 하며 가장 이른 복귀 가능 경기는 Week 13 Dolphins전이라고 설명했다. 러닝백을 한 명 올렸다는 사실만으로 기존 터치 배분이 그대로 유지되지는 않는다. 특히 러닝 외에 백필드 패스와 보호 역할을 누가 맡는지가 중요하다. Chiefs전에서 러닝백별 다운·거리와 패스 상황의 출전 비중을 살펴보자.",
+        "url": "https://www.denverbroncos.com/news/broncos-promote-s-taylor-rapp-to-active-roster-place-rb-rj-harvey-on-injured-reserve"
+      },
+      {
+        "id": "2026-10-30-payne-foot-injury-report",
+        "eventKey": "2026-10-30-payne-foot-injury-report",
+        "team": "Commanders",
+        "label": "부상 · 취재 보도 후속",
+        "title": "Payne, 시즌 종료 발 골절 보도…Eagles전 내부 수비 부담 더 커졌다",
+        "takeaway": "전날의 추가 평가 예정에서 시즌 종료 전망으로 보도가 구체화됐다. 공식 등록 조치와는 별개다.",
+        "sources": [
+          {
+            "label": "Commanders' Daron Payne suffers season-ending foot fracture, ending any trade speculation - CBS Sports",
+            "url": "https://www.cbssports.com/nfl/news/commanders-daron-payne-suffers-season-ending-foot-fracture"
+          },
+          {
+            "label": "NFL news roundup: Broncos places RJ Harvey (knee) on IR; Bears RB Kyle Monangai out again | Latest NFL News, Analysis & ",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-31"
+          }
+        ],
+        "why": "CBS와 NFL의 현지 10월 31일 업데이트는 ESPN의 Adam Schefter를 인용해 Payne에게 시즌을 마치는 발 골절이 발생했다고 전했다. 전날 금요일 훈련에서 입은 부상이다. NFL 토요일 종합에서는 Jer’Zhan Newton도 Eagles전 OUT으로 바뀌었다. 현재로서는 Schefter의 취재 보도이며 구단의 최종 설명과 로스터 조치는 별도로 확인해야 한다. Washington은 이미 내부 수비 가용성이 문제였고, 패스러시뿐 아니라 러닝 갭 책임을 어떻게 나눌지가 중요해졌다. 11월 2일 오전 10시 20분 Eagles전의 수비라인 조합과 후속 구단 발표를 보자.",
+        "url": "https://www.cbssports.com/nfl/news/commanders-daron-payne-suffers-season-ending-foot-fracture",
+        "changeSummary": "이전 발행 이후 확인된 변화: 시즌을 마치는 발 골절",
+        "changeEvidence": {
+          "url": "https://www.cbssports.com/nfl/news/commanders-daron-payne-suffers-season-ending-foot-fracture",
+          "before": "IR 이동 가능성이 언급됐지만",
+          "after": "시즌을 마치는 발 골절",
+          "quote": "시즌을 마치는 발 골절",
+          "originalQuote": "suffered a season-ending Jones fracture in practice Friday,",
+          "isTranslation": true,
+          "translationLanguage": "ko"
+        }
+      },
+      {
+        "id": "2026-10-31-seahawks-charbonnet-return-price-pending",
+        "eventKey": "2026-10-31-seahawks-charbonnet-return-price-pending",
+        "team": "Seahawks",
+        "label": "MNF · 복귀 계획과 남은 절차",
+        "title": "Charbonnet 시즌 첫 출전 예고…Price는 IR 활성화가 남았다",
+        "takeaway": "두 러닝백 모두 출전 확정으로 묶지 말자. Price에게는 실제 로스터 복귀 절차가 남아 있다.",
+        "sources": [
+          {
+            "label": "Seahawks RB Zach Charbonnet (knee) off injury report, set for season debut vs. Bears | Latest NFL News, Analysis & Updat",
+            "url": "https://www.nfl.com/news/seahawks-rb-zach-charbonnet-knee-off-injury-report-set-for-season-debut-vs-bears"
+          },
+          {
+            "label": "NFL news roundup: Broncos places RJ Harvey (knee) on IR; Bears RB Kyle Monangai out again | Latest NFL News, Analysis & ",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-31"
+          }
+        ],
+        "why": "NFL의 현지 10월 31일 보도에서 Zach Charbonnet은 Bears전 경기 제한 등급 없이 시즌 첫 출전을 준비한다. Jadarian Price도 경기 부상 등급은 없지만 아직 IR에 있어 별도 활성화가 필요하다. Seattle은 Cross·Shaheed를 OUT으로 분류했고 Chicago의 Monangai도 결장한다. 러닝 선택지가 늘어날 가능성과 왼쪽 태클의 공백이 함께 존재한다. 선수 이름만으로 지상 공격의 개선을 확신하기보다 블로킹과 교대 빈도를 함께 관찰하자. 11월 3일 오전 10시 15분 Bears전 전까지 Price의 활성화와 경기 당일 명단을 확인하자.",
+        "url": "https://www.nfl.com/news/seahawks-rb-zach-charbonnet-knee-off-injury-report-set-for-season-debut-vs-bears"
+      },
+      {
+        "id": "2026-10-31-chargers-james-ir",
+        "eventKey": "2026-10-31-chargers-james-ir",
+        "team": "Chargers",
+        "label": "로스터 · 구단 공식 발표",
+        "title": "Chargers, Derwin James IR 등록…Rams전 앞두고 수비 뒷선 변경",
+        "takeaway": "James의 IR 이동과 두 코너백 보강은 같은 역할의 일대일 교체가 아니다.",
+        "sources": [
+          {
+            "label": "Los Angeles Chargers Place Derwin James Jr. on Injured Reserve",
+            "url": "https://www.chargers.com/news/place-derwin-james-jr-injured-reserve-2026"
+          },
+          {
+            "label": "NFL news roundup: Broncos places RJ Harvey (knee) on IR; Bears RB Kyle Monangai out again | Latest NFL News, Analysis & ",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-31"
+          }
+        ],
+        "why": "Chargers는 현지 10월 31일 Derwin James Jr.를 IR에 등록했다고 발표했다. Isas Waxter는 정식 로스터로 계약했고 Kaiir Elam은 경기용 승격했다. NFL 종합은 James의 부상 부위를 햄스트링으로 기재했다. 안전한 뒷선 배치와 타이트엔드·슬롯 매치업의 역할을 어떻게 나누는지 보자. 이번 조치만으로 시즌 아웃이나 복귀 날짜를 정할 수는 없다. 11월 2일 오전 6시 5분 Rams전, 스냅 전 정렬과 수비 교대 때의 소통을 살펴보자.",
+        "url": "https://www.chargers.com/news/place-derwin-james-jr-injured-reserve-2026"
+      },
+      {
+        "id": "2026-10-31-parsons-thanksgiving-eve-target",
+        "eventKey": "2026-10-31-parsons-thanksgiving-eve-target",
+        "team": "Packers",
+        "label": "복귀 일정 · 기명 취재 보도",
+        "title": "Parsons 복귀 목표는 추수감사절 전야…Rams전 출전 확정은 아니다",
+        "takeaway": "복귀 희망이 구체적 목표 일정으로 바뀌었지만 출전 보장은 아니다.",
+        "sources": [
+          {
+            "label": "NFL Network: Packers, Micah Parsons (knee) targeting Thanksgiving Eve return vs. Rams | Latest NFL News, Analysis & Upda",
+            "url": "https://www.nfl.com/news/packers-micah-parsons-knee-targeting-thanksgiving-eve-return"
+          }
+        ],
+        "why": "NFL Network의 Ian Rapoport는 현지 10월 31일 Packers와 Micah Parsons가 11월 25일 Rams전을 복귀 목표로 잡았다고 보도했다. 다음 주 개인 훈련, 이후 팀 훈련으로 진행하는 계획이며 순조롭게 회복한다는 조건이 붙는다. Parsons는 현재 PUP 명단에 있다. Green Bay는 핵심 패스러셔가 없는 동안 다양한 압박을 쓰고 있다. 복귀 후에는 그에게 기대하는 물량과 다른 수비수의 일대일 기회가 어떻게 바뀌는지 살펴볼 만하다. 우선 훈련 복귀와 실제 참여 수준, 그다음 구단의 활성화·경기 상태 발표를 확인하자.",
+        "url": "https://www.nfl.com/news/packers-micah-parsons-knee-targeting-thanksgiving-eve-return"
+      },
+      {
+        "id": "2026-10-31-henry-career-rushing-seventh-watch",
+        "eventKey": "2026-10-31-henry-career-rushing-seventh-watch",
+        "team": "Ravens",
+        "label": "기록 · 달성 전 관전 포인트",
+        "title": "Henry, 88야드면 통산 러싱 역대 7위…Bills전의 또 다른 관전 포인트",
+        "takeaway": "Lamar의 복귀전에는 승부뿐 아니라 Henry의 누적 기록 이동도 걸려 있다.",
+        "sources": [
+          {
+            "label": "With 88 yards on Sunday, Derrick Henry will jump to No. 7 all-time in rushing yards - NBC Sports",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-88-yards-on-sunday-derrick-henry-will-jump-to-no-7-all-time-in-rushing-yards"
+          },
+          {
+            "label": "Derrick Henry Career Stats | NFL.com",
+            "url": "https://www.nfl.com/players/derrick-henry/stats/career"
+          }
+        ],
+        "why": "NFL 공식 경력 통계에서 Derrick Henry의 정규시즌 러싱은 160경기·13,597야드다. NBC Sports의 10월 31일 기록 안내에 따르면 Bills전에서 66야드를 더하면 Jerome Bettis를 넘어 8위, 88야드면 LaDainian Tomlinson을 넘어 7위에 오른다. 아직 달성 전이다. 누적 야드는 오래 뛴 생산량의 기록이지 시대·경기 수·공격 환경을 보정한 역대 실력 순위는 아니다. 이번 시즌 공식 집계는 7경기 147회 러싱·579야드다. 11월 2일 오전 3시 Bills전에서 러닝 물량과 전진의 지속성을 함께 보자.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-88-yards-on-sunday-derrick-henry-will-jump-to-no-7-all-time-in-rushing-yards"
+      },
+      {
+        "id": "2026-10-31-week8-rivalries-uniform-debuts",
+        "eventKey": "2026-10-31-week8-rivalries-uniform-debuts",
+        "team": "NFL",
+        "label": "문화 · Week 8 유니폼",
+        "title": "Lions는 은색, Jaguars는 Bold City…주말 새 유니폼도 볼거리",
+        "takeaway": "두 경기 모두 한국 월요일 오전 3시다. 팀 색상만으로 선수들을 찾던 팬이라면 새 조합을 기억하자.",
+        "sources": [
+          {
+            "label": "NFL Week 8 uniforms: Jaguars, Lions debut 'Rivalries' look - ESPN",
+            "url": "https://www.espn.com/nfl/story/_/id/50302364/nfl-week-8-uniforms"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "why": "ESPN은 현지 10월 31일 Lions와 Jaguars가 Week 8에 Rivalries 유니폼을 처음 입는다고 소개했다. Detroit의 Defend the Den은 Vikings전, Jacksonville의 Bold City는 Colts전이다. Lions는 은색 상·하의와 Honolulu blue 헬멧, Jaguars는 청록색 헬멧·흰 상의·검은 하의를 조합한다. 경기력 평가와는 별개인 지역 정체성의 표현이다. Jacksonville의 바지 무늬에는 지역 동네 이름을 담았고 Detroit는 자동차·레이싱 문화의 요소를 사용했다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50302364/nfl-week-8-uniforms"
+      },
+      {
+        "id": "2026-10-30-packers-coordinated-pocket-rush",
+        "eventKey": "2026-10-30-packers-coordinated-pocket-rush",
+        "team": "Packers",
+        "label": "전술 심화 · 기사 분석과 게임북 대조",
+        "title": "Wyatt의 색 뒤에는 세 동료가 있었다…통로를 함께 좁힌 패스러시",
+        "takeaway": "색은 한 명에게 기록되지만 포켓을 좁히는 과정은 여러 러셔의 공동 작업일 수 있다.",
+        "sources": [
+          {
+            "label": "Jonathan Gannon has Packers pass rush buzzing. Soon enough, he'll get to deploy Micah Parsons | Latest NFL News, Analysi",
+            "url": "https://www.nfl.com/news/jonathan-gannon-has-packers-pass-rush-buzzing-soon-enough-he-ll-get-to-deploy-micah-parsons"
+          },
+          {
+            "label": "static.www.nfl.com",
+            "url": "https://static.www.nfl.com/image/upload/v1793361096/gamecenter/aaf70a66-4feb-11f1-abca-2c54536568a9.pdf"
+          }
+        ],
+        "why": "NFL에 게재된 Matt Schneidman의 10월 30일 분석은 Panthers전 첫 수비 드라이브를 짚었다. 공식 게임북상 1쿼터 12분 25초, GB 15야드의 3rd-and-8에서 Wyatt가 Young을 6야드 손실 색으로 잡았다. 기자는 양쪽 엣지의 압축과 Brooks의 내부 밀어내기가 QB의 전진·탈출 공간을 줄였다고 설명했다. 개별 장면의 역할 설명이며 상대 공격라인 결장이 있었던 한 경기를 시즌 전체 우위로 일반화하지 않는다. 이번 사례는 특정 선수의 순수 압박 효율을 계산한 분석도 아니다. 하이라이트에서는 QB를 잡은 선수뿐 아니라 양쪽 엣지와 내부 러셔가 공간을 어떻게 좁히는지 보자.",
+        "url": "https://www.nfl.com/news/jonathan-gannon-has-packers-pass-rush-buzzing-soon-enough-he-ll-get-to-deploy-micah-parsons"
+      }
+    ],
+    "tactics": [
+      {
+        "id": "packers-pocket-compression-20261101",
+        "team": "Packers",
+        "label": "오늘의 전술 · 포켓 압축",
+        "title": "양쪽과 가운데를 함께 좁혀 QB의 탈출구를 없애기",
+        "concept": "포켓은 공격라인이 QB를 위해 만드는 공간이다. 한 러셔가 빨리 도착하는 것뿐 아니라 양쪽과 안쪽이 함께 줄어드는지가 중요하다.",
+        "easy": "문 한쪽만 닫으면 반대편으로 나갈 수 있다. 양옆을 좁히면서 앞쪽까지 밀어 넣으면 이동할 공간 자체가 작아진다.",
+        "gameUse": "10월 29일 Panthers–Packers, 1쿼터 12:25 GB 15야드의 3rd-and-8. 공식 기록은 Wyatt의 6야드 손실 색이다. Schneidman의 분석에 따르면 Van Ness와 Sorrell이 양쪽을 눌렀고 Brooks가 가드를 밀어 Young의 앞쪽 공간도 좁혔다.",
+        "whyItWorks": "기자의 분석처럼 엣지 둘이 비슷한 깊이에서 공간을 줄이면 QB가 앞으로 올라오려 한다. 내부까지 밀려 있으면 그 전진 경로도 막혀 동료가 마무리할 기회를 얻는다.",
+        "defenseCounter": "수비 관전 포인트는 무조건 깊이 달려드는지보다 서로의 깊이와 탈출 통로를 맞추는지다. 공격은 빠른 패스·보호 보조로 대응할 수 있지만 이 경기에서 그 대안이 항상 성공했다고 주장하지 않는다.",
+        "breakdown": [
+          {
+            "label": "1. 양쪽 통로 좁히기",
+            "text": "Van Ness와 Sorrell이 양쪽 태클을 상대로 공간을 압축했다는 기자의 설명을 따라 엣지의 깊이를 함께 본다."
+          },
+          {
+            "label": "2. 전진 경로까지 밀기",
+            "text": "Brooks가 가드를 뒤로 밀면 QB가 앞으로 한 걸음 나갈 공간도 줄어든다. 사이드 압박과 내부 압박을 연결해 보자."
+          },
+          {
+            "label": "3. 마무리와 기록 구분하기",
+            "text": "Wyatt에게 색이 기록됐지만 동료들의 공간 제한도 과정의 일부다. 개념도는 실제 선수 간 거리나 전체 수비 정렬의 재현이 아니다."
+          }
+        ],
+        "watchOrder": [
+          "양쪽 엣지의 깊이를 함께 보기",
+          "QB 앞쪽 가드의 후퇴 확인하기",
+          "탈출 방향과 마무리 러셔 연결하기"
+        ],
+        "source": {
+          "label": "Jonathan Gannon has Packers pass rush buzzing. Soon enough, he'll get to deploy Micah Parsons | Latest NFL News, Analysi",
+          "url": "https://www.nfl.com/news/jonathan-gannon-has-packers-pass-rush-buzzing-soon-enough-he-ll-get-to-deploy-micah-parsons"
+        },
+        "sources": [
+          {
+            "label": "Jonathan Gannon has Packers pass rush buzzing. Soon enough, he'll get to deploy Micah Parsons | Latest NFL News, Analysi",
+            "url": "https://www.nfl.com/news/jonathan-gannon-has-packers-pass-rush-buzzing-soon-enough-he-ll-get-to-deploy-micah-parsons"
+          },
+          {
+            "label": "static.www.nfl.com",
+            "url": "https://static.www.nfl.com/image/upload/v1793361096/gamecenter/aaf70a66-4feb-11f1-abca-2c54536568a9.pdf"
+          }
+        ],
+        "video": {
+          "title": "Panthers–Packers 전체 경기 하이라이트",
+          "type": "NFL 공식 전체 경기 하이라이트",
+          "url": "https://www.youtube.com/watch?v=L6m1RUIXLB4"
+        },
+        "diagram": {
+          "kind": "coordinated-pocket-compression",
+          "caption": "양쪽 압축·내부 밀어내기·마무리의 관계를 나타낸 일반 개념도다."
+        },
+        "narrativeMode": "integrated"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "미식축구 GOAT 감독이 이끄는 언더독 팀이 전국 1위 팀을 흔든 그 경기",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "K9Wbu18Kvkw",
+        "url": "https://www.youtube.com/watch?v=K9Wbu18Kvkw",
+        "type": "채널 해설/리뷰",
+        "publishedAt": "2026-11-01T01:20:03-07:00",
+        "note": "업로드: 2026-11-01 17:20 KST",
+        "evidence": {
+          "checkedAt": "2026-11-01T18:04:07+09:00",
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+          "metadataFile": "video-metadata.json",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=K9Wbu18Kvkw"
+          ],
+          "previouslyPublished": false
+        }
+      },
+      {
+        "title": "이거에 속는다고?? 뇌정지 와버린 수비수ㅋㅋㅋㅋ",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "G960nfgVBU8",
+        "url": "https://www.youtube.com/watch?v=G960nfgVBU8",
+        "type": "채널 해설/리뷰",
+        "publishedAt": "2026-10-31T22:12:58-07:00",
+        "note": "업로드: 2026-11-01 14:12 KST",
+        "evidence": {
+          "checkedAt": "2026-11-01T18:04:07+09:00",
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+          "metadataFile": "video-metadata.json",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=G960nfgVBU8"
+          ],
+          "previouslyPublished": false
+        }
+      },
+      {
+        "title": "Carolina Panthers vs Green Bay Packers Game Highlights | 2026 NFL Season Week 8",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "L6m1RUIXLB4",
+        "url": "https://www.youtube.com/watch?v=L6m1RUIXLB4",
+        "type": "NFL 공식 · 전체 경기 하이라이트",
+        "publishedAt": "2026-10-29T20:45:33-07:00",
+        "note": "업로드: 2026-10-30 12:45 KST · 포켓 압축 전술과 함께 다시 볼 경기.",
+        "evidence": {
+          "checkedAt": "2026-11-01T18:04:51+09:00",
+          "authorVerified": true,
+          "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+          "metadataFile": "video-metadata.json",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=L6m1RUIXLB4"
+          ],
+          "previouslyPublished": true
+        }
+      },
+      {
+        "title": "NFL 26시즌 7주차 리뷰 가보입시다 - 조금 빨리 왔습니다.",
+        "channel": "픽다운",
+        "channelId": "UC-XSuyEOJh7mXukcuax2KvA",
+        "videoId": "UyISMY3wlN0",
+        "type": "채널 해설/리뷰",
+        "note": "업로드: 2026-11-01 19:03 KST · 픽다운의 NFL 영상.",
+        "url": "https://www.youtube.com/watch?v=UyISMY3wlN0",
+        "publishedAt": "2026-11-01T10:03:29+00:00",
+        "evidence": {
+          "checkedAt": "2026-11-01T11:04:29.243574+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UC-XSuyEOJh7mXukcuax2KvA",
+            "https://www.youtube.com/watch?v=UyISMY3wlN0"
+          ],
+          "authorVerified": true,
+          "channelId": "UC-XSuyEOJh7mXukcuax2KvA"
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873026",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Baltimore Ravens at Buffalo Bills",
+        "note": "Lamar의 복귀전이자 Henry의 통산 러싱 순위 도전 경기다.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873031",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Tennessee Titans at Cincinnati Bengals",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873024",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Arizona Cardinals at Dallas Cowboys",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873030",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Minnesota Vikings at Detroit Lions",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873029",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Las Vegas Raiders at New York Jets",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873027",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Cleveland Browns at Pittsburgh Steelers",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873025",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Atlanta Falcons at Tampa Bay Buccaneers",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873028",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Indianapolis Colts at Jacksonville Jaguars",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873032",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:05",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Chargers at Los Angeles Rams",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873033",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Denver Broncos",
+        "note": "Sneed IR·Delane OUT, Denver는 Harvey IR. 대체 선수의 실제 역할을 보자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873034",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Miami Dolphins",
+        "note": "Brown·Henderson OUT. 패스 표적과 러닝백 교대, 두 TE 활용을 보자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873035",
+        "gameDate": "2026-11-02",
+        "date": "11/02",
+        "weekday": "월",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Philadelphia Eagles at Washington Commanders",
+        "note": "최종 액티브 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873036",
+        "gameDate": "2026-11-03",
+        "date": "11/03",
+        "weekday": "화",
+        "time": "10:15",
+        "status": "경기 예정",
+        "matchup": "Chicago Bears at Seattle Seahawks",
+        "note": "Charbonnet의 첫 출전과 Price의 IR 활성화 여부를 구분해서 확인하자.",
+        "source": {
+          "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+        },
+        "sources": [
+          {
+            "label": "NFL Week 8 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+          },
+          {
+            "label": "ESPN · 2026 Week 8 스코어보드",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=8"
+          }
+        ],
+        "checkedAt": "2026-11-01T18:02:21+09:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-01"
+      },
+      {
+        "gameId": "401873082",
+        "gameDate": "2026-11-27",
+        "date": "11/27",
+        "weekday": "금",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Buffalo Bills",
+        "note": "추수감사절 야간 경기. 하프타임 Goo Goo Dolls 공연이 공식 발표됐다. 마지막 확인 2026-10-31 발행본 기준 · 이전 확인 일정 이월, 오늘 재검증하지 않음. 실제 경기 진행·최종 결과 미확인.",
+        "sources": [
+          {
+            "label": "Goo Goo Dolls to headline Thanksgiving halftime show for Bills vs. Chiefs at Highmark Stadium | Latest NFL News, Analysis & Updates | NFL.com",
+            "url": "https://www.nfl.com/news/goo-goo-dolls-to-headline-thanksgiving-halftime-show-for-bills-vs-chiefs-at-highmark-stadium"
+          },
+          {
+            "label": "NFL Week 12 Schedule 2026: Games, Times, Matchups & Tickets",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+        },
+        "checkedAt": "2026-10-31T09:06:57.848255+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-10-31",
+        "carriedForward": true
+      }
+    ]
+  },
+  {
     "date": "2026-10-31",
     "weekday": "토요일",
     "edition": "2026 WEEK 8 · 수비 지휘 교체와 주말 복귀",
