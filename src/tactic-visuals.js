@@ -275,7 +275,53 @@ function coordinatedPocketCompression(item) {
   </section>`;
 }
 
+function goPostGoCover3(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="gpg-title gpg-desc" style="max-width:100%;height:auto">
+    <title id="gpg-title">${escapeXml(item.title)}</title>
+    <desc id="gpg-desc">일반 개념도 · 실제 배치 재현 아님. 1 짧은 모션으로 바깥 순서 변경. 2 양쪽 go와 안쪽 post가 깊은 세 구역을 시험. 3 QB가 포켓 안에서 전진. 수비는 중앙 포스트와 바깥 세로 경로를 함께 관리한다.</desc>
+    <defs><marker id="gpg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="field-label" x="24" y="28">989 · GO–POST–GO · 공격 ↑</text>
+    <g fill="#78c8ff" fill-opacity="0.12" stroke="#78c8ff" stroke-dasharray="6 5">
+      <rect data-zone="deep-left" x="30" y="50" width="210" height="125" rx="12"/>
+      <rect data-zone="deep-middle" x="255" y="50" width="210" height="125" rx="12"/>
+      <rect data-zone="deep-right" x="480" y="50" width="210" height="125" rx="12"/>
+    </g>
+    <text class="mini-label" x="55" y="72">왼쪽 깊은 존</text><text class="mini-label" x="280" y="72">중앙 세이프티</text><text class="mini-label" x="500" y="72">오른쪽 깊은 존</text>
+    <path class="line-scrimmage" d="M24 300H696"/>
+    <path data-action="short-motion" d="M545 340H635" fill="none" stroke="#78c8ff" stroke-width="4" stroke-dasharray="6 5" marker-end="url(#gpg-arrow)"/>
+    <path data-action="left-go" class="route-path" d="M100 300V100" marker-end="url(#gpg-arrow)"/>
+    <path data-action="right-go" class="route-path" d="M635 300V100" marker-end="url(#gpg-arrow)"/>
+    <path data-action="deep-post" d="M510 300V210L365 100" fill="none" stroke="#78c8ff" stroke-width="5" marker-end="url(#gpg-arrow)"/>
+    <path data-action="qb-step-up" class="route-path" d="M350 365V315" marker-end="url(#gpg-arrow)"/>
+    ${player(100,325,'WR')}${player(510,325,'WR')}${player(635,325,'WR')}${player(350,390,'QB')}
+    <text class="mini-label" x="115" y="190">GO</text><text class="mini-label" x="515" y="190">POST ↖</text><text class="mini-label" x="640" y="190">GO</text>
+    <text class="mini-label" x="420" y="378">① 짧은 모션 →</text><text class="mini-label" x="180" y="360">③ QB 전진 ↑</text>
+    <text class="field-label" x="24" y="420">② 깊은 세 구역 읽기 · 일반 개념도</text>
+  </svg>`;
+}
+
+function stuntProtectionExchange(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="exchange-title exchange-desc" style="max-width:100%;height:auto">
+    <title id="exchange-title">${escapeXml(item.title)}</title>
+    <desc id="exchange-desc">일반 개념도 · 실제 배치 재현 아님. 첫 러셔가 안으로 파고들고 두 번째 러셔가 뒤로 돌아 교차한다. 공격라인은 첫 상대를 동료에게 넘기고 돌아오는 러셔를 받아 QB를 보호한다.</desc>
+    <defs><marker id="exchange-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="field-label" x="24" y="35">스턴트와 담당 교환 · 공격 ↑</text>
+    <path class="line-scrimmage" d="M24 240H696"/>
+    <path data-action="penetrator" class="pressure-path" d="M260 135L380 255" marker-end="url(#exchange-arrow)"/>
+    <path data-action="looper" class="pressure-path" d="M430 135Q430 190 320 190Q230 190 260 270" marker-end="url(#exchange-arrow)"/>
+    <path data-action="protection-exchange" d="M290 290H365" fill="none" stroke="#78c8ff" stroke-width="4" stroke-dasharray="6 5" marker-end="url(#exchange-arrow)"/>
+    ${player(260,110,'D','defense')}${player(430,110,'D','defense')}${player(260,300,'OL')}${player(400,300,'OL')}${player(350,380,'QB')}
+    <text class="mini-label" x="55" y="110">① 첫 진입</text><text class="mini-label" x="465" y="160">② 돌아오는 러셔</text>
+    <text class="mini-label" x="450" y="300">③ 옆 동료와 교환</text>
+    <text class="mini-label" x="24" y="420">빨강: 두 러셔의 교차 · 파랑 점선: 담당 인계</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'go-post-go-vs-cover3') return goPostGoCover3(item);
+  if (item?.diagram?.kind === 'stunt-protection-exchange') return stuntProtectionExchange(item);
   if (item?.diagram?.kind === 'coordinated-pocket-compression') return coordinatedPocketCompression(item);
   if (item?.diagram?.kind === 'scramble-drill-levels') return scrambleDrillLevels(item);
   if (item?.diagram?.kind === 'pass-tip-interception') return passTipInterception(item);
