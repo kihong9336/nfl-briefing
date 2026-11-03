@@ -319,7 +319,52 @@ function stuntProtectionExchange(item) {
   </svg>`;
 }
 
+function poachQuartersTrips(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 480" role="img" aria-labelledby="poach-title poach-desc" style="max-width:100%;height:auto">
+    <title id="poach-title">${escapeXml(item.title)}</title>
+    <desc id="poach-desc">일반 개념도 · 실제 정렬 재현 아님. 단독 WR는 CB가 맡고 약측 세이프티는 trips의 No.3를 돕는다. 강측 CB는 아웃을 제한한다. 파란 점선은 커버 도움, 빨간 곡선은 루프 러시다. 노란 corner-stop은 별도 플레이에서의 공격 대응이다.</desc>
+    <defs><marker id="poach-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="480" rx="12"/>
+    <text class="field-label" x="24" y="28">POACH QUARTERS · 공격 ↑</text>
+    <text class="mini-label" x="24" y="58">약측: 단독 WR</text><text class="mini-label" x="450" y="58">강측: TRIPS (3명)</text>
+    <path class="line-scrimmage" d="M24 300H696"/>
+    <path data-action="solo-lock" d="M100 180V285" fill="none" stroke="#78c8ff" stroke-width="4" stroke-dasharray="7 5"/>
+    <path data-action="weak-safety-help" d="M235 105Q320 80 430 180" fill="none" stroke="#78c8ff" stroke-width="5" stroke-dasharray="7 5" marker-end="url(#poach-arrow)"/>
+    <path data-action="flat-out" d="M635 240H555" fill="none" stroke="#78c8ff" stroke-width="5" stroke-dasharray="7 5" marker-end="url(#poach-arrow)"/>
+    <path data-action="loop-rush" class="pressure-path" d="M310 245Q235 245 260 305Q275 350 330 365" marker-end="url(#poach-arrow)"/>
+    <path data-action="corner-stop" class="route-path" d="M450 290V195L530 150H550" marker-end="url(#poach-arrow)"/>
+    ${player(100,320,'WR')}${player(100,155,'CB','defense')}${player(215,100,'S','defense')}${player(590,100,'S','defense')}${player(635,210,'CB','defense')}
+    ${player(450,320,'No.3')}${player(545,320,'No.2')}${player(640,320,'No.1')}${player(310,220,'D','defense')}${player(350,380,'QB')}
+    <text class="mini-label" x="34" y="115">단독 담당</text><text class="mini-label" x="270" y="115">약측 S → No.3</text>
+    <text class="mini-label" x="470" y="85">강측 S</text><text class="mini-label" x="475" y="275">아웃 제한</text>
+    <text class="mini-label" x="30" y="365">루프 러시 →</text><text class="mini-label" x="420" y="380">대응: CORNER-STOP</text>
+    <text class="mini-label" x="24" y="430">파랑 점선: 커버 · 빨강: 러시</text>
+    <text class="mini-label" x="24" y="462">노랑: 별도 장면의 대응 루트 · 실제 정렬 재현 아님</text>
+  </svg>`;
+}
+
+function teammatePassTipInterception(item) {
+  return `<svg class="play-diagram" viewBox="0 0 720 430" role="img" aria-labelledby="teamtip-title teamtip-desc" style="max-width:100%;height:auto">
+    <title id="teamtip-title">${escapeXml(item.title)}</title>
+    <desc id="teamtip-desc">일반 개념도 · 실제 정렬 재현 아님. Booker가 패스를 굴절시키고 다른 수비수 Lynch가 확보하는 두 역할을 구분한다.</desc>
+    <defs><marker id="teamtip-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="720" height="430" rx="12"/>
+    <text class="field-label" x="24" y="32">Booker 굴절 → Lynch 확보</text>
+    <path class="line-scrimmage" d="M24 270H696"/>
+    <path data-action="intended-pass" class="pass-path" d="M160 335L330 245L580 125" stroke-dasharray="8 7"/>
+    <path data-action="deflection" class="route-path" d="M330 245Q345 90 480 185" marker-end="url(#teamtip-arrow)"/>
+    ${player(145,350,'QB')}${player(330,270,'D','defense')}${player(500,205,'D','defense')}${player(600,110,'TE')}
+    <text class="mini-label" x="40" y="310">① Darnold 패스</text>
+    <text class="mini-label" x="235" y="320">② Booker 접촉</text>
+    <text data-action="possession" class="mini-label" x="475" y="260">③ Lynch 포구</text>
+    <text class="mini-label" x="470" y="75">원래 표적: Barner</text>
+    <text class="mini-label" x="24" y="395">서로 다른 수비수의 연결 · 실제 정렬 재현 아님</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'poach-quarters-trips') return poachQuartersTrips(item);
+  if (item?.diagram?.kind === 'teammate-pass-tip-interception') return teammatePassTipInterception(item);
   if (item?.diagram?.kind === 'go-post-go-vs-cover3') return goPostGoCover3(item);
   if (item?.diagram?.kind === 'stunt-protection-exchange') return stuntProtectionExchange(item);
   if (item?.diagram?.kind === 'coordinated-pocket-compression') return coordinatedPocketCompression(item);
