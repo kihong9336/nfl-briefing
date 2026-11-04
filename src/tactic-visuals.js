@@ -362,7 +362,30 @@ function teammatePassTipInterception(item) {
   </svg>`;
 }
 
+function splitZoneCutback(item) {
+  return `<svg class="play-diagram" viewBox="0 0 560 450" role="img" aria-labelledby="split-title split-desc" style="max-width:100%;height:auto">
+    <title id="split-title">${escapeXml(item.title)}</title>
+    <desc id="split-desc">일반 개념도 · 실제 정렬 재현 아님. 공격 방향은 위쪽. 다섯 OL은 오른쪽 존 블로킹, TE는 왼쪽으로 가로질러 뒤쪽 DE와 접촉한다. RB는 오른쪽 흐름을 읽고 안쪽으로 컷백한다. LB는 컷백 통로를 지킨다.</desc>
+    <defs><marker id="split-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="560" height="450" rx="12"/>
+    <text class="mini-label" x="20" y="32">SPLIT-ZONE · 공격 ↑</text>
+    <text class="mini-label" x="20" y="66">① OL 오른쪽 →</text>
+    <path class="line-scrimmage" d="M20 205H540"/>
+    <path data-action="zone-right" d="M270 220H450" fill="none" stroke="#78c8ff" stroke-width="5" marker-end="url(#split-arrow)"/>
+    <path data-action="sift-left" d="M455 280Q340 310 175 245" fill="none" stroke="#78c8ff" stroke-width="5" stroke-dasharray="7 5" marker-end="url(#split-arrow)"/>
+    <circle data-action="edge-contact" cx="160" cy="230" r="27" fill="none" stroke="#ff5b68" stroke-width="4"/>
+    <path data-action="rb-cutback" class="route-path" d="M330 375Q420 335 370 310Q300 300 245 270L245 170" marker-end="url(#split-arrow)"/>
+    ${player(210,245,'OL','offense',18)}${player(265,245,'OL','offense',18)}${player(320,245,'OL','offense',18)}${player(375,245,'OL','offense',18)}${player(430,245,'OL','offense',18)}
+    ${player(475,280,'TE')}${player(320,320,'QB')}${player(330,395,'RB')}${player(155,185,'DE','defense')}${player(245,120,'LB','defense')}
+    <text class="mini-label" x="20" y="300">② TE 뒤쪽 차단</text>
+    <text class="mini-label" x="20" y="345">③ RB 컷백 ↖</text>
+    <text class="mini-label" x="290" y="125">LB: 컷백 통로</text>
+    <text class="mini-label" x="20" y="435">파랑: 블록 · 노랑: 러닝</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'split-zone-cutback') return splitZoneCutback(item);
   if (item?.diagram?.kind === 'poach-quarters-trips') return poachQuartersTrips(item);
   if (item?.diagram?.kind === 'teammate-pass-tip-interception') return teammatePassTipInterception(item);
   if (item?.diagram?.kind === 'go-post-go-vs-cover3') return goPostGoCover3(item);
