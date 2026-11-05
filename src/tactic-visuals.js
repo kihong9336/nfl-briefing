@@ -384,7 +384,30 @@ function splitZoneCutback(item) {
   </svg>`;
 }
 
+function passProtectionResponsibility(item) {
+  const panels = [
+    {title:'① OL 일대일', action:'interior-pressure', path:'M280 85V142', actors:player(280,65,'DL','defense',18), note:'안쪽 블록의 승패'},
+    {title:'② RB 추가 러셔', action:'rb-pressure', path:'M420 85Q425 145 385 205', actors:player(420,65,'LB','defense',18), note:'추가 압박 담당 확인'},
+    {title:'③ QB 공 처리', action:'qb-decision', path:'M270 242Q160 220 105 85', actors:player(95,65,'WR','offense',18), note:'표적과 던질 시간'}
+  ];
+  return `<section class="protection-responsibility" aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <p>일반 개념도 · 실제 정렬 재현 아님 · 공격 ↑</p>
+    ${panels.map((p,i) => `<div data-panel="${i+1}"><p><strong>${p.title}</strong> · ${p.note}</p>
+      <svg class="play-diagram" viewBox="0 0 560 300" role="img" aria-label="${p.title}" style="display:block;width:100%;max-width:100%;height:auto">
+        <defs><marker id="responsibility-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="${i===2?'#ffd54a':'#ff5b68'}" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="field-bg" width="560" height="300" rx="12"/>
+        <path class="line-scrimmage" d="M20 145H540"/>
+        <path data-action="${p.action}" class="${i===2?'pass-path':'pressure-path'}" d="${p.path}" marker-end="url(#responsibility-${i})"/>
+        ${i===1?'<path data-action="rb-block" d="M365 235L390 205M380 195L400 215" fill="none" stroke="#78c8ff" stroke-width="5"/>':''}
+        ${[170,225,280,335,390].map(x=>player(x,175,'OL','offense',18)).join('')}
+        ${player(280,260,'QB','offense',20)}${player(365,250,'RB','offense',18)}${p.actors}
+      </svg></div>`).join('')}
+    <p>빨강: 압박 · 파랑: 블록 · 노랑 점선: QB의 패스 선택</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'pass-protection-responsibility') return passProtectionResponsibility(item);
   if (item?.diagram?.kind === 'split-zone-cutback') return splitZoneCutback(item);
   if (item?.diagram?.kind === 'poach-quarters-trips') return poachQuartersTrips(item);
   if (item?.diagram?.kind === 'teammate-pass-tip-interception') return teammatePassTipInterception(item);
