@@ -406,7 +406,32 @@ function passProtectionResponsibility(item) {
   </section>`;
 }
 
+function blitzProtectionMiddleCatchRun(item) {
+  return `<svg class="play-diagram" viewBox="0 0 560 480" role="img" aria-labelledby="middle-title middle-desc" style="display:block;width:100%;max-width:100%;height:auto">
+    <title id="middle-title">${escapeXml(item.title)}</title>
+    <desc id="middle-desc">OL이 압박을 막아 QB의 시간을 확보하고 가운데 WR로 패스한다. 포구 뒤 전진과 후방 수비의 추격을 구분한 개념도. 실제 정렬 재현 아님.</desc>
+    <defs><marker id="middle-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="560" height="480" rx="12"/>
+    <text class="mini-label" x="20" y="30">보호 → 가운데 패스 → 전진 · 공격 ↑</text>
+    <path d="M20 70H540" stroke="#78c8ff" stroke-width="3"/>
+    <text class="mini-label" x="20" y="62">엔드존</text>
+    <path data-action="pressure" class="pressure-path" d="M140 230L215 295" marker-end="url(#middle-arrow)"/>
+    <path data-action="protection" d="M175 315H350" fill="none" stroke="#78c8ff" stroke-width="7"/>
+    <path data-action="middle-pass" class="pass-path" d="M280 385Q390 310 280 225" marker-end="url(#middle-arrow)"/>
+    <path data-action="run-after-catch" class="route-path" d="M280 200Q335 140 300 85" marker-end="url(#middle-arrow)"/>
+    <path data-action="pursuit" class="pressure-path" d="M420 125Q395 105 335 95" marker-end="url(#middle-arrow)"/>
+    ${player(280,400,'QB')}${player(280,315,'OL')}${player(280,210,'WR')}${player(435,145,'S','defense')}
+    <text class="mini-label" x="20" y="270">① 압박 차단</text>
+    <text class="mini-label" x="355" y="275">② 가운데 패스</text>
+    <text class="mini-label" x="20" y="155">③ 포구 뒤 전진</text>
+    <text class="mini-label" x="400" y="200">추격·태클</text>
+    <text class="mini-label" x="20" y="445">50야드: 전체 이득 · 공중/YAC 분할 없음</text>
+    <text class="mini-label" x="20" y="472">실제 정렬 재현 아님 · 거리 비례 아님</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'blitz-protection-middle-catch-run') return blitzProtectionMiddleCatchRun(item);
   if (item?.diagram?.kind === 'pass-protection-responsibility') return passProtectionResponsibility(item);
   if (item?.diagram?.kind === 'split-zone-cutback') return splitZoneCutback(item);
   if (item?.diagram?.kind === 'poach-quarters-trips') return poachQuartersTrips(item);
