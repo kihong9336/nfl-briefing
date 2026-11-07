@@ -430,7 +430,38 @@ function blitzProtectionMiddleCatchRun(item) {
   </svg>`;
 }
 
+function counterHotPlayAction(item) {
+  return `<section class="counter-hot" aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <svg class="play-diagram" viewBox="0 0 560 480" role="img" aria-labelledby="counter-title counter-desc" style="display:block;width:100%;max-width:100%;height:auto">
+      <title id="counter-title">${escapeXml(item.title)}</title>
+      <desc id="counter-desc">일반 개념도 · 실제 정렬 재현 아님. 공격은 위쪽. 가드가 풀한 뒤 보호하고 QB는 러닝 페이크, TE는 라인배커 뒤와 세이프티 앞을 가로지른다. 실선은 이동, 짧은 점선은 수비 반응, 긴 점선은 패스.</desc>
+      <defs><marker id="counter-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+      <rect class="field-bg" width="560" height="480" rx="12"/>
+      <text class="mini-label" x="20" y="30">COUNTER-HOT · 공격 ↑</text>
+      <path class="line-scrimmage" d="M20 275H540"/>
+      <path data-action="guard-pull" d="M220 305Q270 350 370 310" fill="none" stroke="#78c8ff" stroke-width="4" marker-end="url(#counter-arrow)"/>
+      <path data-action="pass-protection" d="M360 285H400M380 285V310" fill="none" stroke="#78c8ff" stroke-width="6"/>
+      <path data-action="run-fake" d="M280 355Q330 380 350 410" fill="none" stroke="#ffd54a" stroke-width="4" marker-end="url(#counter-arrow)"/>
+      <path data-action="lb-reaction" d="M195 220V250M355 220V250" fill="none" stroke="#ff5b68" stroke-width="4" stroke-dasharray="3 5" marker-end="url(#counter-arrow)"/>
+      <path data-action="te-cross" d="M465 295V185Q465 150 410 150H180" fill="none" stroke="#ffd54a" stroke-width="5" marker-end="url(#counter-arrow)"/>
+      <path data-action="qb-pass" d="M280 355Q300 250 200 150" fill="none" stroke="#ffd54a" stroke-width="4" stroke-dasharray="10 7" marker-end="url(#counter-arrow)"/>
+      ${player(280,300,'C','offense',18)}${player(220,300,'LG','offense',18)}${player(280,350,'QB')}${player(280,425,'RB')}${player(465,315,'TE')}${player(195,200,'LB','defense')}${player(355,200,'LB','defense')}${player(280,85,'S','defense')}
+      <text class="mini-label" x="325" y="90">깊은 세이프티</text>
+      <text class="mini-label" x="20" y="135">③ TE 크로싱 ←</text>
+      <text class="mini-label" x="20" y="335">① 가드 풀 →</text>
+      <text class="mini-label" x="365" y="365">② 보호 유지</text>
+      <text class="mini-label" x="20" y="405">러닝 페이크 ↘</text>
+      <text class="mini-label" x="20" y="465">실선: 이동 · 점선: 반응/패스</text>
+    </svg>
+    <details open><summary>① 러닝을 닮은 출발</summary><p>가드의 풀과 QB의 핸드오프 페이크가 러닝처럼 보인다. 수비는 첫 동작만이 아니라 TE의 릴리스도 읽는다.</p></details>
+    <details open><summary>② 가드는 보호를 유지</summary><p>풀한 가드는 패스 러셔를 막을 균형을 지킨다. 러닝처럼 보이는 출발이 무리한 돌진을 뜻하지는 않는다.</p></details>
+    <details open><summary>③ 두 수비 층 사이로</summary><p>TE가 라인배커 뒤·중앙 세이프티 앞을 가로지른다. 수비는 페이크에 반응한 뒤 뒤 공간을 회복해야 한다.</p></details>
+    <p>일반 개념도 · 실제 정렬 재현 아님. 투하이 때의 시임 선택은 별도 변형이며 이 그림의 동시 루트가 아니다.</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'counter-hot-play-action') return counterHotPlayAction(item);
   if (item?.diagram?.kind === 'blitz-protection-middle-catch-run') return blitzProtectionMiddleCatchRun(item);
   if (item?.diagram?.kind === 'pass-protection-responsibility') return passProtectionResponsibility(item);
   if (item?.diagram?.kind === 'split-zone-cutback') return splitZoneCutback(item);

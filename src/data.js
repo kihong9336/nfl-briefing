@@ -1,5 +1,808 @@
 export const briefings = [
   {
+    "date": "2026-11-07",
+    "weekday": "토요일",
+    "sample": false,
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 9,
+    "edition": "2026 WEEK 9 · QB 재편과 주말 관전",
+    "dek": "Ravens의 Brissett 거래가 완료됐고 Browns는 Sanders를 선발로 확정했다. 마드리드전의 전술 대결, NFC North의 강세, Gronkowski 헌액식과 관심팀 최종 출전 보고를 짚는다.",
+    "lead": {
+      "kicker": "리그 핵심 · 선발과 트레이드",
+      "title": "Ravens, Brissett 거래 완료…Browns는 Sanders 선발 확정",
+      "summary": "AFC North 경쟁의 쿼터백 구성이 다시 바뀐다. 거래 조건이 공개된 Baltimore와 선발을 결정한 Cleveland, 일요일 밤 마드리드전까지 주말의 변수를 살펴본다."
+    },
+    "sections": [
+      {
+        "id": "2026-week9-49ers-return-practice",
+        "eventKey": "2026-week9-49ers-return-practice",
+        "team": "49ers",
+        "label": "구단 최종 보고",
+        "title": "Bosa·McCaffrey 출전 등급 해제…49ers 리시버 세 명은 OUT",
+        "takeaway": "러닝백과 패스러시는 돌아오지만 리시버의 공백은 확정됐다. 두 변화를 동시에 보자.",
+        "summary": "49ers의 11월 6일 최종 보고에서 Bosa와 McCaffrey는 경기 제한 등급 없이 마쳤다. 반면 Mike Evans·Deebo Samuel·Christian Kirk은 Raiders전 OUT이다. Kirk은 목요일 반월상연골을 다쳤으며 수술 여부는 아직 결정되지 않았다.",
+        "commentary": "Bosa의 복귀와 Buckner 합류는 수비라인 조합의 관전 포인트다. 공격은 리시버 세 명 없이 운영해야 한다. Demarcus Robinson은 Questionable이며 출전하려면 IR 활성화도 필요하다. 이 단계에서 평소 표적 배분이 그대로 유지된다고 가정하면 안 된다.",
+        "watch": "한국시간 11월 9일 오전 6시 25분, 최종 액티브 명단과 Bosa의 스냅, 대체 리시버들의 역할을 확인하자.",
+        "sources": [
+          {
+            "label": "www.49ers.com",
+            "url": "https://www.49ers.com/news/49ers-rule-out-three-wide-receivers-vs-raiders-bosa-returns-to-full-practice-ahead-of-week-9-lvvssf"
+          }
+        ],
+        "changeSummary": "새로 확인된 변화: Bosa와 McCaffrey는 경기 제한 등급 없이 마쳤다",
+        "changeEvidence": {
+          "url": "https://www.49ers.com/news/49ers-rule-out-three-wide-receivers-vs-raiders-bosa-returns-to-full-practice-ahead-of-week-9-lvvssf",
+          "before": "Christian McCaffrey는 제한 훈련으로 복귀했다",
+          "after": "Bosa와 McCaffrey는 경기 제한 등급 없이 마쳤다",
+          "quote": "Bosa와 McCaffrey는 경기 제한 등급 없이 마쳤다",
+          "originalQuote": "Bosa and McCaffrey both progressed to full participation Friday and carry no game designations heading into Sunday.",
+          "translation": true
+        }
+      },
+      {
+        "id": "2026-week9-chiefs-jets-first-report",
+        "eventKey": "2026-week9-chiefs-jets-first-report",
+        "team": "Chiefs",
+        "label": "최종 출전 보고",
+        "title": "Chiefs Rice·Kelce 제한 등급 없음…Jets Wilson은 결장 확정",
+        "takeaway": "목요일 훈련 참여에서 금요일 최종 등급으로 넘어왔다. Jets의 주 표적 공백도 확정됐다.",
+        "summary": "11월 6일 Chiefs 공식 최종 보고에서 Garrett Wilson은 OUT으로 확정됐다. Chiefs의 Rice·Kelce·Mahomes는 FP이며 별도 경기 제한 등급이 없다. 수비의 Peter Woods·Mansoor Delane·Omarr Norman-Lott는 OUT, Nikko Remigio는 Questionable이다.",
+        "commentary": "Jets는 Breece Hall의 경기 제한 등급이 사라졌다. Wilson의 부재와 Chiefs 수비 인력 공백이 함께 작용하므로 부상자 수만 세어 유불리를 단정하지 말자. 정상 훈련이 실제 경기의 평소 사용량을 보장하지도 않는다.",
+        "watch": "한국시간 11월 9일 오전 3시, Jets의 표적 재배분과 Chiefs의 대체 코너 운용을 함께 보자.",
+        "sources": [
+          {
+            "label": "www.chiefs.com",
+            "url": "https://www.chiefs.com/news/week-9-injury-report-jets-vs-chiefs"
+          }
+        ],
+        "changeSummary": "새로 확인된 변화: Garrett Wilson은 OUT으로 확정됐다",
+        "changeEvidence": {
+          "url": "https://www.chiefs.com/news/week-9-injury-report-jets-vs-chiefs",
+          "before": "Garrett Wilson은 뇌진탕으로 계속 불참",
+          "after": "Garrett Wilson은 OUT으로 확정됐다",
+          "quote": "Garrett Wilson은 OUT으로 확정됐다",
+          "originalQuote": "WR Garrett Wilson - Concussion - DNP |\nGame Status: Out",
+          "translation": true
+        }
+      },
+      {
+        "id": "2026-week9-patriots-packers-first-report",
+        "eventKey": "2026-week9-patriots-packers-first-report",
+        "team": "Patriots",
+        "label": "최종 보고 · 구단 원문 우선",
+        "title": "A.J. Brown·Henderson OUT…Marcus Jones는 출전 등급 해제",
+        "takeaway": "공격의 확정 결장과 수비의 복귀를 나누자. Hunter Henry는 여전히 출전 여부가 미정이다.",
+        "summary": "11월 6일 Patriots 최종 보고에서 A.J. Brown과 Henderson은 OUT이다. Hunter Henry·Mack Hollins·Morgan Moses 등은 Questionable이다. 전날 불참했던 Marcus Jones는 금요일 FP이며 별도 경기 제한 등급이 없다.",
+        "commentary": "구단 최종 보고와 Evan Lazar의 분석은 Jones가 제한 등급 없이 경기를 준비한다고 일치한다. Maye의 FP와 주위 표적들의 가용성은 별개다. Hollins와 Greg Van Roten은 출전하려면 IR 활성화도 필요하다. Packers는 Parsons·Zaire Franklin·Sean Rhyan 등이 OUT이다.",
+        "watch": "한국시간 11월 9일 오전 6시 25분, Henry·Hollins의 최종 명단과 대체 표적의 짧은 패스 연결을 보자.",
+        "sources": [
+          {
+            "label": "www.patriots.com",
+            "url": "https://www.patriots.com/news/week-9-injury-report-patriots-vs-packers"
+          },
+          {
+            "label": "www.patriots.com",
+            "url": "https://www.patriots.com/news/injury-report-analysis-patriots-rule-out-wr-a-j-brown-rb-treveyon-henderson-te-hunter-henry-questionable-for-sunday-vs-packers"
+          }
+        ],
+        "changeSummary": "새로 확인된 변화: A.J. Brown과 Henderson은 OUT이다",
+        "changeEvidence": {
+          "url": "https://www.patriots.com/news/week-9-injury-report-patriots-vs-packers",
+          "before": "A.J. Brown·Hunter Henry·TreVeyon Henderson은 불참",
+          "after": "A.J. Brown과 Henderson은 OUT이다",
+          "quote": "A.J. Brown과 Henderson은 OUT이다",
+          "originalQuote": "OUT\nWR A.J. Brown - Ankle / Knee (DNP)\nRB TreVeyon Henderson - Illness (DNP)",
+          "translation": true
+        }
+      },
+      {
+        "id": "2026-11-06-henderson-health-statement",
+        "eventKey": "2026-11-06-henderson-health-statement",
+        "team": "Patriots",
+        "label": "선수 입장 · 건강 소식",
+        "title": "Henderson, 신경학적 증상 공개…원인은 아직 불명이라고 밝혀",
+        "takeaway": "단순한 출전 등급과는 별개의 선수 발표다. 병명이나 복귀 시기를 추정하지 않는다.",
+        "summary": "ESPN의 11월 6일 보도에 따르면 TreVeyon Henderson은 원인이 설명되지 않은 신경학적 증상으로 예상치 못한 의료적 응급상황을 겪었다고 밝혔다. 검사 결과는 긍정적이고 안심할 만했다고 했지만, 원인은 아직 알 수 없다고 설명했다.",
+        "commentary": "그는 증상이 근력·협응과 일부 신체 기능에 영향을 주었고 전문의·물리치료사와 회복에 집중한다고 밝혔다. 이는 선수 본인의 공개 설명이며 독립적인 진단이나 회복 예측이 아니다. 일상적인 부상표의 illness 한 단어만으로 상태를 가볍게 판단하지 말자.",
+        "watch": "추가 공개가 있더라도 선수의 건강과 장기적 회복을 우선해서 읽고, 복귀 일정은 공식 발표를 기다리자.",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50400016/patriots-treveyon-henderson-affected-neurological-symptoms"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-02-aiyuk-rosenhaus-representation",
+        "eventKey": "2026-11-02-aiyuk-rosenhaus-representation",
+        "team": "49ers",
+        "label": "복귀 협의 후속 · 취재",
+        "title": "Aiyuk, 49ers와 실제 면담…리그 복귀 승인과 이적은 아직",
+        "takeaway": "보고 계획이 면담 실행으로 바뀌었다. 회의 참석이 곧 49ers 경기 복귀를 뜻하지 않는다.",
+        "summary": "ESPN은 11월 6일 Aiyuk이 에이전트 Rosenhaus와 구단 사업 사무실에서 면담했다고 보도했다. 선수는 몸 상태가 100%라고 말하며 리그 복귀를 희망했다. ESPN에 따르면 아직 복귀 승인은 나지 않았다.",
+        "commentary": "이는 선수 본인의 건강 주장이지 팀의 경기 출전 승인이 아니다. 구단과의 계약 정리·복귀 자격·실제 소속 결정은 별도의 문제다. 따라서 당장 49ers 리시버 부상 공백의 해답으로 계산할 수 없다.",
+        "watch": "공식 복귀 승인과 구단의 실제 명단 조치를 보자. 면담 뒤 방출이나 트레이드 합의가 나왔다고 앞서가지 않는다.",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50402899/brandon-aiyuk-meets-49ers-looking-get-reinstated"
+          }
+        ],
+        "changeSummary": "새로 확인된 변화: 구단 사업 사무실에서 면담했다",
+        "changeEvidence": {
+          "url": "https://www.espn.com/nfl/story/_/id/50402899/brandon-aiyuk-meets-49ers-looking-get-reinstated",
+          "before": "선수는 미국 금요일 오후 구단 시설에 보고할 계획이다",
+          "after": "구단 사업 사무실에서 면담했다",
+          "quote": "구단 사업 사무실에서 면담했다",
+          "originalQuote": "Aiyuk, flanked by his agent Drew Rosenhaus, arrived at the Niners' business offices Friday afternoon to meet with the team and begin hammering out a path toward a divorce that has been more than two years in the making.",
+          "translation": true
+        }
+      },
+      {
+        "id": "2026-11-06-gronk-ceremony-stream",
+        "eventKey": "2026-11-06-gronk-ceremony-stream",
+        "team": "Patriots",
+        "label": "구단 행사 · 시청 안내",
+        "title": "Gronkowski 헌액식은 한국 일요일 새벽 3시…경기와 별도 중계",
+        "takeaway": "헌액식과 Packers전 하프타임 축하는 서로 다른 행사다. 구단 명예의 전당이라는 점도 기억하자.",
+        "summary": "Patriots의 11월 6일 안내에 따르면 Rob Gronkowski의 구단 명예의 전당 헌액식은 현지 11월 7일 오후 1시, 한국시간 11월 8일 오전 3시에 열린다. Patriot Place Plaza의 무료 공개 행사이며 Patriots.com·구단 앱·공식 소셜 계정에서 생중계한다.",
+        "commentary": "Packers전 하프타임 축하 행사는 별도로 진행하며 구단 사이트와 앱에서만 생중계한다고 안내했다. 또한 Super Bowl LI 우승팀의 10주년 재결합 행사도 예정돼 있다. Pro Football Hall of Fame의 헌액 확정과 혼동하지 말자.",
+        "watch": "한국 새벽 3시는 토요일 밤을 넘긴 일요일이다. 경기 시작 시각인 월요일 오전 6시 25분과 달력에 따로 구분하자.",
+        "sources": [
+          {
+            "label": "www.patriots.com",
+            "url": "https://www.patriots.com/news/rob-gronkowski-induction-ceremony-to-be-held-on-saturday-november-7"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-06-gronk-counter-hot-analysis",
+        "eventKey": "2026-11-06-gronk-counter-hot-analysis",
+        "team": "Patriots",
+        "label": "전술 심화 · 구단 기자 분석",
+        "title": "러닝처럼 보이게 만든 뒤 그 뒤로…Gronk의 Charles Barkley",
+        "takeaway": "블로킹 위협이 패스 공간을 만든다. 가드의 움직임과 TE의 경로를 함께 보자.",
+        "summary": "Evan Lazar의 11월 6일 분석은 Gronkowski의 대표 플레이 Charles Barkley, 즉 counter-hot을 설명한다. Super Bowl LIII 1쿼터에는 두 TE를 세우고 LG Joe Thuney가 당겨 나오자 Gronkowski가 라인배커 뒤를 가로질러 19야드를 얻었다.",
+        "commentary": "가드가 이동하고 QB가 러닝 페이크를 하면 수비가 앞으로 반응할 수 있다. 그 뒤 공간을 TE가 이용한다. 기사에 따르면 원형은 싱글하이일 때 크로싱, 투하이일 때 세이프티 사이로 전진하는 선택을 담았다. 다만 모든 변형이 같은 배치라는 뜻은 아니다. 올해 Week 4 Buffalo전에도 Henry의 14야드 연결로 변형이 사용됐다.",
+        "watch": "가드가 러닝처럼 낮게 움직이면서도 패스 보호 균형을 유지하는지, 라인배커가 첫 동작에 반응한 뒤 뒤 공간을 회복하는지 보자.",
+        "sources": [
+          {
+            "label": "www.patriots.com",
+            "url": "https://www.patriots.com/news/charles-barkley-the-gronk-route-that-spearheaded-rob-gronkowski-s-patriots-hall-of-fame-career"
+          }
+        ]
+      }
+    ],
+    "leagueWide": [
+      {
+        "id": "2026-11-04-brissett-ravens-trade",
+        "eventKey": "2026-11-04-brissett-ravens-trade",
+        "team": "Ravens",
+        "label": "거래 완료 · 조건 공개",
+        "title": "Brissett의 Ravens행 확정…지명권 교환과 연봉 분담 공개",
+        "takeaway": "영입 추진에서 구단의 거래 완료 발표로 바뀌었다. 다음 과제는 공격 운영의 안정이다.",
+        "why": "미국 11월 6일 Ravens가 Brissett 트레이드를 완료했다. Baltimore는 Brissett와 2027년 5라운드 지명권을 받고, Arizona에 2027년 4라운드와 2028년 7라운드 지명권을 보낸다. NFL Network·ESPN 보도를 인용한 구단 발표에 따르면 Arizona가 남은 2026년 연봉의 절반 이상도 부담한다. 4연패한 Baltimore는 Week 10 Chargers전에 Brissett를 선발로 준비시킬 예정이다. 경험 있는 QB의 영입은 공격 안정화 시도지만 보호선과 반칙 문제까지 자동으로 해결하지는 않는다. 구단은 최근 네 경기 연속 14점 미만에 그친 것이 프랜차이즈 최초라고 설명했다. 다음 경기에서 긴 다운을 줄이고 드라이브를 이어갈 수 있는지 보자.",
+        "url": "https://www.baltimoreravens.com/news/jacoby-brissett-ravens-trade-cardinals-finalize-2026",
+        "sources": [
+          {
+            "label": "www.baltimoreravens.com",
+            "url": "https://www.baltimoreravens.com/news/jacoby-brissett-ravens-trade-cardinals-finalize-2026"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/ravens-complete-trade-for-cardinals-jacoby-brissett-deal-terms-revealed"
+          }
+        ],
+        "changeSummary": "새로 확인된 변화: Ravens가 Brissett 트레이드를 완료했다",
+        "changeEvidence": {
+          "url": "https://www.baltimoreravens.com/news/jacoby-brissett-ravens-trade-cardinals-finalize-2026",
+          "before": "완료 예상은 주말이며 보상 조건은 아직 공개되지 않았다",
+          "after": "Ravens가 Brissett 트레이드를 완료했다",
+          "quote": "Ravens가 Brissett 트레이드를 완료했다",
+          "originalQuote": "The Ravens have finalized their trade for 11-year veteran quarterback Jacoby Brissett, hoping he can elevate an offense that has gone cold without injured Lamar Jackson.",
+          "translation": true
+        }
+      },
+      {
+        "id": "2026-11-04-watson-concussion-protocol",
+        "eventKey": "2026-11-04-watson-concussion-protocol",
+        "team": "Browns",
+        "label": "감독 발표 · 선발 변경",
+        "title": "Sanders, Saints전 시즌 첫 선발…Watson의 상태와 분리된 결정",
+        "takeaway": "선발 가능성이 공식 결정으로 바뀌었다. 올해 세 번의 패스만으로 기대치를 단정하지 말자.",
+        "why": "미국 11월 6일 Todd Monken 감독은 Shedeur Sanders의 Saints전 선발을 확정했다. Deshaun Watson은 뇌진탕 프로토콜에 남아 있고 최종 Questionable이다. 감독은 프로토콜을 통과해도 액티브 명단에 넣을지는 아직 결정하지 않았다고 말했다. Browns는 5승 3패로 AFC North의 Steelers·Bengals를 추격한다. Sanders는 올해 두 경기에서 패스 세 번을 모두 성공했지만 합계 2야드뿐이다. 이 작은 표본을 선발 경기의 효율 예측으로 쓰기는 어렵다. 지난주 Pittsburgh전 319야드를 얻고도 6점에 그친 공격이 득점권에서 마무리를 개선하는지 보자. 경기는 한국시간 11월 9일 오전 3시다.",
+        "url": "https://www.browns.com/news/shedeur-sanders-to-start-week-9-against-the-saints",
+        "sources": [
+          {
+            "label": "www.browns.com",
+            "url": "https://www.browns.com/news/shedeur-sanders-to-start-week-9-against-the-saints"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/browns-shedeur-sanders-to-start-at-qb-vs-saints-with-deshaun-watson-in-concussion-protocol"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+          }
+        ],
+        "changeSummary": "새로 확인된 변화: Shedeur Sanders의 Saints전 선발을 확정했다",
+        "changeEvidence": {
+          "url": "https://www.browns.com/news/shedeur-sanders-to-start-week-9-against-the-saints",
+          "before": "Shedeur Sanders가 Saints전 선발로 나설 가능성이 커졌지만 최종 선발 확정 발표와는 구분해야 한다",
+          "after": "Shedeur Sanders의 Saints전 선발을 확정했다",
+          "quote": "Shedeur Sanders의 Saints전 선발을 확정했다",
+          "originalQuote": "will make his first start of the 2026 season in Week 9, as head coach Todd Monken announced Sanders will start against the Saints with QB",
+          "translation": true
+        }
+      },
+      {
+        "id": "2026-11-06-seahawks-nelson-knee-procedure",
+        "eventKey": "2026-11-06-seahawks-nelson-knee-procedure",
+        "team": "Seahawks",
+        "label": "구단 발표 · 공격라인 재편",
+        "title": "Nelson, 무릎 시술로 결장…Seattle은 가드 조합을 다시 돌린다",
+        "takeaway": "새 영입의 효과를 기다리는 사이 기존 조합이 복귀한다. QB 교체와 보호선 문제를 함께 보자.",
+        "why": "Seahawks는 11월 6일 Quenton Nelson이 경미한 무릎 시술을 받을 예정이며 Cardinals전에 결장한다고 발표했다. Mike Macdonald 감독은 주 단위로 상태를 보되 현재 IR에 올릴 계획은 없다고 밝혔다. Grey Zabel은 왼쪽 가드로 돌아가고 Anthony Bradford가 오른쪽 가드 선발로 복귀한다. 이미 알려진 Sam Darnold 결장에 더해 Charles Cross도 빠져 Drew Lock의 보호 환경이 중요해졌다. 영입 직후의 부상을 트레이드 전체의 실패로 확정할 수는 없지만, 새 조합의 안정화를 기대했던 일정은 바뀌었다. Lock의 빠른 공 처리와 대체 라인의 인계가 첫 관찰점이다.",
+        "url": "https://www.seahawks.com/news/seahawks-guard-quenton-nelson-to-have-minor-procedure-on-knee-considered-week-to-week",
+        "sources": [
+          {
+            "label": "www.seahawks.com",
+            "url": "https://www.seahawks.com/news/seahawks-guard-quenton-nelson-to-have-minor-procedure-on-knee-considered-week-to-week"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-6"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-02-rams-garrett-practice-window",
+        "eventKey": "2026-11-02-rams-garrett-practice-window",
+        "team": "Rams",
+        "label": "복귀 후속 · 감독 전망",
+        "title": "Garrett, 차질 없으면 Commanders전 출전…Ferguson은 뒤늦게 OUT",
+        "takeaway": "훈련 창 개방에서 실제 경기 복귀 전망으로 전진했다. 활성화와 스냅 배분은 확인이 남았다.",
+        "why": "11월 6일 Sean McVay 감독은 추가 차질이 없으면 Garrett이 일요일에 뛸 것으로 예상했다. 무릎 수술 뒤 IR에 있던 Myles Garrett은 이번 주 훈련을 재개했고 최종 경기 제한 등급은 없다. 금요일 DNP는 감독 설명상 휴식 관리였다. Aaron Donald와 함께 뛰게 된다면 상대 보호선이 누구에게 추가 인원을 붙이는지가 관전 포인트다. 다만 예상 출전과 IR 활성화 완료, 정상 사용량은 다른 단계다. 반대로 복귀를 기대했던 TE Terrance Ferguson은 금요일 햄스트링 문제가 추가돼 OUT으로 바뀌었다. Colby Parkinson도 Questionable이어서 공격과 수비의 가용성이 서로 다른 방향으로 움직인다.",
+        "url": "https://www.therams.com/news/rams-outside-linebacker-myles-garrett-expected-to-play-for-rams-against-commanders-sunday",
+        "sources": [
+          {
+            "label": "www.therams.com",
+            "url": "https://www.therams.com/news/rams-outside-linebacker-myles-garrett-expected-to-play-for-rams-against-commanders-sunday"
+          },
+          {
+            "label": "www.therams.com",
+            "url": "https://www.therams.com/news/rams-injury-report-week-9-2026-at-commanders-myles-garrett-trent-mcduffie-terrance-ferguson"
+          }
+        ],
+        "changeSummary": "새로 확인된 변화: 추가 차질이 없으면 Garrett이 일요일에 뛸 것으로 예상했다",
+        "changeEvidence": {
+          "url": "https://www.therams.com/news/rams-outside-linebacker-myles-garrett-expected-to-play-for-rams-against-commanders-sunday",
+          "before": "이번 주 훈련하며 복귀를 위한 21일 훈련 창을 열 것",
+          "after": "추가 차질이 없으면 Garrett이 일요일에 뛸 것으로 예상했다",
+          "quote": "추가 차질이 없으면 Garrett이 일요일에 뛸 것으로 예상했다",
+          "originalQuote": "And on Friday, McVay said he expects Garrett to play on Sunday \"barring any sort of setbacks.\"",
+          "translation": true
+        }
+      },
+      {
+        "id": "2026-week9-madrid-bengals-falcons-matchups",
+        "eventKey": "2026-week9-madrid-bengals-falcons-matchups",
+        "team": "Bengals / Falcons",
+        "label": "마드리드 프리뷰 · 관전 실용",
+        "title": "일요일 밤 11시 30분 마드리드…Burrow의 패스와 Bijan의 러닝 대결",
+        "takeaway": "Cincinnati의 깊은 패스와 Atlanta의 러닝이 각각 상대 강점과 만난다. 승패는 단순 순위 합산이 아니다.",
+        "why": "Bengals–Falcons는 한국시간 11월 8일 일요일 밤 11시 30분 Bernabéu에서 열린다. NFL의 11월 6일 프리뷰는 Burrow가 패스 성공률 73.0%, 경기당 302.1야드, 패싱 TD 20개로 해당 부문 선두라고 짚었다. 반면 Falcons는 공중 20야드 이상 깊은 패스의 TD를 아직 허용하지 않았다. 다른 쪽에서는 Bijan Robinson의 아웃사이드 존 러닝과 Bengals의 전진 저지 능력이 맞붙는다. NFL 분석상 Bijan은 해당 러닝에서 시도당 6.5야드, Cincinnati는 상대 아웃사이드 존의 31.7%를 전진 없이 막았다. 이는 서로 다른 공격·수비 표본의 상황별 기록이지 맞대결 결과의 예측식이 아니다. Atlanta의 Brian Robinson은 OUT이어서 Bijan의 활용 방식도 보자. Bengals는 승리하면 6승 2패로 Steelers와 승패가 같아진다. NFL Network·NFL+ 안내는 미국 중계 기준이며 국내 편성 확정으로 읽지 말자.",
+        "url": "https://www.nfl.com/news/bengals-vs-falcons-preview-week-9-madrid-game",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/bengals-vs-falcons-preview-week-9-madrid-game"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/nfl-madrid-gameday-guide"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-6"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-06-nfc-north-external-record",
+        "eventKey": "2026-11-06-nfc-north-external-record",
+        "team": "NFL",
+        "label": "순위 맥락 · 지구 외 상대 성적",
+        "title": "NFC North, 지구 밖 상대에 17승 3패…와일드카드도 좁아진다",
+        "takeaway": "같은 지구의 강세가 경쟁팀의 와일드카드 경로에 영향을 준다. 역사상 최강이라는 판정은 아니다.",
+        "why": "11월 6일 NBC/PFT는 Vikings·Bears·Lions·Packers가 같은 지구 외 팀을 상대로 합계 17승 3패라고 보도했다. 20경기에서 85%의 승률이다. 지구 내부 경기는 어느 팀의 승리가 다른 팀의 패배가 되므로, 이 지표는 외부 상대에게 거둔 성과를 따로 보려는 것이다. 다만 상대 수준과 홈·원정, 일정 강도는 보정하지 않았다. 이번 주 Packers–Patriots와 Bills–Vikings는 이 강세를 시험하는 매치업이다. 북부 네 팀의 동시 포스트시즌 진출은 가능성이지 확정이 아니며 Rams·Seahawks 같은 경쟁팀의 결과와 남은 지구전도 영향을 준다.",
+        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfc-north-has-17-3-record-against-non-nfc-north-teams",
+        "sources": [
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfc-north-has-17-3-record-against-non-nfc-north-teams"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/standings/division/2026/REG"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-06-antonio-brown-plea",
+        "eventKey": "2026-11-06-antonio-brown-plea",
+        "team": "NFL",
+        "label": "법원 사건 · 취재 보도",
+        "title": "Antonio Brown, Miami 총격 사건 감경 혐의 인정…3년 보호관찰",
+        "takeaway": "사법 절차의 새 결과를 전하는 보도다. 무죄 판단이나 NFL 복귀 발표가 아니다.",
+        "why": "ESPN과 CBS는 미국 11월 6일 Antonio Brown이 2025년 Miami 총격 사건에서 총기를 이용한 가중폭행 혐의를 인정하고 3년 보호관찰 처분을 받았다고 보도했다. 기존 살인미수 혐의에서 낮아진 혐의로 합의한 것이며 수감은 피했다는 보도다. 법원의 절차 결과와 과거 당사자의 정당방위 주장을 같은 것으로 읽지 말자. 이번 소식은 전직 선수의 법원 사건 처리에 관한 것이지 리그 출전 자격이나 현역 복귀가 결정됐다는 발표가 아니다. 세부 이행 조건은 보도 간 표현이 달라 여기서 단정하지 않는다.",
+        "url": "https://www.espn.com/nfl/story/_/id/50400733/antonio-brown-pleads-guilty-lesser-charge-shooting-case",
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50400733/antonio-brown-pleads-guilty-lesser-charge-shooting-case"
+          },
+          {
+            "label": "www.cbssports.com",
+            "url": "https://www.cbssports.com/nfl/news/steelers-bucs-antonio-brown-takes-plea-deal-in-miami-shooting"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-05-madrid-fan-events-guide",
+        "eventKey": "2026-11-05-madrid-fan-events-guide",
+        "team": "NFL",
+        "label": "국제 행사 · 현지 팬 경험",
+        "title": "마드리드는 경기 전부터 NFL…NFL House와 구단 팬 거점 운영",
+        "takeaway": "경기 티켓 없이 참여할 수 있는 행사와 티켓 소지자 전용 구역을 구분하자.",
+        "why": "NFL의 현지 행사 안내에 따르면 11월 6~7일 Palacio de las Alhajas의 NFL House Madrid는 무료 가족 행사로 운영된다. 현지 정오부터 오후 8시까지 체험 게임과 Lombardi Trophy·슈퍼볼 반지 전시 등을 마련한다. Chiefs도 6~7일 Mercado de San Ildefonso에서 Chiefs House를 연다. 반면 8일 경기장 주변 Gameday Experience는 경기 티켓 소지자 전용이다. 국제전의 팬 경험은 참가 두 팀에만 한정되지 않는다는 점이 흥미롭다. 실제 방문자는 NFL의 행사별 현지 시각과 입장 안내를 확인하자. 경기 하프타임의 Manuel Turizo 공연은 10월 9일 이미 발표된 내용이며 오늘의 새 발표로 다루지 않는다.",
+        "url": "https://www.nfl.com/news/fan-events-in-madrid",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/fan-events-in-madrid"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/manuel-turizo-halftime-show-2026-nfl-madrid-game"
+          }
+        ]
+      }
+    ],
+    "tactics": [
+      {
+        "id": "2026-gronk-counter-hot",
+        "team": "Patriots",
+        "label": "실전 전술 · 플레이액션",
+        "title": "가드가 당겨 나오면 러닝일까: Gronk의 counter-hot 19야드",
+        "narrativeMode": "integrated",
+        "concept": "counter-hot은 러닝처럼 보이는 가드 이동과 핸드오프 페이크 뒤에 TE를 라인배커 뒤 공간으로 보내는 플레이액션 개념이다.",
+        "easy": "수비가 공을 든 러너를 막으려고 앞으로 한 발 움직일 때, 공은 그 뒤의 리시버에게 갈 수 있다.",
+        "gameUse": "Evan Lazar의 구단 분석에 따르면 Super Bowl LIII 1쿼터 Patriots는 12 personnel로 Joe Thuney를 당겨 나오게 했고 Gronkowski가 라인배커 뒤·중앙 세이프티 앞을 가로질러 19야드를 얻었다.",
+        "whyItWorks": "Gronkowski가 실제로 강한 러닝 블로커였기에 같은 출발 모습의 러닝 위협이 설득력을 얻는다. 페이크에 반응한 두 번째 수비선 뒤로 패스 공간이 생긴다.",
+        "defenseCounter": "개념상 수비는 가드의 첫 동작만 보고 전진하지 말고 TE의 릴리스와 공의 위치를 함께 읽어야 한다. 아래는 실제 수비 지시를 단정하는 분석이 아니라 관전 원칙이다.",
+        "breakdown": [
+          {
+            "label": "1 · 러닝을 닮은 출발",
+            "text": "두 TE를 세운 인원 구성이 러닝 가능성을 보인다. 가드 Thuney가 당겨 나오고 QB가 공을 건네는 척하면 라인배커는 러닝 갭을 메우려 할 수 있다. 수비는 첫 동작 뒤 TE가 블로킹하는지 빠져나가는지도 읽어야 한다."
+          },
+          {
+            "label": "2 · 가드는 페이크와 보호를 함께",
+            "text": "가드는 낮은 자세와 속도로 러닝처럼 보이게 하되 패스 러셔에게 과하게 몸을 던지면 안 된다. 기자가 인용한 Ben Brown의 설명처럼 수비 엔드를 위협하면서도 균형을 지켜 QB의 시간을 확보하는 것이 중요하다."
+          },
+          {
+            "label": "3 · TE는 수비 두 층 사이로",
+            "text": "이 사례에서는 Gronkowski가 라인배커 뒤와 중앙 세이프티 앞을 가로질렀다. 원형 개념은 싱글하이의 크로싱과 투하이의 시임 선택을 포함하지만 이 장면에서 두 경로를 동시에 달렸다는 뜻은 아니다. 수비는 앞으로 반응한 뒤 뒤 공간을 다시 메워야 한다."
+          },
+          {
+            "label": "4 · 과거와 현재를 연결",
+            "text": "기사의 올해 Week 4 사례에서는 공격라인 여섯 명과 Vera-Tucker의 풀로 Henry에게 14야드를 연결했다. 같은 원리라도 인원과 배치는 달라진다. 반복되는 러닝 동작 속에서 어느 선수가 뒤 공간으로 빠지는지를 관찰하자."
+          }
+        ],
+        "watchOrder": [
+          "가드의 풀과 QB의 러닝 페이크를 함께 본다.",
+          "TE가 라인배커 뒤에서 찾는 패스 공간을 본다.",
+          "수비 세이프티의 깊이와 보호 균형을 함께 본다."
+        ],
+        "source": {
+          "label": "www.patriots.com",
+          "url": "https://www.patriots.com/news/charles-barkley-the-gronk-route-that-spearheaded-rob-gronkowski-s-patriots-hall-of-fame-career"
+        },
+        "video": {
+          "title": "Patriots–Rams Super Bowl LIII 전체 경기 하이라이트",
+          "type": "NFL 공식 · 전체 경기 하이라이트",
+          "url": "https://www.youtube.com/watch?v=usw9WiShXEs"
+        },
+        "diagram": {
+          "kind": "counter-hot-play-action",
+          "caption": "가드의 풀·러닝 페이크·라인배커 뒤 크로싱을 설명하는 개념도다. 실제 22명의 정렬과 거리 재현은 아니다."
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "title": "이 NFL 선수가 유독 밝은 색의 언더셔츠만 고집하는 이유 🥹",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "PtZ9QSTenNk",
+        "type": "채널 해설/리뷰",
+        "url": "https://www.youtube.com/watch?v=PtZ9QSTenNk",
+        "publishedAt": "2026-11-07T05:00:36+00:00",
+        "evidence": {
+          "checkedAt": "2026-11-07T09:01:40.457074+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCKF-sV1lgtP_exBfQ8cm9ag",
+            "https://www.youtube.com/watch?v=PtZ9QSTenNk"
+          ],
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag"
+        }
+      },
+      {
+        "title": "BEST PLAYS OF ROB GRONKOWSKI'S PATRIOTS CAREER 🔥",
+        "channel": "New England Patriots",
+        "channelId": "UCMm_V8YjmnZRhToXIqDYDuw",
+        "videoId": "3gu-9ZvYVcc",
+        "url": "https://www.youtube.com/watch?v=3gu-9ZvYVcc",
+        "type": "구단 공식 · 커리어 하이라이트",
+        "publishedAt": "2026-11-06T07:00:37-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-07T18:11:26.848+09:00",
+          "authorVerified": true,
+          "channelId": "UCMm_V8YjmnZRhToXIqDYDuw",
+          "metadataFile": "152b36059cd7.video.json",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=3gu-9ZvYVcc"
+          ]
+        }
+      },
+      {
+        "title": "Celebrating Rob Gronkowski, the Return of the Super Bowl LI Squad & More | Patriots All Access",
+        "channel": "New England Patriots",
+        "channelId": "UCMm_V8YjmnZRhToXIqDYDuw",
+        "videoId": "Z3FHy3WbgXY",
+        "url": "https://www.youtube.com/watch?v=Z3FHy3WbgXY",
+        "type": "구단 공식 · 주간 프로그램",
+        "publishedAt": "2026-11-06T17:00:25-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-07T18:11:26.852+09:00",
+          "authorVerified": true,
+          "channelId": "UCMm_V8YjmnZRhToXIqDYDuw",
+          "metadataFile": "732205cac7d4.video.json",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=Z3FHy3WbgXY"
+          ]
+        }
+      },
+      {
+        "title": "Patriots vs. Rams | Super Bowl LIII Game Highlights",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "usw9WiShXEs",
+        "url": "https://www.youtube.com/watch?v=usw9WiShXEs",
+        "type": "NFL 공식 · 전체 경기 하이라이트",
+        "publishedAt": "2019-02-03T19:26:50-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-07T18:11:26.855+09:00",
+          "authorVerified": true,
+          "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+          "metadataFile": "cb34424f980d.video.json",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=usw9WiShXEs"
+          ]
+        }
+      },
+      {
+        "title": "너무 잘해서 1년 일찍 대학팀에 들어가는 초특급 한국인 유망주!",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "hJAGwDTEtfw",
+        "type": "채널 해설/리뷰",
+        "note": "업로드: 2026-11-07 18:00 KST · 미식축구 읽어주는 남자의 NFL 영상.",
+        "url": "https://www.youtube.com/watch?v=hJAGwDTEtfw",
+        "publishedAt": "2026-11-07T09:00:39+00:00",
+        "evidence": {
+          "checkedAt": "2026-11-07T11:05:37.410847+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCKF-sV1lgtP_exBfQ8cm9ag",
+            "https://www.youtube.com/watch?v=hJAGwDTEtfw"
+          ],
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag"
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873038",
+        "gameDate": "2026-11-08",
+        "date": "11/08",
+        "weekday": "일",
+        "time": "23:30",
+        "status": "경기 예정",
+        "matchup": "Cincinnati Bengals at Atlanta Falcons",
+        "note": "마드리드 국제전. 한국 일요일 밤 23시 30분, Burrow의 패스와 Bijan의 러닝을 함께 보자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873040",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Dallas Cowboys at Indianapolis Colts",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873045",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "New York Jets at Kansas City Chiefs",
+        "note": "Wilson OUT, Rice·Kelce는 제한 등급 없음. Jets의 표적 재배분을 보자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873042",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Detroit Lions at Miami Dolphins",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873039",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Cleveland Browns at New Orleans Saints",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873044",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "New York Giants at Philadelphia Eagles",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873043",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Los Angeles Rams at Washington Commanders",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873041",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Denver Broncos at Carolina Panthers",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873046",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "06:05",
+        "status": "경기 예정",
+        "matchup": "Houston Texans at Los Angeles Chargers",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873049",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Green Bay Packers at New England Patriots",
+        "note": "A.J. Brown·Henderson OUT, Henry는 Questionable. 최종 명단을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873047",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Las Vegas Raiders at San Francisco 49ers",
+        "note": "Bosa·McCaffrey는 제한 등급 없음. Evans·Deebo·Kirk은 OUT이다.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873048",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Arizona Cardinals at Seattle Seahawks",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873050",
+        "gameDate": "2026-11-09",
+        "date": "11/09",
+        "weekday": "월",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Tampa Bay Buccaneers at Chicago Bears",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873051",
+        "gameDate": "2026-11-10",
+        "date": "11/10",
+        "weekday": "화",
+        "time": "10:15",
+        "status": "경기 예정",
+        "matchup": "Buffalo Bills at Minnesota Vikings",
+        "note": "최종 출전 명단과 첫 드라이브의 인원 구성을 확인하자.",
+        "source": {
+          "label": "site.api.espn.com",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=9"
+        },
+        "checkedAt": "2026-11-07T09:01:37.436017+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-07"
+      },
+      {
+        "gameId": "401873081",
+        "gameDate": "2026-11-27",
+        "date": "11/27",
+        "weekday": "금",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Chicago Bears at Detroit Lions",
+        "note": "한국시간 기준 예정 경기. 최종 출전 명단과 일정 변경 공지를 확인하자. 마지막 확인 2026-11-03 발행본 기준 · 이전 확인 일정 이월, 오늘 재검증하지 않음.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC에서 KST 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+        },
+        "checkedAt": "2026-11-03T09:15:28.488024+00:00",
+        "verified": false,
+        "lastConfirmedEdition": "2026-11-03",
+        "carriedForward": true
+      },
+      {
+        "gameId": "401873082",
+        "gameDate": "2026-11-27",
+        "date": "11/27",
+        "weekday": "금",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Kansas City Chiefs at Buffalo Bills",
+        "note": "한국시간 기준 예정 경기. 최종 출전 명단과 일정 변경 공지를 확인하자. 마지막 확인 2026-11-03 발행본 기준 · 이전 확인 일정 이월, 오늘 재검증하지 않음.",
+        "source": {
+          "label": "ESPN 스코어보드 · UTC에서 KST 변환",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+        },
+        "checkedAt": "2026-11-03T09:15:28.488024+00:00",
+        "verified": false,
+        "lastConfirmedEdition": "2026-11-03",
+        "carriedForward": true
+      }
+    ],
+    "topStoryKeys": [
+      "2026-11-04-brissett-ravens-trade",
+      "2026-11-04-watson-concussion-protocol",
+      "2026-week9-madrid-bengals-falcons-matchups",
+      "2026-11-06-henderson-health-statement",
+      "2026-11-06-nfc-north-external-record"
+    ]
+  },
+  {
     "date": "2026-11-06",
     "weekday": "금요일",
     "sample": false,
