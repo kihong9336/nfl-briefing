@@ -460,7 +460,30 @@ function counterHotPlayAction(item) {
   </section>`;
 }
 
+function heavyPersonnelProtectionRelease(item) {
+  return `<section class="heavy-personnel" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <svg class="play-diagram" viewBox="0 0 560 440" role="img" aria-labelledby="heavy-title heavy-desc" style="display:block;width:100%;max-width:100%;height:auto">
+      <title id="heavy-title">${escapeXml(item.title)}</title>
+      <desc id="heavy-desc">13 personnel: OL 다섯, QB 하나, RB 하나, TE 셋, WR 하나. TE3는 백필드에 있다. 파란 실선은 보호, 노란 점선은 릴리스의 대안이며 동시에 실행하는 경로가 아니다. 수비 LB는 압박 후보, S는 커버 인계의 개념적 책임이다. 실제 스냅 재현 아님.</desc>
+      <defs><marker id="heavy-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+      <rect class="field-bg" width="560" height="440" rx="12"/>
+      <text class="mini-label" x="20" y="30">13 PERSONNEL · 공격 ↑</text>
+      <path class="line-scrimmage" d="M20 250H540"/>
+      <g data-step="3"><path data-action="coverage-handoff" d="M400 100Q470 125 455 180" fill="none" stroke="#ff5b68" stroke-width="4" stroke-dasharray="3 5" marker-end="url(#heavy-arrow)"/>
+      ${player(400,80,'S','defense',18)}${player(365,200,'LB','defense',18)}</g>
+      <g data-step="2"><path data-action="te-protect" d="M380 320L365 235M350 235H380" fill="none" stroke="#78c8ff" stroke-width="5"/>
+      <path data-action="te-release" d="M395 320Q470 285 465 205" fill="none" stroke="#ffd54a" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#heavy-arrow)"/></g>
+      ${[170,220,270,320,370].map(x=>player(x,270,'OL','offense',17)).join('')}
+      ${player(270,340,'QB', 'offense',18)}${player(270,400,'RB','offense',18)}${player(60,270,'WR','offense',18)}
+      <g data-step="1">${player(120,270,'TE1','offense',20)}${player(420,270,'TE2','offense',20)}<g data-position="backfield-te">${player(390,345,'TE3','offense',20)}</g></g>
+      <text class="mini-label" x="20" y="90">③ 커버 인계</text><text class="mini-label" x="20" y="180">② 보호 / 릴리스</text><text class="mini-label" x="20" y="380">① TE 위치</text>
+    </svg>
+    <p>일반 개념도 · 실제 스냅 재현 아님. 파란 실선은 보호, 노란 점선은 패스로 나가는 대안이며 동시에 실행하는 경로가 아니다. 빨간 점선은 수비의 커버 인계다.</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'heavy-personnel-protection-release') return heavyPersonnelProtectionRelease(item);
   if (item?.diagram?.kind === 'counter-hot-play-action') return counterHotPlayAction(item);
   if (item?.diagram?.kind === 'blitz-protection-middle-catch-run') return blitzProtectionMiddleCatchRun(item);
   if (item?.diagram?.kind === 'pass-protection-responsibility') return passProtectionResponsibility(item);

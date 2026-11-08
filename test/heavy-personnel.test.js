@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { renderTacticDiagram } from '../src/tactic-visuals.js';
+import { validateEdition } from '../src/publish.js';
+import { briefings } from '../src/data.js';
+const tactic = {id:'heavy-test',team:'Lions',label:'전술 교실',title:'TE 셋의 보호와 패스 선택을 읽는다',concept:'RB 한 명과 TE 세 명을 사용하는 인원 구성이다.',easy:'큰 선수라고 모두 보호에 남는 것은 아니다.',gameUse:'구단 분석은 Vikings 상대 보호 계획을 설명한다.',whyItWorks:'보호와 패스 선택을 남겨 수비의 판단을 어렵게 한다.',defenseCounter:'수비는 압박 책임과 커버 인계를 함께 결정한다.',diagram:{kind:'heavy-personnel-protection-release',caption:'일반 개념도이며 실제 스냅의 배치를 재현하지 않는다.'},breakdown:[1,2,3].map(n=>({label:String(n),text:'스냅 전 위치와 스냅 뒤 역할을 구분하여 살펴본다.'})),watchOrder:['TE 인원과 위치','보호와 패스 선택','수비의 커버 인계'],source:{label:'Lions',url:'https://www.detroitlions.com/'}};
+test('heavy personnel is accepted by edition validation',()=>{const e=structuredClone(briefings.find(e=>e.sample===false));e.tactics=[tactic];assert.doesNotThrow(()=>validateEdition(e));});
+test('heavy diagram shows eleven attackers, TE3 and a backfield TE',()=>{const s=renderTacticDiagram(tactic);assert.equal((s.match(/diagram-player offense/g)||[]).length,11);assert.equal((s.match(/>TE[123]<\/text>/g)||[]).length,3);assert.match(s,/data-position="backfield-te"/);});
+test('heavy diagram distinguishes alternative protection and release and defensive handoff',()=>{const s=renderTacticDiagram(tactic);for(const action of ['te-protect','te-release','coverage-handoff'])assert.ok(s.includes(`data-action="${action}"`));assert.match(s,/동시에 실행하는 경로가 아니다/);assert.match(s,/stroke-dasharray="8 6"/);for(const step of [1,2,3])assert.ok(s.includes(`data-step="${step}"`));});
+test('heavy diagram is responsive, accessible and escapes title',()=>{const s=renderTacticDiagram({...tactic,title:'<unsafe>'});assert.match(s,/viewBox="0 0 560 440"/);assert.match(s,/width:100%;max-width:100%;height:auto/);assert.match(s,/role="img"/);assert.match(s,/<desc/);assert.match(s,/&lt;unsafe&gt;/);assert.ok(!s.includes('<unsafe>'));});
