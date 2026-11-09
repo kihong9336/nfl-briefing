@@ -482,7 +482,33 @@ function heavyPersonnelProtectionRelease(item) {
   </section>`;
 }
 
+function quartersBacksideCrosserJump(item) {
+  const labels = ['① 3x1 · 단독 타깃 CB 고정', '② 크로서와 공간 비우기', '③ 늦은 패스 · 세이프티 진입'];
+  const panels = labels.map((label, i) => `<div data-panel="${i+1}"><p><strong>${label}</strong></p>
+    <svg class="play-diagram" viewBox="0 0 360 260" role="img" aria-labelledby="crosser-title-${i}" style="display:block;width:100%;max-width:100%;height:auto">
+      <title id="crosser-title-${i}">${escapeXml(item.title)} · ${label}</title>
+      <rect class="field-bg" width="360" height="260" rx="12"/>
+      <path class="line-scrimmage" d="M20 185H340"/>
+      ${i === 0 ? `<path data-action="solo-lock" d="M50 145V180" stroke="#ff5b68" stroke-width="3"/>
+        ${player(50,125,'CB','defense',17)}${player(50,210,'WR','offense',17)}
+        ${player(200,210,'1','offense',17)}${player(250,210,'2','offense',17)}${player(310,210,'3','offense',17)}
+        <text class="mini-label" x="28" y="50">단독 쪽</text><text class="mini-label" x="210" y="50">세 타깃 쪽</text>` : `
+        <path data-action="backside-crosser" d="M65 205Q80 125 265 125" fill="none" stroke="#ffd54a" stroke-width="4"/>
+        <path data-action="zone-clear" d="M300 205V55l-5 10m5-10l5 10" fill="none" stroke="#ffd54a" stroke-width="4"/>
+        ${player(65,210,'TE','offense',17)}${player(170,160,'LB','defense',17)}${player(300,210,'WR','offense',17)}
+        <text class="mini-label" x="20" y="248">Raridon →</text><text class="mini-label" x="245" y="248">Williams ↑</text>
+        ${i === 2 ? `<path data-action="late-pass" d="M175 225L265 125" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="7 5"/>
+          <path data-action="safety-jump" d="M235 60L265 125l-10-6m10 6l2-12" fill="none" stroke="#ff5b68" stroke-width="4" stroke-dasharray="3 5"/>
+          ${player(175,225,'QB','offense',17)}${player(235,50,'S','defense',17)}
+          <text class="mini-label" x="120" y="25">McKinney</text>` : ''}`}
+    </svg></div>`).join('');
+  return `<section style="max-width:100%;min-width:0;overflow-wrap:anywhere">${panels}
+    <p>노랑 실선: 리시버 루트 · 흰 점선: 패스 · 빨강 점선: 수비 이동. CB의 짧은 빨간 선은 단독 담당 관계.</p>
+    <p>기자 설명을 바탕으로 한 역할 개념도 · 실제 좌표 재현 아님. 미확인 수비 정렬은 생략.</p></section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'quarters-backside-crosser-jump') return quartersBacksideCrosserJump(item);
   if (item?.diagram?.kind === 'heavy-personnel-protection-release') return heavyPersonnelProtectionRelease(item);
   if (item?.diagram?.kind === 'counter-hot-play-action') return counterHotPlayAction(item);
   if (item?.diagram?.kind === 'blitz-protection-middle-catch-run') return blitzProtectionMiddleCatchRun(item);
