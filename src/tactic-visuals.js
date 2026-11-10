@@ -507,7 +507,32 @@ function quartersBacksideCrosserJump(item) {
     <p>기자 설명을 바탕으로 한 역할 개념도 · 실제 좌표 재현 아님. 미확인 수비 정렬은 생략.</p></section>`;
 }
 
+function extendedPlayOpenTarget(item) {
+  return `<svg class="play-diagram" style="display:block;width:100%;max-width:720px;height:auto" viewBox="0 0 720 430" role="img" aria-labelledby="extended-title extended-desc">
+    <title id="extended-title">${escapeXml(item.title)}</title>
+    <desc id="extended-desc">일반 개념도. QB가 오른쪽으로 이동하는 동안 보호가 이어지고 Latu가 빈 엔드존에서 패스를 받는다. 실제 정렬이나 최초 루트 재현은 아니다.</desc>
+    <defs><marker id="extended-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect width="720" height="430" rx="12" fill="#102c25"/>
+    <g fill="#f4f6fa" font-family="sans-serif" font-size="20">
+      <text x="24" y="34">보호 → QB 이동 → 열린 표적 · 일반 개념도</text>
+      <rect x="24" y="60" width="672" height="105" rx="12" fill="#234c3a"/>
+      <text x="44" y="94">엔드존 · 25야드 TD</text>
+      <circle data-action="open-target" cx="555" cy="120" r="26" fill="#ffd54a"/>
+      <text x="555" y="127" text-anchor="middle" fill="#102c25" font-size="18">Latu</text>
+      <text x="360" y="197">③ 빈 공간에서 캐치</text>
+      <rect data-action="sustained-protection" x="190" y="230" width="225" height="48" rx="16" fill="#285376" stroke="#78c8ff" stroke-dasharray="7 5"/>
+      <text x="302" y="261" text-anchor="middle">① 보호 지속</text>
+      <circle cx="270" cy="330" r="24" fill="#ffd54a"/>
+      <text x="270" y="337" text-anchor="middle" fill="#102c25">QB</text>
+      <path data-action="qb-right" d="M300 330 Q370 348 455 320" fill="none" stroke="#ffd54a" stroke-width="5" marker-end="url(#extended-arrow)"/>
+      <path data-action="td-pass" d="M475 309 L550 153" fill="none" stroke="white" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#extended-arrow)"/>
+      <text x="300" y="385">② 오른쪽 이동 · 패스 유지</text>
+    </g>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'extended-play-open-target') return extendedPlayOpenTarget(item);
   if (item?.diagram?.kind === 'quarters-backside-crosser-jump') return quartersBacksideCrosserJump(item);
   if (item?.diagram?.kind === 'heavy-personnel-protection-release') return heavyPersonnelProtectionRelease(item);
   if (item?.diagram?.kind === 'counter-hot-play-action') return counterHotPlayAction(item);
