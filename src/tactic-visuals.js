@@ -531,7 +531,26 @@ function extendedPlayOpenTarget(item) {
   </svg>`;
 }
 
+function teMiddleCatchRun(item) {
+  return `<svg class="play-diagram" viewBox="0 0 560 430" role="img" aria-labelledby="te-middle-title te-middle-desc" style="display:block;width:100%;max-width:560px;height:auto">
+    <title id="te-middle-title">${escapeXml(item.title)}</title>
+    <desc id="te-middle-desc">QB의 중앙 패스, TE의 포구, 포구 뒤 전진을 구분한다. 일반 개념도이며 실제 정렬이나 거리 비례 재현은 아니다.</desc>
+    <defs><marker id="te-middle-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs>
+    <rect class="field-bg" width="560" height="430" rx="12"/>
+    <text class="mini-label" x="20" y="30">중앙 패스 → 포구 → 전진 · 공격 ↑</text>
+    <path class="line-scrimmage" d="M20 285H540"/>
+    <path data-action="middle-pass" d="M280 345L280 245" fill="none" stroke="#78c8ff" stroke-width="4" stroke-dasharray="9 6" marker-end="url(#te-middle-arrow)"/>
+    <path data-action="run-after-catch" d="M280 195Q340 150 300 80" fill="none" stroke="#ffd54a" stroke-width="5" marker-end="url(#te-middle-arrow)"/>
+    ${player(280,370,'QB')}<g data-action="te-catch">${player(280,220,'TE')}</g>
+    <text class="mini-label" x="25" y="325">① 중앙 패스</text>
+    <text class="mini-label" x="25" y="220">② TE 포구</text>
+    <text class="mini-label" x="25" y="115">③ 포구 뒤 전진</text>
+    <text class="mini-label" x="20" y="415">파랑 점선: 공 · 노랑 실선: 전진</text>
+  </svg>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'te-middle-catch-run') return teMiddleCatchRun(item);
   if (item?.diagram?.kind === 'extended-play-open-target') return extendedPlayOpenTarget(item);
   if (item?.diagram?.kind === 'quarters-backside-crosser-jump') return quartersBacksideCrosserJump(item);
   if (item?.diagram?.kind === 'heavy-personnel-protection-release') return heavyPersonnelProtectionRelease(item);
