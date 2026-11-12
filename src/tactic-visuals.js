@@ -549,7 +549,30 @@ function teMiddleCatchRun(item) {
   </svg>`;
 }
 
+function powerRushOutsideCounter(item) {
+  const panels = [
+    {title:'① 정면 파워 반복', action:'power-setup', path:'M150 85V132', note:'LT는 중심을 낮춰 버틴다'},
+    {title:'② 안쪽 잽', action:'inside-jab', path:'M150 85Q175 98 190 120', note:'안쪽 카운터를 떠올리게 한다'},
+    {title:'③ 바깥 어깨 공략', action:'outside-counter', path:'M150 85Q65 105 80 180Q95 235 205 228', note:'QB의 던지는 팔까지 접근'}
+  ];
+  return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    ${panels.map((p,i)=>`<div data-panel="${i+1}"><p><strong>${p.title}</strong> · ${p.note}</p>
+      <svg class="play-diagram" viewBox="0 0 320 280" role="img" aria-label="${p.title}" style="display:block;width:100%;max-width:100%;height:auto">
+        <defs><marker id="power-counter-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="#ff5b68" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="field-bg" width="320" height="280" rx="12"/>
+        <text class="mini-label" x="18" y="30">바깥 ← · → 안쪽</text>
+        <path class="line-scrimmage" d="M20 125H300"/>
+        <path data-action="${p.action}" d="${p.path}" fill="none" stroke="#ff5b68" stroke-width="4" ${i===1?'stroke-dasharray="5 5"':''} marker-end="url(#power-counter-${i})"/>
+        ${player(150,65,'D','defense',18)}${player(150,155,'LT','offense',20)}${player(230,230,'QB','offense',20)}
+        ${i===0?'<path d="M130 180H170" stroke="#78c8ff" stroke-width="5"/>':''}
+        ${i===2?'<circle data-action="arm-contact" cx="207" cy="228" r="7" fill="#ffd54a"/>':''}
+      </svg></div>`).join('')}
+    <p>공격: 흰색 · 수비: 빨강 · 파랑: 버티는 중심 · 화살표: 러시 방향 · 점선: 안쪽 잽 · 노랑 점: 팔 접촉</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'power-rush-setup-outside-counter') return powerRushOutsideCounter(item);
   if (item?.diagram?.kind === 'te-middle-catch-run') return teMiddleCatchRun(item);
   if (item?.diagram?.kind === 'extended-play-open-target') return extendedPlayOpenTarget(item);
   if (item?.diagram?.kind === 'quarters-backside-crosser-jump') return quartersBacksideCrosserJump(item);
