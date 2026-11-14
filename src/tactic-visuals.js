@@ -571,7 +571,29 @@ function powerRushOutsideCounter(item) {
   </section>`;
 }
 
+function qbSneakAssignment(item) {
+  return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <p><strong>① 3rd &amp; 1 · 4Q 3:56 · NYG 11</strong></p>
+    <svg class="play-diagram" viewBox="0 0 320 320" role="img" aria-label="QB 전진과 선택적 후방 지원" style="display:block;width:100%;max-width:100%;height:auto">
+      <defs><marker id="sneak-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+      <rect class="field-bg" width="320" height="320" rx="12"/>
+      <text class="mini-label" x="16" y="28">전진 목표 ↑ · 거리 비례 아님</text>
+      <path d="M20 70H300" stroke="#ffd54a" stroke-width="2"/>
+      <path class="line-scrimmage" d="M20 150H300"/>
+      <path data-action="line-block" d="M90 135V100M230 135V100" stroke="#78c8ff" stroke-width="5"/>
+      <path data-action="qb-advance" d="M160 195V110" stroke="#ffd54a" stroke-width="4" marker-end="url(#sneak-arrow)"/>
+      <path data-action="optional-support" d="M160 265V240" stroke="#ffd54a" stroke-width="3" stroke-dasharray="4 4" marker-end="url(#sneak-arrow)"/>
+      ${player(90,165,'OL','offense',18)}${player(230,165,'OL','offense',18)}${player(160,215,'QB','offense',18)}${player(160,290,'RB','offense',18)}
+    </svg>
+    <p>② 파랑: 전방 블록 · 노랑: QB 전진<br>점선: 선택적인 후방 지원</p>
+    <details><summary>후방 지원은 모든 sneak의 필수 역할일까요?</summary><p>아닙니다. Harbaugh는 이 콜에서 Skattebo가 미는 임무가 아니었다고 설명했습니다.</p></details>
+    <p><strong>③ 챌린지 뒤 0야드 → 4th &amp; 1</strong></p>
+    <p>역할 관계를 보여주는 일반 개념도이며 실제 정렬·수비 갭 책임의 재현이 아닙니다.</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'qb-sneak-assignment-vs-push') return qbSneakAssignment(item);
   if (item?.diagram?.kind === 'power-rush-setup-outside-counter') return powerRushOutsideCounter(item);
   if (item?.diagram?.kind === 'te-middle-catch-run') return teMiddleCatchRun(item);
   if (item?.diagram?.kind === 'extended-play-open-target') return extendedPlayOpenTarget(item);
