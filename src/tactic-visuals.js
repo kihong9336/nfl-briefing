@@ -592,7 +592,44 @@ function qbSneakAssignment(item) {
   </section>`;
 }
 
+function twoBackLeadPlayAction(item) {
+  const diagramPlayer = (...args) => player(...args)
+    .replace('<circle ', `<circle style="fill:${args[3] === 'defense' ? '#ff8790' : '#e2e8f0'};stroke:#64748b" `)
+    .replace('<text ', '<text style="fill:#0f172a;font:12px sans-serif" ');
+  const panels = [
+    ['alignment', '① 출발: 센터 바로 뒤 QB', 'FB는 RB 앞에 · 공격 방향 ↑'],
+    ['run', '② 러닝: FB가 먼저 길을 연다', '실선: RB 전진 · 파랑: FB 블록'],
+    ['play-action', '③ 플레이액션: QB가 공 회수', '점선: 패스 예시 · LB는 러닝 판단']
+  ];
+  return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0">
+    <p>일반 개념도 · 실제 경기 배치 재현 아님. 핵심 역할만 표시합니다.</p>
+    ${panels.map(([kind, title, legend], i) => `<div data-panel="${kind}">
+      <p><strong>${title}</strong></p>
+      <svg class="play-diagram" viewBox="0 0 320 340" role="img" aria-label="${title}" style="display:block;width:100%;max-width:100%;height:auto">
+        <defs><marker id="two-back-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="field-bg" width="320" height="340" rx="12"/>
+        <text x="16" y="26" fill="#cbd5e1" font-size="14">공격 ↑ · 러닝과 커버 책임 구분</text>
+        <path class="line-scrimmage" d="M16 150H304" style="stroke:#78c8ff;stroke-width:2"/>
+        <text x="18" y="144" fill="#cbd5e1" font-size="12">LOS</text>
+        ${i===2?'<rect x="190" y="42" width="110" height="55" rx="8" fill="#78c8ff" opacity="0.18"/><text x="198" y="65" fill="#cbd5e1" font-size="14">뒤 공간 커버</text>':''}
+        ${diagramPlayer(160,78,'LB','defense',18)}${diagramPlayer(160,145,'C','offense',16)}
+        ${diagramPlayer(i===2?100:160,i===2?280:184,'QB','offense',18)}
+        ${diagramPlayer(i===0?160:222,i===0?235:120,'FB','offense',18)}
+        ${diagramPlayer(i===0?160:222,i===0?290:220,'RB','offense',18)}
+        ${i>0?`<path data-action="lead-block" d="M222 185V145" stroke="#78c8ff" stroke-width="5" fill="none"/>
+          <path data-action="run-path" d="M222 255V155" stroke="#ffd54a" stroke-width="3" fill="none" ${i===2?'stroke-dasharray="4 4"':''} marker-end="url(#two-back-${i})"/>`:''}
+        ${i===1?'<ellipse data-ball="RB" cx="242" cy="220" rx="5" ry="8" fill="#ffd54a"/>':''}
+        ${i===2?`<ellipse data-ball="QB" cx="121" cy="280" rx="5" ry="8" fill="#ffd54a"/>
+          <path data-action="pass-path" d="M112 260Q125 145 260 100" fill="none" stroke="#ffd54a" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#two-back-${i})"/>
+          <path d="M160 98V119" stroke="#ff5b68" stroke-width="3"/>
+          <text x="18" y="320" fill="#cbd5e1" font-size="14">노랑 공: QB 보유 · RB는 가짜 러닝</text>`:''}
+        ${i===1?'<text x="18" y="320" fill="#cbd5e1" font-size="14">노랑 공: 핸드오프 뒤 RB 보유</text>':''}
+      </svg><p>${legend}</p></div>`).join('')}
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'two-back-lead-play-action') return twoBackLeadPlayAction(item);
   if (item?.diagram?.kind === 'qb-sneak-assignment-vs-push') return qbSneakAssignment(item);
   if (item?.diagram?.kind === 'power-rush-setup-outside-counter') return powerRushOutsideCounter(item);
   if (item?.diagram?.kind === 'te-middle-catch-run') return teMiddleCatchRun(item);
