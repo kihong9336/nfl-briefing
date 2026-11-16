@@ -628,7 +628,29 @@ function twoBackLeadPlayAction(item) {
   </section>`;
 }
 
+function scrambleResetCatchRun(item) {
+  const panels = [
+    ['1 · 오른쪽 이동', 'qb-escape', '<path d="M90 230Q170 270 240 210"/>', 'Purdy: 압박을 피해 이동'],
+    ['2 · 멈춰서 패스', 'reset-pass', '<path d="M240 210L130 110" stroke-dasharray="7 5"/>', '열린 McCaffrey에게 연결'],
+    ['3 · 블록 뒤 전진', 'catch-run', '<path d="M130 210Q220 150 230 60"/>', 'Kittle · Watkins 전방 블록']
+  ];
+  return `<section class="scramble-reset-diagram" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;min-width:0">
+    ${panels.map(([label, action, path, note], i) => `<div style="min-width:0"><h4>${label}</h4>
+      <svg class="play-diagram" style="width:100%;max-width:100%;height:auto" viewBox="0 0 320 310" role="img" aria-label="${escapeXml(item.title)}: ${label}">
+        <rect class="field-bg" width="320" height="310" rx="12"/>
+        <defs><marker id="scramble-reset-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs>
+        <text x="16" y="28" fill="#cbd5e1" font-size="13">일반 역할 개념도 · 공격 ↑</text>
+        <g data-action="${action}" fill="none" stroke="#ffd54a" stroke-width="3" marker-end="url(#scramble-reset-${i})">${path}</g>
+        ${i===0?player(90,230,'QB'):i===1?player(240,230,'QB')+player(130,90,'RB'):player(130,230,'RB')}
+        ${i===0?'<text x="25" y="180" fill="#ff8590" font-size="14">압박 →</text>':''}
+        ${i===2?'<path d="M175 105l22 -14M195 79l15 24M245 120l22 -14M265 94l15 24" stroke="#78c8ff" stroke-width="5"/><text x="125" y="72" fill="#cbd5e1" font-size="13">Kittle</text><text x="240" y="152" fill="#cbd5e1" font-size="13">Watkins</text>':''}
+        <text x="16" y="283" fill="#cbd5e1" font-size="14">${note}</text>
+      </svg></div>`).join('')}
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'scramble-reset-catch-run') return scrambleResetCatchRun(item);
   if (item?.diagram?.kind === 'two-back-lead-play-action') return twoBackLeadPlayAction(item);
   if (item?.diagram?.kind === 'qb-sneak-assignment-vs-push') return qbSneakAssignment(item);
   if (item?.diagram?.kind === 'power-rush-setup-outside-counter') return powerRushOutsideCounter(item);
