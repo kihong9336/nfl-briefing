@@ -649,7 +649,22 @@ function scrambleResetCatchRun(item) {
   </section>`;
 }
 
+function november17Diagram(item) {
+  const tip = item.diagram.kind === 'teammate-deflection-secure';
+  const panels = tip ? [
+    ['① 원래 표적', 'intended-pass', `${player(90,235,'QB')}${player(200,95,'WR')}<path d="M90 215L200 118" stroke-dasharray="6 5"/>`, 'Brissett → Lane'],
+    ['② 공의 방향 변화', 'deflection', `${player(125,160,'CB','defense')}<path d="M80 235L125 185" stroke-dasharray="6 5"/><path d="M145 160L235 110"/>`, 'Hart: 패스 굴절'],
+    ['③ 확보 후 리턴', 'secure', `${player(210,140,'CB','defense')}<path d="M100 100L185 135"/><path d="M210 165L210 240"/>`, 'Phillips: 확보 · 9야드 리턴']
+  ] : [
+    ['① 뭉친 WR의 출발', 'bunch-release', `${player(145,135,'WR')}${player(115,195,'WR')}${player(185,195,'WR')}<path d="M115 218Q65 195 55 145"/>`, '앞: Williams · 뒤: St. Brown'],
+    ['② flat으로 짧은 패스', 'flat-catch', `${player(230,240,'QB')}${player(65,160,'WR')}<path d="M210 230L85 175" stroke-dasharray="6 5"/>`, 'Goff → St. Brown'],
+    ['③ 첫 태클과 추격', 'pursuit', `${player(80,205,'WR')}${player(145,180,'CB','defense')}${player(245,95,'D','defense')}<path d="M80 180L80 75"/><path d="M145 157L100 145M225 95L100 75" stroke="#78c8ff" stroke-dasharray="5 4"/>`, 'Gonzalez 첫 태클 · 동료 추격']
+  ];
+  return `<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;min-width:0">${panels.map(([label,action,body,note],i)=>`<div style="min-width:0"><h4>${label}</h4><svg class="play-diagram" style="width:100%;max-width:100%;height:auto" viewBox="0 0 320 330" role="img" aria-label="${escapeXml(item.title)}: ${label}"><rect class="field-bg" width="320" height="330" rx="12"/><text x="14" y="27" fill="#cbd5e1" font-size="13">일반 개념도 · 공격 ↑ · 실제 좌표 아님</text><defs><marker id="${item.diagram.kind}-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs><g data-action="${action}" fill="none" stroke="#ffd54a" stroke-width="3" marker-end="url(#${item.diagram.kind}-${i})">${body}</g><text x="14" y="290" fill="#cbd5e1" font-size="14">${note}</text><text x="14" y="314" fill="#cbd5e1" font-size="12">${tip?'점선: 원래 패스 · 실선: 굴절/리턴':'노랑: 공격 · 파랑: 수비 추격'}</text></svg></div>`).join('')}</section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (['teammate-deflection-secure', 'bunch-flat-pursuit'].includes(item?.diagram?.kind)) return november17Diagram(item);
   if (item?.diagram?.kind === 'scramble-reset-catch-run') return scrambleResetCatchRun(item);
   if (item?.diagram?.kind === 'two-back-lead-play-action') return twoBackLeadPlayAction(item);
   if (item?.diagram?.kind === 'qb-sneak-assignment-vs-push') return qbSneakAssignment(item);
