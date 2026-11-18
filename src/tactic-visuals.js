@@ -663,7 +663,20 @@ function november17Diagram(item) {
   return `<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;min-width:0">${panels.map(([label,action,body,note],i)=>`<div style="min-width:0"><h4>${label}</h4><svg class="play-diagram" style="width:100%;max-width:100%;height:auto" viewBox="0 0 320 330" role="img" aria-label="${escapeXml(item.title)}: ${label}"><rect class="field-bg" width="320" height="330" rx="12"/><text x="14" y="27" fill="#cbd5e1" font-size="13">일반 개념도 · 공격 ↑ · 실제 좌표 아님</text><defs><marker id="${item.diagram.kind}-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker></defs><g data-action="${action}" fill="none" stroke="#ffd54a" stroke-width="3" marker-end="url(#${item.diagram.kind}-${i})">${body}</g><text x="14" y="290" fill="#cbd5e1" font-size="14">${note}</text><text x="14" y="314" fill="#cbd5e1" font-size="12">${tip?'점선: 원래 패스 · 실선: 굴절/리턴':'노랑: 공격 · 파랑: 수비 추격'}</text></svg></div>`).join('')}</section>`;
 }
 
+function fiveOutPressure(item) {
+  return `<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;min-width:0">${[false,true].map((release,i)=>`<div style="min-width:0"><h4>${release?'② RB·TE 루트 · 표적 5명':'① RB·TE 보호 · 표적 3명'}</h4><svg class="play-diagram" style="width:100%;max-width:100%;height:auto" viewBox="0 0 320 360" role="img" aria-label="${escapeXml(item.title)}: ${release?'다섯 루트':'보호 잔류'}"><rect class="field-bg" width="320" height="360" rx="12"/><text x="14" y="25" fill="#cbd5e1" font-size="13">일반 개념도 · 실제 경기 배치 아님</text><defs>${[['threat','#ff8590'],['rush','#ff5b68'],['drop','#78c8ff'],['route','#ffd54a']].map(([key,color])=>`<marker id="five-${i}-${key}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="${color}" d="M0 0L10 5L0 10z"/></marker>`).join('')}</defs>
+    <path data-action="pressure-threat" d="M110 70L130 112M210 70L190 112" stroke="#ff8590" stroke-width="2" stroke-dasharray="3 5" marker-end="url(#five-${i}-threat)"/>
+    <path data-action="actual-rush" d="M130 120L145 180" stroke="#ff5b68" stroke-width="3" marker-end="url(#five-${i}-rush)"/>
+    <path data-action="coverage-drop" d="M190 120L225 80" stroke="#78c8ff" stroke-width="3" stroke-dasharray="7 4" marker-end="url(#five-${i}-drop)"/>
+    <path d="M20 195H300" stroke="#789" stroke-dasharray="4 4"/>
+    ${[40,160,280].map(x=>`<path d="M${x} 225V155" stroke="#ffd54a" stroke-width="3" marker-end="url(#five-${i}-route)"/>${player(x,244,'WR','offense',16)}`).join('')}
+    ${player(160,285,'QB','offense',18)}${player(90,260,'RB','offense',17)}${player(230,260,'TE','offense',17)}
+    ${release?'<path d="M90 240L75 175M230 240L245 175" stroke="#ffd54a" stroke-width="3" marker-end="url(#five-'+i+'-route)"/>':'<path d="M78 229H102M218 229H242" stroke="#ffd54a" stroke-width="5"/>'}
+    <text x="14" y="320" fill="#cbd5e1" font-size="13">점선 위협 ≠ 실제 러시(빨강 실선)</text><text x="14" y="344" fill="#cbd5e1" font-size="13">파랑 점선: 커버 복귀 · 노랑: 공격</text></svg></div>`).join('')}</section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'five-out-vs-pressure-disguise') return fiveOutPressure(item);
   if (['teammate-deflection-secure', 'bunch-flat-pursuit'].includes(item?.diagram?.kind)) return november17Diagram(item);
   if (item?.diagram?.kind === 'scramble-reset-catch-run') return scrambleResetCatchRun(item);
   if (item?.diagram?.kind === 'two-back-lead-play-action') return twoBackLeadPlayAction(item);
