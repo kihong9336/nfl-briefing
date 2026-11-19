@@ -675,7 +675,22 @@ function fiveOutPressure(item) {
     <text x="14" y="320" fill="#cbd5e1" font-size="13">점선 위협 ≠ 실제 러시(빨강 실선)</text><text x="14" y="344" fill="#cbd5e1" font-size="13">파랑 점선: 커버 복귀 · 노랑: 공격</text></svg></div>`).join('')}</section>`;
 }
 
+function november19Diagram(item) {
+  const reverse = item.diagram.kind === 'reverse-misdirection-lead-block';
+  const panels = reverse ? [
+    ['① 오른쪽 모션·피치', 'right-pitch', `${player(130,210,'QB')}${player(245,230,'RB')}<path d="M150 215L220 230" stroke="#ffd54a"/><path d="M65 160H250" stroke="#78c8ff" stroke-dasharray="5 5"/>`, 'Juszczyk 모션 · Black 피치'],
+    ['② 반대 방향으로 공 전환', 'reverse-transfer', `${player(245,190,'RB')}${player(85,240,'WR')}<path d="M225 200L108 233" stroke="#ffd54a"/><path d="M90 95H250" stroke="#aab4c0"/>`, 'Black → Deebo · 회색: 수비 추격'],
+    ['③ 블록 뒤 왼쪽 전진', 'lead-block', `${player(240,240,'WR')}<path d="M220 235Q80 235 65 90" stroke="#ffd54a"/><path d="M95 140l20 -12M140 170l20 -12M185 200l20 -12" stroke="#78c8ff" marker-end="none"/>`, 'Watkins · Williams · Purdy 블록']
+  ] : [
+    ['① 양옆 탈출로 제한', 'edge-contain', `${player(160,230,'QB')}<path d="M45 100Q40 200 125 230M275 100Q280 200 195 230" stroke="#ff5b68"/>`, 'Winters · Downs: 바깥 압박'],
+    ['② 안쪽 압박과 전진', 'interior-finish', `${player(160,230,'QB')}<path d="M100 100Q130 135 145 185M220 100Q245 145 180 185" stroke="#ff5b68"/><path d="M160 210V170" stroke="#ffd54a"/>`, 'Ogbonnia · Houston: 안쪽 돌파'],
+    ['③ 공동 색으로 마무리', 'shared-sack', `${player(160,185,'QB')}<path d="M85 135L130 170M235 135L190 170" stroke="#ff5b68"/>`, 'Purdy · 2야드 손실 공동 색']
+  ];
+  return `<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;min-width:0">${panels.map(([label,action,body,note],i)=>`<div style="min-width:0"><h4>${label}</h4><svg class="play-diagram" style="width:100%;max-width:100%;height:auto" viewBox="0 0 320 340" role="img" aria-label="${escapeXml(item.title)}: ${label}"><rect class="field-bg" width="320" height="340" rx="12"/><text x="14" y="28" fill="#cbd5e1" font-size="13">공격 방향 ↑ · 역할과 공의 흐름</text><defs><marker id="nov19-${reverse}-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs><g data-action="${action}" fill="none" stroke-width="3" marker-end="url(#nov19-${reverse}-${i})">${body}</g><text x="14" y="283" fill="#cbd5e1" font-size="13">${note}</text><text x="14" y="309" fill="#cbd5e1" font-size="12">${reverse?'파랑 점선: 모션 · 노랑: 공/주자':'빨강: 수비 압박 · 노랑: QB 이동'}</text><text x="14" y="329" fill="#cbd5e1" font-size="12">${reverse?'① 피치 · ② 공 전환 · ③ 주자 이동':'양옆 제한 → 안쪽 돌파 → 공동 색'}</text></svg></div>`).join('')}</section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (['cowboys-coordinated-pocket-compression', 'reverse-misdirection-lead-block'].includes(item?.diagram?.kind)) return november19Diagram(item);
   if (item?.diagram?.kind === 'five-out-vs-pressure-disguise') return fiveOutPressure(item);
   if (['teammate-deflection-secure', 'bunch-flat-pursuit'].includes(item?.diagram?.kind)) return november17Diagram(item);
   if (item?.diagram?.kind === 'scramble-reset-catch-run') return scrambleResetCatchRun(item);
