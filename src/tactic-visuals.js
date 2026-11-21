@@ -689,7 +689,17 @@ function november19Diagram(item) {
   return `<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;min-width:0">${panels.map(([label,action,body,note],i)=>`<div style="min-width:0"><h4>${label}</h4><svg class="play-diagram" style="width:100%;max-width:100%;height:auto" viewBox="0 0 320 340" role="img" aria-label="${escapeXml(item.title)}: ${label}"><rect class="field-bg" width="320" height="340" rx="12"/><text x="14" y="28" fill="#cbd5e1" font-size="13">공격 방향 ↑ · 역할과 공의 흐름</text><defs><marker id="nov19-${reverse}-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="context-stroke" d="M0 0L10 5L0 10z"/></marker></defs><g data-action="${action}" fill="none" stroke-width="3" marker-end="url(#nov19-${reverse}-${i})">${body}</g><text x="14" y="283" fill="#cbd5e1" font-size="13">${note}</text><text x="14" y="309" fill="#cbd5e1" font-size="12">${reverse?'파랑 점선: 모션 · 노랑: 공/주자':'빨강: 수비 압박 · 노랑: QB 이동'}</text><text x="14" y="329" fill="#cbd5e1" font-size="12">${reverse?'① 피치 · ② 공 전환 · ③ 주자 이동':'양옆 제한 → 안쪽 돌파 → 공동 색'}</text></svg></div>`).join('')}</section>`;
 }
 
+function rbKeyReadFocus(item) {
+  const steps = [
+    ['① 읽기 대상', 'read-key', 'RB → 필요한 단서', '콜이 요구한 키부터 확인'],
+    ['② 현재 움직임', 'current-movement', '단서 → 방향 판단', '미리 예상한 길에 고정하지 않기'],
+    ['③ 결과와 과정', 'decision-result', '판단 → 전진 결과', '수비 통제·블로킹도 함께 보기']
+  ];
+  return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere"><p>일반 개념도 · 실제 정렬이나 선수의 시선 재현이 아닙니다.</p>${steps.map(([label,action,flow,note],i)=>`<details ${i===0?'open':''} style="min-width:0"><summary style="cursor:pointer;padding:12px">${label}</summary><svg class="play-diagram" viewBox="0 0 320 150" role="img" aria-label="${flow}" style="display:block;width:100%;max-width:100%;height:auto"><rect width="320" height="150" rx="12" fill="#142333"/><g data-action="${action}"><rect x="16" y="30" width="288" height="48" rx="12" fill="#253c50" stroke="#ffd54a"/><text x="160" y="60" text-anchor="middle" fill="#ffd54a" font-size="20">${flow}</text><text x="160" y="115" text-anchor="middle" fill="#e2e8f0" font-size="15">${note}</text></g></svg></details>`).join('')}</section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'rb-key-read-focus') return rbKeyReadFocus(item);
   if (['cowboys-coordinated-pocket-compression', 'reverse-misdirection-lead-block'].includes(item?.diagram?.kind)) return november19Diagram(item);
   if (item?.diagram?.kind === 'five-out-vs-pressure-disguise') return fiveOutPressure(item);
   if (['teammate-deflection-secure', 'bunch-flat-pursuit'].includes(item?.diagram?.kind)) return november17Diagram(item);
