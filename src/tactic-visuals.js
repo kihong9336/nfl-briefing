@@ -698,7 +698,23 @@ function rbKeyReadFocus(item) {
   return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere"><p>일반 개념도 · 실제 정렬이나 선수의 시선 재현이 아닙니다.</p>${steps.map(([label,action,flow,note],i)=>`<details ${i===0?'open':''} style="min-width:0"><summary style="cursor:pointer;padding:12px">${label}</summary><svg class="play-diagram" viewBox="0 0 320 150" role="img" aria-label="${flow}" style="display:block;width:100%;max-width:100%;height:auto"><rect width="320" height="150" rx="12" fill="#142333"/><g data-action="${action}"><rect x="16" y="30" width="288" height="48" rx="12" fill="#253c50" stroke="#ffd54a"/><text x="160" y="60" text-anchor="middle" fill="#ffd54a" font-size="20">${flow}</text><text x="160" y="115" text-anchor="middle" fill="#e2e8f0" font-size="15">${note}</text></g></svg></details>`).join('')}</section>`;
 }
 
+function islandTackleProtection(item) {
+  const panels = [['alignment','① OL 다섯 명 · RT 위치'],['individual-blocks','② 각자의 러셔 · 도움 없이'],['quick-release','③ 블록 + QB의 빠른 패스']];
+  return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere"><p>일반 개념도 · 실제 정렬 재현 아님 · 공격 ↑</p>
+    ${panels.map(([key,label],i)=>`<div data-panel="${key}" style="min-width:0"><h4>${label}</h4>
+      <svg class="play-diagram" viewBox="0 0 320 300" role="img" aria-label="${label}" style="display:block;width:100%;max-width:100%;height:auto">
+        <rect class="field-bg" width="320" height="300" rx="12"/>
+        <path class="line-scrimmage" d="M16 145H304"/>
+        ${['LT','LG','C','RG','RT'].map((pos,n)=>{const x=40+n*60;return `<g data-pair="${pos}">${i>0?`<path d="M${x} 103V142M${x-12} 142H${x+12}" stroke="#78c8ff" stroke-width="4"/>`:''}${player(x,80,'D','defense',17)}<g data-position="${pos}">${pos==='RT'?`<rect x="${x-23}" y="155" width="46" height="50" rx="10" fill="none" stroke="#ffd54a" stroke-width="3"/>`:''}${player(x,180,pos,'offense',17)}</g></g>`;}).join('')}
+        ${player(160,255,'QB','offense',20)}
+        ${i===2?'<path data-action="qb-release" d="M180 240L305 110l-12 5m12-5l-3 13" fill="none" stroke="#ffd54a" stroke-width="3" stroke-dasharray="7 5"/>':''}
+        <text x="16" y="28" fill="#cbd5e1" font-size="13">빨강: 수비 · 흰색: 공격 · RT 강조</text>
+        <text x="16" y="290" fill="#cbd5e1" font-size="12">${i===0?'오른쪽 끝 RT · 다섯 러셔 확인':i===1?'파랑: 5쌍 블록 책임 · RT 도움 없음':'노랑 점선: 패스 · 특정 루트 재현 아님'}</text>
+      </svg></div>`).join('')}</section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'island-tackle-five-man-protection') return islandTackleProtection(item);
   if (item?.diagram?.kind === 'rb-key-read-focus') return rbKeyReadFocus(item);
   if (['cowboys-coordinated-pocket-compression', 'reverse-misdirection-lead-block'].includes(item?.diagram?.kind)) return november19Diagram(item);
   if (item?.diagram?.kind === 'five-out-vs-pressure-disguise') return fiveOutPressure(item);
