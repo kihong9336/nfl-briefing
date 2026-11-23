@@ -713,7 +713,31 @@ function islandTackleProtection(item) {
       </svg></div>`).join('')}</section>`;
 }
 
+function stickNodZoneWindow(item) {
+  const panels = [
+    ['① 바깥으로 꺾는 모양', 'outside-fake', 'M160 230V150H245', 'TE: 첫 방향 전환 →'],
+    ['② 수비가 바깥으로 반응', 'defender-reaction', 'M180 110H270', '수비 이동 → 중앙 공간'],
+    ['③ 중앙 재진입 · 패스', 'middle-return', 'M245 150Q210 120 160 70', 'TE: 중앙으로 다시 ↑']
+  ];
+  return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <p>일반 개념도 · 실제 정렬 재현 아님 · 공격 ↑</p>
+    ${panels.map(([label, action, path, note], i)=>`<div data-panel="${i+1}" style="min-width:0"><h4>${label}</h4>
+      <svg class="play-diagram" viewBox="0 0 320 310" role="img" aria-label="${label}" style="display:block;width:100%;max-width:100%;height:auto">
+        <rect class="field-bg" width="320" height="310" rx="12"/>
+        <defs><marker id="stick-nod-${i}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="${i===1?'#ff5b68':'#ffd54a'}" d="M0 0L10 5L0 10z"/></marker></defs>
+        <text x="16" y="28" fill="#cbd5e1" font-size="14">${note}</text>
+        <path class="line-scrimmage" d="M16 245H304"/>
+        ${i>0?'<ellipse cx="160" cy="80" rx="50" ry="30" fill="#78c8ff" fill-opacity="0.15" stroke="#78c8ff" stroke-dasharray="5 4"/>':''}
+        <path data-action="${action}" d="${path}" fill="none" stroke="${i===1?'#ff5b68':'#ffd54a'}" stroke-width="4" ${i===1?'stroke-dasharray="4 5"':''} marker-end="url(#stick-nod-${i})"/>
+        ${player(i===0?160:245,i===0?230:150,'TE','offense',18)}${player(i===0?180:270,90,'D','defense',18)}${player(100,270,'QB','offense',18)}
+        ${i===2?'<path data-action="qb-pass" d="M105 248L155 100" fill="none" stroke="#78c8ff" stroke-width="3" stroke-dasharray="8 6"/>':''}
+      </svg></div>`).join('')}
+    <p>노랑: TE 루트 · 빨강 점선: 수비 반응 · 파랑 점선: 패스</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'stick-nod-zone-window') return stickNodZoneWindow(item);
   if (item?.diagram?.kind === 'island-tackle-five-man-protection') return islandTackleProtection(item);
   if (item?.diagram?.kind === 'rb-key-read-focus') return rbKeyReadFocus(item);
   if (['cowboys-coordinated-pocket-compression', 'reverse-misdirection-lead-block'].includes(item?.diagram?.kind)) return november19Diagram(item);
