@@ -736,7 +736,23 @@ function stickNodZoneWindow(item) {
   </section>`;
 }
 
+function twoMinuteMiddleSpike(item) {
+  const steps = [
+    ['pass', '0:39', 'WAS28 → 50', '중앙 패스 22야드', '포구 뒤 빠르게 다음 스냅 정렬'],
+    ['spike', '0:24', '50', '첫 번째 스파이크', '시계를 멈추고 다음 전진 준비'],
+    ['pass', '0:23', '50 → CIN8', '중앙 크로서 42야드', '큰 전진 뒤 다시 재정렬'],
+    ['spike', '0:05', 'CIN8', '두 번째 스파이크', '킥 유닛을 위한 시간 보존'],
+    ['kick', '0:04', 'CIN8', '26야드 필드골 시도', 'Stevens의 결승 킥']
+  ];
+  return `<section aria-label="${escapeXml(item.title)}" style="box-sizing:border-box;max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <p>경기 기록 시간선 · 경기 시계 · 실제 선수 정렬 재현 아님</p>
+    <ol style="box-sizing:border-box;max-width:100%;padding-inline-start:1.5em">${steps.map(([action, clock, spot, label, detail]) => `<li data-action="${action}" style="margin-block:1em;border-inline-start:3px solid ${action === 'spike' ? '#78c8ff' : '#ffd54a'};padding-inline-start:0.75em"><strong>${clock} · ${spot}</strong><br><b>${label}</b><br>${detail}</li>`).join('')}</ol>
+    <p>전진 → 정렬 → 시계 정지 → 다시 전진 → 킥 준비</p>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'two-minute-middle-spike') return twoMinuteMiddleSpike(item);
   if (item?.diagram?.kind === 'stick-nod-zone-window') return stickNodZoneWindow(item);
   if (item?.diagram?.kind === 'island-tackle-five-man-protection') return islandTackleProtection(item);
   if (item?.diagram?.kind === 'rb-key-read-focus') return rbKeyReadFocus(item);
