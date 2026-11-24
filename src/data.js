@@ -344,7 +344,8 @@ export const briefings = [
           "title": "Bengals–Commanders 전체 경기 하이라이트",
           "type": "전체 경기 하이라이트",
           "url": "https://www.youtube.com/watch?v=C3ZJX7on7OE"
-        }
+        },
+        "narrativeMode": "integrated"
       }
     ],
     "highlights": [
