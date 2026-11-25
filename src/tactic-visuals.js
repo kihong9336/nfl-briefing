@@ -751,7 +751,24 @@ function twoMinuteMiddleSpike(item) {
   </section>`;
 }
 
+function flatReleaseMiddleWindow(item) {
+  const panels = [['condensed','① 좁은 대형에서 출발'],['flat-release','② RB 플랫 · 수비 폭 확대'],['middle-window','③ TE 중앙 창 · 경합 포구']];
+  return `<section style="max-width:100%;min-width:0;overflow-wrap:anywhere"><p>일반 개념도 · 실제 선수 배치 재현 아님 · 공격 ↑</p>${panels.map(([key,label],i)=>`<div data-panel="${key}" style="min-width:0"><h4>${label}</h4>
+    <svg class="play-diagram" viewBox="0 0 320 310" role="img" aria-label="${escapeXml(item.title)}: ${label}" style="display:block;width:100%;max-width:100%;height:auto">
+      <rect class="field-bg" width="320" height="310" rx="12"/>
+      <path class="line-scrimmage" d="M16 200H304"/>
+      <text x="16" y="28" fill="#cbd5e1" font-size="13">플랫: 라인 가까운 바깥 공간</text>
+      ${i>0?'<path data-action="rb-flat" d="M195 250Q275 250 280 210" fill="none" stroke="#ffd54a" stroke-width="4"/><path data-action="underneath-widen" d="M185 160L260 165" stroke="#ff5b68" stroke-width="3" stroke-dasharray="5 4"/>':''}
+      ${i===2?'<ellipse cx="175" cy="120" rx="40" ry="30" fill="#78c8ff" fill-opacity="0.2"/><path data-action="middle-pass" d="M140 260L175 125" stroke="#78c8ff" stroke-width="3" stroke-dasharray="7 5"/>':''}
+      <path d="${i===0?'M210 220V195':i===1?'M210 220V150L195 130':'M210 220V150L175 105'}" fill="none" stroke="#ffd54a" stroke-width="3"/>
+      ${player(140,270,'QB','offense',17)}${player(i===0?195:280,i===0?250:210,'RB','offense',17)}${player(i===2?175:210,i===2?105:i===1?150:220,'TE','offense',17)}
+      ${player(i===0?185:260,160,'LB','defense',17)}<g data-role="deep-defender">${player(i===2?200:190,i===2?75:65,'S','defense',17)}</g>
+      <text x="16" y="300" fill="#cbd5e1" font-size="12">노랑: 루트 · 빨강: 수비 · 파랑: 패스 창</text>
+    </svg></div>`).join('')}</section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'flat-release-middle-window') return flatReleaseMiddleWindow(item);
   if (item?.diagram?.kind === 'two-minute-middle-spike') return twoMinuteMiddleSpike(item);
   if (item?.diagram?.kind === 'stick-nod-zone-window') return stickNodZoneWindow(item);
   if (item?.diagram?.kind === 'island-tackle-five-man-protection') return islandTackleProtection(item);
