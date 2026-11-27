@@ -767,7 +767,31 @@ function flatReleaseMiddleWindow(item) {
     </svg></div>`).join('')}</section>`;
 }
 
+function endzoneBoundaryCatch(item) {
+  return `<section style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <p>관계 개념도 · 실제 전체 배치 재현 아님</p>
+    <p>시작 9초 · 3rd-and-goal → 6야드 TD · 득점 뒤 3초</p>
+    <svg class="play-diagram" viewBox="0 0 360 350" role="img" aria-label="${escapeXml(item.title)}" style="display:block;width:100%;max-width:100%;height:auto">
+      <title>${escapeXml(item.title)}</title>
+      <desc>오른쪽 뒤 모서리에서 캐치할 공간과 경계선 안 착지 공간을 구분한다. 수비는 바깥으로 압박한다. 경로는 개념이며 거리 비례가 아니다.</desc>
+      <defs><marker id="boundary-yellow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#ffd54a" d="M0 0L10 5L0 10z"/></marker><marker id="boundary-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#ff5b68" d="M0 0L10 5L0 10z"/></marker></defs>
+      <rect width="360" height="350" rx="12" fill="#123b2b"/>
+      <path d="M20 60H320V310" fill="none" stroke="white" stroke-width="4"/>
+      <text x="20" y="40" fill="white" font-size="14">엔드존 뒤 경계선 · 오른쪽 모서리 ↗</text>
+      <ellipse data-region="catch" cx="283" cy="95" rx="23" ry="20" fill="#ffd54a" fill-opacity="0.35" stroke="#ffd54a"/>
+      <rect data-region="inbounds-landing" x="270" y="122" width="38" height="30" rx="5" fill="#78c8ff" fill-opacity="0.35" stroke="#78c8ff"/>
+      <path data-action="receiver-direction" d="M170 265Q235 200 277 118" fill="none" stroke="#ffd54a" stroke-width="4" marker-end="url(#boundary-yellow)"/>
+      <path data-action="defender-pressure" d="M230 166L310 115" fill="none" stroke="#ff5b68" stroke-width="4" marker-end="url(#boundary-red)"/>
+      ${player(170,275,'WR','offense',18)}${player(220,180,'DB','defense',18)}
+      <text x="24" y="91" fill="#ffd54a" font-size="14">노랑 원: 공을 잡는 영역</text>
+      <text x="24" y="125" fill="#78c8ff" font-size="14">파랑: 경계선 안 착지</text>
+      <text x="24" y="220" fill="#ff9aa3" font-size="14">수비: 바깥쪽으로 압박 ↗</text>
+      <text x="24" y="330" fill="white" font-size="13">WR 진행 ↗ · 공과 발의 공간을 함께 보기</text>
+    </svg></section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'endzone-boundary-catch') return endzoneBoundaryCatch(item);
   if (item?.diagram?.kind === 'flat-release-middle-window') return flatReleaseMiddleWindow(item);
   if (item?.diagram?.kind === 'two-minute-middle-spike') return twoMinuteMiddleSpike(item);
   if (item?.diagram?.kind === 'stick-nod-zone-window') return stickNodZoneWindow(item);

@@ -1,5 +1,841 @@
 export const briefings = [
   {
+    "date": "2026-11-27",
+    "weekday": "금요일",
+    "edition": "WEEK 12 · 추수감사절의 세 번의 뒤집기",
+    "season": 2026,
+    "seasonType": "regular",
+    "week": 12,
+    "sample": false,
+    "dek": "Eagles는 21점 차를 뒤집었고 Bears는 3초 남긴 TD로 지구 선두에 섰다. Bills는 57야드 결승 킥으로 Chiefs를 잡았다. Rodgers의 자유계약 전환과 토요일 새벽 Denver전도 확인하자.",
+    "lead": {
+      "kicker": "추수감사절 경기 결산",
+      "title": "31-10에서 39-38로…Eagles가 뒤집은 밤, Bears와 Bills도 끝에 웃었다",
+      "summary": "Philadelphia의 대역전, Chicago의 3초 결승 TD, Buffalo의 종료 순간 필드골이 하루에 나왔다. 세 경기의 결과와 승부를 가른 마지막 선택을 짚는다."
+    },
+    "sections": [
+      {
+        "id": "2026-week12-chiefs-bills-result",
+        "eventKey": "2026-week12-chiefs-bills-result",
+        "team": "chiefs",
+        "label": "경기 결과 · AFC 선두 경쟁",
+        "title": "Bills 13-10…Allen의 81야드보다 컸던 Bass의 마지막 킥",
+        "takeaway": "QB 대결의 승부는 스페셜팀과 출발 위치에서 갈렸다. Chiefs는 8승 3패, Bills는 10승 1패다.",
+        "summary": "미국 11월 26일 Buffalo가 Kansas City를 13-10으로 꺾었다. Bass가 4쿼터 54야드 동점 필드골과 종료 순간 57야드 결승 필드골을 성공시켰다. Allen은 10/21·81야드·2INT, Mahomes는 16/29·174야드·무TD·무INT였다. Cook은 32러시 117야드·1TD, Chiefs 신인 Emmett Johnson은 17러시 72야드·1TD를 기록했다.",
+        "commentary": "공식 기록상 비와 강풍 속에서 Chiefs는 3다운 2/11, Bills는 9/16이었다. Kansas City가 총공격 야드에서는 241-230으로 앞섰어도 좋은 출발 위치와 공격 지속 능력은 별개였다. 마지막에 굴절된 펀트를 Dortch가 17야드 돌려놓아 결승 킥 기회를 만들었다. Butker는 46야드를 놓쳤다. Rice의 막판 캐치가 비디오 판독으로 불완전 처리된 데 대해 Chiefs는 반발했지만, 리그 판독 책임자는 착지 과정에서 손이 공 위로 미끄러져 통제력을 잃었다고 설명했다. 판정 논쟁과 뒤이은 스냅 처리·펀트 실패를 분리해 봐야 한다. 악천후 한 경기의 패싱 수치를 시즌 QB 실력 순위로 일반화하지 않는다.",
+        "watch": "Chiefs의 다음 Rams전에서는 공격 시작 위치와 3다운, 킥 안정성을 함께 보자. Buffalo는 Allen의 저조한 패싱에도 이기는 길을 확인했지만 이를 매주 재현할 공격 모델로 단정할 수는 없다.",
+        "sources": [
+          {
+            "label": "static.www.nfl.com",
+            "url": "https://static.www.nfl.com/image/upload/v1795769326/gamecenter/abbf321b-4feb-11f1-abca-2c54536568a9.pdf"
+          },
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyler-bass-hits-walk-off-57-yard-field-goal-bills-beat-chiefs-13-10"
+          },
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50609968/rashee-rice-chiefs-believe-caught-pivotal-3rd-pass"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-25-purdy-low-ankle-sprain",
+        "eventKey": "2026-11-25-purdy-low-ankle-sprain",
+        "team": "49ers",
+        "label": "출전 변수 · 지구전",
+        "title": "Purdy 이틀 연속 DNP…Seattle도 오른쪽 태클·가드 결장",
+        "takeaway": "Purdy의 출전은 아직 확정되지 않았다. 양 팀 모두 보호 라인의 구성까지 봐야 한다.",
+        "summary": "미국 11월 26일 Purdy는 발목 부상으로 이틀 연속 훈련에 불참했다. 수요일 한 차례 결장했던 전날 상황에서 준비 시간이 더 줄었다. NFL은 Seattle의 Abraham Lucas와 Quenton Nelson이 49ers전에 결장한다고 전했다. Darnold는 목요일에도 FP였다.",
+        "commentary": "Purdy의 결장 확정이나 공식 Questionable 등급 발표로 읽으면 안 된다. PFT의 questionable 표현은 전망이며 최종 구단 등급과 구별해야 한다. Evans는 목요일 LP로 올라왔고 Pleasants는 FP였다. Seattle의 선발 QB 참여가 좋더라도 두 라인맨 결장이 사라지는 것은 아니다. 양 팀 패스 보호와 짧은 패스 지원을 함께 확인할 경기다.",
+        "watch": "한국 11월 30일 월요일 06시 25분. 금요일 최종 등급과 경기 전 비활성 명단을 확인하자.",
+        "sources": [
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-misses-practice-again-on-thursday"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-26"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          }
+        ],
+        "changeSummary": "Purdy는 발목 부상으로 이틀 연속 훈련에 불참했다.",
+        "changeEvidence": {
+          "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-misses-practice-again-on-thursday",
+          "before": "수요일 훈련에 불참",
+          "after": "이틀 연속 훈련에 불참",
+          "quote": "Purdy는 발목 부상으로 이틀 연속 훈련에 불참했다.",
+          "originalQuote": "Quarterback Brock Purdy missed practice for the second straight day with an ankle injury.",
+          "translated": true
+        }
+      },
+      {
+        "id": "2026-11-23-49ers-aiyuk-waived",
+        "eventKey": "2026-11-23-49ers-aiyuk-waived",
+        "team": "49ers",
+        "label": "이적 후속 · 구단 공식",
+        "title": "Aiyuk, 이제 계약 완료…Commanders 연습조 합류 공식화",
+        "takeaway": "행선지 예상이 실제 계약으로 바뀌었다. 다만 53인 로스터 합류나 경기 출전 발표는 아니다.",
+        "summary": "미국 11월 26일 Commanders가 연습조 계약 완료를 발표했다. 대상은 전 49ers 리시버 Brandon Aiyuk이다. 전날 에이전트의 계약 예정 설명에서 구단 공식 거래로 한 단계 진행됐다. Washington은 Ambry Thomas도 연습조에 영입하고 Malik Heath를 연습조에서 방출했다.",
+        "commentary": "49ers와의 결별 이후 이제 관찰 대상은 계약 여부가 아니라 실제 연습 적응과 경기일 승격이다. 연습조 등록은 그 자체로 다음 경기 출전을 뜻하지 않는다. 과거의 생산량과 현재 몸 상태도 구분해야 한다.",
+        "watch": "Cardinals전 출전 가능성은 별도 구단 발표를 보자. 계약 발표만으로 즉시 주전 복귀를 예상하지 않는다.",
+        "sources": [
+          {
+            "label": "www.commanders.com",
+            "url": "https://www.commanders.com/news/commanders-brandon-aiyuk-to-practice-squad"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-26"
+          }
+        ],
+        "changeSummary": "Commanders가 연습조 계약 완료를 발표했다. 베테랑 리시버 Brandon Aiyuk과의 계약이다.",
+        "changeEvidence": {
+          "url": "https://www.commanders.com/news/commanders-brandon-aiyuk-to-practice-squad",
+          "before": "Commanders 연습조와 계약할 예정",
+          "after": "Commanders가 연습조 계약 완료를 발표했다",
+          "quote": "Commanders가 연습조 계약 완료를 발표했다. 베테랑 리시버 Brandon Aiyuk과의 계약이다.",
+          "originalQuote": "The Washington Commanders have signed veteran wide receiver Brandon Aiyuk to their practice squad.",
+          "translated": true
+        }
+      }
+    ],
+    "leagueWide": [
+      {
+        "id": "2026-week12-eagles-cowboys-result",
+        "eventKey": "2026-week12-eagles-cowboys-result",
+        "team": "eagles",
+        "label": "경기 결과 · 21점 차 역전",
+        "title": "31-10이 39-38로…Eagles, Dallas의 추수감사절을 뒤집었다",
+        "takeaway": "Milton의 긴 패스만이 전부가 아니었다. 펀트 블록 TD와 마지막 수비가 역전의 시간을 만들었다.",
+        "why": "미국 11월 26일 Philadelphia는 3쿼터 31-10으로 뒤지던 경기를 39-38로 뒤집었다. Elliott가 2초를 남기고 성공시킨 결승 킥은 공식 기록상 59야드다. Milton은 21/31·331야드·3패싱 TD·1INT에 러싱 TD를 더했고, DeVonta Smith는 11캐치 200야드·2TD였다. 4쿼터 초 Robinson의 펀트 블록을 Kenny Moore가 TD로 연결하며 추격이 본격화됐다. Dallas는 38-36으로 앞선 종료 55초 전 상대 39야드의 4th-and-1에서 승부를 걸었지만 Prescott이 9야드 색을 당했다. Eagles는 타임아웃 없이도 마지막 기회를 득점으로 바꿨다. Cowboys는 5승 7패, Eagles는 4승 7패다. 이번 결과는 Dallas의 공격 생산량만으로 팀 안정성을 판단할 수 없는 이유다. Milton에게도 한 경기의 폭발을 장기 선발 검증과 혼동하지 않는 것이 중요하다. 다음에는 더 안정적인 수비를 상대로도 깊은 패스를 연결하는지 보자. Barkley·Goedert·DeJean은 경기 중 부상으로 돌아오지 못해 후속 상태를 따로 확인해야 한다.",
+        "url": "https://static.www.nfl.com/image/upload/v1795769326/gamecenter/abbf2f12-4feb-11f1-abca-2c54536568a9.pdf",
+        "sources": [
+          {
+            "label": "static.www.nfl.com",
+            "url": "https://static.www.nfl.com/image/upload/v1795769326/gamecenter/abbf2f12-4feb-11f1-abca-2c54536568a9.pdf"
+          },
+          {
+            "label": "www.nbcsports.com",
+            "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-mount-furious-comeback-beat-cowboys-39-38-in-thanksgiving-classic"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/rock-star-joe-milton-iii-leads-eagles-to-stunning-rally-over-cowboys"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-26"
+          }
+        ]
+      },
+      {
+        "id": "2026-week12-bears-lions-result",
+        "eventKey": "2026-week12-bears-lions-result",
+        "team": "bears",
+        "label": "경기 결과 · NFC North",
+        "title": "3초 남긴 Odunze의 발끝…Bears 39-35, 지구 단독 선두",
+        "takeaway": "Gibbs의 205러싱 야드에도 Detroit는 마지막 공격권을 지키지 못했다. Chicago는 9승 2패다.",
+        "why": "미국 11월 26일 Bears가 Lions를 39-35로 이겼다. 4쿼터 24-35에서 Odunze의 41야드 TD와 2점 전환으로 따라붙었고, 마지막 13플레이·68야드 드라이브를 6야드 TD 패스로 마쳤다. 결승 득점 뒤 남은 시간은 3초였다. Williams는 30/44·345야드·2TD·무INT, Odunze는 6캐치 87야드·2TD였다. Detroit의 Gibbs는 21러시 205야드·3TD와 5캐치 47야드를 기록했다. Bears가 총공격 458야드 대 549야드로 뒤져도 마지막 4다운 수비와 끝내기 공격을 성공한 점이 승부를 갈랐다. Chicago는 9승 2패로 NFC North 단독 선두, Detroit는 8승 3패가 됐다. 지구 우승을 확정한 것은 아니며 Week 17 맞대결이 남아 있다. Loveland가 무릎 부상으로 전반에 빠진 만큼 승리와 별개로 타이트엔드 전력을 살펴야 한다. Gibbs의 대량 생산은 강력한 개인 활약의 증거지만 한 경기 야드만으로 전체 러닝백 순위를 결정하지는 않는다.",
+        "url": "https://static.www.nfl.com/image/upload/v1795769326/gamecenter/abbf2c16-4feb-11f1-abca-2c54536568a9.pdf",
+        "sources": [
+          {
+            "label": "static.www.nfl.com",
+            "url": "https://static.www.nfl.com/image/upload/v1795769326/gamecenter/abbf2c16-4feb-11f1-abca-2c54536568a9.pdf"
+          },
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50608495/qb-caleb-williams-wr-rome-odunze-chemistry-helps-bears-stun-lions"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/thanksgiving-tripleheader-what-we-learned-from-bears-lions-eagles-cowboys-chiefs-bills"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-24-steelers-rodgers-benched-rudolph",
+        "eventKey": "2026-11-24-steelers-rodgers-benched-rudolph",
+        "team": "steelers",
+        "label": "방출 후속 · 자유계약",
+        "title": "Rodgers 웨이버 통과…Rooney는 McCarthy 지지를 직접 밝혔다",
+        "takeaway": "방출과 자유계약 신분은 다른 단계다. 새 팀 계약은 아직 확인되지 않았다.",
+        "why": "미국 11월 26일 Rodgers는 웨이버를 통과해 자유계약선수가 됐다. NFL은 리그 거래 공지를 근거로 전했다. 같은 날 Art Rooney II는 ESPN에 보낸 성명에서 McCarthy를 전적으로 신뢰한다고 밝혔다. 이는 전날 방출과 구단 지지 취재 보도에 이어 나온 실제 신분 변화와 구단주 직접 발언이다. 다른 팀 영입이나 은퇴는 발표되지 않았다. Steelers는 Rudolph 체제로 Denver전을 준비한다. Rodgers의 감독 비판과 구단주의 반박은 당사자들의 입장이므로 건강·근무 태도에 대한 모든 주장이 확정된 사실인 것처럼 옮기지 않는다. 다음 관찰점은 새 팀 접촉의 구체적인 취재와 Rudolph의 경기 운영이다.",
+        "url": "https://www.nfl.com/news/nfl-network-aaron-rodgers-clears-waivers-now-a-free-agent-after-stunning-release-from-steelers",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/nfl-network-aaron-rodgers-clears-waivers-now-a-free-agent-after-stunning-release-from-steelers"
+          },
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50605070/steelers-owner-disappointed-rodgers-backs-mccarthy"
+          }
+        ],
+        "changeSummary": "Rodgers는 목요일 웨이버를 통과해 자유계약선수가 됐다. 리그 거래 공지가 근거다.",
+        "changeEvidence": {
+          "url": "https://www.nfl.com/news/nfl-network-aaron-rodgers-clears-waivers-now-a-free-agent-after-stunning-release-from-steelers",
+          "before": "방출이 리그 인사 공지에 공식 반영됐다",
+          "after": "웨이버를 통과해 자유계약선수가 됐다",
+          "quote": "Rodgers는 목요일 웨이버를 통과해 자유계약선수가 됐다. 리그 거래 공지가 근거다.",
+          "originalQuote": "cleared waivers on Thursday and is now a free agent, per the league's transaction wire.",
+          "translated": true
+        }
+      },
+      {
+        "id": "2026-11-26-steelers-pittman-activated-black-friday",
+        "eventKey": "2026-11-26-steelers-pittman-activated-black-friday",
+        "team": "steelers",
+        "label": "내일 05시 · 로스터 변화",
+        "title": "Rudolph의 첫 시험에 Pittman 복귀…토요일 새벽 Denver전",
+        "takeaway": "Pittman 활성화와 Hurleman 승격이 확정됐다. 쿼터백 교체뿐 아니라 받는 선수 구성도 달라진다.",
+        "why": "미국 11월 26일 Steelers는 Michael Pittman Jr.를 IR에서 활성화하고 Max Hurleman을 연습조에서 정식 로스터로 올렸다. Ben Skowronek은 IR로 이동했다. Pittman은 이번 시즌 선발 3경기에서 7캐치 89야드, Hurleman은 직전 Eagles전에서 6캐치 61야드·1TD를 기록했다. 작은 표본만으로 어느 선수가 주도권을 잡을지 단정할 수는 없지만 Rudolph가 사용할 표적 구성이 바뀌었다는 점은 분명하다. Broncos–Steelers는 한국 11월 28일 토요일 05시, 미국 현지로는 27일 금요일 오후 경기다. 구단은 미국 Prime Video 편성을 안내한다. NFL+는 미국 내 서비스라고 명시하므로 한국 시청 수단으로 혼동하지 말자. 한국에서는 이용 중인 Game Pass 등 서비스의 실제 편성을 확인하자. 초반 짧은 패스로 리듬을 찾는지, Pittman의 실전 참여가 얼마나 되는지가 첫 관전 포인트다.",
+        "url": "https://www.steelers.com/news/steelers-make-roster-moves-ahead-of-broncos-game",
+        "sources": [
+          {
+            "label": "www.steelers.com",
+            "url": "https://www.steelers.com/news/steelers-make-roster-moves-ahead-of-broncos-game"
+          },
+          {
+            "label": "www.steelers.com",
+            "url": "https://www.steelers.com/news/steelers-vs-broncos-how-to-watch-listen-to-the-game-x0841"
+          },
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          }
+        ]
+      },
+      {
+        "id": "2026-11-23-mcvay-nacua-contract-outlook",
+        "eventKey": "2026-11-23-mcvay-nacua-contract-outlook",
+        "team": "rams",
+        "label": "계약 전망 · 11월 23일 감독 발언",
+        "title": "McVay, Nacua의 내년 거취 확답 피해…결별 발표는 아니다",
+        "takeaway": "부상·징계와 계약 결정은 별개다. Rams는 연장·태그·자유계약 대응을 아직 확정 발표하지 않았다.",
+        "why": "NFL이 미국 11월 24일 전한 전날 기자회견에서 McVay는 Nacua의 다음 시즌 잔류를 확답하지 않았다. 동시에 Nacua를 현재와 미래의 중요한 선수로 설명하고, 다른 자유계약 예정 선수들과 함께 장기 구성을 고민한다고 밝혔다. 11월 23일 발언을 바탕으로 한 계약 전망이며, 방출이나 이적 결정이 아니다. 이미 소개한 무릎 수술과 출장정지는 복귀 가능성에 영향을 주지만, 어느 팀과 어떤 계약을 맺는지를 정해주지는 않는다. NFL 기사는 연장 계약·프랜차이즈 태그·자유계약 시장 대응을 선택지로 제시했다. 이를 구단이 특정 방안을 결정했다는 발표로 읽지 말자. 다음 관찰점은 실제 계약 협상 보도와 구단의 공식 조치다.",
+        "url": "https://www.nfl.com/news/sean-mcvay-can-t-say-for-certain-anything-on-puka-nacua-s-future-with-rams",
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/news/sean-mcvay-can-t-say-for-certain-anything-on-puka-nacua-s-future-with-rams"
+          }
+        ]
+      }
+    ],
+    "tactics": [
+      {
+        "id": "2026-week12-odunze-boundary-touchdown",
+        "team": "bears",
+        "label": "전술 교실 · 경계선 캐치",
+        "title": "9초의 선택: Odunze는 왜 엔드존 끝까지 달렸을까",
+        "concept": "엔드존 안에서도 수비수에게서 떨어진 공간과 경계선까지 남은 공간은 다르다. 패스와 캐치가 두 조건을 동시에 충족해야 한다.",
+        "easy": "Bears는 3점 뒤진 3rd-and-goal, 종료 9초에 승리를 노렸다. 공을 잡는 것에 더해 발을 둘 공간까지 남겨야 하는 상황이었다.",
+        "gameUse": "ESPN의 현장 보도는 Odunze가 엔드존 오른쪽 뒤 모서리로 달렸고 Williams가 그쪽으로 공을 보냈다고 설명한다. Ya-Sin이 밖으로 밀어내려 했지만 캐치가 인정됐다. 공식 게임북은 6야드 TD와 판독 유지, 득점 뒤 3초를 확인한다.",
+        "whyItWorks": "이 장면에서 중요한 것은 공격수만 사용할 수 있는 마지막 공간으로 공과 몸이 함께 도달했다는 점이다. 기사에서 확인한 경계선 경쟁을 설명하는 것이며 전체 수비 커버리지나 플레이콜 이름을 추정하지 않는다.",
+        "defenseCounter": "수비는 리시버와 경계선 사이의 남은 공간을 줄여 캐치와 착지를 어렵게 만들려 한다. 실제 보도에서도 Ya-Sin의 밀어내기 시도가 언급된다. 접촉 자체가 반칙이라는 뜻은 아니며 이번 판정은 TD 유지였다.",
+        "breakdown": [
+          {
+            "label": "1. 먼저 시간과 점수",
+            "text": "3점 뒤진 상황, 3rd-and-goal에 9초가 남았다. 무조건 길게 버티는 플레이가 아니라 제한된 시간에 엔드존의 승리 기회를 고르는 장면으로 읽자."
+          },
+          {
+            "label": "2. 공이 갈 자리와 발이 놓일 자리",
+            "text": "보도상 Odunze는 오른쪽 뒤 모서리로 달렸다. Williams의 패스 방향만 보지 말고 수비수와 경계선 사이에 착지할 공간이 얼마나 남는지 함께 보자. 공을 잡을 수 있는 공간과 발을 놓을 수 있는 공간은 다르다. 그래서 패스 도착점과 몸의 진행 방향이 함께 맞아야 한다."
+          },
+          {
+            "label": "3. 수비의 밀어내기와 캐치 완성",
+            "text": "Ya-Sin은 Odunze를 바깥으로 보내려 했지만 캐치가 인정됐고 판독도 유지됐다. 공식 결과는 6야드 TD다. 공을 향한 손과 경계선을 향한 발이 동시에 관전 대상이다. 수비는 남은 착지 공간을 줄이는 쪽으로 대응한다. 이 접촉만으로 반칙을 뜻하지는 않는다."
+          }
+        ],
+        "watchOrder": [
+          "스냅 전 9초·3rd-and-goal 상황",
+          "엔드존 오른쪽 뒤 모서리로 향하는 리시버",
+          "캐치와 경계선 안 착지의 연결"
+        ],
+        "source": {
+          "label": "www.espn.com",
+          "url": "https://www.espn.com/nfl/story/_/id/50608495/qb-caleb-williams-wr-rome-odunze-chemistry-helps-bears-stun-lions"
+        },
+        "sources": [
+          {
+            "label": "www.espn.com",
+            "url": "https://www.espn.com/nfl/story/_/id/50608495/qb-caleb-williams-wr-rome-odunze-chemistry-helps-bears-stun-lions"
+          },
+          {
+            "label": "static.www.nfl.com",
+            "url": "https://static.www.nfl.com/image/upload/v1795769326/gamecenter/abbf2c16-4feb-11f1-abca-2c54536568a9.pdf"
+          }
+        ],
+        "video": {
+          "title": "Bears–Lions 전체 경기 하이라이트",
+          "type": "전체 경기 하이라이트",
+          "url": "https://www.youtube.com/watch?v=6mDrkExeNSY"
+        },
+        "diagram": {
+          "kind": "endzone-boundary-catch",
+          "caption": "경계선·리시버·수비수·캐치 지점의 관계 개념도. 실제 22명 배치나 정확한 경로를 재현한 도식이 아니다."
+        }
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Philadelphia Eagles vs. Dallas Cowboys Thanksgiving Day Game Highlights | 2026 NFL Season Week 12",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "jXmdND-z0_8",
+        "type": "NFL 공식 · 전체 경기 하이라이트",
+        "url": "https://www.youtube.com/watch?v=jXmdND-z0_8",
+        "publishedAt": "2026-11-26T17:51:16-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-27T09:07:38.668907+00:00",
+          "authorVerified": true,
+          "playabilityStatus": "OK",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=jXmdND-z0_8"
+          ],
+          "metadataFile": "/Users/user/projects/nfl-briefing/.incoming/2026-11-27.180046-55eb253d/video-metadata-full.json"
+        }
+      },
+      {
+        "title": "Chicago Bears vs. Detroit Lions Thanksgiving Day Game Highlights | 2026 NFL Season Week 12",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "6mDrkExeNSY",
+        "type": "NFL 공식 · 전체 경기 하이라이트",
+        "url": "https://www.youtube.com/watch?v=6mDrkExeNSY",
+        "publishedAt": "2026-11-26T13:44:26-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-27T09:07:38.668248+00:00",
+          "authorVerified": true,
+          "playabilityStatus": "OK",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=6mDrkExeNSY"
+          ],
+          "metadataFile": "/Users/user/projects/nfl-briefing/.incoming/2026-11-27.180046-55eb253d/video-metadata-full.json"
+        }
+      },
+      {
+        "title": "Kansas City Chiefs vs Buffalo Bills Thanksgiving Day Game Highlights | 2026 NFL Season Week 12",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "WDYynoHb2Bs",
+        "type": "NFL 공식 · 전체 경기 하이라이트",
+        "url": "https://www.youtube.com/watch?v=WDYynoHb2Bs",
+        "publishedAt": "2026-11-26T20:48:47-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-27T09:05:16.047669+00:00",
+          "authorVerified": true,
+          "playabilityStatus": "OK",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=WDYynoHb2Bs"
+          ],
+          "metadataFile": "/Users/user/projects/nfl-briefing/.incoming/2026-11-27.180046-55eb253d/video-metadata-full.json"
+        }
+      },
+      {
+        "title": "Miranda Lambert's FULL Thanksgiving Halftime Performance",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "HfN76j5y19o",
+        "type": "NFL 공식 · 하프타임 공연",
+        "url": "https://www.youtube.com/watch?v=HfN76j5y19o",
+        "publishedAt": "2026-11-26T15:49:41-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-27T09:09:54.367338+00:00",
+          "authorVerified": true,
+          "playabilityStatus": "OK",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=HfN76j5y19o"
+          ],
+          "metadataFile": "/Users/user/projects/nfl-briefing/.incoming/2026-11-27.180046-55eb253d/video-metadata-full.json"
+        }
+      },
+      {
+        "title": "Wu-Tang Clan FULL Thanksgiving Halftime Show",
+        "channel": "NFL",
+        "channelId": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
+        "videoId": "SI7wbW6oIAg",
+        "type": "NFL 공식 · 하프타임 공연",
+        "url": "https://www.youtube.com/watch?v=SI7wbW6oIAg",
+        "publishedAt": "2026-11-26T12:30:29-08:00",
+        "evidence": {
+          "checkedAt": "2026-11-27T09:09:54.368048+00:00",
+          "authorVerified": true,
+          "playabilityStatus": "OK",
+          "sourceURLs": [
+            "https://www.youtube.com/watch?v=SI7wbW6oIAg"
+          ],
+          "metadataFile": "/Users/user/projects/nfl-briefing/.incoming/2026-11-27.180046-55eb253d/video-metadata-full.json"
+        }
+      },
+      {
+        "title": "\"감히 나를 버려?\" 방출된 쿼터백의 처절한 복수전 ㄷㄷ | NFL 필라델피아 vs 댈러스",
+        "channel": "미식축구 읽어주는 남자",
+        "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag",
+        "videoId": "SZ6P2fMxR6w",
+        "type": "채널 해설/리뷰",
+        "note": "업로드: 2026-11-27 18:53 KST · 미식축구 읽어주는 남자의 NFL 영상.",
+        "url": "https://www.youtube.com/watch?v=SZ6P2fMxR6w",
+        "publishedAt": "2026-11-27T09:53:51+00:00",
+        "evidence": {
+          "checkedAt": "2026-11-27T11:04:43.912805+00:00",
+          "sourceURLs": [
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCKF-sV1lgtP_exBfQ8cm9ag",
+            "https://www.youtube.com/watch?v=SZ6P2fMxR6w"
+          ],
+          "authorVerified": true,
+          "channelId": "UCKF-sV1lgtP_exBfQ8cm9ag"
+        }
+      }
+    ],
+    "schedule": [
+      {
+        "gameId": "401873079",
+        "gameDate": "2026-11-26",
+        "date": "11/26",
+        "weekday": "목",
+        "time": "10:00",
+        "status": "종료",
+        "matchup": "Green Bay Packers at Los Angeles Rams",
+        "note": "Green Bay Packers 13–26 Los Angeles Rams.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873081",
+        "gameDate": "2026-11-27",
+        "date": "11/27",
+        "weekday": "금",
+        "time": "03:00",
+        "status": "종료",
+        "matchup": "Chicago Bears at Detroit Lions",
+        "note": "Chicago Bears 39–35 Detroit Lions.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873080",
+        "gameDate": "2026-11-27",
+        "date": "11/27",
+        "weekday": "금",
+        "time": "06:30",
+        "status": "종료",
+        "matchup": "Philadelphia Eagles at Dallas Cowboys",
+        "note": "Philadelphia Eagles 39–38 Dallas Cowboys.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873082",
+        "gameDate": "2026-11-27",
+        "date": "11/27",
+        "weekday": "금",
+        "time": "10:20",
+        "status": "종료",
+        "matchup": "Kansas City Chiefs at Buffalo Bills",
+        "note": "Kansas City Chiefs 10–13 Buffalo Bills.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873083",
+        "gameDate": "2026-11-28",
+        "date": "11/28",
+        "weekday": "토",
+        "time": "05:00",
+        "status": "경기 예정",
+        "matchup": "Denver Broncos at Pittsburgh Steelers",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873087",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "New Orleans Saints at Cincinnati Bengals",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873088",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "New York Giants at Indianapolis Colts",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873089",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "New York Jets at Miami Dolphins",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873084",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Atlanta Falcons at Minnesota Vikings",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873090",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Tennessee Titans at Jacksonville Jaguars",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873085",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "03:00",
+        "status": "경기 예정",
+        "matchup": "Baltimore Ravens at Houston Texans",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873093",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "06:05",
+        "status": "경기 예정",
+        "matchup": "New England Patriots at Los Angeles Chargers",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873092",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Washington Commanders at Arizona Cardinals",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873091",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "06:25",
+        "status": "경기 예정",
+        "matchup": "Seattle Seahawks at San Francisco 49ers",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873086",
+        "gameDate": "2026-11-30",
+        "date": "11/30",
+        "weekday": "월",
+        "time": "10:20",
+        "status": "경기 예정",
+        "matchup": "Las Vegas Raiders at Cleveland Browns",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      },
+      {
+        "gameId": "401873094",
+        "gameDate": "2026-12-01",
+        "date": "12/01",
+        "weekday": "화",
+        "time": "10:15",
+        "status": "경기 예정",
+        "matchup": "Carolina Panthers at Tampa Bay Buccaneers",
+        "note": "한국시간 킥오프. 경기 전 최종 출전 명단과 중계 편성을 확인하자.",
+        "source": {
+          "label": "www.nfl.com",
+          "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+        },
+        "sources": [
+          {
+            "label": "www.nfl.com",
+            "url": "https://www.nfl.com/schedules/2026/by-week/week-12"
+          },
+          {
+            "label": "site.api.espn.com",
+            "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=2026&seasontype=2&week=12"
+          }
+        ],
+        "checkedAt": "2026-11-27T09:02:33+00:00",
+        "verified": true,
+        "lastConfirmedEdition": "2026-11-27"
+      }
+    ],
+    "topStoryKeys": [
+      "2026-week12-eagles-cowboys-result",
+      "2026-week12-bears-lions-result",
+      "2026-week12-chiefs-bills-result",
+      "2026-11-24-steelers-rodgers-benched-rudolph",
+      "2026-11-26-steelers-pittman-activated-black-friday"
+    ]
+  },
+  {
     "date": "2026-11-26",
     "weekday": "목요일",
     "edition": "WEEK 12 · Rodgers 방출과 Rams의 5연승",
