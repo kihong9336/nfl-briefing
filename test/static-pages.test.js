@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { briefings } from '../src/data.js';
 import { generateStaticPages } from '../src/static-pages.js';
+const escaped = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 // Editorial text remains fully readable without JS; only the opt-in chat is enhanced.
 const withoutChatBootstrap = html => html.replace(/<script type="module">import \{ createNflChat \} from '\.\.\/\.\.\/src\/nfl-chat\.js\?v=20261027-reader'; createNflChat\(document\.querySelector\('#nflChat'\)\)\.setDate\('\d{4}-\d{2}-\d{2}'\);<\/script>/g, '');
 
@@ -44,18 +45,18 @@ test('dated pages contain original text, source links and date-specific crawler 
     assert.ok(html.includes(`<time datetime="${edition.date}">${edition.date}</time>`));
     assert.ok(html.includes(`https://kihong9336.github.io/nfl-briefing/editions/${edition.date}/`));
     assert.ok(html.includes(`href="https://kihong9336.github.io/nfl-briefing/?date=${edition.date}"`));
-    assert.ok(html.includes(edition.lead.title));
-    assert.ok(html.includes(edition.lead.summary));
+    assert.ok(html.includes(escaped(edition.lead.title)));
+    assert.ok(html.includes(escaped(edition.lead.summary)));
     assert.ok(html.includes('property="og:title"'));
     assert.ok(html.includes('property="og:description"'));
     assert.match(html, /property="og:image" content="https:\/\/kihong9336.github.io\/nfl-briefing\/assets\/icons\//);
     assert.doesNotMatch(withoutChatBootstrap(html), /<script\b/);
     assert.equal(html.includes('data-sample-warning'), edition.sample !== false);
     for (const story of edition.sections) {
-      assert.ok(html.includes(story.commentary));
+      assert.ok(html.includes(escaped(story.commentary)));
       for (const source of story.sources ?? []) {
         // Attribute serialization escapes query separators; the URL is unchanged.
-        const href = source.url.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+        const href = escaped(source.url);
         assert.ok(html.includes(`href="${href}"`), `${edition.date}: missing source ${source.url}`);
       }
     }

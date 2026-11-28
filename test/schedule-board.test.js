@@ -36,11 +36,14 @@ test('actual favorite matchups are prioritized, stable within each priority, wit
 });
 
 test('in-progress status outranks favorites (test-only status variation on actual fixture)', () => {
-  const actual = briefings[0].schedule;
-  const games = [actual[0], actual[2], actual[12], {...actual[1], status: '진행 중'}];
+  const actual = briefings.find(b => b.schedule.some(g => /49ers|Chiefs|Patriots/.test(g.matchup)) && b.schedule.some(g => !/49ers|Chiefs|Patriots/.test(g.matchup))).schedule;
+  const favorite = actual.find(g => /49ers|Chiefs|Patriots/.test(g.matchup));
+  const other = actual.find(g => !/49ers|Chiefs|Patriots/.test(g.matchup));
+  assert.ok(favorite && other, 'fixture has distinct favorite and non-favorite games');
+  const games = [favorite, {...other, status: '진행 중'}];
   const before = JSON.stringify(games);
   const html = module.renderScheduleBoard(games);
-  assert.ok(html.indexOf(games[3].matchup) < html.indexOf(games[0].matchup));
+  assert.ok(html.indexOf(games[1].matchup) < html.indexOf(games[0].matchup));
   assert.equal(JSON.stringify(games), before);
 });
 
