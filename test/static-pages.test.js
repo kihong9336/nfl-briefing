@@ -53,7 +53,11 @@ test('dated pages contain original text, source links and date-specific crawler 
     assert.equal(html.includes('data-sample-warning'), edition.sample !== false);
     for (const story of edition.sections) {
       assert.ok(html.includes(story.commentary));
-      for (const source of story.sources ?? []) assert.ok(html.includes(`href="${source.url}"`));
+      for (const source of story.sources ?? []) {
+        // Attribute serialization escapes query separators; the URL is unchanged.
+        const href = source.url.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+        assert.ok(html.includes(`href="${href}"`), `${edition.date}: missing source ${source.url}`);
+      }
     }
   }
   assert.notEqual(pages['editions/2026-10-17/index.html'].match(/property="og:title" content="([^"]+)"/)[1], pages['editions/2026-10-16/index.html'].match(/property="og:title" content="([^"]+)"/)[1]);
