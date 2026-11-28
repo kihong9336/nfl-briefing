@@ -790,7 +790,32 @@ function endzoneBoundaryCatch(item) {
     </svg></section>`;
 }
 
+function twoEdgePressureFumbleRecovery(item) {
+  return `<section aria-label="${escapeXml(item.title)}" style="max-width:100%;min-width:0;overflow-wrap:anywhere">
+    <svg class="play-diagram" viewBox="0 0 360 390" role="img" aria-label="두 방향 압박과 공 회수" style="display:block;width:100%;max-width:100%;height:auto">
+      <rect class="field-bg" width="360" height="390" rx="12"/>
+      <text x="16" y="28" fill="#cbd5e1" font-size="14">3rd &amp; 15 · 공격 ↑ · 거리 비례 아님</text>
+      <path class="line-scrimmage" d="M16 120H344"/>
+      <text x="16" y="110" fill="#cbd5e1" font-size="13">스냅선</text>
+      <defs><marker id="two-edge-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="#ff5b68" d="M0 0L10 5L0 10z"/></marker></defs>
+      <path data-action="two-edge-pressure" d="M65 100Q55 200 145 225M295 100Q305 200 215 225" fill="none" stroke="#ff5b68" stroke-width="4" marker-end="url(#two-edge-arrow)"/>
+      ${player(180,230,'QB')}
+      <text x="40" y="75" fill="#cbd5e1" font-size="15">Watt</text><text x="265" y="75" fill="#cbd5e1" font-size="15">Herbig</text>
+      <text x="165" y="270" fill="#cbd5e1" font-size="15">Nix</text>
+      <ellipse data-action="loose-ball" cx="225" cy="285" rx="6" ry="9" fill="#ffd54a"/>
+      <text x="240" y="290" fill="#ffd54a" font-size="13">놓친 공</text>
+      <rect data-action="endzone-recovery" x="16" y="315" width="328" height="55" rx="8" fill="#285376"/>
+      <text x="35" y="348" fill="white" font-size="16">자기 엔드존: Watt 회수 → 수비 TD</text>
+    </svg>
+    <p>일반 개념도 · 실제 좌표 재현 아님. 빨강은 두 방향 압박, 노랑은 공입니다. 공의 이동 경로와 강제 펌블 책임은 표시하지 않습니다.</p>
+    <ol><li><strong>앞선 다운이 만든 거리</strong><p>러닝 5야드 손실과 패스 불완전 뒤 3rd-and-15. 공격은 긴 거리를 남기기 전 손실부터 줄여야 합니다.</p></li>
+    <li><strong>두 방향 압박</strong><p>Labriola의 설명처럼 Watt와 Herbig가 두 각도에서 접근합니다. 한쪽 회피만으로 안전해지기 어려워 QB의 빠른 공 처리가 중요합니다.</p></li>
+    <li><strong>공 확보까지 마무리</strong><p>Nix의 펌블을 Watt가 엔드존에서 회수합니다. 회수자와 강제 펌블 책임은 별개이며, 수비는 압박 뒤 공 소유까지 확보해야 합니다.</p></li></ol>
+  </section>`;
+}
+
 export function renderTacticDiagram(item) {
+  if (item?.diagram?.kind === 'two-edge-pressure-fumble-recovery') return twoEdgePressureFumbleRecovery(item);
   if (item?.diagram?.kind === 'endzone-boundary-catch') return endzoneBoundaryCatch(item);
   if (item?.diagram?.kind === 'flat-release-middle-window') return flatReleaseMiddleWindow(item);
   if (item?.diagram?.kind === 'two-minute-middle-spike') return twoMinuteMiddleSpike(item);
